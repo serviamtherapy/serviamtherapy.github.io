@@ -1,31 +1,74 @@
 <!-- The Pop-up Structure -->
 <div id="homepage-popup" class="popup-overlay">
   <div class="popup-content">
-    <!-- Custom Close Button -->
+    <!-- Close Button -->
     <span id="close-popup-btn" class="close-btn">&times;</span>
     
-    <h2>Welcome to ServiamTherapy!</h2>
-    <p>בימים אלו הקליניקה נמצאת בתהליך שדרוג ושיפוץ, כדי שנוכל להציע לכם/לכן חוויית טיפול נעימה ומקצועית אף יותר.
-      בינתיים, אני מציע טיפולים עד הבית שלכם/כן.
-      אני מגיע עם כל הציוד הנדרש עד אליכם/כן, ואתם/ן רק צריכים/ות להתכונן לחוויה שתטיב איתכם/כן. </p>
+    <!-- The 4-Line Message -->
+    <p class="popup-text">
+      בימים אלו הקליניקה נמצאת בתהליך שדרוג ושיפוץ, כדי שנוכל להציע לכם/לכן חוויית טיפול נעימה ומקצועית אף יותר.<br>
+      בינתיים, אני מציע טיפולים עד הבית שלכם/כן. אני מגיע עם כל הציוד הנדרש עד אליכם/כן, ואתם/ן רק צריכים/ות<br>
+      להתכונן לחוויה שתטיב איתכם/כן.
+    </p>
   </div>
 </div>
 
 <script>
-  // Wait for the DOM to load
+  // Redirect when the close button is clicked
   document.getElementById('close-popup-btn').addEventListener('click', function() {
-    // Redirect the user to your desired link
-    window.location.href = "https://serviamtherapy.wixsite.com/home";
+    window.location.href = "https://serviamtherapy.wixsite.com/home"; // Replace with your link
   });
 </script>
 
 <style>
-  /* Basic styling to show/hide the pop-up */
+  /* Darkens the background behind the pop-up */
   .popup-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7); display: flex; justify-content: center; align-items: center;
-    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
   }
-  .popup-content { background: white; padding: 30px; border-radius: 8px; position: relative; }
-  .close-btn { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 24px; }
+
+  /* Small rectangular box in the exact middle */
+  .popup-content {
+    background: #ffffff;
+    padding: 35px 25px 25px 25px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 500px; /* Limits the width to keep it rectangular */
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    direction: rtl; /* Sets text direction from right-to-left for Hebrew */
+  }
+
+  /* X Close Button styling */
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    left: 15px; /* Placed on the left because Hebrew is right-to-left */
+    cursor: pointer;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover {
+    color: #ff0000;
+  }
+
+  /* Formatting for the 4 lines of Hebrew text */
+  .popup-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+  }
 </style>
