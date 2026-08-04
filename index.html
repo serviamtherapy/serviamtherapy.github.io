@@ -23,13 +23,16 @@
   });
   // Clicking the main overlay (the dark background) triggers the redirect
   document.getElementById('homepage-popup').addEventListener('click', function() {
-    window.location.href = targetLink;
+    window.location.href = "https://serviamtherapy.wixsite.com/home";
+  });
+  document.getElementById('enter-site-btn').addEventListener('click', function() {
+    window.location.href = "https://serviamtherapy.wixsite.com/home"; // Replace with your link
   });
 
   // Clicking inside the white rectangle also triggers the redirect
   document.querySelector('.popup-content').addEventListener('click', function(e) {
     // If you ever add other interactive elements inside, this ensures everything redirects
-    window.location.href = targetLink;
+    window.location.href = "https://serviamtherapy.wixsite.com/home";
   });
 </script>
 
