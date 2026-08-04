@@ -1,5 +1,5 @@
 <!-- =======================================================
-     SERVIAM THERAPY PREMIUM WELCOME POPUP
+     SERVIAM THERAPY PREMIUM COMPACT POPUP
 ======================================================= -->
 
 
@@ -13,144 +13,157 @@
 <div id="homepage-popup" class="popup-overlay">
 
 
-    <div class="popup-window">
+<div class="popup-window">
 
 
-        <div class="popup-left">
 
-            <div class="popup-image-overlay"></div>
+<div class="popup-left">
 
-        </div>
+</div>
 
 
 
-        <div class="popup-right">
 
+<div class="popup-right">
 
-            <span 
-            id="popup-close"
-            class="popup-close"
-            aria-label="Close popup">
 
-            ×
+<span 
+id="popup-close"
+class="popup-close">
 
-            </span>
+×
 
+</span>
 
 
-            <a 
-            href="https://serviamtherapy.wixsite.com/home"
-            class="popup-link">
 
 
-                <img
+<a 
+href="https://serviamtherapy.wixsite.com/home"
+class="popup-link">
 
-                src="images/logo.png"
 
-                class="popup-logo"
 
-                alt="Serviam Therapy">
+<img
 
+src="images/logo.png"
 
-                <h1>
+class="popup-logo"
 
-                אנחנו מתחדשים בשבילכם
+alt="Serviam Therapy">
 
-                </h1>
 
 
 
-                <p>
 
-                בימים אלו הקליניקה עוברת שדרוג,
-                כדי שנוכל להעניק לכם חוויית טיפול
-                יוקרתית, מקצועית ונעימה אפילו יותר.
+<h1>
 
-                <br><br>
+אנחנו מתחדשים בשבילכם
 
-                בינתיים ניתן להזמין טיפולים עד הבית.
+</h1>
 
-                אני מגיע עם כל הציוד המקצועי הדרוש,
-                ואתם רק צריכים להתכונן לרגע של רוגע והתחדשות.
 
-                </p>
 
 
+<p>
 
+בימים אלו הקליניקה עוברת שדרוג,
+כדי שנוכל להעניק לכם חוויית טיפול
+מקצועית, נעימה ויוקרתית אפילו יותר.
 
-                <div class="popup-features">
+<br><br>
 
+בינתיים ניתן להזמין טיפולים עד הבית.
 
-                    <div>
+אני מגיע עם כל הציוד המקצועי הדרוש,
+ואתם רק צריכים להתכונן לרגע של רוגע והתחדשות.
 
-                    🚗
+</p>
 
-                    <span>
 
-                    טיפולים עד הבית
 
-                    </span>
 
-                    </div>
 
 
+<div class="popup-features">
 
-                    <div>
 
-                    💆
 
-                    <span>
+<div>
 
-                    כל הציוד המקצועי מגיע איתי
+🚗
 
-                    </span>
+<span>
 
-                    </div>
+טיפולים עד הבית
 
+</span>
 
+</div>
 
-                    <div>
 
-                    ⭐
 
-                    <span>
 
-                    אותה איכות טיפול שאתם מכירים
+<div>
 
-                    </span>
+💆
 
-                    </div>
+<span>
 
+כל הציוד המקצועי מגיע איתי
 
+</span>
 
-                </div>
+</div>
 
 
-            </a>
 
 
+<div>
 
+⭐
 
-            <a
+<span>
 
-            href="https://serviamtherapy.wixsite.com/home"
+אותה איכות טיפול שאתם מכירים
 
-            class="popup-button">
+</span>
 
-            המשך לאתר Serviam Therapy
+</div>
 
-            </a>
-
-
-
-
-        </div>
-
-
-    </div>
 
 
 </div>
+
+
+</a>
+
+
+
+
+
+
+<a
+
+href="https://serviamtherapy.wixsite.com/home"
+
+class="popup-button">
+
+המשך לאתר Serviam Therapy
+
+</a>
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 
 
@@ -166,53 +179,43 @@ const popupURL =
 
 
 
-// Close button redirects
-
 document
-
 .getElementById("popup-close")
+.onclick=function(e){
 
-.onclick=function(event){
+e.stopPropagation();
 
-event.stopPropagation();
-
-window.location.href = popupURL;
+window.location.href=popupURL;
 
 };
 
 
 
 
-// Clicking outside redirects
-
 document
-
 .getElementById("homepage-popup")
-
 .onclick=function(){
 
-window.location.href = popupURL;
+window.location.href=popupURL;
 
 };
 
 
 
-
-// Prevent clicks inside popup from closing
 
 document
-
 .querySelector(".popup-window")
+.onclick=function(e){
 
-.onclick=function(event){
-
-event.stopPropagation();
+e.stopPropagation();
 
 };
-
 
 
 </script>
+
+
+
 
 
 
@@ -239,9 +242,7 @@ inset:0;
 
 display:flex;
 
-
 justify-content:center;
-
 
 align-items:center;
 
@@ -254,13 +255,17 @@ background:
 rgba(0,31,63,.92);
 
 
-backdrop-filter:blur(10px);
+
+backdrop-filter:blur(8px);
+
 
 
 z-index:999999;
 
 
+
 font-family:'Heebo',Arial,sans-serif;
+
 
 
 animation:
@@ -296,6 +301,7 @@ opacity:1;
 
 
 
+
 .popup-window{
 
 
@@ -305,22 +311,24 @@ display:flex;
 overflow:hidden;
 
 
-width:min(1150px,95vw);
+width:min(900px,92vw);
 
 
-min-height:650px;
+max-height:560px;
 
 
-border-radius:32px;
+border-radius:28px;
 
 
 background:white;
 
 
+
 box-shadow:
 
 
-0 45px 120px rgba(0,0,0,.5);
+0 35px 90px rgba(0,0,0,.45);
+
 
 
 animation:
@@ -329,6 +337,8 @@ popupShow .6s ease;
 
 
 }
+
+
 
 
 
@@ -345,7 +355,7 @@ opacity:0;
 
 transform:
 
-translateY(50px)
+translateY(40px)
 
 scale(.95);
 
@@ -375,13 +385,16 @@ scale(1);
 
 
 
+
 .popup-left{
 
 
-flex:1;
+flex:.85;
+
 
 
 background:
+
 
 
 linear-gradient(
@@ -393,10 +406,13 @@ rgba(0,35,73,.65)
 ),
 
 
+
 url("images/popup-background.jpg");
 
 
+
 background-size:cover;
+
 
 
 background-position:center;
@@ -407,37 +423,50 @@ background-position:center;
 
 
 
+
+
+
 .popup-right{
 
 
 flex:1;
 
 
+
 background:#fcfaf5;
 
 
-padding:70px 60px;
+
+padding:40px 45px;
+
 
 
 position:relative;
 
 
+
 display:flex;
+
 
 
 flex-direction:column;
 
 
+
 justify-content:center;
 
 
+
 direction:rtl;
+
 
 
 text-align:center;
 
 
 }
+
+
 
 
 
@@ -452,7 +481,12 @@ text-decoration:none;
 color:inherit;
 
 
+display:block;
+
+
 }
+
+
 
 
 
@@ -461,10 +495,10 @@ color:inherit;
 .popup-logo{
 
 
-width:150px;
+width:95px;
 
 
-margin:0 auto 25px;
+margin:0 auto 15px;
 
 
 display:block;
@@ -476,19 +510,24 @@ display:block;
 
 
 
+
+
 .popup-right h1{
 
 
-font-size:44px;
+font-size:34px;
 
 
 font-weight:800;
 
 
+
 color:#00458B;
 
 
-margin-bottom:25px;
+
+margin:0 0 15px;
+
 
 
 }
@@ -497,13 +536,21 @@ margin-bottom:25px;
 
 
 
+
+
 .popup-right p{
 
 
-font-size:23px;
+font-size:18px;
 
 
-line-height:1.9;
+
+line-height:1.7;
+
+
+
+margin:15px 0;
+
 
 
 color:#333;
@@ -515,22 +562,29 @@ color:#333;
 
 
 
+
+
 .popup-features{
 
 
 display:flex;
 
 
+
 flex-direction:column;
 
 
-gap:18px;
+
+gap:10px;
 
 
-margin-top:25px;
+
+margin-top:15px;
 
 
 }
+
+
 
 
 
@@ -542,28 +596,37 @@ margin-top:25px;
 background:white;
 
 
-padding:20px;
+
+padding:12px;
 
 
-border-radius:18px;
+
+border-radius:12px;
 
 
-font-size:22px;
+
+font-size:17px;
+
 
 
 font-weight:600;
 
 
+
 box-shadow:
 
 
-0 10px 25px rgba(0,0,0,.08);
+0 8px 20px rgba(0,0,0,.07);
+
 
 
 transition:.3s;
 
 
+
 }
+
+
 
 
 
@@ -572,7 +635,9 @@ transition:.3s;
 .popup-features div:hover{
 
 
-transform:translateX(-8px);
+transform:
+
+translateX(-6px);
 
 
 }
@@ -581,19 +646,34 @@ transform:translateX(-8px);
 
 
 
+
+
+
 .popup-button{
 
 
-margin-top:40px;
+display:block;
 
 
-padding:28px;
+
+margin-top:20px;
+
+
+
+padding:18px;
+
 
 
 width:100%;
 
 
+
+text-align:center;
+
+
+
 background:
+
 
 
 linear-gradient(
@@ -607,25 +687,32 @@ linear-gradient(
 );
 
 
-border-radius:22px;
+
+border-radius:18px;
 
 
-font-size:34px;
+
+font-size:24px;
+
 
 
 font-weight:800;
 
 
+
 color:white;
+
 
 
 text-decoration:none;
 
 
+
 box-shadow:
 
 
-0 18px 45px rgba(212,175,55,.45);
+0 15px 35px rgba(212,175,55,.4);
+
 
 
 transition:.3s;
@@ -637,13 +724,27 @@ transition:.3s;
 
 
 
+
 .popup-button:hover{
 
 
-transform:translateY(-5px);
+transform:
+
+translateY(-4px);
+
+
+
+box-shadow:
+
+
+0 20px 45px rgba(212,175,55,.55);
+
 
 
 }
+
+
+
 
 
 
@@ -655,22 +756,29 @@ transform:translateY(-5px);
 position:absolute;
 
 
-top:18px;
+
+top:15px;
 
 
-left:25px;
+
+left:20px;
 
 
-font-size:45px;
+
+font-size:40px;
+
 
 
 font-weight:bold;
 
 
+
 cursor:pointer;
 
 
+
 color:#777;
+
 
 
 transition:.3s;
@@ -682,16 +790,31 @@ transition:.3s;
 
 
 
+
 .popup-close:hover{
 
 
 color:#C62828;
 
 
-transform:rotate(90deg);
+
+transform:
+
+rotate(90deg);
+
 
 
 }
+
+
+
+
+
+
+
+/* ===========================
+        MOBILE
+=========================== */
 
 
 
@@ -700,105 +823,173 @@ transform:rotate(90deg);
 @media(max-width:900px){
 
 
+
 .popup-window{
 
 
 flex-direction:column;
 
 
-max-height:95vh;
+
+width:94vw;
 
 
-overflow:auto;
+
+max-height:90vh;
+
 
 
 }
+
+
 
 
 
 .popup-left{
 
 
-height:230px;
+height:130px;
+
+
+
+flex:none;
+
 
 
 }
+
+
 
 
 
 .popup-right{
 
 
-padding:40px 25px;
+padding:25px 20px;
+
 
 
 }
+
+
 
 
 
 .popup-logo{
 
 
-width:110px;
+width:80px;
+
 
 
 }
+
+
 
 
 
 .popup-right h1{
 
 
-font-size:30px;
+font-size:25px;
+
 
 
 }
+
+
 
 
 
 .popup-right p{
 
 
-font-size:19px;
+font-size:16px;
+
+
+
+line-height:1.6;
+
 
 
 }
+
+
+
+
+
+.popup-features{
+
+
+gap:10px;
+
+
+
+}
+
+
 
 
 
 .popup-features div{
 
 
-font-size:18px;
+font-size:15px;
+
+
+
+padding:10px;
+
 
 
 }
+
+
 
 
 
 .popup-button{
 
 
-font-size:25px;
+font-size:21px;
 
 
-padding:22px;
+
+padding:16px;
+
 
 
 }
 
 
+
 }
+
+
+
 
 
 
 @media(max-width:480px){
 
 
+
+.popup-left{
+
+
+height:100px;
+
+
+
+}
+
+
+
 .popup-right h1{
 
 
-font-size:26px;
+font-size:22px;
+
 
 
 }
@@ -808,7 +999,8 @@ font-size:26px;
 .popup-right p{
 
 
-font-size:17px;
+font-size:15px;
+
 
 
 }
@@ -818,10 +1010,12 @@ font-size:17px;
 .popup-button{
 
 
-font-size:22px;
+font-size:19px;
+
 
 
 }
+
 
 
 }
