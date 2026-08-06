@@ -1,1 +1,564 @@
 
+/* ==========================================================
+   SERVIAM THERAPY PREMIUM POPUP
+   VERSION 2.0
+========================================================== */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-family:'Heebo',sans-serif;
+}
+
+/* ===========================================
+   OVERLAY
+=========================================== */
+
+.popup-overlay{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    background:
+        linear-gradient(
+            rgba(6,24,47,.78),
+            rgba(6,24,47,.78)
+        ),
+        url("images/background.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    backdrop-filter:blur(8px);
+
+    z-index:999999;
+
+    animation:fadeIn .45s ease;
+
+}
+
+.popup-overlay.hide{
+
+    opacity:0;
+    visibility:hidden;
+    transition:.45s;
+
+}
+
+/* ===========================================
+   WINDOW
+=========================================== */
+
+.popup-window{
+
+    width:min(1020px,95vw);
+
+    height:min(610px,88vh);
+
+    display:flex;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.93);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+
+        0 35px 90px rgba(0,0,0,.20),
+
+        0 10px 30px rgba(0,0,0,.10);
+
+    animation:popupAppear .55s cubic-bezier(.17,.89,.32,1.2);
+
+}
+
+/* ===========================================
+   LEFT IMAGE
+=========================================== */
+
+.popup-left{
+
+    flex:.95;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,35,73,.28),
+
+            rgba(0,35,73,.58)
+
+        ),
+
+        url("images/popup-background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    overflow:hidden;
+
+}
+
+/* ===========================================
+   RIGHT SIDE
+=========================================== */
+
+.popup-right{
+
+    flex:1;
+
+    direction:rtl;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    position:relative;
+
+    padding:70px 55px 50px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #FFFDF9,
+
+            #F8F5EF
+
+        );
+
+}
+
+/* ===========================================
+   CLOSE BUTTON
+=========================================== */
+
+.popup-close{
+
+    position:absolute;
+
+    top:22px;
+
+    left:22px;
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+    color:#666;
+
+    box-shadow:
+
+        0 6px 18px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.popup-close:hover{
+
+    background:#f3f3f3;
+
+    color:#C62828;
+
+    transform:rotate(90deg);
+
+}
+
+/* ===========================================
+   LOGO
+=========================================== */
+
+.popup-logo{
+
+    width:62px;
+
+    position:absolute;
+
+    right:32px;
+
+    top:26px;
+
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.18));
+
+}
+
+/* ===========================================
+   DIVIDER
+=========================================== */
+
+.popup-divider{
+
+    width:90px;
+
+    height:4px;
+
+    border-radius:999px;
+
+    margin:0 auto 18px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #D4AF37,
+
+            #EFD27D
+
+        );
+
+}
+
+/* ===========================================
+   TITLES
+=========================================== */
+
+.popup-right h1{
+
+    margin:0;
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:#003B73;
+
+}
+
+.popup-right h2{
+
+    margin:12px 0 28px;
+
+    font-size:21px;
+
+    color:#B8860B;
+
+    letter-spacing:1px;
+
+    font-weight:600;
+
+}
+
+/* ===========================================
+   TEXT
+=========================================== */
+
+.popup-right p{
+
+    margin:0 0 18px;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    color:#404040;
+
+}
+
+/* ===========================================
+   FEATURES
+=========================================== */
+
+.popup-features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:15px;
+
+}
+
+.popup-features div{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+
+            #FFFFFF,
+
+            #F7F5EF
+
+        );
+
+    box-shadow:
+
+        0 8px 22px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.popup-features div:hover{
+
+    transform:
+
+        translateY(-3px)
+
+        scale(1.02);
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.popup-button{
+
+    margin-top:34px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    padding:20px;
+
+    width:100%;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    letter-spacing:.4px;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #D4AF37,
+
+            #B8860B
+
+        );
+
+    box-shadow:
+
+        0 18px 45px rgba(212,175,55,.40);
+
+    transition:.25s;
+
+}
+
+.popup-button:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    box-shadow:
+
+        0 24px 55px rgba(212,175,55,.55);
+
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes popupAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(35px)
+
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media (max-width:900px){
+
+.popup-window{
+
+    flex-direction:column;
+
+    width:94vw;
+
+    height:auto;
+
+    max-height:92vh;
+
+}
+
+.popup-left{
+
+    height:190px;
+
+}
+
+.popup-right{
+
+    padding:45px 28px;
+
+}
+
+.popup-logo{
+
+    width:72px;
+
+}
+
+.popup-right h1{
+
+    font-size:30px;
+
+}
+
+.popup-right h2{
+
+    font-size:18px;
+
+}
+
+.popup-right p{
+
+    font-size:17px;
+
+}
+
+.popup-button{
+
+    font-size:20px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.popup-left{
+
+    height:140px;
+
+}
+
+.popup-right{
+
+    padding:35px 22px;
+
+}
+
+.popup-right h1{
+
+    font-size:25px;
+
+}
+
+.popup-right p{
+
+    font-size:15px;
+
+}
+
+.popup-features div{
+
+    font-size:15px;
+
+}
+
+.popup-button{
+
+    font-size:18px;
+
+    padding:17px;
+
+}
+
+}
