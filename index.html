@@ -91,116 +91,121 @@
 <body>
 
 
-<!-- =========================================================
-     MAINTENANCE / WELCOME POPUP
-========================================================= -->
+```html
+<!-- =====================================================
+     SERVIAM THERAPY — MAINTENANCE POPUP
+====================================================== -->
 
 <div
+    class="popup-overlay"
     id="maintenance-popup"
-    class="maintenance-popup"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="maintenance-title"
+    aria-hidden="false"
 >
 
-    <div class="maintenance-backdrop"></div>
-
-    <div class="maintenance-window">
+    <div class="popup-window">
 
 
-        <!-- CLOSE -->
+        <!-- LEFT IMAGE / VISUAL -->
 
-        <button
-            type="button"
-            class="maintenance-close"
-            id="maintenance-close"
-            aria-label="סגירה"
-        >
-            ×
-        </button>
+        <div class="popup-left"></div>
 
 
-        <!-- LOGO -->
+        <!-- RIGHT CONTENT -->
 
-        <div class="maintenance-logo">
-
-            <img
-                src="images/logo/logo.png"
-                alt="Serviam Therapy"
-            >
-
-        </div>
-
-
-        <!-- CONTENT -->
-
-        <div class="maintenance-content">
-
-            <span class="maintenance-label">
-                SERVIAM THERAPY
-            </span>
-
-            <h2 id="maintenance-title">
-                אנחנו מתחדשים
-                <span>בשבילכם.</span>
-            </h2>
-
-            <p>
-
-                האתר החדש של
-                <strong>Serviam Therapy</strong>
-                מוכן עבורכם.
-
-            </p>
-
-            <p>
-
-                הקליניקה נמצאת כעת
-                בתהליך התחדשות ושדרוג.
-                עד לפתיחת הקליניקה,
-                אנו ממשיכים להעניק
-                <strong>טיפולי עיסוי עד הבית</strong>.
-
-            </p>
-
-
-            <div class="maintenance-notice">
-
-                <span class="maintenance-notice-icon">
-                    ✦
-                </span>
-
-                <span>
-                    טיפולי עיסוי עד הבית זמינים כרגיל
-                </span>
-
-            </div>
+        <div class="popup-right">
 
 
             <button
+                id="popup-close"
+                class="popup-close"
+                aria-label="סגירת חלון"
                 type="button"
-                class="maintenance-enter"
-                id="maintenance-enter"
             >
-
-                כניסה לאתר
-
-                <span>
-                    ←
-                </span>
-
+                ×
             </button>
 
 
-            <div class="maintenance-contact">
+            <div class="popup-content">
 
-                <span>
-                    לפרטים ותיאום טיפול
-                </span>
 
-                <a href="tel:+972543629852">
-                    054-362-9852
-                </a>
+                <img
+                    src="images/logo.png"
+                    class="popup-logo"
+                    alt="Serviam Therapy"
+                >
+
+
+                <h1>
+                    אנחנו מתחדשים בשבילכם/כן
+                </h1>
+
+
+                <p>
+
+                    בימים אלו הקליניקה עוברת שדרוג,
+                    כדי שנוכל להעניק לכם חוויית טיפול
+                    מקצועית, נעימה ויוקרתית אפילו יותר.
+
+                    בינתיים ניתן להזמין טיפולים עד הבית.
+                    אני מגיע עם כל הציוד המקצועי הדרוש,
+                    ואתם רק צריכים להתכונן לרגע של רוגע והתחדשות.
+
+                </p>
+
+
+                <div class="popup-features">
+
+
+                    <div>
+
+                        <span class="popup-feature-icon">
+                            🚗
+                        </span>
+
+                        <span>
+                            טיפולים עד הבית
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="popup-feature-icon">
+                            💆
+                        </span>
+
+                        <span>
+                            כל הציוד המקצועי מגיע איתי
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="popup-feature-icon">
+                            ⭐
+                        </span>
+
+                        <span>
+                            אותה איכות טיפול שאתם מכירים
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    id="popup-enter"
+                    class="popup-button"
+                    type="button"
+                >
+                    המשך לאתר Serviam Therapy →
+                </button>
+
 
             </div>
 
@@ -209,6 +214,8 @@
     </div>
 
 </div>
+```
+
 
 
 
