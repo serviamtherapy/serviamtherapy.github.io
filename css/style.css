@@ -2056,20 +2056,12 @@ button {
 
     outline-offset: 4px;
 }
+```css
 /* =========================================================
    SERVIAM THERAPY — MAINTENANCE POPUP
 ========================================================= */
 
-body.maintenance-open {
-    overflow: hidden;
-}
-
-
-/* ---------------------------------------------------------
-   POPUP CONTAINER
---------------------------------------------------------- */
-
-.maintenance-popup {
+.popup-overlay {
 
     position: fixed;
 
@@ -2083,7 +2075,16 @@ body.maintenance-open {
 
     justify-content: center;
 
-    padding: 25px;
+    padding: 20px;
+
+    background:
+        rgba(7, 15, 28, .78);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
 
     opacity: 1;
 
@@ -2092,44 +2093,16 @@ body.maintenance-open {
     transition:
         opacity .45s ease,
         visibility .45s ease;
-
 }
 
 
-.maintenance-popup.is-hidden {
+.popup-overlay.hidden {
 
     opacity: 0;
 
     visibility: hidden;
 
     pointer-events: none;
-
-}
-
-
-/* ---------------------------------------------------------
-   BACKDROP
---------------------------------------------------------- */
-
-.maintenance-backdrop {
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(8,18,32,.94),
-            rgba(16,27,45,.90)
-        );
-
-    backdrop-filter:
-        blur(10px);
-
-    -webkit-backdrop-filter:
-        blur(10px);
-
 }
 
 
@@ -2137,57 +2110,148 @@ body.maintenance-open {
    POPUP WINDOW
 --------------------------------------------------------- */
 
-.maintenance-window {
+.popup-window {
 
     position: relative;
 
-    z-index: 2;
+    width: min(1050px, 100%);
 
-    width: min(
-        620px,
-        100%
-    );
+    min-height: 560px;
 
-    max-height: calc(100vh - 50px);
+    display: grid;
 
-    overflow-y: auto;
+    grid-template-columns:
+        .9fr 1.1fr;
 
-    padding:
-        48px
-        50px
-        45px;
-
-    text-align: center;
-
-    border:
-        1px solid
-        rgba(255,255,255,.12);
-
-    border-radius:
-        24px;
+    overflow: hidden;
 
     background:
+        #ffffff;
 
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.98),
-            rgba(246,243,237,.98)
-        );
+    border-radius:
+        26px;
 
     box-shadow:
-        0 40px 100px
-        rgba(0,0,0,.45);
+        0 35px 100px
+        rgba(0,0,0,.35);
 
     transform:
         translateY(0)
         scale(1);
 
-    animation:
-        maintenancePopupIn
-        .7s
-        cubic-bezier(.2,.8,.2,1)
-        both;
+    transition:
+        transform .5s cubic-bezier(.2,.8,.2,1);
+}
 
+
+.popup-overlay.hidden .popup-window {
+
+    transform:
+        translateY(20px)
+        scale(.97);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT IMAGE
+--------------------------------------------------------- */
+
+.popup-left {
+
+    position: relative;
+
+    min-height: 560px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(16,27,45,.05),
+            rgba(16,27,45,.45)
+        ),
+
+        url("../images/therapist/therapist.jpg")
+        center / cover
+        no-repeat;
+}
+
+
+.popup-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(16,27,45,.55)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT CONTENT
+--------------------------------------------------------- */
+
+.popup-right {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        60px 65px;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(184,145,74,.10),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f6f4ef
+        );
+}
+
+
+.popup-content {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+--------------------------------------------------------- */
+
+.popup-logo {
+
+    display: block;
+
+    width: 95px;
+
+    height: auto;
+
+    margin:
+        0 0 25px auto;
+
+    object-fit: contain;
 }
 
 
@@ -2195,17 +2259,19 @@ body.maintenance-open {
    CLOSE BUTTON
 --------------------------------------------------------- */
 
-.maintenance-close {
+.popup-close {
 
     position: absolute;
 
-    top: 15px;
+    top: 18px;
 
-    left: 18px;
+    left: 20px;
 
-    width: 38px;
+    z-index: 5;
 
-    height: 38px;
+    width: 42px;
+
+    height: 42px;
 
     display: flex;
 
@@ -2218,16 +2284,12 @@ body.maintenance-open {
     border-radius: 50%;
 
     background:
-        rgba(16,27,45,.07);
+        rgba(16,27,45,.08);
 
     color:
         #101b2d;
 
-    font-family:
-        Arial,
-        sans-serif;
-
-    font-size: 28px;
+    font-size: 27px;
 
     line-height: 1;
 
@@ -2235,226 +2297,12 @@ body.maintenance-open {
 
     transition:
         background .25s ease,
+        color .25s ease,
         transform .25s ease;
-
 }
 
 
-.maintenance-close:hover {
-
-    background:
-        rgba(16,27,45,.14);
-
-    transform:
-        rotate(90deg);
-
-}
-
-
-/* ---------------------------------------------------------
-   LOGO
---------------------------------------------------------- */
-
-.maintenance-logo {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    margin-bottom: 20px;
-
-}
-
-
-.maintenance-logo img {
-
-    display: block;
-
-    width: auto;
-
-    max-width: 180px;
-
-    height: 75px;
-
-    object-fit: contain;
-
-}
-
-
-/* ---------------------------------------------------------
-   CONTENT
---------------------------------------------------------- */
-
-.maintenance-content {
-
-    position: relative;
-
-}
-
-
-.maintenance-label {
-
-    display: block;
-
-    margin-bottom: 12px;
-
-    color:
-        #b08a45;
-
-    font-family:
-        Poppins,
-        sans-serif;
-
-    font-size: .72rem;
-
-    font-weight: 600;
-
-    letter-spacing: .25em;
-
-}
-
-
-.maintenance-content h2 {
-
-    margin:
-        0 0 20px;
-
-    color:
-        #101b2d;
-
-    font-size:
-        clamp(
-            2rem,
-            5vw,
-            3.2rem
-        );
-
-    font-weight: 600;
-
-    line-height: 1.12;
-
-}
-
-
-.maintenance-content h2 span {
-
-    display: block;
-
-    color:
-        #b08a45;
-
-}
-
-
-.maintenance-content > p {
-
-    max-width: 500px;
-
-    margin:
-        0 auto 14px;
-
-    color:
-        #4d5663;
-
-    font-size:
-        1rem;
-
-    line-height: 1.9;
-
-}
-
-
-.maintenance-content strong {
-
-    color:
-        #101b2d;
-
-    font-weight: 700;
-
-}
-
-
-/* ---------------------------------------------------------
-   NOTICE
---------------------------------------------------------- */
-
-.maintenance-notice {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    max-width: 460px;
-
-    margin:
-        25px auto;
-
-    padding:
-        15px
-        20px;
-
-    border:
-        1px solid
-        rgba(176,138,69,.28);
-
-    border-radius:
-        12px;
-
-    background:
-        rgba(176,138,69,.08);
-
-    color:
-        #101b2d;
-
-    font-size:
-        .92rem;
-
-    font-weight: 500;
-
-}
-
-
-.maintenance-notice-icon {
-
-    color:
-        #b08a45;
-
-    font-size:
-        1.1rem;
-
-}
-
-
-/* ---------------------------------------------------------
-   ENTER BUTTON
---------------------------------------------------------- */
-
-.maintenance-enter {
-
-    width: 100%;
-
-    max-width: 330px;
-
-    min-height: 58px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 14px;
-
-    border: 0;
-
-    border-radius:
-        999px;
+.popup-close:hover {
 
     background:
         #101b2d;
@@ -2462,139 +2310,1186 @@ body.maintenance-open {
     color:
         #ffffff;
 
+    transform:
+        rotate(90deg);
+}
+
+
+/* ---------------------------------------------------------
+   TITLE
+--------------------------------------------------------- */
+
+.popup-content h1 {
+
+    margin:
+        0 0 20px;
+
+    color:
+        #101b2d;
+
     font-family:
-        Heebo,
+        "Heebo",
+        sans-serif;
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.15;
+}
+
+
+.popup-content h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 3px;
+
+    margin:
+        18px 0 0 auto;
+
+    background:
+        #b89555;
+
+    border-radius:
+        10px;
+}
+
+
+/* ---------------------------------------------------------
+   TEXT
+--------------------------------------------------------- */
+
+.popup-content > p {
+
+    margin:
+        0;
+
+    color:
+        #566070;
+
+    font-family:
+        "Heebo",
         sans-serif;
 
     font-size:
         1.05rem;
 
-    font-weight: 600;
+    line-height:
+        1.9;
 
-    cursor: pointer;
+    white-space:
+        pre-line;
+}
+
+
+/* ---------------------------------------------------------
+   FEATURES
+--------------------------------------------------------- */
+
+.popup-features {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    margin:
+        28px 0;
+}
+
+
+.popup-features > div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+    gap:
+        12px;
+
+    color:
+        #263449;
+
+    font-family:
+        "Heebo",
+        sans-serif;
+
+    font-size:
+        .98rem;
+
+    font-weight:
+        500;
+}
+
+
+.popup-feature-icon {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    flex:
+        0 0 36px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(184,149,85,.12);
+
+    font-size:
+        17px;
+}
+
+
+/* ---------------------------------------------------------
+   ENTER BUTTON
+--------------------------------------------------------- */
+
+.popup-button {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        58px;
+
+    padding:
+        15px 25px;
+
+    border:
+        0;
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #101b2d,
+            #1d304d
+        );
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Heebo",
+        sans-serif;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    overflow:
+        hidden;
 
     box-shadow:
         0 12px 30px
         rgba(16,27,45,.20);
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        background .3s ease;
-
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 
-.maintenance-enter span {
+.popup-button::before {
 
-    font-size:
-        1.2rem;
+    content: "";
 
-    transition:
-        transform .3s ease;
+    position:
+        absolute;
 
-}
+    top:
+        0;
 
+    bottom:
+        0;
 
-.maintenance-enter:hover {
+    right:
+        -120%;
+
+    width:
+        70%;
 
     background:
-        #1b2b44;
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        right .8s ease;
+}
+
+
+.popup-button:hover {
 
     transform:
         translateY(-2px);
 
     box-shadow:
-        0 18px 35px
+        0 16px 35px
         rgba(16,27,45,.28);
-
 }
 
 
-.maintenance-enter:hover span {
+.popup-button:hover::before {
 
-    transform:
-        translateX(-5px);
-
+    right:
+        140%;
 }
 
 
 /* ---------------------------------------------------------
-   CONTACT
+   MOBILE
 --------------------------------------------------------- */
 
-.maintenance-contact {
+@media (max-width: 800px) {
 
-    display: flex;
+    .popup-overlay {
 
-    flex-direction: column;
+        padding:
+            15px;
+    }
 
-    align-items: center;
 
-    gap: 4px;
+    .popup-window {
 
-    margin-top: 22px;
+        grid-template-columns:
+            1fr;
 
-    color:
-        #7a818b;
+        width:
+            min(520px, 100%);
 
-    font-size:
-        .82rem;
+        max-height:
+            calc(100svh - 30px);
 
+        overflow-y:
+            auto;
+
+        border-radius:
+            22px;
+    }
+
+
+    .popup-left {
+
+        min-height:
+            190px;
+
+        height:
+            190px;
+    }
+
+
+    .popup-right {
+
+        padding:
+            38px 28px 30px;
+    }
+
+
+    .popup-content {
+
+        max-width:
+            none;
+    }
+
+
+    .popup-logo {
+
+        width:
+            75px;
+
+        margin-bottom:
+            18px;
+    }
+
+
+    .popup-content h1 {
+
+        font-size:
+            clamp(1.8rem, 8vw, 2.4rem);
+
+        margin-bottom:
+            16px;
+    }
+
+
+    .popup-content > p {
+
+        font-size:
+            .95rem;
+
+        line-height:
+            1.75;
+    }
+
+
+    .popup-features {
+
+        margin:
+            22px 0;
+    }
+
+
+    .popup-close {
+
+        top:
+            12px;
+
+        left:
+            12px;
+
+        width:
+            38px;
+
+        height:
+            38px;
+    }
 }
 
 
-.maintenance-contact a {
+/* ---------------------------------------------------------
+   SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .popup-left {
+
+        min-height:
+            150px;
+
+        height:
+            150px;
+    }
+
+
+    .popup-right {
+
+        padding:
+            32px 22px 24px;
+    }
+
+
+    .popup-content h1 {
+
+        font-size:
+            1.75rem;
+    }
+
+
+    .popup-content > p {
+
+        font-size:
+            .9rem;
+
+        line-height:
+            1.7;
+    }
+
+
+    .popup-features > div {
+
+        font-size:
+            .9rem;
+    }
+
+
+    .popup-button {
+
+        min-height:
+            54px;
+
+        font-size:
+            .95rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   POPUP REDUCED MOTION
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .popup-overlay,
+    .popup-window,
+    .popup-close,
+    .popup-button {
+
+        transition:
+            none !important;
+    }
+
+    .popup-button::before {
+
+        display:
+            none;
+    }
+}
+```
+```css
+/* =========================================================
+   SERVIAM THERAPY — MAINTENANCE POPUP
+========================================================= */
+
+.popup-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(7, 15, 28, .78);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity .45s ease,
+        visibility .45s ease;
+}
+
+
+.popup-overlay.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   POPUP WINDOW
+--------------------------------------------------------- */
+
+.popup-window {
+
+    position: relative;
+
+    width: min(1050px, 100%);
+
+    min-height: 560px;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    overflow: hidden;
+
+    background:
+        #ffffff;
+
+    border-radius:
+        26px;
+
+    box-shadow:
+        0 35px 100px
+        rgba(0,0,0,.35);
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    transition:
+        transform .5s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.popup-overlay.hidden .popup-window {
+
+    transform:
+        translateY(20px)
+        scale(.97);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT IMAGE
+--------------------------------------------------------- */
+
+.popup-left {
+
+    position: relative;
+
+    min-height: 560px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(16,27,45,.05),
+            rgba(16,27,45,.45)
+        ),
+
+        url("../images/therapist/therapist.jpg")
+        center / cover
+        no-repeat;
+}
+
+
+.popup-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(16,27,45,.55)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT CONTENT
+--------------------------------------------------------- */
+
+.popup-right {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        60px 65px;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(184,145,74,.10),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f6f4ef
+        );
+}
+
+
+.popup-content {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+--------------------------------------------------------- */
+
+.popup-logo {
+
+    display: block;
+
+    width: 95px;
+
+    height: auto;
+
+    margin:
+        0 0 25px auto;
+
+    object-fit: contain;
+}
+
+
+/* ---------------------------------------------------------
+   CLOSE BUTTON
+--------------------------------------------------------- */
+
+.popup-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 20px;
+
+    z-index: 5;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(16,27,45,.08);
 
     color:
         #101b2d;
 
-    font-size:
-        .95rem;
+    font-size: 27px;
 
-    font-weight: 600;
+    line-height: 1;
 
-    text-decoration: none;
+    cursor: pointer;
 
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
 }
 
 
-.maintenance-contact a:hover {
+.popup-close:hover {
+
+    background:
+        #101b2d;
 
     color:
-        #b08a45;
+        #ffffff;
 
+    transform:
+        rotate(90deg);
 }
 
 
 /* ---------------------------------------------------------
-   POPUP ANIMATION
+   TITLE
 --------------------------------------------------------- */
 
-@keyframes maintenancePopupIn {
+.popup-content h1 {
 
-    from {
+    margin:
+        0 0 20px;
 
-        opacity: 0;
+    color:
+        #101b2d;
 
-        transform:
-            translateY(30px)
-            scale(.96);
+    font-family:
+        "Heebo",
+        sans-serif;
 
-    }
+    font-size:
+        clamp(2rem, 4vw, 3rem);
 
-    to {
+    font-weight:
+        700;
 
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-    }
-
+    line-height:
+        1.15;
 }
 
+
+.popup-content h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 3px;
+
+    margin:
+        18px 0 0 auto;
+
+    background:
+        #b89555;
+
+    border-radius:
+        10px;
+}
+
+
+/* ---------------------------------------------------------
+   TEXT
+--------------------------------------------------------- */
+
+.popup-content > p {
+
+    margin:
+        0;
+
+    color:
+        #566070;
+
+    font-family:
+        "Heebo",
+        sans-serif;
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.9;
+
+    white-space:
+        pre-line;
+}
+
+
+/* ---------------------------------------------------------
+   FEATURES
+--------------------------------------------------------- */
+
+.popup-features {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    margin:
+        28px 0;
+}
+
+
+.popup-features > div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+    gap:
+        12px;
+
+    color:
+        #263449;
+
+    font-family:
+        "Heebo",
+        sans-serif;
+
+    font-size:
+        .98rem;
+
+    font-weight:
+        500;
+}
+
+
+.popup-feature-icon {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    flex:
+        0 0 36px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(184,149,85,.12);
+
+    font-size:
+        17px;
+}
+
+
+/* ---------------------------------------------------------
+   ENTER BUTTON
+--------------------------------------------------------- */
+
+.popup-button {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        58px;
+
+    padding:
+        15px 25px;
+
+    border:
+        0;
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #101b2d,
+            #1d304d
+        );
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Heebo",
+        sans-serif;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(16,27,45,.20);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.popup-button::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    right:
+        -120%;
+
+    width:
+        70%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        right .8s ease;
+}
+
+
+.popup-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 16px 35px
+        rgba(16,27,45,.28);
+}
+
+
+.popup-button:hover::before {
+
+    right:
+        140%;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .popup-overlay {
+
+        padding:
+            15px;
+    }
+
+
+    .popup-window {
+
+        grid-template-columns:
+            1fr;
+
+        width:
+            min(520px, 100%);
+
+        max-height:
+            calc(100svh - 30px);
+
+        overflow-y:
+            auto;
+
+        border-radius:
+            22px;
+    }
+
+
+    .popup-left {
+
+        min-height:
+            190px;
+
+        height:
+            190px;
+    }
+
+
+    .popup-right {
+
+        padding:
+            38px 28px 30px;
+    }
+
+
+    .popup-content {
+
+        max-width:
+            none;
+    }
+
+
+    .popup-logo {
+
+        width:
+            75px;
+
+        margin-bottom:
+            18px;
+    }
+
+
+    .popup-content h1 {
+
+        font-size:
+            clamp(1.8rem, 8vw, 2.4rem);
+
+        margin-bottom:
+            16px;
+    }
+
+
+    .popup-content > p {
+
+        font-size:
+            .95rem;
+
+        line-height:
+            1.75;
+    }
+
+
+    .popup-features {
+
+        margin:
+            22px 0;
+    }
+
+
+    .popup-close {
+
+        top:
+            12px;
+
+        left:
+            12px;
+
+        width:
+            38px;
+
+        height:
+            38px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .popup-left {
+
+        min-height:
+            150px;
+
+        height:
+            150px;
+    }
+
+
+    .popup-right {
+
+        padding:
+            32px 22px 24px;
+    }
+
+
+    .popup-content h1 {
+
+        font-size:
+            1.75rem;
+    }
+
+
+    .popup-content > p {
+
+        font-size:
+            .9rem;
+
+        line-height:
+            1.7;
+    }
+
+
+    .popup-features > div {
+
+        font-size:
+            .9rem;
+    }
+
+
+    .popup-button {
+
+        min-height:
+            54px;
+
+        font-size:
+            .95rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   POPUP REDUCED MOTION
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .popup-overlay,
+    .popup-window,
+    .popup-close,
+    .popup-button {
+
+        transition:
+            none !important;
+    }
+
+    .popup-button::before {
+
+        display:
+            none;
+    }
+}
+```
 
 /* ---------------------------------------------------------
    EMAIL REVEAL
