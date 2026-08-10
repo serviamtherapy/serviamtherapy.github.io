@@ -1,0 +1,329 @@
+/* =========================================================
+   SERVIAM THERAPY — PREMIUM ANIMATIONS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   Scroll reveal
+--------------------------------------------------------- */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   Page fade
+--------------------------------------------------------- */
+
+.fade-in {
+    opacity: 0;
+
+    animation:
+        fadeIn .9s ease forwards;
+}
+
+
+/* ---------------------------------------------------------
+   Fade up
+--------------------------------------------------------- */
+
+.fade-up {
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    animation:
+        fadeUp .9s
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+}
+
+
+/* ---------------------------------------------------------
+   Hero sequence
+--------------------------------------------------------- */
+
+.hero-eyebrow {
+    animation:
+        fadeUp .9s .15s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+.hero h1 {
+    animation:
+        fadeUp 1s .3s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+.hero-description {
+    animation:
+        fadeUp 1s .45s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+.hero-actions {
+    animation:
+        fadeUp 1s .6s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+.scroll-indicator {
+    animation:
+        fadeIn 1s 1.2s ease both;
+}
+
+
+/* ---------------------------------------------------------
+   Card reveal
+--------------------------------------------------------- */
+
+.service-card,
+.benefit-card {
+    animation:
+        cardReveal .8s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+}
+
+
+/* ---------------------------------------------------------
+   Staggered service cards
+--------------------------------------------------------- */
+
+.services-grid .service-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.services-grid .service-card:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.services-grid .service-card:nth-child(3) {
+    animation-delay: .19s;
+}
+
+.services-grid .service-card:nth-child(4) {
+    animation-delay: .26s;
+}
+
+.services-grid .service-card:nth-child(5) {
+    animation-delay: .33s;
+}
+
+.services-grid .service-card:nth-child(6) {
+    animation-delay: .40s;
+}
+
+
+/* ---------------------------------------------------------
+   Stagger benefits
+--------------------------------------------------------- */
+
+.benefits-grid .benefit-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.benefits-grid .benefit-card:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.benefits-grid .benefit-card:nth-child(3) {
+    animation-delay: .19s;
+}
+
+.benefits-grid .benefit-card:nth-child(4) {
+    animation-delay: .26s;
+}
+
+
+/* ---------------------------------------------------------
+   Button shine
+--------------------------------------------------------- */
+
+.button-primary,
+.button-gold {
+    position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+}
+
+.button-primary::before,
+.button-gold::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.38),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left .8s ease;
+
+    pointer-events: none;
+}
+
+.button-primary:hover::before,
+.button-gold:hover::before {
+    left: 140%;
+}
+
+
+/* ---------------------------------------------------------
+   Image hover preparation
+--------------------------------------------------------- */
+
+.gallery-item,
+.service-card,
+.about-image {
+    will-change: transform;
+}
+
+
+/* ---------------------------------------------------------
+   Floating WhatsApp pulse
+--------------------------------------------------------- */
+
+.floating-whatsapp::before {
+    animation:
+        whatsappPulse 2.2s ease-out infinite;
+}
+
+
+/* ---------------------------------------------------------
+   Hero background
+--------------------------------------------------------- */
+
+.hero-background {
+    animation:
+        heroZoom 12s ease-out both;
+}
+
+
+/* ---------------------------------------------------------
+   Keyframes
+--------------------------------------------------------- */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes cardReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        opacity: .8;
+
+        transform:
+            scale(.9);
+    }
+
+    70% {
+        opacity: 0;
+
+        transform:
+            scale(1.35);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            scale(1.35);
+    }
+}
+
+
+@keyframes heroZoom {
+
+    from {
+        transform:
+            scale(1.08);
+    }
+
+    to {
+        transform:
+            scale(1.02);
+    }
+}
