@@ -322,133 +322,157 @@ button {
    INSTAGRAM ICON — FIXED
 ========================================================= */
 
+/* =========================================================
+   SOCIAL MEDIA ICONS
+========================================================= */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-inline-start: 18px;
+}
+
 .social-link {
-    display: inline-flex;
+    width: 38px;
+    height: 38px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    border-radius: 50%;
 
     text-decoration: none;
 
     transition:
         transform .3s ease,
-        opacity .3s ease;
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
 }
 
-.social-link:hover {
-    transform: translateY(-2px);
-    opacity: .85;
-}
-
-
-/* Instagram */
-
-.instagram-icon {
-    width: 25px;
-    height: 25px;
+.social-link svg {
+    width: 19px;
+    height: 19px;
 
     display: block;
 
+    fill: currentColor;
+}
+
+
+/* ---------------------------------------------------------
+   FACEBOOK
+--------------------------------------------------------- */
+
+.facebook-link {
+    color: #ffffff;
+
+    background: #1877f2;
+
+    border: 1px solid rgba(255,255,255,.18);
+}
+
+.facebook-link:hover {
+    transform: translateY(-3px);
+
+    background: #166fe5;
+
+    box-shadow:
+        0 8px 20px rgba(24,119,242,.30);
+}
+
+
+/* ---------------------------------------------------------
+   INSTAGRAM
+--------------------------------------------------------- */
+
+.instagram-link {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4 0%,
+            #c13584 35%,
+            #e1306c 60%,
+            #fd1d1d 78%,
+            #f77737 100%
+        );
+
+    border: 1px solid rgba(255,255,255,.18);
+}
+
+.instagram-link svg {
     fill: none;
+
     stroke: currentColor;
+
     stroke-width: 1.8;
 
     stroke-linecap: round;
+
     stroke-linejoin: round;
 }
 
-.instagram-icon .instagram-dot {
+.instagram-link .instagram-dot {
     fill: currentColor;
+
     stroke: none;
 }
 
-
-/* Header */
-
-.site-header .instagram-icon {
-    width: 23px;
-    height: 23px;
-}
-
-
-/* Contact section */
-
-.contact .instagram-icon {
-    width: 27px;
-    height: 27px;
-}
-
-
-/* Footer */
-
-.site-footer .instagram-icon {
-    width: 23px;
-    height: 23px;
-}
-
-
-/* Mobile */
-
-@media (max-width: 700px) {
-
-    .site-header .instagram-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .contact .instagram-icon {
-        width: 28px;
-        height: 28px;
-    }
-}
-.nav-socials,
-.footer-socials,
-.contact-socials {
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-}
-
-.social-icon {
-    width: 34px;
-    height: 34px;
-
-    display: grid;
-    place-items: center;
-
-    border:
-        1px solid rgba(255,255,255,.16);
-
-    border-radius: 50%;
-
-    color: var(--white);
-
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        border-color .25s ease;
-}
-
-.social-icon svg,
-.large-social svg,
-.footer-socials svg {
-    width: 17px;
-    height: 17px;
-
-    fill: currentColor;
-}
-
-.social-icon:hover {
+.instagram-link:hover {
     transform: translateY(-3px);
 
-    background: var(--gold);
-
-    border-color: var(--gold);
-
-    color: var(--navy-dark);
+    box-shadow:
+        0 8px 20px rgba(193,53,132,.30);
 }
 
 
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .social-links {
+        margin-inline-start: 0;
+
+        margin-top: 10px;
+
+        gap: 14px;
+    }
+
+    .social-link {
+        width: 42px;
+        height: 42px;
+    }
+
+    .social-link svg {
+        width: 21px;
+        height: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+
+}
 /* =========================================================
    MOBILE TOGGLE
 ========================================================= */
