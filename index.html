@@ -5,9 +5,14 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Serviam Therapy | עיסוי מקצועי וטיפולי</title>
+    <title>
+        Serviam Therapy | עיסוי מקצועי וטיפולי
+    </title>
 
     <meta
         name="description"
@@ -19,22 +24,55 @@
         content="Serviam Therapy, עיסוי, עיסוי טיפולי, עיסוי שוודי, עיסוי רקמות עמוקות, עיסוי ספורטאים, עיסוי אבנים חמות, כוסות רוח, massage Israel, massage Bat Yam"
     >
 
-    <meta name="author" content="Serviam Therapy">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#101b2d">
+    <meta
+        name="author"
+        content="Serviam Therapy"
+    >
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Serviam Therapy">
-    <meta property="og:title" content="Serviam Therapy | עיסוי מקצועי וטיפולי">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#101b2d"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Serviam Therapy"
+    >
+
+    <meta
+        property="og:title"
+        content="Serviam Therapy | עיסוי מקצועי וטיפולי"
+    >
+
     <meta
         property="og:description"
         content="טיפולי עיסוי מקצועיים בהתאמה אישית."
     >
+
     <meta
         property="og:url"
         content="https://www.serviamtherapy.com/"
     >
-    <meta property="og:locale" content="he_IL">
+
+    <meta
+        property="og:locale"
+        content="he_IL"
+    >
 
     <meta
         property="og:image"
@@ -46,7 +84,15 @@
         content="Serviam Therapy — טיפול עיסוי מקצועי"
     >
 
-    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- =====================================================
+         TWITTER
+    ====================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
     <meta
         name="twitter:title"
@@ -63,9 +109,15 @@
         content="https://www.serviamtherapy.com/images/hero/hero.jpg"
     >
 
-    <!-- Google Fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
     <link
         rel="preconnect"
@@ -78,7 +130,10 @@
         rel="stylesheet"
     >
 
-    <!-- Main CSS -->
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -87,97 +142,33 @@
 
 </head>
 
-```html
-<script>
-
-/* =========================================================
-   SERVIAM THERAPY — MAINTENANCE POPUP
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const popup =
-        document.getElementById("maintenance-popup");
-
-    const closeButton =
-        document.getElementById("popup-close");
-
-    const enterButton =
-        document.getElementById("popup-enter");
-
-
-    function closePopup() {
-
-        if (!popup) return;
-
-        popup.classList.add("hidden");
-
-        popup.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.classList.remove(
-            "popup-open"
-        );
-
-    }
-
-
-    if (closeButton) {
-
-        closeButton.addEventListener(
-            "click",
-            closePopup
-        );
-
-    }
-
-
-    if (enterButton) {
-
-        enterButton.addEventListener(
-            "click",
-            closePopup
-        );
-
-    }
-
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key === "Escape") {
-
-                closePopup();
-
-            }
-
-        }
-    );
-
-
-    if (popup) {
-
-        document.body.classList.add(
-            "popup-open"
-        );
-
-    }
-
-});
-
-</script>
-```
 
 <body>
 
 
-```html
-<!-- =====================================================
-     SERVIAM THERAPY — MAINTENANCE POPUP
-====================================================== -->
+<!-- =========================================================
+     PAGE LOADER
+========================================================== -->
+
+<div
+    class="page-loader"
+    id="page-loader"
+    aria-hidden="true"
+>
+
+    <div class="loader-logo">
+        SERVIAM
+    </div>
+
+    <div class="loader-line"></div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAINTENANCE POPUP
+========================================================== -->
 
 <div
     class="popup-overlay"
@@ -185,12 +176,20 @@ document.addEventListener("DOMContentLoaded", function () {
     aria-hidden="false"
 >
 
-    <div class="popup-window">
+    <div
+        class="popup-window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="popup-title"
+    >
 
 
-        <!-- LEFT IMAGE / VISUAL -->
+        <!-- LEFT IMAGE -->
 
-        <div class="popup-left"></div>
+        <div
+            class="popup-left"
+            aria-hidden="true"
+        ></div>
 
 
         <!-- RIGHT CONTENT -->
@@ -212,36 +211,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 <img
-                    src="images/logo.png"
+                    src="images/logo/logo.png"
                     class="popup-logo"
                     alt="Serviam Therapy"
                 >
 
 
-                <h1>
-                    אנחנו מתחדשים בשבילכם/כן
+                <h1 id="popup-title">
+                    אנחנו מתחדשים בשבילכם
                 </h1>
 
 
                 <p>
-
                     בימים אלו הקליניקה עוברת שדרוג,
                     כדי שנוכל להעניק לכם חוויית טיפול
                     מקצועית, נעימה ויוקרתית אפילו יותר.
+                </p>
 
+                <p>
                     בינתיים ניתן להזמין טיפולים עד הבית.
                     אני מגיע עם כל הציוד המקצועי הדרוש,
-                    ואתם רק צריכים להתכונן לרגע של רוגע והתחדשות.
-
+                    ואתם רק צריכים להתכונן לרגע של רוגע
+                    והתחדשות.
                 </p>
 
 
                 <div class="popup-features">
 
 
-                    <div>
+                    <a
+                        href="#booking"
+                        class="popup-feature"
+                    >
 
-                        <span class="popup-feature-icon">
+                        <span
+                            class="popup-feature-icon"
+                            aria-hidden="true"
+                        >
                             🚗
                         </span>
 
@@ -249,12 +255,15 @@ document.addEventListener("DOMContentLoaded", function () {
                             טיפולים עד הבית
                         </span>
 
-                    </div>
+                    </a>
 
 
-                    <div>
+                    <div class="popup-feature">
 
-                        <span class="popup-feature-icon">
+                        <span
+                            class="popup-feature-icon"
+                            aria-hidden="true"
+                        >
                             💆
                         </span>
 
@@ -265,9 +274,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
 
-                    <div>
+                    <div class="popup-feature">
 
-                        <span class="popup-feature-icon">
+                        <span
+                            class="popup-feature-icon"
+                            aria-hidden="true"
+                        >
                             ⭐
                         </span>
 
@@ -286,7 +298,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     class="popup-button"
                     type="button"
                 >
-                    המשך לאתר Serviam Therapy →
+                    המשך לאתר Serviam Therapy
+                    <span aria-hidden="true">←</span>
                 </button>
 
 
@@ -297,133 +310,135 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
 </div>
-```
-
-
-
-
-<!-- =========================================================
-     PAGE LOADER
-========================================================= -->
-
-<div
-    class="page-loader"
-    aria-hidden="true"
->
-
-    <div class="loader-logo">
-        SERVIAM
-    </div>
-
-    <div class="loader-line"></div>
-
-</div>
 
 
 
 <!-- =========================================================
-     HEADER
-========================================================= -->
+     NAVIGATION
+========================================================== -->
 
 <header class="site-header">
 
-    <nav
-        class="navbar"
-        aria-label="ניווט ראשי"
+<nav
+    class="navbar"
+    aria-label="ניווט ראשי"
+>
+
+
+    <a
+        href="#home"
+        class="brand"
+        aria-label="Serviam Therapy - ראשי"
     >
 
+        <img
+            src="images/logo/logo.png"
+            alt="Serviam Therapy"
+            class="brand-logo"
+        >
+
+        <span class="brand-text">
+
+            SERVIAM
+
+            <small>
+                THERAPY
+            </small>
+
+        </span>
+
+    </a>
+
+
+    <button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="פתיחת תפריט"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <div
+        class="nav-menu"
+        id="main-navigation"
+    >
 
         <a
             href="#home"
-            class="brand"
-            aria-label="Serviam Therapy - ראשי"
+            class="nav-link"
         >
-
-            <img
-                src="images/logo/logo.png"
-                alt="Serviam Therapy"
-                class="brand-logo"
-            >
-
-            <span class="brand-text">
-
-                SERVIAM
-
-                <small>
-                    THERAPY
-                </small>
-
-            </span>
-
+            ראשי
         </a>
 
-
-        <button
-            class="mobile-menu-toggle"
-            type="button"
-            aria-label="פתיחת תפריט"
-            aria-expanded="false"
-            aria-controls="main-navigation"
+        <a
+            href="#services"
+            class="nav-link"
         >
+            טיפולים
+        </a>
 
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-        <div
-            class="nav-menu"
-            id="main-navigation"
+        <a
+            href="#about"
+            class="nav-link"
         >
+            אודות
+        </a>
 
-            <a href="#home" class="nav-link">
-                ראשי
-            </a>
+        <a
+            href="#gallery"
+            class="nav-link"
+        >
+            גלריה
+        </a>
 
-            <a href="#services" class="nav-link">
-                טיפולים
-            </a>
+        <a
+            href="#faq"
+            class="nav-link"
+        >
+            שאלות נפוצות
+        </a>
 
-            <a href="#about" class="nav-link">
-                אודות
-            </a>
+        <a
+            href="#contact"
+            class="nav-link"
+        >
+            צור קשר
+        </a>
 
-            <a href="#gallery" class="nav-link">
-                גלריה
-            </a>
+        <a
+            href="#booking"
+            class="nav-book-button"
+        >
+            הזמנת טיפול
+        </a>
 
-            <a href="#contact" class="nav-link">
-                צור קשר
-            </a>
+    </div>
 
-            <a
-                href="#booking"
-                class="nav-book-button"
-            >
-                הזמנת טיפול
-            </a>
-
-        </div>
-
-    </nav>
+</nav>
 
 </header>
 
 
 
+<!-- =========================================================
+     HERO
+========================================================== -->
+
 <main>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
-
 <section
-    class="hero"
     id="home"
+    class="hero"
 >
+
 
     <div
         class="hero-background"
@@ -442,6 +457,7 @@ document.addEventListener("DOMContentLoaded", function () {
             SERVIAM THERAPY
         </div>
 
+
         <h1>
 
             הגוף שלך
@@ -451,6 +467,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </span>
 
         </h1>
+
 
         <p class="hero-description">
 
@@ -495,15 +512,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 
+
 </section>
 
 
 
 <!-- =========================================================
      INTRO
-========================================================= -->
+========================================================== -->
 
-<section class="section intro">
+<section
+    class="intro-section"
+    id="intro"
+>
 
     <div class="container">
 
@@ -543,11 +564,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      SERVICES
-========================================================= -->
+========================================================== -->
 
 <section
-    class="section services"
     id="services"
+    class="services-section"
 >
 
     <div class="container">
@@ -584,7 +605,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="services-grid">
 
 
-            <!-- SWEDISH -->
+            <!-- 01 -->
 
             <article class="service-card">
 
@@ -609,12 +630,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h3>
 
                     <p>
-
                         טיפול מרגיע ומאוזן
                         המשלב תנועות זורמות
                         לשחרור מתח, הרפיית השרירים
                         ושיפור התחושה הכללית.
-
                     </p>
 
                     <div class="service-pricing">
@@ -636,7 +655,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span>←</span>
+                        <span aria-hidden="true">←</span>
                     </a>
 
                 </div>
@@ -645,7 +664,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-            <!-- DEEP TISSUE -->
+            <!-- 02 -->
 
             <article class="service-card">
 
@@ -670,12 +689,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h3>
 
                     <p>
-
                         עבודה ממוקדת על שכבות
                         השריר והרקמות העמוקות
                         במטרה להפחית עומס,
                         נוקשות ומתח מצטבר.
-
                     </p>
 
                     <div class="service-pricing">
@@ -692,7 +709,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span>←</span>
+                        <span aria-hidden="true">←</span>
                     </a>
 
                 </div>
@@ -701,7 +718,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-            <!-- SPORTS -->
+            <!-- 03 -->
 
             <article class="service-card">
 
@@ -726,12 +743,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h3>
 
                     <p>
-
                         מתאים לפני או אחרי אימון,
                         לשחרור עומסים ולתמיכה
                         בהתאוששות של הגוף
                         לאחר פעילות גופנית.
-
                     </p>
 
                     <div class="service-pricing">
@@ -748,7 +763,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span>←</span>
+                        <span aria-hidden="true">←</span>
                     </a>
 
                 </div>
@@ -757,7 +772,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-            <!-- MEDICAL -->
+            <!-- 04 -->
 
             <article class="service-card">
 
@@ -782,12 +797,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h3>
 
                     <p>
-
                         טיפול ממוקד המותאם
                         לאזורים עמוסים או כואבים,
                         עם דגש על שחרור והרפיה
                         של אזורים ספציפיים.
-
                     </p>
 
                     <div class="service-pricing">
@@ -804,7 +817,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span>←</span>
+                        <span aria-hidden="true">←</span>
                     </a>
 
                 </div>
@@ -813,7 +826,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-            <!-- HOT STONES -->
+            <!-- 05 -->
 
             <article class="service-card">
 
@@ -838,11 +851,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h3>
 
                     <p>
-
                         שילוב של חום וטכניקות
                         עיסוי ליצירת חוויית
                         הרפיה עמוקה ונעימה.
-
                     </p>
 
                     <div class="service-pricing">
@@ -859,7 +870,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span>←</span>
+                        <span aria-hidden="true">←</span>
                     </a>
 
                 </div>
@@ -868,7 +879,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-            <!-- CUPPING -->
+            <!-- 06 -->
 
             <article class="service-card">
 
@@ -893,11 +904,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h3>
 
                     <p>
-
                         טכניקה משלימה המתבצעת
                         בהתאם להתאמה האישית
                         ולמטרות הטיפול.
-
                     </p>
 
                     <div class="service-pricing">
@@ -914,7 +923,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span>←</span>
+                        <span aria-hidden="true">←</span>
                     </a>
 
                 </div>
@@ -932,11 +941,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      ABOUT
-========================================================= -->
+========================================================== -->
 
 <section
-    class="section about"
     id="about"
+    class="about-section"
 >
 
     <div class="container">
@@ -973,6 +982,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
 
+
             <div class="about-content">
 
                 <span class="section-label">
@@ -992,31 +1002,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 </h2>
 
                 <p>
-
                     שמי דניאל ואני מטפל הוליסטי
                     מקצועי עם ניסיון רב בתחום
                     העיסויים.
-
                 </p>
 
                 <p>
-
                     אני מאמין שכל אדם הוא ייחודי
                     ולכן אני מתאים את הטיפול שלי
                     לכל מטופל לפי צרכיו האישיים —
                     בין אם זה להקלת כאבים,
                     שיפור מצב הרוח או הרגעת
                     הגוף והנפש.
-
                 </p>
 
                 <p>
-
                     הקליניקה שלי ממוקמת במרכז הארץ
                     ואני מזמין אותך לתאם טיפול אישי
                     המותאם במיוחד עבורך.
                     ניתן להזמין טיפול גם כשובר מתנה.
-
                 </p>
 
 
@@ -1045,11 +1049,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
 
+
                 <div class="about-education">
 
                     <h3>
                         השכלה וקורסים
                     </h3>
+
 
                     <div class="education-group">
 
@@ -1082,6 +1088,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
 
+
                     <div class="education-group">
 
                         <h4>
@@ -1110,6 +1117,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </ul>
 
                     </div>
+
 
 
                     <div class="skills-section">
@@ -1156,9 +1164,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      STATISTICS
-========================================================= -->
+========================================================== -->
 
-<section class="statistics">
+<section
+    class="statistics-section"
+>
 
     <div class="container">
 
@@ -1224,12 +1234,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <!-- =========================================================
-     WHY US
-========================================================= -->
+     BENEFITS
+========================================================== -->
 
 <section
-    class="section why-us"
-    id="why-us"
+    class="benefits-section"
 >
 
     <div class="container">
@@ -1251,11 +1260,9 @@ document.addEventListener("DOMContentLoaded", function () {
             </h2>
 
             <p>
-
                 אני לא עובד לפי תבנית אחת.
                 כל טיפול נבנה סביב האדם
                 שנמצא מולי.
-
             </p>
 
         </div>
@@ -1337,6 +1344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </article>
 
+
         </div>
 
     </div>
@@ -1347,9 +1355,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      PROCESS
-========================================================= -->
+========================================================== -->
 
-<section class="section process">
+<section
+    class="process-section"
+>
 
     <div class="container">
 
@@ -1392,7 +1402,10 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
 
-            <div class="process-line"></div>
+            <div
+                class="process-line"
+                aria-hidden="true"
+            ></div>
 
 
             <div class="process-step">
@@ -1410,7 +1423,10 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
 
-            <div class="process-line"></div>
+            <div
+                class="process-line"
+                aria-hidden="true"
+            ></div>
 
 
             <div class="process-step">
@@ -1428,7 +1444,10 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
 
-            <div class="process-line"></div>
+            <div
+                class="process-line"
+                aria-hidden="true"
+            ></div>
 
 
             <div class="process-step">
@@ -1445,6 +1464,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </div>
 
+
         </div>
 
     </div>
@@ -1455,9 +1475,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      TESTIMONIALS
-========================================================= -->
+========================================================== -->
 
-<section class="section testimonials">
+<section
+    class="testimonials-section"
+>
 
     <div class="container">
 
@@ -1489,7 +1511,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <article class="testimonial-card">
 
-                <div class="stars">
+                <div
+                    class="stars"
+                    aria-label="5 כוכבים"
+                >
                     ★ ★ ★ ★ ★
                 </div>
 
@@ -1514,11 +1539,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      GALLERY
-========================================================= -->
+========================================================== -->
 
 <section
-    class="section gallery"
     id="gallery"
+    class="gallery-section"
 >
 
     <div class="container">
@@ -1548,53 +1573,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="gallery-grid">
 
+
             <div class="gallery-item">
+
                 <img
                     src="images/gallery/gallery-1.jpg"
                     alt="Serviam Therapy"
                     loading="lazy"
                 >
+
             </div>
 
+
             <div class="gallery-item">
+
                 <img
                     src="images/gallery/gallery-2.jpg"
                     alt="Serviam Therapy"
                     loading="lazy"
                 >
+
             </div>
 
+
             <div class="gallery-item">
+
                 <img
                     src="images/gallery/gallery-3.jpg"
                     alt="Serviam Therapy"
                     loading="lazy"
                 >
+
             </div>
 
+
             <div class="gallery-item">
+
                 <img
                     src="images/gallery/gallery-4.jpg"
                     alt="Serviam Therapy"
                     loading="lazy"
                 >
+
             </div>
 
+
             <div class="gallery-item">
+
                 <img
                     src="images/gallery/gallery-5.jpg"
                     alt="Serviam Therapy"
                     loading="lazy"
                 >
+
             </div>
 
+
             <div class="gallery-item">
+
                 <img
                     src="images/gallery/gallery-6.jpg"
                     alt="Serviam Therapy"
                     loading="lazy"
                 >
+
             </div>
+
 
         </div>
 
@@ -1606,11 +1650,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      FAQ
-========================================================= -->
+========================================================== -->
 
 <section
-    class="section faq"
     id="faq"
+    class="faq-section"
 >
 
     <div class="container">
@@ -1635,14 +1679,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </h2>
 
                 <p>
-
                     כאן תוכלו למצוא תשובות
                     לשאלות הנפוצות ביותר
                     לפני הטיפול.
-
                 </p>
 
             </div>
+
 
 
             <div class="faq-list">
@@ -1660,7 +1703,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             איזה טיפול מתאים לי?
                         </span>
 
-                        <span class="faq-plus">
+                        <span
+                            class="faq-plus"
+                            aria-hidden="true"
+                        >
                             +
                         </span>
 
@@ -1669,19 +1715,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="faq-answer">
 
                         <p>
-
                             אם אינכם בטוחים,
                             אין צורך לבחור לבד.
                             ניתן ליצור קשר ולספר
                             מה אתם מרגישים ומה
                             מטרת הטיפול, ואכוון
                             אתכם לאפשרות המתאימה.
-
                         </p>
 
                     </div>
 
                 </div>
+
 
 
                 <div class="faq-item">
@@ -1696,7 +1741,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             האם ניתן להתאים את עוצמת העיסוי?
                         </span>
 
-                        <span class="faq-plus">
+                        <span
+                            class="faq-plus"
+                            aria-hidden="true"
+                        >
                             +
                         </span>
 
@@ -1705,17 +1753,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="faq-answer">
 
                         <p>
-
                             בהחלט. עוצמת הטיפול
                             מותאמת אישית בהתאם
                             להעדפה שלכם, למצב הגוף
                             ולמטרת הטיפול.
-
                         </p>
 
                     </div>
 
                 </div>
+
 
 
                 <div class="faq-item">
@@ -1730,7 +1777,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             כמה זמן נמשך טיפול?
                         </span>
 
-                        <span class="faq-plus">
+                        <span
+                            class="faq-plus"
+                            aria-hidden="true"
+                        >
                             +
                         </span>
 
@@ -1739,17 +1789,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="faq-answer">
 
                         <p>
-
                             משך הטיפול משתנה בהתאם
                             לסוג הטיפול. המחירים
                             ומשך הטיפול מופיעים
                             באזור הטיפולים באתר.
-
                         </p>
 
                     </div>
 
                 </div>
+
 
 
                 <div class="faq-item">
@@ -1764,7 +1813,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             האם ניתן להזמין טיפול מראש?
                         </span>
 
-                        <span class="faq-plus">
+                        <span
+                            class="faq-plus"
+                            aria-hidden="true"
+                        >
                             +
                         </span>
 
@@ -1773,16 +1825,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="faq-answer">
 
                         <p>
-
                             כן. ניתן ליצור קשר
                             בטלפון או ב-WhatsApp
                             כדי לתאם טיפול מראש.
-
                         </p>
 
                     </div>
 
                 </div>
+
 
 
                 <div class="faq-item">
@@ -1797,7 +1848,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             האם ניתן להזמין טיפול כשובר מתנה?
                         </span>
 
-                        <span class="faq-plus">
+                        <span
+                            class="faq-plus"
+                            aria-hidden="true"
+                        >
                             +
                         </span>
 
@@ -1806,10 +1860,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="faq-answer">
 
                         <p>
-
                             כן. ניתן להזמין טיפול
                             גם כשובר מתנה.
-
                         </p>
 
                     </div>
@@ -1829,12 +1881,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      BOOKING
-========================================================= -->
+========================================================== -->
 
 <section
-    class="section booking"
     id="booking"
+    class="booking-section"
 >
+
 
     <div
         class="booking-background"
@@ -1866,17 +1919,15 @@ document.addEventListener("DOMContentLoaded", function () {
             </h2>
 
             <p>
-
                 טיפול טוב הוא לא מותרות.
                 לפעמים זה בדיוק מה שהגוף
                 צריך כדי לחזור לעצמו.
-
             </p>
 
 
             <div class="booking-notice">
 
-                <span>
+                <span aria-hidden="true">
                     ✦
                 </span>
 
@@ -1918,11 +1969,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      CONTACT
-========================================================= -->
+========================================================== -->
 
 <section
-    class="section contact"
     id="contact"
+    class="contact-section"
 >
 
     <div class="container">
@@ -1947,11 +1998,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </h2>
 
                 <p>
-
                     לקבלת מידע נוסף,
                     תיאום טיפול או שאלה,
                     ניתן ליצור קשר ישירות.
-
                 </p>
 
 
@@ -1965,7 +2014,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="contact-item"
                     >
 
-                        <span class="contact-icon">
+                        <span
+                            class="contact-icon"
+                            aria-hidden="true"
+                        >
                             TEL
                         </span>
 
@@ -1984,6 +2036,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
 
 
+
                     <!-- WHATSAPP -->
 
                     <a
@@ -1993,7 +2046,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="contact-item"
                     >
 
-                        <span class="contact-icon">
+                        <span
+                            class="contact-icon"
+                            aria-hidden="true"
+                        >
                             WA
                         </span>
 
@@ -2012,6 +2068,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
 
 
+
                     <!-- EMAIL -->
 
                     <button
@@ -2020,7 +2077,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         id="email-reveal"
                     >
 
-                        <span class="contact-icon">
+                        <span
+                            class="contact-icon"
+                            aria-hidden="true"
+                        >
                             @
                         </span>
 
@@ -2039,6 +2099,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </button>
 
 
+
                     <!-- ADDRESS -->
 
                     <a
@@ -2048,7 +2109,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="contact-item"
                     >
 
-                        <span class="contact-icon">
+                        <span
+                            class="contact-icon"
+                            aria-hidden="true"
+                        >
                             LOC
                         </span>
 
@@ -2067,6 +2131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </a>
 
 
+
                     <!-- WAZE -->
 
                     <a
@@ -2076,7 +2141,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="contact-item"
                     >
 
-                        <span class="contact-icon">
+                        <span
+                            class="contact-icon"
+                            aria-hidden="true"
+                        >
                             W
                         </span>
 
@@ -2098,58 +2166,83 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
 
+
                 <!-- SOCIAL LINKS -->
 
                 <div class="social-links">
 
-    <a
-        href="https://www.facebook.com/serviamtherapypage"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-        class="social-link facebook-link"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"/>
-        </svg>
-    </a>
 
-    <a
-        href="https://www.instagram.com/serviamtherapy"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-        class="social-link instagram-link"
-    >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect
-                x="3"
-                y="3"
-                width="18"
-                height="18"
-                rx="5"
-                ry="5"
-            />
-            <circle
-                cx="12"
-                cy="12"
-                r="4"
-            />
-            <circle
-                cx="17.5"
-                cy="6.5"
-                r="1.2"
-                class="instagram-dot"
-            />
-        </svg>
-    </a>
+                    <a
+                        href="https://www.facebook.com/serviamtherapypage"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        class="social-link facebook-link"
+                    >
 
-</div>
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"
+                            />
+
+                        </svg>
+
+                    </a>
+
+
+
+                    <a
+                        href="https://www.instagram.com/serviamtherapy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        class="social-link instagram-link"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="18"
+                                height="18"
+                                rx="5"
+                                ry="5"
+                            />
+
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="4"
+                            />
+
+                            <circle
+                                cx="17.5"
+                                cy="6.5"
+                                r="1.2"
+                                class="instagram-dot"
+                            />
+
+                        </svg>
+
+                    </a>
+
+
+                </div>
+
+
             </div>
 
-            </div>
 
 
+            <!-- CONTACT CARD -->
 
             <div class="contact-card">
 
@@ -2162,11 +2255,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </h3>
 
                 <p>
-
                     עד לפתיחת הקליניקה,
                     טיפולי עיסוי עד הבית
                     זמינים כרגיל.
-
                 </p>
 
 
@@ -2194,7 +2285,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 <a
-                    href="tel:+972543629852"
+                    href="#booking"
                     class="button button-gold"
                 >
                     הזמנת טיפול
@@ -2216,9 +2307,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      FOOTER
-========================================================= -->
+========================================================== -->
 
-<footer class="site-footer">
+<footer
+    class="site-footer"
+>
 
     <div class="container">
 
@@ -2230,17 +2323,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img
                     src="images/logo/logo.png"
                     alt="Serviam Therapy"
+                    loading="lazy"
                 >
 
                 <p>
-
                     Serviam Therapy —
                     מקצועיות, ניסיון והקשבה
                     לגוף.
-
                 </p>
 
             </div>
+
 
 
             <div class="footer-column">
@@ -2261,11 +2354,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     אודות
                 </a>
 
+                <a href="#gallery">
+                    גלריה
+                </a>
+
                 <a href="#contact">
                     צור קשר
                 </a>
 
             </div>
+
 
 
             <div class="footer-column">
@@ -2290,7 +2388,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     עיסוי רפואי
                 </a>
 
+                <a href="#services">
+                    אבנים חמות
+                </a>
+
             </div>
+
 
 
             <div class="footer-column">
@@ -2324,11 +2427,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="footer-bottom">
 
             ©
+
             <span data-current-year>
                 2026
             </span>
 
             Serviam Therapy.
+
             כל הזכויות שמורות.
 
         </div>
@@ -2341,7 +2446,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      FLOATING WHATSAPP
-========================================================= -->
+========================================================== -->
 
 <a
     href="https://wa.me/972543629852"
@@ -2361,7 +2466,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!-- =========================================================
      JAVASCRIPT
-========================================================= -->
+========================================================== -->
 
 <script>
 
@@ -2369,56 +2474,101 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       MAINTENANCE POPUP
-    ===================================================== */
+       PAGE LOADER
+    ====================================================== */
 
-    const maintenancePopup =
+    const pageLoader =
+        document.getElementById("page-loader");
+
+    window.addEventListener("load", function () {
+
+        if (pageLoader) {
+
+            pageLoader.classList.add("loaded");
+
+        }
+
+    });
+
+
+
+    /* =====================================================
+       MAINTENANCE POPUP
+    ====================================================== */
+
+    const popup =
         document.getElementById("maintenance-popup");
 
-    const maintenanceEnter =
-        document.getElementById("maintenance-enter");
+    const closeButton =
+        document.getElementById("popup-close");
 
-    const maintenanceClose =
-        document.getElementById("maintenance-close");
+    const enterButton =
+        document.getElementById("popup-enter");
 
 
-    function closeMaintenancePopup() {
+    function closePopup() {
 
-        if (!maintenancePopup) return;
+        if (!popup) return;
 
-        maintenancePopup.classList.add("is-hidden");
+        popup.classList.add("hidden");
+
+        popup.setAttribute(
+            "aria-hidden",
+            "true"
+        );
 
         document.body.classList.remove(
-            "maintenance-open"
+            "popup-open"
         );
 
     }
 
 
-    if (maintenancePopup) {
+    if (popup) {
 
         document.body.classList.add(
-            "maintenance-open"
+            "popup-open"
         );
 
     }
 
 
-    if (maintenanceEnter) {
+    if (closeButton) {
 
-        maintenanceEnter.addEventListener(
+        closeButton.addEventListener(
             "click",
-            closeMaintenancePopup
+            closePopup
         );
 
     }
 
 
-    if (maintenanceClose) {
+    if (enterButton) {
 
-        maintenanceClose.addEventListener(
+        enterButton.addEventListener(
             "click",
-            closeMaintenancePopup
+            closePopup
+        );
+
+    }
+
+
+    /* Popup feature that links to booking */
+
+    const popupBookingLink =
+        document.querySelector(
+            '.popup-feature[href="#booking"]'
+        );
+
+    if (popupBookingLink) {
+
+        popupBookingLink.addEventListener(
+            "click",
+            function () {
+
+                closePopup();
+
+            }
         );
 
     }
@@ -2428,13 +2578,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "keydown",
         function (event) {
 
-            if (
-                event.key === "Escape" &&
-                maintenancePopup &&
-                !maintenancePopup.classList.contains("is-hidden")
-            ) {
+            if (event.key === "Escape") {
 
-                closeMaintenancePopup();
+                closePopup();
 
             }
 
@@ -2442,80 +2588,10 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* =====================================================
-       PAGE LOADER
-    ===================================================== */
-
-    const loader =
-        document.querySelector(".page-loader");
-
-
-    window.addEventListener(
-        "load",
-        function () {
-
-            if (loader) {
-
-                setTimeout(
-                    function () {
-
-                        loader.classList.add(
-                            "hidden"
-                        );
-
-                    },
-                    350
-                );
-
-            }
-
-        }
-    );
-
 
     /* =====================================================
-       HEADER SCROLL
-    ===================================================== */
-
-    const header =
-        document.querySelector(".site-header");
-
-
-    function updateHeader() {
-
-        if (!header) return;
-
-        if (window.scrollY > 40) {
-
-            header.classList.add(
-                "scrolled"
-            );
-
-        } else {
-
-            header.classList.remove(
-                "scrolled"
-            );
-
-        }
-
-    }
-
-
-    updateHeader();
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        {
-            passive: true
-        }
-    );
-
-
-    /* =====================================================
-       MOBILE MENU
-    ===================================================== */
+       MOBILE NAVIGATION
+    ====================================================== */
 
     const menuToggle =
         document.querySelector(
@@ -2523,35 +2599,26 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
     const navMenu =
-        document.querySelector(
-            ".nav-menu"
-        );
-
-    const navLinks =
-        document.querySelectorAll(
-            ".nav-menu a"
+        document.getElementById(
+            "main-navigation"
         );
 
 
-    function closeMenu() {
+    function closeMobileMenu() {
 
-        if (!navMenu || !menuToggle) return;
-
-        navMenu.classList.remove(
-            "open"
-        );
+        if (!menuToggle || !navMenu) return;
 
         menuToggle.classList.remove(
+            "active"
+        );
+
+        navMenu.classList.remove(
             "active"
         );
 
         menuToggle.setAttribute(
             "aria-expanded",
             "false"
-        );
-
-        document.body.classList.remove(
-            "menu-open"
         );
 
     }
@@ -2564,11 +2631,11 @@ document.addEventListener("DOMContentLoaded", function () {
             function () {
 
                 const isOpen =
-                    navMenu.classList.toggle(
-                        "open"
+                    menuToggle.classList.toggle(
+                        "active"
                     );
 
-                menuToggle.classList.toggle(
+                navMenu.classList.toggle(
                     "active",
                     isOpen
                 );
@@ -2578,75 +2645,70 @@ document.addEventListener("DOMContentLoaded", function () {
                     String(isOpen)
                 );
 
-                document.body.classList.toggle(
-                    "menu-open",
-                    isOpen
-                );
-
             }
         );
+
+
+        navMenu
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    closeMobileMenu
+                );
+
+            });
 
     }
 
 
-    navLinks.forEach(
-        function (link) {
-
-            link.addEventListener(
-                "click",
-                closeMenu
-            );
-
-        }
-    );
-
 
     /* =====================================================
-       FAQ
-    ===================================================== */
+       FAQ ACCORDION
+    ====================================================== */
 
-    const faqItems =
+    const faqQuestions =
         document.querySelectorAll(
-            ".faq-item"
+            ".faq-question"
         );
 
 
-    faqItems.forEach(
-        function (item) {
+    faqQuestions.forEach(function (question) {
 
-            const question =
-                item.querySelector(
-                    ".faq-question"
-                );
+        question.addEventListener(
+            "click",
+            function () {
 
-            if (!question) return;
+                const currentItem =
+                    question.closest(
+                        ".faq-item"
+                    );
 
-
-            question.addEventListener(
-                "click",
-                function () {
-
-                    const isOpen =
-                        item.classList.contains(
-                            "open"
-                        );
+                const isOpen =
+                    currentItem.classList.contains(
+                        "active"
+                    );
 
 
-                    faqItems.forEach(
-                        function (otherItem) {
+                document
+                    .querySelectorAll(".faq-item.active")
+                    .forEach(function (item) {
 
-                            otherItem.classList.remove(
-                                "open"
+                        if (item !== currentItem) {
+
+                            item.classList.remove(
+                                "active"
                             );
 
-                            const otherQuestion =
-                                otherItem.querySelector(
+                            const button =
+                                item.querySelector(
                                     ".faq-question"
                                 );
 
-                            if (otherQuestion) {
+                            if (button) {
 
-                                otherQuestion.setAttribute(
+                                button.setAttribute(
                                     "aria-expanded",
                                     "false"
                                 );
@@ -2654,32 +2716,31 @@ document.addEventListener("DOMContentLoaded", function () {
                             }
 
                         }
-                    );
+
+                    });
 
 
-                    if (!isOpen) {
+                currentItem.classList.toggle(
+                    "active",
+                    !isOpen
+                );
 
-                        item.classList.add(
-                            "open"
-                        );
 
-                        question.setAttribute(
-                            "aria-expanded",
-                            "true"
-                        );
+                question.setAttribute(
+                    "aria-expanded",
+                    String(!isOpen)
+                );
 
-                    }
+            }
+        );
 
-                }
-            );
+    });
 
-        }
-    );
 
 
     /* =====================================================
        EMAIL REVEAL
-    ===================================================== */
+    ====================================================== */
 
     const emailReveal =
         document.getElementById(
@@ -2692,35 +2753,39 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
+    /*
+       Change this address if your business email
+       is different.
+    */
+
+    const businessEmail =
+        "serviamtherapy@gmail.com";
+
+
     if (emailReveal && emailLabel) {
 
         emailReveal.addEventListener(
             "click",
             function () {
 
-                const email =
-                    "serviamtherapy@gmail.com";
-
                 emailLabel.textContent =
-                    email;
-
-                emailReveal.classList.add(
-                    "email-visible"
-                );
+                    businessEmail;
 
                 emailReveal.setAttribute(
                     "aria-label",
-                    "שליחת אימייל ל-" + email
+                    "שליחת אימייל"
                 );
 
+                emailReveal.dataset.revealed =
+                    "true";
 
-                emailReveal.onclick =
-                    function () {
 
-                        window.location.href =
-                            "mailto:" + email;
+                emailReveal.onclick = function () {
 
-                    };
+                    window.location.href =
+                        "mailto:" + businessEmail;
+
+                };
 
             }
         );
@@ -2728,9 +2793,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+
     /* =====================================================
        CURRENT YEAR
-    ===================================================== */
+    ====================================================== */
 
     const yearElements =
         document.querySelectorAll(
@@ -2738,100 +2804,77 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    yearElements.forEach(
-        function (element) {
+    yearElements.forEach(function (element) {
 
-            element.textContent =
-                new Date().getFullYear();
+        element.textContent =
+            new Date().getFullYear();
 
-        }
-    );
+    });
+
 
 
     /* =====================================================
-       SMOOTH INTERNAL LINKS
-    ===================================================== */
+       SMOOTH INTERNAL NAVIGATION
+    ====================================================== */
 
     document
-        .querySelectorAll(
-            'a[href^="#"]'
-        )
-        .forEach(
-            function (link) {
+        .querySelectorAll('a[href^="#"]')
+        .forEach(function (link) {
 
-                link.addEventListener(
-                    "click",
-                    function (event) {
+            link.addEventListener(
+                "click",
+                function (event) {
 
-                        const targetId =
-                            link.getAttribute(
-                                "href"
-                            );
+                    const targetId =
+                        link.getAttribute("href");
 
-
-                        if (
-                            !targetId ||
-                            targetId === "#"
-                        ) {
-
-                            return;
-
-                        }
-
-
-                        const target =
-                            document.querySelector(
-                                targetId
-                            );
-
-
-                        if (!target) return;
-
-                        event.preventDefault();
-
-
-                        const headerHeight =
-                            header
-                                ? header.offsetHeight
-                                : 0;
-
-
-                        const targetPosition =
-                            target
-                                .getBoundingClientRect()
-                                .top +
-                            window.pageYOffset -
-                            headerHeight;
-
-
-                        window.scrollTo({
-
-                            top:
-                                targetPosition,
-
-                            behavior:
-                                "smooth"
-
-                        });
-
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+                        return;
                     }
-                );
 
-            }
-        );
+
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
+
+
+                    if (!target) {
+                        return;
+                    }
+
+
+                    event.preventDefault();
+
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+            );
+
+        });
+
 
 
     /* =====================================================
-       ESCAPE KEY
-    ===================================================== */
+       CLOSE MOBILE MENU ON RESIZE
+    ====================================================== */
 
-    document.addEventListener(
-        "keydown",
-        function (event) {
+    window.addEventListener(
+        "resize",
+        function () {
 
-            if (event.key === "Escape") {
+            if (
+                window.innerWidth > 900
+            ) {
 
-                closeMenu();
+                closeMobileMenu();
 
             }
 
