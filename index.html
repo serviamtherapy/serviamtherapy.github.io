@@ -87,6 +87,89 @@
 
 </head>
 
+```html
+<script>
+
+/* =========================================================
+   SERVIAM THERAPY — MAINTENANCE POPUP
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const popup =
+        document.getElementById("maintenance-popup");
+
+    const closeButton =
+        document.getElementById("popup-close");
+
+    const enterButton =
+        document.getElementById("popup-enter");
+
+
+    function closePopup() {
+
+        if (!popup) return;
+
+        popup.classList.add("hidden");
+
+        popup.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "popup-open"
+        );
+
+    }
+
+
+    if (closeButton) {
+
+        closeButton.addEventListener(
+            "click",
+            closePopup
+        );
+
+    }
+
+
+    if (enterButton) {
+
+        enterButton.addEventListener(
+            "click",
+            closePopup
+        );
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                closePopup();
+
+            }
+
+        }
+    );
+
+
+    if (popup) {
+
+        document.body.classList.add(
+            "popup-open"
+        );
+
+    }
+
+});
+
+</script>
+```
 
 <body>
 
