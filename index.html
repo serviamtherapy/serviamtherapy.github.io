@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 
@@ -39,10 +40,7 @@
         content="#101b2d"
     >
 
-
-    <!-- =====================================================
-         OPEN GRAPH
-    ====================================================== -->
+    <!-- Open Graph -->
 
     <meta
         property="og:type"
@@ -84,10 +82,7 @@
         content="Serviam Therapy — טיפול עיסוי מקצועי"
     >
 
-
-    <!-- =====================================================
-         TWITTER
-    ====================================================== -->
+    <!-- Twitter -->
 
     <meta
         name="twitter:card"
@@ -109,10 +104,7 @@
         content="https://www.serviamtherapy.com/images/hero/hero.jpg"
     >
 
-
-    <!-- =====================================================
-         GOOGLE FONTS
-    ====================================================== -->
+    <!-- Google Fonts -->
 
     <link
         rel="preconnect"
@@ -126,14 +118,11 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- =====================================================
-         MAIN CSS
-    ====================================================== -->
+    <!-- Main CSS -->
 
     <link
         rel="stylesheet"
@@ -146,9 +135,9 @@
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PAGE LOADER
-========================================================== -->
+====================================================== -->
 
 <div
     class="page-loader"
@@ -165,10 +154,9 @@
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      MAINTENANCE POPUP
-========================================================== -->
+====================================================== -->
 
 <div
     class="popup-overlay"
@@ -183,8 +171,7 @@
         aria-labelledby="popup-title"
     >
 
-
-        <!-- LEFT IMAGE -->
+        <!-- LEFT VISUAL -->
 
         <div
             class="popup-left"
@@ -196,19 +183,17 @@
 
         <div class="popup-right">
 
-
             <button
                 id="popup-close"
                 class="popup-close"
-                aria-label="סגירת חלון"
                 type="button"
+                aria-label="סגירת חלון"
             >
                 ×
             </button>
 
 
             <div class="popup-content">
-
 
                 <img
                     src="images/logo/logo.png"
@@ -217,37 +202,41 @@
                 >
 
 
+                <span class="popup-label">
+                    SERVIAM THERAPY
+                </span>
+
+
                 <h1 id="popup-title">
                     אנחנו מתחדשים בשבילכם
                 </h1>
 
 
                 <p>
+
                     בימים אלו הקליניקה עוברת שדרוג,
                     כדי שנוכל להעניק לכם חוויית טיפול
                     מקצועית, נעימה ויוקרתית אפילו יותר.
+
                 </p>
 
+
                 <p>
+
                     בינתיים ניתן להזמין טיפולים עד הבית.
                     אני מגיע עם כל הציוד המקצועי הדרוש,
                     ואתם רק צריכים להתכונן לרגע של רוגע
                     והתחדשות.
+
                 </p>
 
 
                 <div class="popup-features">
 
 
-                    <a
-                        href="#booking"
-                        class="popup-feature"
-                    >
+                    <div class="popup-feature">
 
-                        <span
-                            class="popup-feature-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="popup-feature-icon">
                             🚗
                         </span>
 
@@ -255,15 +244,12 @@
                             טיפולים עד הבית
                         </span>
 
-                    </a>
+                    </div>
 
 
                     <div class="popup-feature">
 
-                        <span
-                            class="popup-feature-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="popup-feature-icon">
                             💆
                         </span>
 
@@ -276,11 +262,8 @@
 
                     <div class="popup-feature">
 
-                        <span
-                            class="popup-feature-icon"
-                            aria-hidden="true"
-                        >
-                            ⭐
+                        <span class="popup-feature-icon">
+                            ★
                         </span>
 
                         <span>
@@ -299,7 +282,7 @@
                     type="button"
                 >
                     המשך לאתר Serviam Therapy
-                    <span aria-hidden="true">←</span>
+                    <span>←</span>
                 </button>
 
 
@@ -312,131 +295,232 @@
 </div>
 
 
+<!-- =====================================================
+     HEADER / NAVIGATION
+====================================================== -->
 
-<!-- =========================================================
-     NAVIGATION
-========================================================== -->
-
-<header class="site-header">
-
-<nav
-    class="navbar"
-    aria-label="ניווט ראשי"
+<header
+    class="site-header"
+    id="site-header"
 >
 
-
-    <a
-        href="#home"
-        class="brand"
-        aria-label="Serviam Therapy - ראשי"
+    <nav
+        class="navbar"
+        aria-label="ניווט ראשי"
     >
 
-        <img
-            src="images/logo/logo.png"
-            alt="Serviam Therapy"
-            class="brand-logo"
-        >
 
-        <span class="brand-text">
-
-            SERVIAM
-
-            <small>
-                THERAPY
-            </small>
-
-        </span>
-
-    </a>
-
-
-    <button
-        class="mobile-menu-toggle"
-        type="button"
-        aria-label="פתיחת תפריט"
-        aria-expanded="false"
-        aria-controls="main-navigation"
-    >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </button>
-
-
-    <div
-        class="nav-menu"
-        id="main-navigation"
-    >
+        <!-- BRAND -->
 
         <a
             href="#home"
-            class="nav-link"
+            class="brand"
+            aria-label="Serviam Therapy - ראשי"
         >
-            ראשי
+
+            <img
+                src="images/logo/logo.png"
+                alt="Serviam Therapy"
+                class="brand-logo"
+            >
+
+            <span class="brand-text">
+
+                SERVIAM
+
+                <small>
+                    THERAPY
+                </small>
+
+            </span>
+
         </a>
 
-        <a
-            href="#services"
-            class="nav-link"
+
+        <!-- DESKTOP SOCIAL ICONS -->
+
+        <div class="header-socials">
+
+            <a
+                href="https://www.facebook.com/serviamtherapypage"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="header-social-link"
+                aria-label="Serviam Therapy בפייסבוק"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path
+                        d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"
+                    />
+
+                </svg>
+
+            </a>
+
+
+            <a
+                href="https://www.instagram.com/serviamtherapy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="header-social-link"
+                aria-label="Serviam Therapy באינסטגרם"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5"
+                        ry="5"
+                    />
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                    />
+
+                    <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1.2"
+                        class="instagram-dot"
+                    />
+
+                </svg>
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="פתיחת תפריט"
+            aria-expanded="false"
+            aria-controls="main-navigation"
         >
-            טיפולים
-        </a>
 
-        <a
-            href="#about"
-            class="nav-link"
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="nav-menu"
+            id="main-navigation"
         >
-            אודות
-        </a>
 
-        <a
-            href="#gallery"
-            class="nav-link"
-        >
-            גלריה
-        </a>
+            <a
+                href="#home"
+                class="nav-link"
+            >
+                ראשי
+            </a>
 
-        <a
-            href="#faq"
-            class="nav-link"
-        >
-            שאלות נפוצות
-        </a>
+            <a
+                href="#services"
+                class="nav-link"
+            >
+                טיפולים
+            </a>
 
-        <a
-            href="#contact"
-            class="nav-link"
-        >
-            צור קשר
-        </a>
+            <a
+                href="#about"
+                class="nav-link"
+            >
+                אודות
+            </a>
 
-        <a
-            href="#booking"
-            class="nav-book-button"
-        >
-            הזמנת טיפול
-        </a>
+            <a
+                href="#gallery"
+                class="nav-link"
+            >
+                גלריה
+            </a>
 
-    </div>
+            <a
+                href="#faq"
+                class="nav-link"
+            >
+                שאלות נפוצות
+            </a>
 
-</nav>
+            <a
+                href="#contact"
+                class="nav-link"
+            >
+                צור קשר
+            </a>
+
+            <a
+                href="#booking"
+                class="nav-book-button"
+            >
+                הזמנת טיפול
+            </a>
+
+
+            <!-- MOBILE SOCIALS -->
+
+            <div class="mobile-socials">
+
+                <a
+                    href="https://www.facebook.com/serviamtherapypage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    Facebook
+                </a>
+
+                <a
+                    href="https://www.instagram.com/serviamtherapy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
 
 </header>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================== -->
+====================================================== -->
 
 <main>
 
 
 <section
-    id="home"
     class="hero"
+    id="home"
 >
 
 
@@ -445,56 +529,65 @@
         aria-hidden="true"
     ></div>
 
+
     <div
         class="hero-overlay"
         aria-hidden="true"
     ></div>
 
 
-    <div class="hero-content">
-
-        <div class="hero-eyebrow">
-            SERVIAM THERAPY
-        </div>
+    <div class="container hero-container">
 
 
-        <h1>
+        <div class="hero-content">
 
-            הגוף שלך
 
-            <span>
-                ראוי להרגיש טוב
+            <span class="hero-eyebrow">
+                SERVIAM THERAPY
             </span>
 
-        </h1>
+
+            <h1>
+
+                הגוף שלך
+
+                <span>
+                    ראוי להרגיש טוב
+                </span>
+
+            </h1>
 
 
-        <p class="hero-description">
+            <p class="hero-description">
 
-            טיפול מקצועי, אישי ומדויק
-            שנועד לעזור לגוף להשתחרר,
-            להתאושש ולחזור לאיזון.
+                טיפול מקצועי, אישי ומדויק
+                שנועד לעזור לגוף להשתחרר,
+                להתאושש ולחזור לאיזון.
 
-        </p>
+            </p>
 
 
-        <div class="hero-actions">
+            <div class="hero-actions">
 
-            <a
-                href="#booking"
-                class="button button-primary"
-            >
-                קביעת תור
-            </a>
+                <a
+                    href="#booking"
+                    class="button button-primary"
+                >
+                    קביעת תור
+                </a>
 
-            <a
-                href="#services"
-                class="button button-outline-light"
-            >
-                הטיפולים שלנו
-            </a>
+                <a
+                    href="#services"
+                    class="button button-outline-light"
+                >
+                    הטיפולים שלנו
+                </a>
+
+            </div>
+
 
         </div>
+
 
     </div>
 
@@ -516,13 +609,12 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      INTRO
-========================================================== -->
+====================================================== -->
 
 <section
-    class="intro-section"
+    class="intro-section section-light"
     id="intro"
 >
 
@@ -561,14 +653,13 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      SERVICES
-========================================================== -->
+====================================================== -->
 
 <section
+    class="services-section section-light"
     id="services"
-    class="services-section"
 >
 
     <div class="container">
@@ -630,10 +721,12 @@
                     </h3>
 
                     <p>
+
                         טיפול מרגיע ומאוזן
                         המשלב תנועות זורמות
                         לשחרור מתח, הרפיית השרירים
                         ושיפור התחושה הכללית.
+
                     </p>
 
                     <div class="service-pricing">
@@ -655,13 +748,12 @@
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span aria-hidden="true">←</span>
+                        <span>←</span>
                     </a>
 
                 </div>
 
             </article>
-
 
 
             <!-- 02 -->
@@ -689,10 +781,12 @@
                     </h3>
 
                     <p>
+
                         עבודה ממוקדת על שכבות
                         השריר והרקמות העמוקות
                         במטרה להפחית עומס,
                         נוקשות ומתח מצטבר.
+
                     </p>
 
                     <div class="service-pricing">
@@ -709,13 +803,12 @@
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span aria-hidden="true">←</span>
+                        <span>←</span>
                     </a>
 
                 </div>
 
             </article>
-
 
 
             <!-- 03 -->
@@ -743,10 +836,12 @@
                     </h3>
 
                     <p>
+
                         מתאים לפני או אחרי אימון,
                         לשחרור עומסים ולתמיכה
                         בהתאוששות של הגוף
                         לאחר פעילות גופנית.
+
                     </p>
 
                     <div class="service-pricing">
@@ -763,13 +858,12 @@
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span aria-hidden="true">←</span>
+                        <span>←</span>
                     </a>
 
                 </div>
 
             </article>
-
 
 
             <!-- 04 -->
@@ -797,10 +891,12 @@
                     </h3>
 
                     <p>
+
                         טיפול ממוקד המותאם
                         לאזורים עמוסים או כואבים,
                         עם דגש על שחרור והרפיה
                         של אזורים ספציפיים.
+
                     </p>
 
                     <div class="service-pricing">
@@ -817,13 +913,12 @@
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span aria-hidden="true">←</span>
+                        <span>←</span>
                     </a>
 
                 </div>
 
             </article>
-
 
 
             <!-- 05 -->
@@ -851,9 +946,11 @@
                     </h3>
 
                     <p>
+
                         שילוב של חום וטכניקות
                         עיסוי ליצירת חוויית
                         הרפיה עמוקה ונעימה.
+
                     </p>
 
                     <div class="service-pricing">
@@ -870,13 +967,12 @@
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span aria-hidden="true">←</span>
+                        <span>←</span>
                     </a>
 
                 </div>
 
             </article>
-
 
 
             <!-- 06 -->
@@ -904,9 +1000,11 @@
                     </h3>
 
                     <p>
+
                         טכניקה משלימה המתבצעת
                         בהתאם להתאמה האישית
                         ולמטרות הטיפול.
+
                     </p>
 
                     <div class="service-pricing">
@@ -923,7 +1021,7 @@
                         class="text-link"
                     >
                         להזמנת טיפול
-                        <span aria-hidden="true">←</span>
+                        <span>←</span>
                     </a>
 
                 </div>
@@ -938,14 +1036,13 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      ABOUT
-========================================================== -->
+====================================================== -->
 
 <section
+    class="about-section section-dark"
     id="about"
-    class="about-section"
 >
 
     <div class="container">
@@ -982,7 +1079,6 @@
             </div>
 
 
-
             <div class="about-content">
 
                 <span class="section-label">
@@ -1002,25 +1098,31 @@
                 </h2>
 
                 <p>
+
                     שמי דניאל ואני מטפל הוליסטי
                     מקצועי עם ניסיון רב בתחום
                     העיסויים.
+
                 </p>
 
                 <p>
+
                     אני מאמין שכל אדם הוא ייחודי
                     ולכן אני מתאים את הטיפול שלי
                     לכל מטופל לפי צרכיו האישיים —
                     בין אם זה להקלת כאבים,
                     שיפור מצב הרוח או הרגעת
                     הגוף והנפש.
+
                 </p>
 
                 <p>
+
                     הקליניקה שלי ממוקמת במרכז הארץ
                     ואני מזמין אותך לתאם טיפול אישי
                     המותאם במיוחד עבורך.
                     ניתן להזמין טיפול גם כשובר מתנה.
+
                 </p>
 
 
@@ -1047,7 +1149,6 @@
                     </div>
 
                 </div>
-
 
 
                 <div class="about-education">
@@ -1088,7 +1189,6 @@
                     </div>
 
 
-
                     <div class="education-group">
 
                         <h4>
@@ -1119,7 +1219,6 @@
                     </div>
 
 
-
                     <div class="skills-section">
 
                         <h4>
@@ -1147,10 +1246,11 @@
 
                 <a
                     href="#booking"
-                    class="button button-dark"
+                    class="button button-gold"
                 >
                     אני רוצה טיפול
                 </a>
+
 
             </div>
 
@@ -1161,18 +1261,19 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      STATISTICS
-========================================================== -->
+====================================================== -->
 
 <section
     class="statistics-section"
+    aria-label="נתונים על Serviam Therapy"
 >
 
     <div class="container">
 
         <div class="statistics-grid">
+
 
             <div class="stat-item">
 
@@ -1203,7 +1304,7 @@
             <div class="stat-item">
 
                 <strong>
-                    100%
+                    100<span>%</span>
                 </strong>
 
                 <p>
@@ -1225,6 +1326,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1232,16 +1334,17 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      BENEFITS
-========================================================== -->
+====================================================== -->
 
 <section
-    class="benefits-section"
+    class="benefits-section section-light"
+    id="benefits"
 >
 
     <div class="container">
+
 
         <div class="section-heading centered">
 
@@ -1260,9 +1363,11 @@
             </h2>
 
             <p>
+
                 אני לא עובד לפי תבנית אחת.
                 כל טיפול נבנה סביב האדם
                 שנמצא מולי.
+
             </p>
 
         </div>
@@ -1352,16 +1457,17 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      PROCESS
-========================================================== -->
+====================================================== -->
 
 <section
-    class="process-section"
+    class="process-section section-dark"
+    id="process"
 >
 
     <div class="container">
+
 
         <div class="section-heading centered">
 
@@ -1389,7 +1495,9 @@
 
             <div class="process-step">
 
-                <span>01</span>
+                <span>
+                    01
+                </span>
 
                 <h3>
                     יוצרים קשר
@@ -1402,15 +1510,14 @@
             </div>
 
 
-            <div
-                class="process-line"
-                aria-hidden="true"
-            ></div>
+            <div class="process-line"></div>
 
 
             <div class="process-step">
 
-                <span>02</span>
+                <span>
+                    02
+                </span>
 
                 <h3>
                     מתאימים טיפול
@@ -1423,15 +1530,14 @@
             </div>
 
 
-            <div
-                class="process-line"
-                aria-hidden="true"
-            ></div>
+            <div class="process-line"></div>
 
 
             <div class="process-step">
 
-                <span>03</span>
+                <span>
+                    03
+                </span>
 
                 <h3>
                     מגיעים לטיפול
@@ -1444,15 +1550,14 @@
             </div>
 
 
-            <div
-                class="process-line"
-                aria-hidden="true"
-            ></div>
+            <div class="process-line"></div>
 
 
             <div class="process-step">
 
-                <span>04</span>
+                <span>
+                    04
+                </span>
 
                 <h3>
                     יוצאים אחרת
@@ -1472,16 +1577,17 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      TESTIMONIALS
-========================================================== -->
+====================================================== -->
 
 <section
-    class="testimonials-section"
+    class="testimonials-section section-light"
+    id="testimonials"
 >
 
     <div class="container">
+
 
         <div class="section-heading centered">
 
@@ -1511,10 +1617,7 @@
 
             <article class="testimonial-card">
 
-                <div
-                    class="stars"
-                    aria-label="5 כוכבים"
-                >
+                <div class="stars">
                     ★ ★ ★ ★ ★
                 </div>
 
@@ -1536,17 +1639,17 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      GALLERY
-========================================================== -->
+====================================================== -->
 
 <section
+    class="gallery-section section-light"
     id="gallery"
-    class="gallery-section"
 >
 
     <div class="container">
+
 
         <div class="section-heading centered">
 
@@ -1647,14 +1750,13 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      FAQ
-========================================================== -->
+====================================================== -->
 
 <section
+    class="faq-section section-light"
     id="faq"
-    class="faq-section"
 >
 
     <div class="container">
@@ -1679,13 +1781,14 @@
                 </h2>
 
                 <p>
+
                     כאן תוכלו למצוא תשובות
                     לשאלות הנפוצות ביותר
                     לפני הטיפול.
+
                 </p>
 
             </div>
-
 
 
             <div class="faq-list">
@@ -1703,10 +1806,7 @@
                             איזה טיפול מתאים לי?
                         </span>
 
-                        <span
-                            class="faq-plus"
-                            aria-hidden="true"
-                        >
+                        <span class="faq-plus">
                             +
                         </span>
 
@@ -1715,18 +1815,19 @@
                     <div class="faq-answer">
 
                         <p>
+
                             אם אינכם בטוחים,
                             אין צורך לבחור לבד.
                             ניתן ליצור קשר ולספר
                             מה אתם מרגישים ומה
                             מטרת הטיפול, ואכוון
                             אתכם לאפשרות המתאימה.
+
                         </p>
 
                     </div>
 
                 </div>
-
 
 
                 <div class="faq-item">
@@ -1741,10 +1842,7 @@
                             האם ניתן להתאים את עוצמת העיסוי?
                         </span>
 
-                        <span
-                            class="faq-plus"
-                            aria-hidden="true"
-                        >
+                        <span class="faq-plus">
                             +
                         </span>
 
@@ -1753,16 +1851,17 @@
                     <div class="faq-answer">
 
                         <p>
+
                             בהחלט. עוצמת הטיפול
                             מותאמת אישית בהתאם
                             להעדפה שלכם, למצב הגוף
                             ולמטרת הטיפול.
+
                         </p>
 
                     </div>
 
                 </div>
-
 
 
                 <div class="faq-item">
@@ -1777,10 +1876,7 @@
                             כמה זמן נמשך טיפול?
                         </span>
 
-                        <span
-                            class="faq-plus"
-                            aria-hidden="true"
-                        >
+                        <span class="faq-plus">
                             +
                         </span>
 
@@ -1789,16 +1885,17 @@
                     <div class="faq-answer">
 
                         <p>
+
                             משך הטיפול משתנה בהתאם
                             לסוג הטיפול. המחירים
                             ומשך הטיפול מופיעים
                             באזור הטיפולים באתר.
+
                         </p>
 
                     </div>
 
                 </div>
-
 
 
                 <div class="faq-item">
@@ -1813,10 +1910,7 @@
                             האם ניתן להזמין טיפול מראש?
                         </span>
 
-                        <span
-                            class="faq-plus"
-                            aria-hidden="true"
-                        >
+                        <span class="faq-plus">
                             +
                         </span>
 
@@ -1825,15 +1919,16 @@
                     <div class="faq-answer">
 
                         <p>
+
                             כן. ניתן ליצור קשר
                             בטלפון או ב-WhatsApp
                             כדי לתאם טיפול מראש.
+
                         </p>
 
                     </div>
 
                 </div>
-
 
 
                 <div class="faq-item">
@@ -1848,10 +1943,7 @@
                             האם ניתן להזמין טיפול כשובר מתנה?
                         </span>
 
-                        <span
-                            class="faq-plus"
-                            aria-hidden="true"
-                        >
+                        <span class="faq-plus">
                             +
                         </span>
 
@@ -1860,8 +1952,10 @@
                     <div class="faq-answer">
 
                         <p>
+
                             כן. ניתן להזמין טיפול
                             גם כשובר מתנה.
+
                         </p>
 
                     </div>
@@ -1878,14 +1972,13 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      BOOKING
-========================================================== -->
+====================================================== -->
 
 <section
-    id="booking"
     class="booking-section"
+    id="booking"
 >
 
 
@@ -1894,6 +1987,7 @@
         aria-hidden="true"
     ></div>
 
+
     <div
         class="booking-overlay"
         aria-hidden="true"
@@ -1901,6 +1995,7 @@
 
 
     <div class="container">
+
 
         <div class="booking-content">
 
@@ -1919,15 +2014,17 @@
             </h2>
 
             <p>
+
                 טיפול טוב הוא לא מותרות.
                 לפעמים זה בדיוק מה שהגוף
                 צריך כדי לחזור לעצמו.
+
             </p>
 
 
             <div class="booking-notice">
 
-                <span aria-hidden="true">
+                <span>
                     ✦
                 </span>
 
@@ -1966,17 +2063,17 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      CONTACT
-========================================================== -->
+====================================================== -->
 
 <section
+    class="contact-section section-light"
     id="contact"
-    class="contact-section"
 >
 
     <div class="container">
+
 
         <div class="contact-grid">
 
@@ -1998,9 +2095,11 @@
                 </h2>
 
                 <p>
+
                     לקבלת מידע נוסף,
                     תיאום טיפול או שאלה,
                     ניתן ליצור קשר ישירות.
+
                 </p>
 
 
@@ -2014,10 +2113,7 @@
                         class="contact-item"
                     >
 
-                        <span
-                            class="contact-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="contact-icon">
                             TEL
                         </span>
 
@@ -2036,7 +2132,6 @@
                     </a>
 
 
-
                     <!-- WHATSAPP -->
 
                     <a
@@ -2046,10 +2141,7 @@
                         class="contact-item"
                     >
 
-                        <span
-                            class="contact-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="contact-icon">
                             WA
                         </span>
 
@@ -2068,7 +2160,6 @@
                     </a>
 
 
-
                     <!-- EMAIL -->
 
                     <button
@@ -2077,10 +2168,7 @@
                         id="email-reveal"
                     >
 
-                        <span
-                            class="contact-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="contact-icon">
                             @
                         </span>
 
@@ -2099,7 +2187,6 @@
                     </button>
 
 
-
                     <!-- ADDRESS -->
 
                     <a
@@ -2109,10 +2196,7 @@
                         class="contact-item"
                     >
 
-                        <span
-                            class="contact-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="contact-icon">
                             LOC
                         </span>
 
@@ -2131,7 +2215,6 @@
                     </a>
 
 
-
                     <!-- WAZE -->
 
                     <a
@@ -2141,10 +2224,7 @@
                         class="contact-item"
                     >
 
-                        <span
-                            class="contact-icon"
-                            aria-hidden="true"
-                        >
+                        <span class="contact-icon">
                             W
                         </span>
 
@@ -2164,7 +2244,6 @@
 
 
                 </div>
-
 
 
                 <!-- SOCIAL LINKS -->
@@ -2192,7 +2271,6 @@
                         </svg>
 
                     </a>
-
 
 
                     <a
@@ -2241,7 +2319,6 @@
             </div>
 
 
-
             <!-- CONTACT CARD -->
 
             <div class="contact-card">
@@ -2255,9 +2332,11 @@
                 </h3>
 
                 <p>
+
                     עד לפתיחת הקליניקה,
                     טיפולי עיסוי עד הבית
                     זמינים כרגיל.
+
                 </p>
 
 
@@ -2268,24 +2347,30 @@
                     </h4>
 
                     <p>
+
                         א' – ו'
+
                         <strong>
                             10:00–20:00
                         </strong>
+
                     </p>
 
                     <p>
+
                         שבת:
+
                         <strong>
                             סגור
                         </strong>
+
                     </p>
 
                 </div>
 
 
                 <a
-                    href="#booking"
+                    href="tel:+972543629852"
                     class="button button-gold"
                 >
                     הזמנת טיפול
@@ -2304,16 +2389,17 @@
 </main>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================== -->
+====================================================== -->
 
 <footer
     class="site-footer"
 >
 
+
     <div class="container">
+
 
         <div class="footer-grid">
 
@@ -2323,17 +2409,17 @@
                 <img
                     src="images/logo/logo.png"
                     alt="Serviam Therapy"
-                    loading="lazy"
                 >
 
                 <p>
+
                     Serviam Therapy —
                     מקצועיות, ניסיון והקשבה
                     לגוף.
+
                 </p>
 
             </div>
-
 
 
             <div class="footer-column">
@@ -2354,16 +2440,11 @@
                     אודות
                 </a>
 
-                <a href="#gallery">
-                    גלריה
-                </a>
-
                 <a href="#contact">
                     צור קשר
                 </a>
 
             </div>
-
 
 
             <div class="footer-column">
@@ -2388,12 +2469,7 @@
                     עיסוי רפואי
                 </a>
 
-                <a href="#services">
-                    אבנים חמות
-                </a>
-
             </div>
-
 
 
             <div class="footer-column">
@@ -2433,20 +2509,20 @@
             </span>
 
             Serviam Therapy.
-
             כל הזכויות שמורות.
 
         </div>
 
+
     </div>
+
 
 </footer>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      FLOATING WHATSAPP
-========================================================== -->
+====================================================== -->
 
 <a
     href="https://wa.me/972543629852"
@@ -2463,38 +2539,40 @@
 </a>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      JAVASCRIPT
-========================================================== -->
+====================================================== -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =====================================================
+    /* =================================================
        PAGE LOADER
-    ====================================================== */
+    ================================================= */
 
     const pageLoader =
         document.getElementById("page-loader");
 
     window.addEventListener("load", function () {
 
-        if (pageLoader) {
+        setTimeout(function () {
 
-            pageLoader.classList.add("loaded");
+            if (pageLoader) {
 
-        }
+                pageLoader.classList.add("loaded");
+
+            }
+
+        }, 350);
 
     });
 
 
-
-    /* =====================================================
+    /* =================================================
        MAINTENANCE POPUP
-    ====================================================== */
+    ================================================= */
 
     const popup =
         document.getElementById("maintenance-popup");
@@ -2553,32 +2631,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* Popup feature that links to booking */
-
-    const popupBookingLink =
-        document.querySelector(
-            '.popup-feature[href="#booking"]'
-        );
-
-    if (popupBookingLink) {
-
-        popupBookingLink.addEventListener(
-            "click",
-            function () {
-
-                closePopup();
-
-            }
-        );
-
-    }
-
-
     document.addEventListener(
         "keydown",
         function (event) {
 
-            if (event.key === "Escape") {
+            if (
+                event.key === "Escape" &&
+                popup &&
+                !popup.classList.contains("hidden")
+            ) {
 
                 closePopup();
 
@@ -2588,59 +2649,41 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
 
-    /* =====================================================
-       MOBILE NAVIGATION
-    ====================================================== */
-
-    const menuToggle =
-        document.querySelector(
-            ".mobile-menu-toggle"
+    const mobileToggle =
+        document.getElementById(
+            "mobile-menu-toggle"
         );
 
-    const navMenu =
+    const navigation =
         document.getElementById(
             "main-navigation"
         );
 
 
-    function closeMobileMenu() {
+    if (
+        mobileToggle &&
+        navigation
+    ) {
 
-        if (!menuToggle || !navMenu) return;
-
-        menuToggle.classList.remove(
-            "active"
-        );
-
-        navMenu.classList.remove(
-            "active"
-        );
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-
-    if (menuToggle && navMenu) {
-
-        menuToggle.addEventListener(
+        mobileToggle.addEventListener(
             "click",
             function () {
 
                 const isOpen =
-                    menuToggle.classList.toggle(
+                    navigation.classList.toggle(
                         "active"
                     );
 
-                navMenu.classList.toggle(
+                mobileToggle.classList.toggle(
                     "active",
                     isOpen
                 );
 
-                menuToggle.setAttribute(
+                mobileToggle.setAttribute(
                     "aria-expanded",
                     String(isOpen)
                 );
@@ -2649,13 +2692,28 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        navMenu
+        navigation
             .querySelectorAll("a")
             .forEach(function (link) {
 
                 link.addEventListener(
                     "click",
-                    closeMobileMenu
+                    function () {
+
+                        navigation.classList.remove(
+                            "active"
+                        );
+
+                        mobileToggle.classList.remove(
+                            "active"
+                        );
+
+                        mobileToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
                 );
 
             });
@@ -2663,10 +2721,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    /* =================================================
+       HEADER SCROLL
+    ================================================= */
 
-    /* =====================================================
+    const header =
+        document.getElementById("site-header");
+
+
+    function updateHeader() {
+
+        if (!header) return;
+
+        if (window.scrollY > 30) {
+
+            header.classList.add(
+                "scrolled"
+            );
+
+        } else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateHeader,
+        {
+            passive: true
+        }
+    );
+
+    updateHeader();
+
+
+    /* =================================================
        FAQ ACCORDION
-    ====================================================== */
+    ================================================= */
 
     const faqQuestions =
         document.querySelectorAll(
@@ -2674,75 +2771,98 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    faqQuestions.forEach(function (question) {
+    faqQuestions.forEach(
+        function (question) {
 
-        question.addEventListener(
-            "click",
-            function () {
+            question.addEventListener(
+                "click",
+                function () {
 
-                const currentItem =
-                    question.closest(
-                        ".faq-item"
-                    );
+                    const item =
+                        question.closest(
+                            ".faq-item"
+                        );
 
-                const isOpen =
-                    currentItem.classList.contains(
-                        "active"
-                    );
+                    if (!item) return;
 
 
-                document
-                    .querySelectorAll(".faq-item.active")
-                    .forEach(function (item) {
+                    const isOpen =
+                        item.classList.contains(
+                            "active"
+                        );
 
-                        if (item !== currentItem) {
 
-                            item.classList.remove(
-                                "active"
-                            );
+                    document
+                        .querySelectorAll(
+                            ".faq-item.active"
+                        )
+                        .forEach(
+                            function (openItem) {
 
-                            const button =
-                                item.querySelector(
-                                    ".faq-question"
-                                );
+                                if (
+                                    openItem !== item
+                                ) {
 
-                            if (button) {
+                                    openItem.classList.remove(
+                                        "active"
+                                    );
 
-                                button.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
+                                    const openButton =
+                                        openItem.querySelector(
+                                            ".faq-question"
+                                        );
+
+                                    if (openButton) {
+
+                                        openButton.setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+                                    }
+
+                                }
 
                             }
-
-                        }
-
-                    });
+                        );
 
 
-                currentItem.classList.toggle(
-                    "active",
-                    !isOpen
-                );
+                    if (isOpen) {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                        question.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    } else {
+
+                        item.classList.add(
+                            "active"
+                        );
+
+                        question.setAttribute(
+                            "aria-expanded",
+                            "true"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
 
 
-                question.setAttribute(
-                    "aria-expanded",
-                    String(!isOpen)
-                );
-
-            }
-        );
-
-    });
-
-
-
-    /* =====================================================
+    /* =================================================
        EMAIL REVEAL
-    ====================================================== */
+    ================================================= */
 
-    const emailReveal =
+    const emailButton =
         document.getElementById(
             "email-reveal"
         );
@@ -2754,38 +2874,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /*
-       Change this address if your business email
-       is different.
+       The email address is assembled here
+       instead of being exposed directly in
+       the HTML markup.
     */
 
-    const businessEmail =
-        "serviamtherapy@gmail.com";
+    const emailUser =
+        "serviamtherapy";
+
+    const emailDomain =
+        "gmail.com";
+
+    const emailAddress =
+        emailUser + "@" + emailDomain;
 
 
-    if (emailReveal && emailLabel) {
+    if (
+        emailButton &&
+        emailLabel
+    ) {
 
-        emailReveal.addEventListener(
+        emailButton.addEventListener(
             "click",
             function () {
 
                 emailLabel.textContent =
-                    businessEmail;
+                    emailAddress;
 
-                emailReveal.setAttribute(
-                    "aria-label",
-                    "שליחת אימייל"
+                emailButton.classList.add(
+                    "revealed"
                 );
 
-                emailReveal.dataset.revealed =
-                    "true";
+                emailButton.setAttribute(
+                    "aria-label",
+                    "שליחת אימייל ל-" +
+                    emailAddress
+                );
 
 
-                emailReveal.onclick = function () {
+                emailButton.onclick =
+                    function () {
 
-                    window.location.href =
-                        "mailto:" + businessEmail;
+                        window.location.href =
+                            "mailto:" +
+                            emailAddress;
 
-                };
+                    };
 
             }
         );
@@ -2793,93 +2927,99 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
-    /* =====================================================
+    /* =================================================
        CURRENT YEAR
-    ====================================================== */
+    ================================================= */
 
-    const yearElements =
-        document.querySelectorAll(
+    const year =
+        new Date().getFullYear();
+
+
+    document
+        .querySelectorAll(
             "[data-current-year]"
+        )
+        .forEach(
+            function (element) {
+
+                element.textContent =
+                    year;
+
+            }
         );
 
 
-    yearElements.forEach(function (element) {
-
-        element.textContent =
-            new Date().getFullYear();
-
-    });
-
-
-
-    /* =====================================================
-       SMOOTH INTERNAL NAVIGATION
-    ====================================================== */
+    /* =================================================
+       SMOOTH SCROLL
+    ================================================= */
 
     document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(function (link) {
+        .querySelectorAll(
+            'a[href^="#"]'
+        )
+        .forEach(
+            function (link) {
 
-            link.addEventListener(
-                "click",
-                function (event) {
+                link.addEventListener(
+                    "click",
+                    function (event) {
 
-                    const targetId =
-                        link.getAttribute("href");
+                        const targetId =
+                            link.getAttribute(
+                                "href"
+                            );
 
-                    if (
-                        !targetId ||
-                        targetId === "#"
-                    ) {
-                        return;
+                        if (
+                            !targetId ||
+                            targetId === "#"
+                        ) {
+                            return;
+                        }
+
+
+                        const target =
+                            document.querySelector(
+                                targetId
+                            );
+
+
+                        if (!target) return;
+
+
+                        event.preventDefault();
+
+
+                        const headerHeight =
+                            header
+                                ? header.offsetHeight
+                                : 0;
+
+
+                        const targetPosition =
+                            target.getBoundingClientRect()
+                                .top +
+                            window.scrollY -
+                            headerHeight;
+
+
+                        window.scrollTo({
+
+                            top:
+                                Math.max(
+                                    0,
+                                    targetPosition
+                                ),
+
+                            behavior:
+                                "smooth"
+
+                        });
+
                     }
-
-
-                    const target =
-                        document.querySelector(
-                            targetId
-                        );
-
-
-                    if (!target) {
-                        return;
-                    }
-
-
-                    event.preventDefault();
-
-
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-
-                }
-            );
-
-        });
-
-
-
-    /* =====================================================
-       CLOSE MOBILE MENU ON RESIZE
-    ====================================================== */
-
-    window.addEventListener(
-        "resize",
-        function () {
-
-            if (
-                window.innerWidth > 900
-            ) {
-
-                closeMobileMenu();
+                );
 
             }
-
-        }
-    );
+        );
 
 
 });
@@ -2890,3 +3030,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
+```
