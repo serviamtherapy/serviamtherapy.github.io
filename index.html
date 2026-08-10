@@ -11,9 +11,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Serviam Therapy | עיסוי מקצועי וטיפולי
-    </title>
+    <title>Serviam Therapy | עיסוי מקצועי וטיפולי</title>
 
     <meta
         name="description"
@@ -22,40 +20,16 @@
 
     <meta
         name="keywords"
-        content="Serviam Therapy, עיסוי, עיסוי טיפולי, עיסוי שוודי, עיסוי רקמות עמוקות, עיסוי ספורטאים, עיסוי אבנים חמות, כוסות רוח, massage Israel, massage Bat Yam"
+        content="Serviam Therapy, עיסוי, עיסוי טיפולי, עיסוי שוודי, עיסוי רקמות עמוקות, עיסוי ספורטאים, עיסוי אבנים חמות, כוסות רוח, massage Israel"
     >
 
-    <meta
-        name="author"
-        content="Serviam Therapy"
-    >
+    <meta name="author" content="Serviam Therapy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#101b2d">
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <meta
-        name="theme-color"
-        content="#101b2d"
-    >
-
-    <!-- Open Graph -->
-
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:site_name"
-        content="Serviam Therapy"
-    >
-
-    <meta
-        property="og:title"
-        content="Serviam Therapy | עיסוי מקצועי וטיפולי"
-    >
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Serviam Therapy">
+    <meta property="og:title" content="Serviam Therapy | עיסוי מקצועי וטיפולי">
 
     <meta
         property="og:description"
@@ -67,10 +41,7 @@
         content="https://www.serviamtherapy.com/"
     >
 
-    <meta
-        property="og:locale"
-        content="he_IL"
-    >
+    <meta property="og:locale" content="he_IL">
 
     <meta
         property="og:image"
@@ -82,12 +53,7 @@
         content="Serviam Therapy — טיפול עיסוי מקצועי"
     >
 
-    <!-- Twitter -->
-
-    <meta
-        name="twitter:card"
-        content="summary_large_image"
-    >
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta
         name="twitter:title"
@@ -106,10 +72,7 @@
 
     <!-- Google Fonts -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -139,19 +102,24 @@
      PAGE LOADER
 ====================================================== -->
 
-<div
-    class="page-loader"
-    id="page-loader"
-    aria-hidden="true"
->
+<div class="page-loader" id="page-loader">
 
-    <div class="loader-logo">
-        SERVIAM
+    <div class="loader-inner">
+
+        <div class="loader-logo">
+            SERVIAM
+        </div>
+
+        <div class="loader-line"></div>
+
+        <div class="loader-subtitle">
+            THERAPY
+        </div>
+
     </div>
 
-    <div class="loader-line"></div>
-
 </div>
+
 
 
 <!-- =====================================================
@@ -171,29 +139,48 @@
         aria-labelledby="popup-title"
     >
 
+
         <!-- LEFT VISUAL -->
 
-        <div
-            class="popup-left"
-            aria-hidden="true"
-        ></div>
+        <div class="popup-left">
+
+            <div class="popup-left-overlay"></div>
+
+            <div class="popup-left-content">
+
+                <span>
+                    SERVIAM THERAPY
+                </span>
+
+                <strong>
+                    מגע שמחזיר
+                    את הגוף לאיזון.
+                </strong>
+
+            </div>
+
+        </div>
 
 
         <!-- RIGHT CONTENT -->
 
         <div class="popup-right">
 
+
             <button
                 id="popup-close"
                 class="popup-close"
-                type="button"
                 aria-label="סגירת חלון"
+                type="button"
             >
                 ×
             </button>
 
 
             <div class="popup-content">
+
+
+                <!-- SAME LOGO AS MAIN WEBSITE -->
 
                 <img
                     src="images/logo/logo.png"
@@ -208,7 +195,8 @@
 
 
                 <h1 id="popup-title">
-                    אנחנו מתחדשים בשבילכם
+                    אנחנו מתחדשים
+                    <span>בשבילכם.</span>
                 </h1>
 
 
@@ -218,10 +206,7 @@
                     כדי שנוכל להעניק לכם חוויית טיפול
                     מקצועית, נעימה ויוקרתית אפילו יותר.
 
-                </p>
-
-
-                <p>
+                    <br><br>
 
                     בינתיים ניתן להזמין טיפולים עד הבית.
                     אני מגיע עם כל הציוד המקצועי הדרוש,
@@ -276,14 +261,14 @@
                 </div>
 
 
-                <button
+                <a
+                    href="#home"
                     id="popup-enter"
                     class="popup-button"
-                    type="button"
                 >
                     המשך לאתר Serviam Therapy
                     <span>←</span>
-                </button>
+                </a>
 
 
             </div>
@@ -295,22 +280,18 @@
 </div>
 
 
+
 <!-- =====================================================
-     HEADER / NAVIGATION
+     NAVIGATION
 ====================================================== -->
 
-<header
-    class="site-header"
-    id="site-header"
->
+<header class="site-header">
 
     <nav
         class="navbar"
         aria-label="ניווט ראשי"
     >
 
-
-        <!-- BRAND -->
 
         <a
             href="#home"
@@ -324,92 +305,11 @@
                 class="brand-logo"
             >
 
-            <span class="brand-text">
-
-                SERVIAM
-
-                <small>
-                    THERAPY
-                </small>
-
-            </span>
-
         </a>
 
 
-        <!-- DESKTOP SOCIAL ICONS -->
-
-        <div class="header-socials">
-
-            <a
-                href="https://www.facebook.com/serviamtherapypage"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="header-social-link"
-                aria-label="Serviam Therapy בפייסבוק"
-            >
-
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-
-                    <path
-                        d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"
-                    />
-
-                </svg>
-
-            </a>
-
-
-            <a
-                href="https://www.instagram.com/serviamtherapy"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="header-social-link"
-                aria-label="Serviam Therapy באינסטגרם"
-            >
-
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-
-                    <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
-                        rx="5"
-                        ry="5"
-                    />
-
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="4"
-                    />
-
-                    <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1.2"
-                        class="instagram-dot"
-                    />
-
-                </svg>
-
-            </a>
-
-        </div>
-
-
-        <!-- MOBILE MENU BUTTON -->
-
         <button
             class="mobile-menu-toggle"
-            id="mobile-menu-toggle"
             type="button"
             aria-label="פתיחת תפריט"
             aria-expanded="false"
@@ -423,52 +323,32 @@
         </button>
 
 
-        <!-- NAVIGATION -->
-
         <div
             class="nav-menu"
             id="main-navigation"
         >
 
-            <a
-                href="#home"
-                class="nav-link"
-            >
+            <a href="#home" class="nav-link">
                 ראשי
             </a>
 
-            <a
-                href="#services"
-                class="nav-link"
-            >
+            <a href="#services" class="nav-link">
                 טיפולים
             </a>
 
-            <a
-                href="#about"
-                class="nav-link"
-            >
+            <a href="#about" class="nav-link">
                 אודות
             </a>
 
-            <a
-                href="#gallery"
-                class="nav-link"
-            >
+            <a href="#gallery" class="nav-link">
                 גלריה
             </a>
 
-            <a
-                href="#faq"
-                class="nav-link"
-            >
+            <a href="#faq" class="nav-link">
                 שאלות נפוצות
             </a>
 
-            <a
-                href="#contact"
-                class="nav-link"
-            >
+            <a href="#contact" class="nav-link">
                 צור קשר
             </a>
 
@@ -480,27 +360,68 @@
             </a>
 
 
-            <!-- MOBILE SOCIALS -->
+            <!-- SOCIAL ICONS -->
 
-            <div class="mobile-socials">
+            <div class="header-socials">
+
 
                 <a
                     href="https://www.facebook.com/serviamtherapypage"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
+                    class="header-social facebook-link"
                 >
-                    Facebook
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"/>
+                    </svg>
+
                 </a>
+
 
                 <a
                     href="https://www.instagram.com/serviamtherapy"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
+                    class="header-social instagram-link"
                 >
-                    Instagram
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                            ry="5"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        />
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1.2"
+                            class="instagram-dot"
+                        />
+
+                    </svg>
+
                 </a>
+
 
             </div>
 
@@ -511,16 +432,17 @@
 </header>
 
 
-<!-- =====================================================
-     HERO
-====================================================== -->
 
 <main>
 
 
+<!-- =====================================================
+     HERO
+====================================================== -->
+
 <section
-    class="hero"
     id="home"
+    class="hero-section"
 >
 
 
@@ -542,9 +464,9 @@
         <div class="hero-content">
 
 
-            <span class="hero-eyebrow">
+            <div class="hero-eyebrow">
                 SERVIAM THERAPY
-            </span>
+            </div>
 
 
             <h1>
@@ -609,14 +531,12 @@
 </section>
 
 
+
 <!-- =====================================================
      INTRO
 ====================================================== -->
 
-<section
-    class="intro-section section-light"
-    id="intro"
->
+<section class="intro-section">
 
     <div class="container">
 
@@ -653,13 +573,14 @@
 </section>
 
 
+
 <!-- =====================================================
      SERVICES
 ====================================================== -->
 
 <section
-    class="services-section section-light"
     id="services"
+    class="services-section"
 >
 
     <div class="container">
@@ -721,12 +642,10 @@
                     </h3>
 
                     <p>
-
                         טיפול מרגיע ומאוזן
                         המשלב תנועות זורמות
                         לשחרור מתח, הרפיית השרירים
                         ושיפור התחושה הכללית.
-
                     </p>
 
                     <div class="service-pricing">
@@ -756,6 +675,7 @@
             </article>
 
 
+
             <!-- 02 -->
 
             <article class="service-card">
@@ -781,12 +701,10 @@
                     </h3>
 
                     <p>
-
                         עבודה ממוקדת על שכבות
                         השריר והרקמות העמוקות
                         במטרה להפחית עומס,
                         נוקשות ומתח מצטבר.
-
                     </p>
 
                     <div class="service-pricing">
@@ -809,6 +727,7 @@
                 </div>
 
             </article>
+
 
 
             <!-- 03 -->
@@ -836,12 +755,10 @@
                     </h3>
 
                     <p>
-
                         מתאים לפני או אחרי אימון,
                         לשחרור עומסים ולתמיכה
                         בהתאוששות של הגוף
                         לאחר פעילות גופנית.
-
                     </p>
 
                     <div class="service-pricing">
@@ -864,6 +781,7 @@
                 </div>
 
             </article>
+
 
 
             <!-- 04 -->
@@ -891,12 +809,10 @@
                     </h3>
 
                     <p>
-
                         טיפול ממוקד המותאם
                         לאזורים עמוסים או כואבים,
                         עם דגש על שחרור והרפיה
                         של אזורים ספציפיים.
-
                     </p>
 
                     <div class="service-pricing">
@@ -919,6 +835,7 @@
                 </div>
 
             </article>
+
 
 
             <!-- 05 -->
@@ -946,11 +863,9 @@
                     </h3>
 
                     <p>
-
                         שילוב של חום וטכניקות
                         עיסוי ליצירת חוויית
                         הרפיה עמוקה ונעימה.
-
                     </p>
 
                     <div class="service-pricing">
@@ -973,6 +888,7 @@
                 </div>
 
             </article>
+
 
 
             <!-- 06 -->
@@ -1000,11 +916,9 @@
                     </h3>
 
                     <p>
-
                         טכניקה משלימה המתבצעת
                         בהתאם להתאמה האישית
                         ולמטרות הטיפול.
-
                     </p>
 
                     <div class="service-pricing">
@@ -1036,13 +950,14 @@
 </section>
 
 
+
 <!-- =====================================================
      ABOUT
 ====================================================== -->
 
 <section
-    class="about-section section-dark"
     id="about"
+    class="about-section"
 >
 
     <div class="container">
@@ -1246,11 +1161,10 @@
 
                 <a
                     href="#booking"
-                    class="button button-gold"
+                    class="button button-dark"
                 >
                     אני רוצה טיפול
                 </a>
-
 
             </div>
 
@@ -1261,14 +1175,12 @@
 </section>
 
 
+
 <!-- =====================================================
      STATISTICS
 ====================================================== -->
 
-<section
-    class="statistics-section"
-    aria-label="נתונים על Serviam Therapy"
->
+<section class="statistics-section">
 
     <div class="container">
 
@@ -1334,14 +1246,12 @@
 </section>
 
 
+
 <!-- =====================================================
      BENEFITS
 ====================================================== -->
 
-<section
-    class="benefits-section section-light"
-    id="benefits"
->
+<section class="benefits-section">
 
     <div class="container">
 
@@ -1457,14 +1367,12 @@
 </section>
 
 
+
 <!-- =====================================================
      PROCESS
 ====================================================== -->
 
-<section
-    class="process-section section-dark"
-    id="process"
->
+<section class="process-section">
 
     <div class="container">
 
@@ -1577,14 +1485,12 @@
 </section>
 
 
+
 <!-- =====================================================
      TESTIMONIALS
 ====================================================== -->
 
-<section
-    class="testimonials-section section-light"
-    id="testimonials"
->
+<section class="testimonials-section">
 
     <div class="container">
 
@@ -1639,13 +1545,14 @@
 </section>
 
 
+
 <!-- =====================================================
      GALLERY
 ====================================================== -->
 
 <section
-    class="gallery-section section-light"
     id="gallery"
+    class="gallery-section"
 >
 
     <div class="container">
@@ -1750,13 +1657,14 @@
 </section>
 
 
+
 <!-- =====================================================
      FAQ
 ====================================================== -->
 
 <section
-    class="faq-section section-light"
     id="faq"
+    class="faq-section"
 >
 
     <div class="container">
@@ -1972,13 +1880,14 @@
 </section>
 
 
+
 <!-- =====================================================
      BOOKING
 ====================================================== -->
 
 <section
-    class="booking-section"
     id="booking"
+    class="booking-section"
 >
 
 
@@ -2063,17 +1972,17 @@
 </section>
 
 
+
 <!-- =====================================================
      CONTACT
 ====================================================== -->
 
 <section
-    class="contact-section section-light"
     id="contact"
+    class="contact-section"
 >
 
     <div class="container">
-
 
         <div class="contact-grid">
 
@@ -2106,8 +2015,6 @@
                 <div class="contact-details">
 
 
-                    <!-- PHONE -->
-
                     <a
                         href="tel:+972543629852"
                         class="contact-item"
@@ -2131,8 +2038,6 @@
 
                     </a>
 
-
-                    <!-- WHATSAPP -->
 
                     <a
                         href="https://wa.me/972543629852"
@@ -2160,8 +2065,6 @@
                     </a>
 
 
-                    <!-- EMAIL -->
-
                     <button
                         type="button"
                         class="contact-item contact-email-button"
@@ -2186,8 +2089,6 @@
 
                     </button>
 
-
-                    <!-- ADDRESS -->
 
                     <a
                         href="https://maps.app.goo.gl/bfcwbqHnwSVkFBsm9"
@@ -2214,8 +2115,6 @@
 
                     </a>
 
-
-                    <!-- WAZE -->
 
                     <a
                         href="https://waze.com/ul?q=Ha-Nevi'im%20St%2027%2C%20Bat%20Yam"
@@ -2246,8 +2145,6 @@
                 </div>
 
 
-                <!-- SOCIAL LINKS -->
-
                 <div class="social-links">
 
 
@@ -2259,14 +2156,9 @@
                         class="social-link facebook-link"
                     >
 
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
 
-                            <path
-                                d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"
-                            />
+                            <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"/>
 
                         </svg>
 
@@ -2281,10 +2173,7 @@
                         class="social-link instagram-link"
                     >
 
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
 
                             <rect
                                 x="3"
@@ -2319,7 +2208,6 @@
             </div>
 
 
-            <!-- CONTACT CARD -->
 
             <div class="contact-card">
 
@@ -2347,23 +2235,17 @@
                     </h4>
 
                     <p>
-
                         א' – ו'
-
                         <strong>
                             10:00–20:00
                         </strong>
-
                     </p>
 
                     <p>
-
                         שבת:
-
                         <strong>
                             סגור
                         </strong>
-
                     </p>
 
                 </div>
@@ -2386,17 +2268,16 @@
 </section>
 
 
+
 </main>
+
 
 
 <!-- =====================================================
      FOOTER
 ====================================================== -->
 
-<footer
-    class="site-footer"
->
-
+<footer class="site-footer">
 
     <div class="container">
 
@@ -2503,7 +2384,6 @@
         <div class="footer-bottom">
 
             ©
-
             <span data-current-year>
                 2026
             </span>
@@ -2516,8 +2396,8 @@
 
     </div>
 
-
 </footer>
+
 
 
 <!-- =====================================================
@@ -2539,6 +2419,7 @@
 </a>
 
 
+
 <!-- =====================================================
      JAVASCRIPT
 ====================================================== -->
@@ -2548,9 +2429,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =================================================
+    /* =====================================================
        PAGE LOADER
-    ================================================= */
+    ===================================================== */
 
     const pageLoader =
         document.getElementById("page-loader");
@@ -2560,19 +2441,19 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
 
             if (pageLoader) {
-
                 pageLoader.classList.add("loaded");
-
             }
 
-        }, 350);
+        }, 450);
 
     });
 
 
-    /* =================================================
+
+    /* =====================================================
        MAINTENANCE POPUP
-    ================================================= */
+       SHOWS ON EVERY VISIT
+    ===================================================== */
 
     const popup =
         document.getElementById("maintenance-popup");
@@ -2649,50 +2530,48 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* =================================================
-       MOBILE MENU
-    ================================================= */
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
 
     const mobileToggle =
-        document.getElementById(
-            "mobile-menu-toggle"
+        document.querySelector(
+            ".mobile-menu-toggle"
         );
 
-    const navigation =
+    const navMenu =
         document.getElementById(
             "main-navigation"
         );
 
 
-    if (
-        mobileToggle &&
-        navigation
-    ) {
+    if (mobileToggle && navMenu) {
 
         mobileToggle.addEventListener(
             "click",
             function () {
 
                 const isOpen =
-                    navigation.classList.toggle(
-                        "active"
+                    navMenu.classList.toggle(
+                        "mobile-open"
                     );
-
-                mobileToggle.classList.toggle(
-                    "active",
-                    isOpen
-                );
 
                 mobileToggle.setAttribute(
                     "aria-expanded",
                     String(isOpen)
                 );
 
+                mobileToggle.classList.toggle(
+                    "active",
+                    isOpen
+                );
+
             }
         );
 
 
-        navigation
+        navMenu
             .querySelectorAll("a")
             .forEach(function (link) {
 
@@ -2700,8 +2579,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     "click",
                     function () {
 
-                        navigation.classList.remove(
-                            "active"
+                        navMenu.classList.remove(
+                            "mobile-open"
                         );
 
                         mobileToggle.classList.remove(
@@ -2721,49 +2600,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =================================================
-       HEADER SCROLL
-    ================================================= */
 
-    const header =
-        document.getElementById("site-header");
-
-
-    function updateHeader() {
-
-        if (!header) return;
-
-        if (window.scrollY > 30) {
-
-            header.classList.add(
-                "scrolled"
-            );
-
-        } else {
-
-            header.classList.remove(
-                "scrolled"
-            );
-
-        }
-
-    }
-
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        {
-            passive: true
-        }
-    );
-
-    updateHeader();
-
-
-    /* =================================================
+    /* =====================================================
        FAQ ACCORDION
-    ================================================= */
+    ===================================================== */
 
     const faqQuestions =
         document.querySelectorAll(
@@ -2771,98 +2611,71 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    faqQuestions.forEach(
-        function (question) {
+    faqQuestions.forEach(function (question) {
 
-            question.addEventListener(
-                "click",
-                function () {
+        question.addEventListener(
+            "click",
+            function () {
 
-                    const item =
-                        question.closest(
-                            ".faq-item"
-                        );
+                const currentItem =
+                    question.closest(".faq-item");
 
-                    if (!item) return;
-
-
-                    const isOpen =
-                        item.classList.contains(
-                            "active"
-                        );
+                const isOpen =
+                    currentItem.classList.contains(
+                        "open"
+                    );
 
 
-                    document
-                        .querySelectorAll(
-                            ".faq-item.active"
-                        )
-                        .forEach(
-                            function (openItem) {
-
-                                if (
-                                    openItem !== item
-                                ) {
-
-                                    openItem.classList.remove(
-                                        "active"
-                                    );
-
-                                    const openButton =
-                                        openItem.querySelector(
-                                            ".faq-question"
-                                        );
-
-                                    if (openButton) {
-
-                                        openButton.setAttribute(
-                                            "aria-expanded",
-                                            "false"
-                                        );
-
-                                    }
-
-                                }
-
-                            }
-                        );
-
-
-                    if (isOpen) {
+                document
+                    .querySelectorAll(".faq-item")
+                    .forEach(function (item) {
 
                         item.classList.remove(
-                            "active"
+                            "open"
                         );
 
-                        question.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
+                        const button =
+                            item.querySelector(
+                                ".faq-question"
+                            );
 
-                    } else {
+                        if (button) {
 
-                        item.classList.add(
-                            "active"
-                        );
+                            button.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
 
-                        question.setAttribute(
-                            "aria-expanded",
-                            "true"
-                        );
+                        }
 
-                    }
+                    });
+
+
+                if (!isOpen) {
+
+                    currentItem.classList.add(
+                        "open"
+                    );
+
+                    question.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
 
                 }
-            );
 
-        }
-    );
+            }
+        );
+
+    });
 
 
-    /* =================================================
+
+    /* =====================================================
        EMAIL REVEAL
-    ================================================= */
+    ===================================================== */
 
-    const emailButton =
+    const emailReveal =
         document.getElementById(
             "email-reveal"
         );
@@ -2873,53 +2686,24 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    /*
-       The email address is assembled here
-       instead of being exposed directly in
-       the HTML markup.
-    */
+    if (emailReveal && emailLabel) {
 
-    const emailUser =
-        "serviamtherapy";
-
-    const emailDomain =
-        "gmail.com";
-
-    const emailAddress =
-        emailUser + "@" + emailDomain;
-
-
-    if (
-        emailButton &&
-        emailLabel
-    ) {
-
-        emailButton.addEventListener(
+        emailReveal.addEventListener(
             "click",
             function () {
 
+                const email =
+                    "info@serviamtherapy.com";
+
                 emailLabel.textContent =
-                    emailAddress;
+                    email;
 
-                emailButton.classList.add(
-                    "revealed"
-                );
+                emailReveal.onclick = function () {
 
-                emailButton.setAttribute(
-                    "aria-label",
-                    "שליחת אימייל ל-" +
-                    emailAddress
-                );
+                    window.location.href =
+                        "mailto:" + email;
 
-
-                emailButton.onclick =
-                    function () {
-
-                        window.location.href =
-                            "mailto:" +
-                            emailAddress;
-
-                    };
+                };
 
             }
         );
@@ -2927,99 +2711,71 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =================================================
-       CURRENT YEAR
-    ================================================= */
+
+    /* =====================================================
+       FOOTER YEAR
+    ===================================================== */
 
     const year =
         new Date().getFullYear();
-
 
     document
         .querySelectorAll(
             "[data-current-year]"
         )
-        .forEach(
-            function (element) {
+        .forEach(function (element) {
 
-                element.textContent =
-                    year;
+            element.textContent =
+                year;
 
-            }
-        );
+        });
 
 
-    /* =================================================
+
+    /* =====================================================
        SMOOTH SCROLL
-    ================================================= */
+    ===================================================== */
 
     document
         .querySelectorAll(
             'a[href^="#"]'
         )
-        .forEach(
-            function (link) {
+        .forEach(function (link) {
 
-                link.addEventListener(
-                    "click",
-                    function (event) {
+            link.addEventListener(
+                "click",
+                function (event) {
 
-                        const targetId =
-                            link.getAttribute(
-                                "href"
-                            );
+                    const targetId =
+                        this.getAttribute("href");
 
-                        if (
-                            !targetId ||
-                            targetId === "#"
-                        ) {
-                            return;
-                        }
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+                        return;
+                    }
 
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
 
-                        const target =
-                            document.querySelector(
-                                targetId
-                            );
-
-
-                        if (!target) return;
-
+                    if (target) {
 
                         event.preventDefault();
 
-
-                        const headerHeight =
-                            header
-                                ? header.offsetHeight
-                                : 0;
-
-
-                        const targetPosition =
-                            target.getBoundingClientRect()
-                                .top +
-                            window.scrollY -
-                            headerHeight;
-
-
-                        window.scrollTo({
-
-                            top:
-                                Math.max(
-                                    0,
-                                    targetPosition
-                                ),
-
-                            behavior:
-                                "smooth"
-
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
                         });
 
                     }
-                );
 
-            }
-        );
+                }
+            );
+
+        });
 
 
 });
@@ -3028,6 +2784,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 </body>
-
 </html>
 ```
