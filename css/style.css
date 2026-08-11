@@ -1,7 +1,7 @@
 ```css
 /* =========================================================
    SERVIAM THERAPY
-   MAIN STYLESHEET — FINAL VERSION
+   MAIN STYLESHEET
 ========================================================= */
 
 
@@ -2129,98 +2129,48 @@ footer {
     font-size: 16px;
 }
 
-
-/* =========================================================
-   POPUP BUTTON — FINAL READABILITY FIX
-========================================================= */
-
 .popup-button {
-    position: relative;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     gap: 12px;
 
-    width: auto;
     min-height: 56px;
 
-    padding: 0 30px;
+    padding: 0 28px;
 
     border: 0;
+
     border-radius: 2px;
 
     background: var(--navy);
 
-    color: #ffffff !important;
+    color: #fff;
 
     font-family: "Heebo", sans-serif;
 
     font-size: 15px;
     font-weight: 600;
 
-    line-height: 1.4;
-
-    text-align: center;
-    text-decoration: none;
-
-    direction: rtl;
-
-    white-space: nowrap;
-
     cursor: pointer;
-
-    opacity: 1;
 
     box-shadow:
         0 10px 25px rgba(16,27,45,.18);
 
     transition:
         background .25s ease,
-        color .25s ease,
-        transform .25s ease,
-        box-shadow .25s ease;
+        transform .25s ease;
 }
 
 .popup-button:hover {
     background: var(--gold-dark);
 
-    color: #ffffff !important;
-
     transform: translateY(-2px);
-
-    box-shadow:
-        0 14px 30px rgba(16,27,45,.22);
-}
-
-.popup-button:active {
-    transform: translateY(0);
-}
-
-.popup-button:focus-visible {
-    outline: 2px solid var(--gold);
-
-    outline-offset: 4px;
-}
-
-.popup-button span {
-    color: #ffffff !important;
 }
 
 .popup-button-arrow {
     display: inline-block;
-
-    flex-shrink: 0;
-
-    color: #ffffff !important;
-
-    font-size: 18px;
-    font-weight: 400;
-
-    line-height: 1;
-
-    opacity: 1;
 
     transition:
         transform .25s ease;
@@ -2228,8 +2178,6 @@ footer {
 
 .popup-button:hover .popup-button-arrow {
     transform: translateX(-4px);
-
-    color: #ffffff !important;
 }
 
 .popup-close {
@@ -2377,6 +2325,8 @@ footer {
             transform .25s ease;
     }
 
+    /* FIX:
+       JavaScript uses .mobile-open */
     .nav-menu.mobile-open {
         opacity: 1;
         visibility: visible;
@@ -2676,17 +2626,9 @@ footer {
 
         min-height: 54px;
 
-        padding: 0 15px;
+        padding-inline: 15px;
 
         font-size: 14px;
-
-        white-space: normal;
-
-        text-align: center;
-    }
-
-    .popup-button-arrow {
-        font-size: 17px;
     }
 
     .popup-close {
@@ -2739,12 +2681,6 @@ footer {
     .popup-left {
         height: 165px;
         min-height: 165px;
-    }
-
-    .popup-button {
-        font-size: 13px;
-
-        min-height: 52px;
     }
 }
 
