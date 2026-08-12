@@ -1,34 +1,34 @@
 /* =========================================================
    SERVIAM THERAPY
-   Luxury Warm Dark / Champagne Theme
+   Luxury Warm Light / Champagne Theme
    ========================================================= */
 
 :root {
 
-    --bg-main: #29231d;
-    --bg-main-soft: #302921;
+    --bg-main: #4a4034;
+    --bg-main-soft: #51473a;
     --bg-dark: #211c17;
     --bg-deep: #1b1713;
 
-    --surface: #342d25;
-    --surface-light: #3b332a;
-    --surface-soft: #40372d;
+    --surface: #5a4f41;
+    --surface-light: #625647;
+    --surface-soft: #695c4c;
 
     --gold: #c9a86a;
     --gold-light: #dfc58e;
     --gold-soft: #b9965a;
 
-    --text: #f4efe6;
-    --text-soft: #d8d0c4;
-    --text-muted: #afa79b;
+    --text: #f8f3ea;
+    --text-soft: #e3dbcf;
+    --text-muted: #c1b7a9;
 
-    --border: rgba(201,168,106,.24);
-    --border-light: rgba(255,255,255,.10);
+    --border: rgba(201,168,106,.28);
+    --border-light: rgba(255,255,255,.13);
 
     --white: #ffffff;
 
     --shadow:
-        0 25px 70px rgba(0,0,0,.25);
+        0 25px 70px rgba(0,0,0,.22);
 
     --container: 1240px;
 
@@ -63,11 +63,14 @@ body {
     color:
         var(--text);
 
-    direction: rtl;
+    direction:
+        rtl;
 
-    line-height: 1.8;
+    line-height:
+        1.8;
 
-    overflow-x: hidden;
+    overflow-x:
+        hidden;
 }
 
 img {
@@ -112,9 +115,11 @@ section {
 
 .section-label {
 
-    display: inline-block;
+    display:
+        inline-block;
 
-    margin-bottom: 18px;
+    margin-bottom:
+        18px;
 
     color:
         var(--gold-light);
@@ -123,29 +128,42 @@ section {
         "Poppins",
         sans-serif;
 
-    font-size: 11px;
+    font-size:
+        11px;
 
-    font-weight: 500;
+    font-weight:
+        500;
 
-    letter-spacing: 3px;
+    letter-spacing:
+        3px;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 }
 
 .section-heading {
-    margin-bottom: 70px;
+    margin-bottom:
+        70px;
 }
 
 .section-heading.centered {
-    text-align: center;
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align:
+        center;
+
+    max-width:
+        760px;
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
 }
 
 .section-heading h2 {
 
-    margin-bottom: 20px;
+    margin-bottom:
+        20px;
 
     font-size:
         clamp(
@@ -154,30 +172,40 @@ section {
             58px
         );
 
-    line-height: 1.18;
+    line-height:
+        1.18;
 
-    font-weight: 400;
+    font-weight:
+        400;
 
-    letter-spacing: -.8px;
+    letter-spacing:
+        -.8px;
 }
 
 .section-heading h2 span {
-    display: inline;
-    color: var(--gold-light);
+    display:
+        inline;
+
+    color:
+        var(--gold-light);
 }
 
 .section-heading p {
 
-    max-width: 700px;
+    max-width:
+        700px;
 
     color:
         var(--text-muted);
 
-    font-size: 17px;
+    font-size:
+        17px;
 
-    line-height: 1.9;
+    line-height:
+        1.9;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 }
 
 
@@ -186,7 +214,8 @@ section {
    ========================================================= */
 
 .loader-inner {
-    text-align: center;
+    text-align:
+        center;
 }
 
 .loader-logo {
@@ -195,9 +224,11 @@ section {
         "Poppins",
         sans-serif;
 
-    font-size: 28px;
+    font-size:
+        28px;
 
-    letter-spacing: 8px;
+    letter-spacing:
+        8px;
 
     color:
         var(--gold-light);
@@ -205,11 +236,14 @@ section {
 
 .loader-line {
 
-    width: 70px;
+    width:
+        70px;
 
-    height: 1px;
+    height:
+        1px;
 
-    margin: 18px auto;
+    margin:
+        18px auto;
 
     background:
         var(--gold);
@@ -221,9 +255,11 @@ section {
         "Poppins",
         sans-serif;
 
-    font-size: 10px;
+    font-size:
+        10px;
 
-    letter-spacing: 5px;
+    letter-spacing:
+        5px;
 
     color:
         var(--text-muted);
@@ -239,15 +275,22 @@ section {
     position:
         fixed;
 
-    top: 0;
-    right: 0;
-    left: 0;
+    top:
+        0;
 
-    z-index: 1000;
+    right:
+        0;
+
+    left:
+        0;
+
+    z-index:
+        1000;
 
     padding:
         22px 0;
 
+    /* Header intentionally remains dark */
     background:
         rgba(41,35,29,.82);
 
@@ -288,7 +331,8 @@ section {
     justify-content:
         space-between;
 
-    gap: 30px;
+    gap:
+        30px;
 }
 
 
@@ -304,17 +348,23 @@ section {
     align-items:
         center;
 
-    gap: 12px;
+    gap:
+        12px;
 
-    flex-shrink: 0;
+    flex-shrink:
+        0;
 }
 
 .brand-logo {
 
-    width: 44px;
-    height: 44px;
+    width:
+        44px;
 
-    object-fit: contain;
+    height:
+        44px;
+
+    object-fit:
+        contain;
 }
 
 .brand-text {
@@ -329,11 +379,14 @@ section {
         "Poppins",
         sans-serif;
 
-    font-size: 17px;
+    font-size:
+        17px;
 
-    line-height: 1;
+    line-height:
+        1;
 
-    letter-spacing: 3px;
+    letter-spacing:
+        3px;
 
     color:
         var(--text);
@@ -341,11 +394,14 @@ section {
 
 .brand-text small {
 
-    margin-top: 6px;
+    margin-top:
+        6px;
 
-    font-size: 8px;
+    font-size:
+        8px;
 
-    letter-spacing: 4px;
+    letter-spacing:
+        4px;
 
     color:
         var(--gold-light);
@@ -364,15 +420,20 @@ section {
     align-items:
         center;
 
-    gap: 9px;
+    gap:
+        9px;
 
-    margin-right: auto;
+    margin-right:
+        auto;
 }
 
 .header-social-link {
 
-    width: 35px;
-    height: 35px;
+    width:
+        35px;
+
+    height:
+        35px;
 
     display:
         flex;
@@ -387,7 +448,8 @@ section {
         1px solid
         rgba(201,168,106,.25);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
     color:
         var(--gold-light);
@@ -413,24 +475,32 @@ section {
 
 .header-social-link svg {
 
-    width: 16px;
-    height: 16px;
+    width:
+        16px;
 
-    fill: currentColor;
+    height:
+        16px;
+
+    fill:
+        currentColor;
 }
 
 .header-social-link .instagram-icon {
 
-    fill: none;
+    fill:
+        none;
 
     stroke:
         currentColor;
 
-    stroke-width: 1.8;
+    stroke-width:
+        1.8;
 
-    stroke-linecap: round;
+    stroke-linecap:
+        round;
 
-    stroke-linejoin: round;
+    stroke-linejoin:
+        round;
 }
 
 .header-social-link
@@ -457,17 +527,20 @@ section {
     align-items:
         center;
 
-    gap: 28px;
+    gap:
+        28px;
 }
 
 .nav-link {
 
-    position: relative;
+    position:
+        relative;
 
     color:
         var(--text-soft);
 
-    font-size: 14px;
+    font-size:
+        14px;
 
     transition:
         var(--transition);
@@ -475,16 +548,23 @@ section {
 
 .nav-link::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
 
-    right: 0;
-    bottom: -7px;
+    right:
+        0;
 
-    width: 0;
-    height: 1px;
+    bottom:
+        -7px;
+
+    width:
+        0;
+
+    height:
+        1px;
 
     background:
         var(--gold);
@@ -500,7 +580,8 @@ section {
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width:
+        100%;
 }
 
 .nav-book-button {
@@ -515,7 +596,8 @@ section {
     color:
         var(--gold-light);
 
-    font-size: 14px;
+    font-size:
+        14px;
 
     transition:
         var(--transition);
@@ -537,10 +619,14 @@ section {
 
 .mobile-menu-toggle {
 
-    display: none;
+    display:
+        none;
 
-    width: 42px;
-    height: 42px;
+    width:
+        42px;
+
+    height:
+        42px;
 
     border:
         1px solid
@@ -561,13 +647,17 @@ section {
     flex-direction:
         column;
 
-    gap: 5px;
+    gap:
+        5px;
 }
 
 .mobile-menu-toggle span {
 
-    width: 19px;
-    height: 1px;
+    width:
+        19px;
+
+    height:
+        1px;
 
     background:
         var(--gold-light);
@@ -577,7 +667,8 @@ section {
 }
 
 .mobile-socials {
-    display: none;
+    display:
+        none;
 }
 
 
@@ -602,8 +693,9 @@ section {
     overflow:
         hidden;
 
+    /* Lighter overall hero */
     background:
-        #4a4034;
+        #625547;
 }
 
 .hero-background {
@@ -617,8 +709,8 @@ section {
     background:
         linear-gradient(
             115deg,
-            rgba(70,58,46,.96),
-            rgba(53,44,35,.90)
+            rgba(92,78,63,.94),
+            rgba(70,59,47,.88)
         );
 
     z-index:
@@ -639,14 +731,14 @@ section {
     background:
         radial-gradient(
             circle at 30% 45%,
-            rgba(201,168,106,.13),
+            rgba(201,168,106,.16),
             transparent 42%
         ),
 
         linear-gradient(
             90deg,
-            rgba(36,30,24,.15),
-            rgba(36,30,24,.35)
+            rgba(50,41,32,.10),
+            rgba(50,41,32,.25)
         );
 }
 
@@ -742,7 +834,7 @@ section {
         40px;
 
     color:
-        rgba(255,250,242,.78);
+        rgba(255,250,242,.84);
 
     font-size:
         clamp(
@@ -829,7 +921,7 @@ section {
 .button-outline-light {
 
     border-color:
-        rgba(255,255,255,.38);
+        rgba(255,255,255,.45);
 
     color:
         var(--white);
@@ -879,7 +971,7 @@ section {
         10px;
 
     color:
-        rgba(255,255,255,.58);
+        rgba(255,255,255,.65);
 
     font-size:
         11px;
@@ -911,7 +1003,7 @@ section {
         125px 0;
 
     background:
-        #302820;
+        #51473a;
 }
 
 
@@ -925,7 +1017,7 @@ section {
         125px 0;
 
     background:
-        #29231d;
+        #4a4034;
 }
 
 .services-grid {
@@ -950,7 +1042,7 @@ section {
 
     border:
         1px solid
-        rgba(201,168,106,.13);
+        rgba(201,168,106,.16);
 
     transition:
         var(--transition);
@@ -1149,7 +1241,7 @@ section {
         130px 0;
 
     background:
-        #332b23;
+        #54493c;
 }
 
 .about-grid {
@@ -1324,7 +1416,6 @@ section {
 }
 
 .feature-icon {
-
     color:
         var(--gold-light);
 }
@@ -1382,7 +1473,6 @@ section {
 }
 
 .education-group ul {
-
     list-style:
         none;
 }
@@ -1403,7 +1493,7 @@ section {
 
     border-bottom:
         1px solid
-        rgba(255,255,255,.06);
+        rgba(255,255,255,.08);
 
     color:
         var(--text-muted);
@@ -1436,7 +1526,7 @@ section {
 
     border:
         1px solid
-        rgba(201,168,106,.20);
+        rgba(201,168,106,.24);
 
     color:
         var(--text-muted);
@@ -1455,6 +1545,7 @@ section {
     padding:
         80px 0;
 
+    /* Dark section intentionally preserved */
     background:
         #211c17;
 
@@ -1493,7 +1584,8 @@ section {
 }
 
 .stat-item:last-child {
-    border-left: 0;
+    border-left:
+        0;
 }
 
 .stat-item strong {
@@ -1546,7 +1638,7 @@ section {
         125px 0;
 
     background:
-        #302820;
+        #51473a;
 }
 
 .benefits-grid {
@@ -1567,11 +1659,11 @@ section {
         35px 28px;
 
     background:
-        rgba(255,255,255,.025);
+        rgba(255,255,255,.045);
 
     border:
         1px solid
-        rgba(201,168,106,.14);
+        rgba(201,168,106,.17);
 
     transition:
         var(--transition);
@@ -1637,7 +1729,7 @@ section {
         125px 0;
 
     background:
-        #29231d;
+        #4a4034;
 }
 
 .process-grid {
@@ -1726,7 +1818,7 @@ section {
         125px 0;
 
     background:
-        #332b23;
+        #54493c;
 }
 
 .google-rating-summary {
@@ -1750,11 +1842,11 @@ section {
         22px;
 
     background:
-        rgba(255,255,255,.025);
+        rgba(255,255,255,.045);
 
     border:
         1px solid
-        rgba(201,168,106,.15);
+        rgba(201,168,106,.18);
 }
 
 .google-rating-stars {
@@ -1871,7 +1963,7 @@ section {
         125px 0;
 
     background:
-        #29231d;
+        #4a4034;
 }
 
 .gallery-grid {
@@ -1930,7 +2022,7 @@ section {
         125px 0;
 
     background:
-        #302820;
+        #51473a;
 }
 
 .faq-grid {
@@ -2063,6 +2155,7 @@ section {
     overflow:
         hidden;
 
+    /* Keep booking dark */
     background:
         #211c17;
 }
@@ -2201,7 +2294,7 @@ section {
         125px 0;
 
     background:
-        #332b23;
+        #54493c;
 }
 
 .contact-grid {
@@ -2283,10 +2376,10 @@ section {
 
     border:
         1px solid
-        rgba(201,168,106,.12);
+        rgba(201,168,106,.15);
 
     background:
-        rgba(255,255,255,.02);
+        rgba(255,255,255,.035);
 
     text-align:
         right;
@@ -2301,7 +2394,7 @@ section {
         rgba(201,168,106,.35);
 
     background:
-        rgba(255,255,255,.04);
+        rgba(255,255,255,.06);
 }
 
 .contact-icon {
@@ -2489,7 +2582,7 @@ section {
         45px;
 
     background:
-        #29231d;
+        #4a4034;
 
     border:
         1px solid
@@ -2591,6 +2684,7 @@ section {
 
 .site-footer {
 
+    /* Footer intentionally remains dark */
     background:
         #211c17;
 
@@ -2785,6 +2879,7 @@ section {
 }
 
 .floating-whatsapp svg path + path {
+
     fill:
         currentColor;
 
@@ -2879,7 +2974,7 @@ section {
 .popup-right {
 
     background:
-        #302820;
+        #51473a;
 
     color:
         var(--text);
@@ -2967,7 +3062,8 @@ section {
 @media (max-width: 1100px) {
 
     .nav-menu {
-        gap: 18px;
+        gap:
+            18px;
     }
 
     .services-grid {
@@ -2981,7 +3077,8 @@ section {
     }
 
     .about-grid {
-        gap: 55px;
+        gap:
+            55px;
     }
 
     .footer-grid {
@@ -3004,11 +3101,13 @@ section {
     }
 
     .header-socials {
-        display: none;
+        display:
+            none;
     }
 
     .mobile-menu-toggle {
-        display: flex;
+        display:
+            flex;
     }
 
     .nav-menu {
@@ -3052,7 +3151,8 @@ section {
     }
 
     .nav-menu.active {
-        display: flex;
+        display:
+            flex;
     }
 
     .nav-link {
@@ -3066,7 +3166,8 @@ section {
     }
 
     .nav-link::after {
-        display: none;
+        display:
+            none;
     }
 
     .nav-book-button {
@@ -3171,6 +3272,7 @@ section {
     }
 
     .about-image-wrapper {
+
         max-width:
             620px;
 
@@ -3210,7 +3312,8 @@ section {
     }
 
     .stat-item:nth-child(2) {
-        border-left: 0;
+        border-left:
+            0;
     }
 
     .gallery-grid {
@@ -3249,7 +3352,7 @@ section {
             90vh;
 
         background:
-            #43382d;
+            #5b4e40;
     }
 
     .hero-content {
@@ -3294,7 +3397,6 @@ section {
     }
 
     .hero-actions .button {
-
         width:
             100%;
     }
