@@ -1,7 +1,7 @@
 /* =========================================================
    SERVIAM THERAPY
-   LUXURY WELLNESS DESIGN SYSTEM
-   EDITION: BOUTIQUE WELCOME POPUP
+   PREMIUM LUXURY WELLNESS DESIGN SYSTEM
+   WITH PROFESSIONAL CREDENTIALS SECTION
    RTL / HEBREW
    ========================================================= */
 
@@ -12,62 +12,31 @@
 
 :root {
 
-    --bg:
-        #ebe5da;
+    --bg: #ebe5da;
+    --bg-soft: #f1ece3;
+    --bg-light: #f8f4ec;
+    --card: #fbf8f2;
 
-    --bg-soft:
-        #f1ece3;
+    --espresso: #30241d;
+    --espresso-dark: #211813;
+    --espresso-soft: #45352a;
 
-    --bg-light:
-        #f8f4ec;
+    --brown: #665649;
+    --brown-soft: #817469;
 
-    --card:
-        #fbf8f2;
+    --gold: #b9914e;
+    --gold-light: #d7b978;
+    --gold-pale: #ead8b0;
+    --gold-dark: #8d6b32;
 
-    --espresso:
-        #30241d;
+    --white: #ffffff;
 
-    --espresso-dark:
-        #211813;
+    --text: #382c24;
+    --text-soft: #75685d;
+    --text-muted: #9b8f82;
 
-    --espresso-soft:
-        #45352a;
-
-    --brown:
-        #665649;
-
-    --brown-soft:
-        #817469;
-
-    --gold:
-        #b9914e;
-
-    --gold-light:
-        #d7b978;
-
-    --gold-pale:
-        #ead8b0;
-
-    --gold-dark:
-        #8d6b32;
-
-    --white:
-        #ffffff;
-
-    --text:
-        #382c24;
-
-    --text-soft:
-        #75685d;
-
-    --text-muted:
-        #9b8f82;
-
-    --border:
-        rgba(98, 76, 52, .15);
-
-    --border-gold:
-        rgba(185, 145, 78, .42);
+    --border: rgba(98, 76, 52, .15);
+    --border-gold: rgba(185, 145, 78, .42);
 
     --shadow-sm:
         0 10px 30px rgba(52, 38, 26, .06);
@@ -135,11 +104,14 @@ body {
         Arial,
         sans-serif;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 
-    overflow-x: hidden;
+    overflow-x:
+        hidden;
 }
 
 body.popup-open {
@@ -174,7 +146,7 @@ button {
 
 
 /* =========================================================
-   03 — GLOBAL LAYOUT
+   03 — GLOBAL
    ========================================================= */
 
 .container {
@@ -184,7 +156,8 @@ button {
             var(--container)
         );
 
-    margin-inline: auto;
+    margin-inline:
+        auto;
 }
 
 section {
@@ -219,15 +192,18 @@ section[id] {
 
     font-weight: 500;
 
-    letter-spacing: .28em;
+    letter-spacing:
+        .28em;
 
-    text-transform: uppercase;
+    text-transform:
+        uppercase;
 }
 
 .section-label::before {
     content: "";
 
     width: 30px;
+
     height: 1px;
 
     background:
@@ -248,14 +224,17 @@ section[id] {
     text-align: center;
 }
 
-.section-heading.centered .section-label {
+.section-heading.centered
+.section-label {
     justify-content: center;
 }
 
 .section-heading h2 {
-    margin: 0 0 22px;
+    margin:
+        0 0 22px;
 
-    color: var(--espresso);
+    color:
+        var(--espresso);
 
     font-size:
         clamp(
@@ -264,59 +243,77 @@ section[id] {
             66px
         );
 
-    font-weight: 400;
+    font-weight:
+        400;
 
-    letter-spacing: -.04em;
+    letter-spacing:
+        -.04em;
 
-    line-height: 1.08;
+    line-height:
+        1.08;
 }
 
 .section-heading h2 span {
     display: block;
 
-    color: var(--gold-dark);
+    color:
+        var(--gold-dark);
 
-    font-weight: 400;
+    font-weight:
+        400;
 }
 
 .section-heading p {
-    max-width: 590px;
+    max-width:
+        590px;
 
-    margin: 0;
+    margin:
+        0;
 
-    color: var(--text-soft);
+    color:
+        var(--text-soft);
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 2;
+    line-height:
+        2;
 }
 
 
 /* =========================================================
-   05 — GOLD DETAILS
+   05 — GOLD BREAK
    ========================================================= */
 
 .gold-break {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 15px;
+    gap:
+        15px;
 
-    margin-top: 26px;
+    margin-top:
+        26px;
 
-    max-width: 440px;
+    max-width:
+        440px;
 }
 
 .gold-break::before,
 .gold-break::after {
     content: "";
 
-    flex: 1;
+    flex:
+        1;
 
-    height: 1px;
+    height:
+        1px;
 
     background:
         linear-gradient(
@@ -336,10 +333,14 @@ section[id] {
 }
 
 .gold-break span {
-    width: 6px;
-    height: 6px;
+    width:
+        6px;
 
-    flex: 0 0 6px;
+    height:
+        6px;
+
+    flex:
+        0 0 6px;
 
     background:
         var(--gold-light);
@@ -349,7 +350,8 @@ section[id] {
 }
 
 .gold-break h2 {
-    display: none;
+    display:
+        none;
 }
 
 
@@ -358,18 +360,23 @@ section[id] {
    ========================================================= */
 
 .page-loader {
+    position:
+        fixed;
 
-    position: fixed;
+    inset:
+        0;
 
-    inset: 0;
+    z-index:
+        99999;
 
-    z-index: 99999;
+    display:
+        flex;
 
-    display: flex;
+    align-items:
+        center;
 
-    align-items: center;
-
-    justify-content: center;
+    justify-content:
+        center;
 
     background:
         radial-gradient(
@@ -379,9 +386,11 @@ section[id] {
         ),
         var(--espresso);
 
-    opacity: 1;
+    opacity:
+        1;
 
-    visibility: visible;
+    visibility:
+        visible;
 
     transition:
         opacity .75s ease,
@@ -389,20 +398,22 @@ section[id] {
 }
 
 .page-loader.loaded {
+    opacity:
+        0;
 
-    opacity: 0;
+    visibility:
+        hidden;
 
-    visibility: hidden;
-
-    pointer-events: none;
+    pointer-events:
+        none;
 }
 
 .loader-inner {
-    text-align: center;
+    text-align:
+        center;
 }
 
 .loader-logo {
-
     color:
         var(--gold-light);
 
@@ -410,40 +421,56 @@ section[id] {
         "Poppins",
         sans-serif;
 
-    font-size: 27px;
+    font-size:
+        27px;
 
-    font-weight: 400;
+    font-weight:
+        400;
 
-    letter-spacing: .3em;
+    letter-spacing:
+        .3em;
 }
 
 .loader-line {
 
-    width: 90px;
+    width:
+        90px;
 
-    height: 1px;
+    height:
+        1px;
 
-    margin: 14px auto;
+    margin:
+        14px auto;
 
     background:
         var(--gold);
 
     animation:
-        loaderPulse 1.35s ease-in-out infinite;
+        loaderPulse
+        1.35s
+        ease-in-out
+        infinite;
 }
 
 .loader-subtitle {
 
     color:
-        rgba(255,255,255,.55);
+        rgba(
+            255,
+            255,
+            255,
+            .55
+        );
 
     font-family:
         "Poppins",
         sans-serif;
 
-    font-size: 9px;
+    font-size:
+        9px;
 
-    letter-spacing: .48em;
+    letter-spacing:
+        .48em;
 }
 
 @keyframes loaderPulse {
@@ -453,43 +480,43 @@ section[id] {
         transform:
             scaleX(.45);
 
-        opacity: .35;
+        opacity:
+            .35;
     }
 
     50% {
         transform:
             scaleX(1);
 
-        opacity: 1;
+        opacity:
+            1;
     }
 }
 
 
 /* =========================================================
-   07 — NEW POPUP DESIGN
-   BOUTIQUE WELCOME CARD
+   07 — POPUP
    ========================================================= */
-
-/*
-   The popup now behaves like an elegant invitation,
-   not a second webpage.
-
-   The main site remains visible behind it.
-*/
 
 .popup-window {
 
-    position: fixed;
+    position:
+        fixed;
 
-    inset: 0;
+    inset:
+        0;
 
-    z-index: 10000;
+    z-index:
+        10000;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
     padding:
         30px;
@@ -508,11 +535,14 @@ section[id] {
     -webkit-backdrop-filter:
         blur(7px);
 
-    opacity: 1;
+    opacity:
+        1;
 
-    visibility: visible;
+    visibility:
+        visible;
 
-    pointer-events: auto;
+    pointer-events:
+        auto;
 
     transition:
         opacity .45s ease,
@@ -521,36 +551,48 @@ section[id] {
 
 .popup-window.popup-hidden {
 
-    opacity: 0;
+    opacity:
+        0;
 
-    visibility: hidden;
+    visibility:
+        hidden;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
-
-
-/* ---------------------------------------------------------
-   Popup card — left / visual side
-   --------------------------------------------------------- */
 
 .popup-left {
 
-    position: relative;
+    position:
+        relative;
 
-    width: min(
-        780px,
-        100%
-    );
+    width:
+        min(
+            780px,
+            100%
+        );
 
-    min-height: 600px;
+    min-height:
+        600px;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
     background:
         linear-gradient(
             180deg,
-            rgba(38,28,21,.25),
-            rgba(38,28,21,.84)
+            rgba(
+                38,
+                28,
+                21,
+                .25
+            ),
+            rgba(
+                38,
+                28,
+                21,
+                .84
+            )
         ),
         url("../images/hero/hero.jpg")
         center / cover no-repeat;
@@ -561,22 +603,30 @@ section[id] {
     box-shadow:
         var(--shadow-dark);
 
+    pointer-events:
+        none;
+
     animation:
         popupVisualIn
         .8s
-        cubic-bezier(.22,.61,.36,1)
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        )
         both;
-
-    pointer-events: none;
 }
 
 .popup-left::before {
 
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 18px;
+    inset:
+        18px;
 
     border:
         1px solid
@@ -587,22 +637,28 @@ section[id] {
             .45
         );
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
 
 .popup-left::after {
 
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    width: 95px;
+    width:
+        95px;
 
-    height: 95px;
+    height:
+        95px;
 
-    right: 32px;
+    right:
+        32px;
 
-    top: 32px;
+    top:
+        32px;
 
     border-top:
         1px solid
@@ -622,14 +678,17 @@ section[id] {
             .8
         );
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
 
 .popup-left-overlay {
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 0;
+    inset:
+        0;
 
     background:
         radial-gradient(
@@ -656,15 +715,20 @@ section[id] {
 
 .popup-left-content {
 
-    position: absolute;
+    position:
+        absolute;
 
-    z-index: 4;
+    z-index:
+        4;
 
-    right: 55px;
+    right:
+        55px;
 
-    left: 55px;
+    left:
+        55px;
 
-    bottom: 58px;
+    bottom:
+        58px;
 
     color:
         var(--white);
@@ -672,9 +736,11 @@ section[id] {
 
 .popup-left-content > span {
 
-    display: block;
+    display:
+        block;
 
-    margin-bottom: 15px;
+    margin-bottom:
+        15px;
 
     color:
         var(--gold-light);
@@ -683,14 +749,17 @@ section[id] {
         "Poppins",
         sans-serif;
 
-    font-size: 10px;
+    font-size:
+        10px;
 
-    letter-spacing: .32em;
+    letter-spacing:
+        .32em;
 }
 
 .popup-left-content strong {
 
-    display: block;
+    display:
+        block;
 
     color:
         #fff;
@@ -702,9 +771,11 @@ section[id] {
             56px
         );
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 1.12;
+    line-height:
+        1.12;
 }
 
 .popup-left-content::after {
@@ -712,9 +783,11 @@ section[id] {
     content:
         "PROFESSIONAL  •  PERSONAL  •  PRECISE";
 
-    display: block;
+    display:
+        block;
 
-    margin-top: 24px;
+    margin-top:
+        24px;
 
     color:
         rgba(
@@ -728,36 +801,38 @@ section[id] {
         "Poppins",
         sans-serif;
 
-    font-size: 8px;
+    font-size:
+        8px;
 
-    letter-spacing: .2em;
+    letter-spacing:
+        .2em;
 }
-
-
-/* ---------------------------------------------------------
-   Popup right / information side
-   --------------------------------------------------------- */
 
 .popup-right {
 
-    position: relative;
+    position:
+        relative;
 
-    width: min(
-        480px,
-        100%
-    );
+    width:
+        min(
+            480px,
+            100%
+        );
 
-    min-height: 600px;
+    min-height:
+        600px;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
     padding:
-        65px
-        48px;
+        65px 48px;
 
     background:
         radial-gradient(
@@ -770,7 +845,7 @@ section[id] {
             ),
             transparent 30%
         ),
-        var(--cream);
+        var(--card);
 
     border-radius:
         0 3px 3px 0;
@@ -782,55 +857,68 @@ section[id] {
         popupCardIn
         .7s
         .08s
-        cubic-bezier(.22,.61,.36,1)
+        cubic-bezier(
+            .22,
+            .61,
+            .36,
+            1
+        )
         both;
 
-    pointer-events: auto;
+    pointer-events:
+        auto;
 }
 
 .popup-right::before {
 
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 14px;
+    inset:
+        14px;
 
     border:
         1px solid
         var(--border-gold);
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
-
-
-/* ---------------------------------------------------------
-   Popup close
-   --------------------------------------------------------- */
 
 .popup-close {
 
-    position: absolute;
+    position:
+        absolute;
 
-    z-index: 100;
+    z-index:
+        100;
 
-    top: 18px;
+    top:
+        18px;
 
-    left: 18px;
+    left:
+        18px;
 
-    width: 39px;
+    width:
+        39px;
 
-    height: 39px;
+    height:
+        39px;
 
-    display: grid;
+    display:
+        grid;
 
-    place-items: center;
+    place-items:
+        center;
 
     border:
         1px solid
         var(--border);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
     background:
         rgba(
@@ -843,15 +931,17 @@ section[id] {
     color:
         var(--brown);
 
-    font-size: 24px;
+    font-size:
+        24px;
 
-    font-weight: 300;
+    font-weight:
+        300;
 
-    line-height: 1;
+    cursor:
+        pointer;
 
-    cursor: pointer;
-
-    pointer-events: auto;
+    pointer-events:
+        auto;
 
     transition:
         var(--transition);
@@ -869,23 +959,24 @@ section[id] {
         var(--gold-light);
 
     transform:
-        rotate(90deg);
+        rotate(
+            90deg
+        );
 }
-
-
-/* ---------------------------------------------------------
-   Popup content
-   --------------------------------------------------------- */
 
 .popup-content {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 50;
+    z-index:
+        50;
 
-    width: 100%;
+    width:
+        100%;
 
-    max-width: 390px;
+    max-width:
+        390px;
 
     margin:
         0 auto;
@@ -899,11 +990,14 @@ section[id] {
 
 .popup-logo {
 
-    width: 64px;
+    width:
+        64px;
 
-    height: 64px;
+    height:
+        64px;
 
-    margin-bottom: 15px;
+    margin-bottom:
+        15px;
 
     object-fit:
         contain;
@@ -911,9 +1005,11 @@ section[id] {
 
 .popup-label {
 
-    display: block;
+    display:
+        block;
 
-    margin-bottom: 17px;
+    margin-bottom:
+        17px;
 
     color:
         var(--gold-dark);
@@ -922,9 +1018,11 @@ section[id] {
         "Poppins",
         sans-serif;
 
-    font-size: 9px;
+    font-size:
+        9px;
 
-    letter-spacing: .28em;
+    letter-spacing:
+        .28em;
 }
 
 .popup-content h1 {
@@ -954,15 +1052,20 @@ section[id] {
 
 .popup-content h1::after {
 
-    content: "";
+    content:
+        "";
 
-    display: block;
+    display:
+        block;
 
-    width: 48px;
+    width:
+        48px;
 
-    height: 1px;
+    height:
+        1px;
 
-    margin-top: 15px;
+    margin-top:
+        15px;
 
     background:
         var(--gold);
@@ -986,16 +1089,13 @@ section[id] {
         1.9;
 }
 
-
-/* ---------------------------------------------------------
-   Popup feature list
-   --------------------------------------------------------- */
-
 .popup-features {
 
-    display: grid;
+    display:
+        grid;
 
-    gap: 7px;
+    gap:
+        7px;
 
     margin:
         24px 0 25px;
@@ -1003,11 +1103,14 @@ section[id] {
 
 .popup-feature {
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 11px;
+    gap:
+        11px;
 
     padding:
         8px 0;
@@ -1025,22 +1128,27 @@ section[id] {
 
 .popup-feature-icon {
 
-    width: 32px;
+    width:
+        32px;
 
-    height: 32px;
+    height:
+        32px;
 
     flex:
         0 0 32px;
 
-    display: grid;
+    display:
+        grid;
 
-    place-items: center;
+    place-items:
+        center;
 
     border:
         1px solid
         var(--border-gold);
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
     color:
         var(--gold-dark);
@@ -1048,11 +1156,14 @@ section[id] {
 
 .popup-feature-icon svg {
 
-    width: 16px;
+    width:
+        16px;
 
-    height: 16px;
+    height:
+        16px;
 
-    fill: none;
+    fill:
+        none;
 
     stroke:
         currentColor;
@@ -1066,11 +1177,6 @@ section[id] {
     stroke-linejoin:
         round;
 }
-
-
-/* ---------------------------------------------------------
-   Popup CTA
-   --------------------------------------------------------- */
 
 .popup-button {
 
@@ -1096,8 +1202,7 @@ section[id] {
         space-between;
 
     padding:
-        14px
-        19px;
+        14px 19px;
 
     border:
         1px solid
@@ -1141,47 +1246,9 @@ section[id] {
         );
 
     transition:
-        background
-        var(--transition),
-
-        transform
-        var(--transition),
-
-        box-shadow
-        var(--transition);
-}
-
-.popup-button::before {
-
-    content: "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-        linear-gradient(
-            105deg,
-            transparent 20%,
-            rgba(
-                255,
-                255,
-                255,
-                .14
-            ) 50%,
-            transparent 80%
-        );
-
-    transform:
-        translateX(-120%);
-
-    transition:
-        .7s ease;
-
-    pointer-events:
-        none;
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 .popup-button:hover {
@@ -1203,20 +1270,21 @@ section[id] {
         );
 
     transform:
-        translateY(-2px);
-}
-
-.popup-button:hover::before {
-    transform:
-        translateX(120%);
+        translateY(
+            -2px
+        );
 }
 
 .popup-button:active {
+
     transform:
-        translateY(0);
+        translateY(
+            0
+        );
 }
 
 .popup-button span {
+
     position:
         relative;
 
@@ -1236,55 +1304,76 @@ section[id] {
         20px;
 
     transition:
-        transform
         var(--transition);
 }
 
 .popup-button:hover
 .popup-button-arrow {
+
     transform:
-        translateX(-4px);
+        translateX(
+            -4px
+        );
 
     color:
         white;
 }
 
-
-/* ---------------------------------------------------------
-   Popup animation
-   --------------------------------------------------------- */
-
 @keyframes popupVisualIn {
 
     from {
-        opacity: 0;
+        opacity:
+            0;
+
         transform:
-            translateX(25px)
-            scale(.98);
+            translateX(
+                25px
+            )
+            scale(
+                .98
+            );
     }
 
     to {
-        opacity: 1;
+        opacity:
+            1;
+
         transform:
-            translateX(0)
-            scale(1);
+            translateX(
+                0
+            )
+            scale(
+                1
+            );
     }
 }
 
 @keyframes popupCardIn {
 
     from {
-        opacity: 0;
+        opacity:
+            0;
+
         transform:
-            translateX(-18px)
-            scale(.97);
+            translateX(
+                -18px
+            )
+            scale(
+                .97
+            );
     }
 
     to {
-        opacity: 1;
+        opacity:
+            1;
+
         transform:
-            translateX(0)
-            scale(1);
+            translateX(
+                0
+            )
+            scale(
+                1
+            );
     }
 }
 
@@ -1295,17 +1384,23 @@ section[id] {
 
 .navbar {
 
-    position: fixed;
+    position:
+        fixed;
 
-    z-index: 5000;
+    z-index:
+        5000;
 
-    top: 15px;
+    top:
+        15px;
 
-    left: 50%;
+    left:
+        50%;
 
     width:
         min(
-            calc(100% - 34px),
+            calc(
+                100% - 34px
+            ),
             1400px
         );
 
@@ -1313,7 +1408,9 @@ section[id] {
         74px;
 
     transform:
-        translateX(-50%);
+        translateX(
+            -50%
+        );
 
     display:
         flex;
@@ -1362,7 +1459,8 @@ section[id] {
 
 .navbar::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -1380,7 +1478,9 @@ section[id] {
         1px;
 
     transform:
-        translateX(-50%);
+        translateX(
+            -50%
+        );
 
     background:
         var(--gold);
@@ -1504,7 +1604,9 @@ section[id] {
         var(--border-gold);
 
     transform:
-        translateY(-2px);
+        translateY(
+            -2px
+        );
 }
 
 .header-social-link svg,
@@ -1583,7 +1685,8 @@ section[id] {
 
 .nav-link::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -1604,7 +1707,9 @@ section[id] {
         var(--gold);
 
     transform:
-        translateX(-50%);
+        translateX(
+            -50%
+        );
 
     transition:
         var(--transition);
@@ -1651,7 +1756,8 @@ section[id] {
 
 .nav-book-button::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -1673,10 +1779,13 @@ section[id] {
         );
 
     transform:
-        translateX(-110%);
+        translateX(
+            -110%
+        );
 
     transition:
-        .75s ease;
+        .75s
+        ease;
 }
 
 .nav-book-button:hover {
@@ -1688,18 +1797,21 @@ section[id] {
 .nav-book-button:hover::before {
 
     transform:
-        translateX(110%);
+        translateX(
+            110%
+        );
 }
 
 .mobile-menu-toggle,
 .mobile-socials {
+
     display:
         none;
 }
 
 
 /* =========================================================
-   HERO
+   09 — HERO
    ========================================================= */
 
 .hero-section {
@@ -1736,10 +1848,13 @@ section[id] {
 
     background:
         url("../images/hero/hero.jpg")
-        center / cover no-repeat;
+        center / cover
+        no-repeat;
 
     transform:
-        scale(1.025);
+        scale(
+            1.025
+        );
 }
 
 .hero-overlay {
@@ -1753,21 +1868,47 @@ section[id] {
     background:
         linear-gradient(
             90deg,
-            rgba(38,27,20,.93) 0%,
-            rgba(38,27,20,.74) 38%,
-            rgba(38,27,20,.35) 70%,
-            rgba(38,27,20,.56) 100%
+            rgba(
+                38,
+                27,
+                20,
+                .93
+            ) 0%,
+            rgba(
+                38,
+                27,
+                20,
+                .74
+            ) 38%,
+            rgba(
+                38,
+                27,
+                20,
+                .35
+            ) 70%,
+            rgba(
+                38,
+                27,
+                20,
+                .56
+            ) 100%
         ),
         radial-gradient(
             circle at 75% 28%,
-            rgba(214,183,118,.16),
+            rgba(
+                214,
+                183,
+                118,
+                .16
+            ),
             transparent 28%
         );
 }
 
 .hero-section::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -1797,7 +1938,8 @@ section[id] {
 
 .hero-section::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -1878,7 +2020,8 @@ section[id] {
 
 .hero-eyebrow::before {
 
-    content: "";
+    content:
+        "";
 
     width:
         42px;
@@ -2006,7 +2149,8 @@ section[id] {
 
 .button::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2028,10 +2172,13 @@ section[id] {
         );
 
     transform:
-        translateX(-120%);
+        translateX(
+            -120%
+        );
 
     transition:
-        .75s ease;
+        .75s
+        ease;
 
     pointer-events:
         none;
@@ -2040,7 +2187,9 @@ section[id] {
 .button:hover::before {
 
     transform:
-        translateX(120%);
+        translateX(
+            120%
+        );
 }
 
 .button-primary,
@@ -2071,7 +2220,9 @@ section[id] {
         var(--espresso);
 
     transform:
-        translateY(-3px);
+        translateY(
+            -3px
+        );
 
     box-shadow:
         0 15px 35px
@@ -2186,7 +2337,7 @@ section[id] {
 
 
 /* =========================================================
-   INTRO
+   10 — INTRO
    ========================================================= */
 
 .intro-section {
@@ -2275,7 +2426,7 @@ section[id] {
 
 
 /* =========================================================
-   SERVICES
+   11 — SERVICES
    ========================================================= */
 
 .services-section {
@@ -2293,7 +2444,8 @@ section[id] {
 
 .services-section::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2388,13 +2540,17 @@ section[id] {
 .service-card:nth-child(5) {
 
     transform:
-        translateY(38px);
+        translateY(
+            38px
+        );
 }
 
 .service-card:hover {
 
     transform:
-        translateY(-9px);
+        translateY(
+            -9px
+        );
 
     border-color:
         var(--border-gold);
@@ -2407,12 +2563,15 @@ section[id] {
 .service-card:nth-child(5):hover {
 
     transform:
-        translateY(29px);
+        translateY(
+            29px
+        );
 }
 
 .service-card::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2438,7 +2597,9 @@ section[id] {
         );
 
     transform:
-        scaleX(0);
+        scaleX(
+            0
+        );
 
     transition:
         var(--transition);
@@ -2447,7 +2608,9 @@ section[id] {
 .service-card:hover::after {
 
     transform:
-        scaleX(1);
+        scaleX(
+            1
+        );
 }
 
 .service-image {
@@ -2467,7 +2630,8 @@ section[id] {
 
 .service-image::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2511,7 +2675,8 @@ section[id] {
 
 .service-image::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2555,7 +2720,6 @@ section[id] {
             .36,
             1
         ),
-
         filter
         .7s
         ease;
@@ -2571,7 +2735,7 @@ section[id] {
 
     filter:
         saturate(
-            .9
+            .90
         );
 }
 
@@ -2791,7 +2955,7 @@ section[id] {
 
 
 /* =========================================================
-   ABOUT
+   12 — ABOUT
    ========================================================= */
 
 .about-section {
@@ -2821,7 +2985,8 @@ section[id] {
 
 .about-section::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2853,7 +3018,8 @@ section[id] {
 
 .about-section::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2924,7 +3090,8 @@ section[id] {
 
 .about-image-wrapper::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -2944,7 +3111,8 @@ section[id] {
 
 .about-image-wrapper::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -3166,7 +3334,8 @@ section[id] {
         grid;
 
     grid-template-columns:
-        1fr 1fr;
+        1fr
+        1fr;
 
     margin:
         34px 0 48px;
@@ -3376,7 +3545,634 @@ section[id] {
 
 
 /* =========================================================
-   STATISTICS
+   13 — PROFESSIONAL CREDENTIALS
+   ========================================================= */
+
+.credentials-section {
+
+    position:
+        relative;
+
+    padding:
+        145px 0
+        135px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f0e8,
+            #e7dfd2
+        );
+
+    overflow:
+        hidden;
+}
+
+.credentials-section::before {
+
+    content:
+        "CREDENTIALS";
+
+    position:
+        absolute;
+
+    left:
+        -25px;
+
+    top:
+        65px;
+
+    color:
+        rgba(
+            82,
+            61,
+            42,
+            .035
+        );
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        115px;
+
+    letter-spacing:
+        .08em;
+
+    white-space:
+        nowrap;
+
+    pointer-events:
+        none;
+}
+
+.credentials-section::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        7%;
+
+    top:
+        105px;
+
+    width:
+        100px;
+
+    height:
+        100px;
+
+    border-top:
+        1px solid
+        rgba(
+            185,
+            145,
+            78,
+            .38
+        );
+
+    border-right:
+        1px solid
+        rgba(
+            185,
+            145,
+            78,
+            .38
+        );
+
+    pointer-events:
+        none;
+}
+
+.credentials-intro {
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        space-between;
+
+    gap:
+        70px;
+
+    margin-bottom:
+        70px;
+}
+
+.credentials-intro
+.section-heading {
+
+    max-width:
+        730px;
+}
+
+.credentials-intro
+.section-heading h2 {
+
+    margin-bottom:
+        26px;
+}
+
+.credentials-intro
+.section-heading p {
+
+    max-width:
+        680px;
+}
+
+.credentials-signature {
+
+    min-width:
+        220px;
+
+    padding-bottom:
+        8px;
+
+    text-align:
+        left;
+
+    border-bottom:
+        1px solid
+        var(--border-gold);
+}
+
+.credentials-signature span {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--gold-dark);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .28em;
+}
+
+.credentials-signature strong {
+
+    display:
+        block;
+
+    color:
+        rgba(
+            56,
+            44,
+            36,
+            .62
+        );
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        9px;
+
+    font-weight:
+        400;
+
+    letter-spacing:
+        .16em;
+}
+
+.credentials-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:
+        22px;
+}
+
+.credential-card {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .62
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform
+        var(--transition-slow),
+
+        box-shadow
+        var(--transition-slow),
+
+        border-color
+        var(--transition);
+}
+
+.credential-card:hover {
+
+    transform:
+        translateY(
+            -7px
+        );
+
+    border-color:
+        var(--border-gold);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+.credential-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    left:
+        0;
+
+    bottom:
+        0;
+
+    height:
+        2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    transform:
+        scaleX(
+            0
+        );
+
+    transition:
+        var(--transition);
+}
+
+.credential-card:hover::after {
+
+    transform:
+        scaleX(
+            1
+        );
+}
+
+.credential-image {
+
+    position:
+        relative;
+
+    height:
+        245px;
+
+    padding:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fdfbf7,
+            #eee6d9
+        );
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+.credential-image::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        15px;
+
+    border:
+        1px solid
+        rgba(
+            185,
+            145,
+            78,
+            .28
+        );
+
+    pointer-events:
+        none;
+}
+
+.credential-placeholder {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    border:
+        1px dashed
+        rgba(
+            141,
+            107,
+            50,
+            .35
+        );
+
+    color:
+        var(--text-muted);
+
+    text-align:
+        center;
+
+    font-size:
+        12px;
+}
+
+.credential-placeholder-number {
+
+    position:
+        absolute;
+
+    top:
+        27px;
+
+    right:
+        28px;
+
+    color:
+        var(--gold-dark);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .14em;
+}
+
+.credential-placeholder-icon {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    margin-bottom:
+        5px;
+
+    border:
+        1px solid
+        var(--border-gold);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        15px;
+}
+
+.credential-content {
+
+    position:
+        relative;
+
+    padding:
+        25px
+        25px
+        28px;
+}
+
+.credential-number {
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--gold-dark);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .18em;
+}
+
+.credential-content h3 {
+
+    margin:
+        0 0 8px;
+
+    color:
+        var(--espresso);
+
+    font-size:
+        19px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.35;
+}
+
+.credential-content p {
+
+    margin:
+        0 0 15px;
+
+    color:
+        var(--text-muted);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .04em;
+
+    line-height:
+        1.6;
+}
+
+.credential-status {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        10px;
+}
+
+.credential-status::before {
+
+    content:
+        "✓";
+
+    display:
+        inline-grid;
+
+    place-items:
+        center;
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    border:
+        1px solid
+        var(--border-gold);
+
+    border-radius:
+        50%;
+
+    font-size:
+        9px;
+}
+
+.credentials-note {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        32px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        11px;
+
+    text-align:
+        center;
+}
+
+.credentials-note > span {
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        14px;
+}
+
+.credentials-note p {
+
+    margin:
+        0;
+}
+
+
+/* =========================================================
+   14 — STATISTICS
    ========================================================= */
 
 .statistics-section {
@@ -3489,7 +4285,7 @@ section[id] {
 
 
 /* =========================================================
-   BENEFITS
+   15 — BENEFITS
    ========================================================= */
 
 .benefits-section {
@@ -3572,7 +4368,8 @@ section[id] {
 
 .benefit-card::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -3650,7 +4447,7 @@ section[id] {
 
 
 /* =========================================================
-   PROCESS
+   16 — PROCESS
    ========================================================= */
 
 .process-section {
@@ -3681,8 +4478,7 @@ section[id] {
         white;
 }
 
-.process-section
-.section-label {
+.process-section .section-label {
 
     color:
         var(--gold-light);
@@ -3820,7 +4616,7 @@ section[id] {
 
 
 /* =========================================================
-   GOOGLE REVIEWS
+   17 — REVIEWS
    ========================================================= */
 
 .reviews-section {
@@ -4226,7 +5022,7 @@ section[id] {
 
 
 /* =========================================================
-   GALLERY
+   18 — GALLERY
    ========================================================= */
 
 .gallery-section {
@@ -4366,7 +5162,8 @@ section[id] {
 
 .gallery-item::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -4395,7 +5192,8 @@ section[id] {
 
 .gallery-item::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -4491,7 +5289,7 @@ section[id] {
 
 
 /* =========================================================
-   FAQ
+   19 — FAQ
    ========================================================= */
 
 .faq-section {
@@ -4678,7 +5476,7 @@ section[id] {
 
 
 /* =========================================================
-   BOOKING
+   20 — BOOKING
    ========================================================= */
 
 .booking-section {
@@ -4727,9 +5525,24 @@ section[id] {
     background:
         linear-gradient(
             90deg,
-            rgba(35,25,19,.94),
-            rgba(35,25,19,.72),
-            rgba(35,25,19,.45)
+            rgba(
+                35,
+                25,
+                19,
+                .94
+            ),
+            rgba(
+                35,
+                25,
+                19,
+                .72
+            ),
+            rgba(
+                35,
+                25,
+                19,
+                .45
+            )
         ),
         radial-gradient(
             circle at 65% 45%,
@@ -4745,7 +5558,8 @@ section[id] {
 
 .booking-section::after {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -4926,7 +5740,7 @@ section[id] {
 
 
 /* =========================================================
-   CONTACT
+   21 — CONTACT
    ========================================================= */
 
 .contact-section {
@@ -5252,7 +6066,8 @@ section[id] {
 
 .contact-card::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -5409,7 +6224,7 @@ section[id] {
 
 
 /* =========================================================
-   FOOTER
+   22 — FOOTER
    ========================================================= */
 
 .footer-section {
@@ -5433,7 +6248,8 @@ section[id] {
 
 .footer-section::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -5609,7 +6425,7 @@ section[id] {
 
 
 /* =========================================================
-   FLOATING WHATSAPP
+   23 — FLOATING WHATSAPP
    ========================================================= */
 
 .floating-whatsapp {
@@ -5675,7 +6491,8 @@ section[id] {
 
 .floating-whatsapp::before {
 
-    content: "";
+    content:
+        "";
 
     position:
         absolute;
@@ -5736,7 +6553,7 @@ section[id] {
 
 
 /* =========================================================
-   TABLET
+   24 — TABLET
    ========================================================= */
 
 @media (max-width: 1150px) {
@@ -5745,7 +6562,9 @@ section[id] {
 
         width:
             min(
-                calc(100% - 42px),
+                calc(
+                    100% - 42px
+                ),
                 var(--container)
             );
     }
@@ -5798,6 +6617,36 @@ section[id] {
             60px;
     }
 
+    .credentials-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+    .credentials-intro {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            28px;
+    }
+
+    .credentials-signature {
+
+        min-width:
+            0;
+
+        text-align:
+            right;
+    }
+
     .contact-grid {
 
         gap:
@@ -5823,7 +6672,7 @@ section[id] {
     }
 
 
-    /* POPUP TABLET */
+    /* POPUP */
 
     .popup-window {
 
@@ -5874,7 +6723,7 @@ section[id] {
 
 
 /* =========================================================
-   MOBILE NAVIGATION
+   25 — MOBILE NAVIGATION
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -6143,6 +6992,12 @@ section[id] {
             auto;
     }
 
+    .credentials-intro {
+
+        margin-bottom:
+            50px;
+    }
+
     .process-grid {
 
         grid-template-columns:
@@ -6186,9 +7041,7 @@ section[id] {
     }
 
 
-    /* ---------------------------------------------------------
-       POPUP — MOBILE / TABLET
-       --------------------------------------------------------- */
+    /* MOBILE POPUP */
 
     .popup-window {
 
@@ -6223,7 +7076,7 @@ section[id] {
             );
 
         min-height:
-            auto;
+            0;
 
         max-height:
             calc(
@@ -6287,7 +7140,7 @@ section[id] {
 
 
 /* =========================================================
-   MOBILE
+   26 — MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
@@ -6416,6 +7269,7 @@ section[id] {
     .intro-section,
     .services-section,
     .about-section,
+    .credentials-section,
     .benefits-section,
     .reviews-section,
     .gallery-section,
@@ -6535,6 +7389,68 @@ section[id] {
             normal;
     }
 
+
+    /* CREDENTIALS MOBILE */
+
+    .credentials-section {
+
+        padding:
+            95px 0;
+    }
+
+    .credentials-intro {
+
+        gap:
+            24px;
+    }
+
+    .credentials-signature {
+
+        width:
+            100%;
+    }
+
+    .credentials-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            17px;
+    }
+
+    .credential-image {
+
+        height:
+            255px;
+    }
+
+    .credential-content {
+
+        padding:
+            22px
+            22px
+            24px;
+    }
+
+    .credential-content h3 {
+
+        font-size:
+            18px;
+    }
+
+    .credentials-note {
+
+        align-items:
+            flex-start;
+
+        text-align:
+            right;
+    }
+
+
+    /* STATISTICS */
+
     .statistics-section {
 
         padding:
@@ -6598,6 +7514,9 @@ section[id] {
             10px;
     }
 
+
+    /* BENEFITS */
+
     .benefits-grid {
 
         grid-template-columns:
@@ -6633,6 +7552,9 @@ section[id] {
             35px;
     }
 
+
+    /* REVIEWS */
+
     .google-rating-summary {
 
         width:
@@ -6656,6 +7578,9 @@ section[id] {
         grid-template-columns:
             1fr;
     }
+
+
+    /* GALLERY */
 
     .gallery-section {
 
@@ -6717,6 +7642,9 @@ section[id] {
             10px;
     }
 
+
+    /* BOOKING */
+
     .booking-section::after {
 
         inset:
@@ -6744,11 +7672,18 @@ section[id] {
             100%;
     }
 
+
+    /* CONTACT */
+
     .contact-card {
 
         padding:
-            42px 28px;
+            42px
+            28px;
     }
+
+
+    /* FOOTER */
 
     .footer-grid {
 
@@ -6756,7 +7691,8 @@ section[id] {
             1fr 1fr;
 
         gap:
-            38px 25px;
+            38px
+            25px;
     }
 
     .footer-brand {
@@ -6764,6 +7700,9 @@ section[id] {
         grid-column:
             1 / -1;
     }
+
+
+    /* WHATSAPP */
 
     .floating-whatsapp {
 
@@ -6781,9 +7720,7 @@ section[id] {
     }
 
 
-    /* ---------------------------------------------------------
-       POPUP — PHONE
-       --------------------------------------------------------- */
+    /* POPUP PHONE */
 
     .popup-window {
 
@@ -6894,8 +7831,7 @@ section[id] {
             55px;
 
         padding:
-            13px
-            16px;
+            13px 16px;
 
         font-size:
             12px;
@@ -6904,7 +7840,7 @@ section[id] {
 
 
 /* =========================================================
-   VERY SMALL PHONE
+   27 — VERY SMALL PHONE
    ========================================================= */
 
 @media (max-width: 430px) {
@@ -6943,7 +7879,22 @@ section[id] {
     }
 
 
-    /* POPUP EXTRA SMALL */
+    /* CREDENTIALS */
+
+    .credential-image {
+
+        height:
+            225px;
+    }
+
+    .credential-placeholder {
+
+        font-size:
+            11px;
+    }
+
+
+    /* POPUP */
 
     .popup-window {
 
@@ -7006,7 +7957,7 @@ section[id] {
 
 
 /* =========================================================
-   ACCESSIBILITY
+   28 — ACCESSIBILITY
    ========================================================= */
 
 a:focus-visible,
@@ -7022,7 +7973,7 @@ button:focus-visible {
 
 
 /* =========================================================
-   REDUCED MOTION
+   29 — REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
