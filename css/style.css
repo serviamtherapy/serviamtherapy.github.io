@@ -471,7 +471,7 @@ button{
     height: 7px;
     margin: 0 10px;
     border: 1px solid #c9a45c;
-    transform: rotate(45deg);
+    transform: rotate(0deg);
     box-shadow:
         0 0 8px rgba(201, 164, 92, 0.25);
 }
