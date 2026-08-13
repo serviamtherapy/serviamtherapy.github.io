@@ -24,9 +24,7 @@
 
     <meta name="author" content="Serviam Therapy">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#17130e">
-
-    <!-- Open Graph -->
+    <meta name="theme-color" content="#f4f1eb">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Serviam Therapy">
@@ -58,8 +56,6 @@
         content="Serviam Therapy — טיפול עיסוי מקצועי"
     >
 
-    <!-- Twitter -->
-
     <meta name="twitter:card" content="summary_large_image">
 
     <meta
@@ -77,8 +73,6 @@
         content="https://www.serviamtherapy.com/images/hero/hero.jpg"
     >
 
-    <!-- Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -92,8 +86,6 @@
         rel="stylesheet"
     >
 
-    <!-- CSS -->
-
     <link
         rel="stylesheet"
         href="css/style.css"
@@ -105,14 +97,11 @@
 <body>
 
 
-<!-- =====================================================
-     PAGE LOADER
-====================================================== -->
+<!-- =========================================================
+     LOADER
+========================================================= -->
 
-<div
-    class="page-loader"
-    id="page-loader"
->
+<div class="loader" id="loader">
 
     <div class="loader-inner">
 
@@ -131,15 +120,14 @@
 </div>
 
 
-<!-- =====================================================
-     MAINTENANCE / WELCOME POPUP
-====================================================== -->
+<!-- =========================================================
+     RENOVATION POPUP
+========================================================= -->
 
 <div
-    class="popup-window"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="popup-title"
+    class="popup"
+    id="renovation-popup"
+    aria-hidden="true"
 >
 
     <div
@@ -286,164 +274,48 @@
 </div>
 
 
-<!-- =====================================================
-     NAVIGATION
-====================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-<nav
-    class="navbar"
-    aria-label="ניווט ראשי"
->
+<header class="site-header" id="site-header">
 
-    <a
-        href="#home"
-        class="brand"
-        aria-label="Serviam Therapy - ראשי"
-    >
-
-        <img
-            src="images/logo/logo.png"
-            alt="Serviam Therapy"
-            class="brand-logo"
-        >
-
-        <span class="brand-text">
-
-            SERVIAM
-
-            <small>
-                THERAPY
-            </small>
-
-        </span>
-
-    </a>
-
-
-    <div class="header-socials">
-
-        <a
-            href="https://www.facebook.com/serviamtherapypage"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header-social-link"
-            aria-label="Serviam Therapy בפייסבוק"
-        >
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"/>
-            </svg>
-
-        </a>
+    <div class="container header-inner">
 
 
         <a
-            href="https://www.instagram.com/serviamtherapy"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header-social-link"
-            aria-label="Serviam Therapy באינסטגרם"
+            href="#home"
+            class="brand"
+            aria-label="Serviam Therapy - ראשי"
         >
 
-            <!-- Proper Instagram icon -->
-
-            <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                class="instagram-icon"
+            <img
+                src="images/logo/logo.png"
+                alt="Serviam Therapy"
+                class="brand-logo"
             >
 
-                <rect
-                    x="3.5"
-                    y="3.5"
-                    width="17"
-                    height="17"
-                    rx="4.5"
-                    ry="4.5"
-                />
+            <span class="brand-text">
 
-                <circle
-                    cx="12"
-                    cy="12"
-                    r="4"
-                />
+                SERVIAM
 
-                <circle
-                    cx="17.4"
-                    cy="6.6"
-                    r="1"
-                    class="instagram-dot"
-                />
+                <small>
+                    THERAPY
+                </small>
 
-            </svg>
+            </span>
 
         </a>
 
-    </div>
 
-
-    <button
-        class="mobile-menu-toggle"
-        id="mobile-menu-toggle"
-        type="button"
-        aria-label="פתיחת תפריט"
-        aria-expanded="false"
-        aria-controls="main-navigation"
-    >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </button>
-
-
-    <div
-        class="nav-menu"
-        id="main-navigation"
-    >
-
-        <a href="#home" class="nav-link">
-            ראשי
-        </a>
-
-        <a href="#services" class="nav-link">
-            טיפולים
-        </a>
-
-        <a href="#about" class="nav-link">
-            אודות
-        </a>
-
-        <a href="#gallery" class="nav-link">
-            גלריה
-        </a>
-
-        <a href="#reviews" class="nav-link">
-            חוות דעת
-        </a>
-
-        <a href="#faq" class="nav-link">
-            שאלות נפוצות
-        </a>
-
-        <a href="#contact" class="nav-link">
-            צור קשר
-        </a>
-
-        <a href="#booking" class="nav-book-button">
-            הזמנת טיפול
-        </a>
-
-
-        <div class="mobile-socials">
+        <div class="header-socials">
 
             <a
                 href="https://www.facebook.com/serviamtherapypage"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
-                class="mobile-social-link"
+                class="header-social-link"
+                aria-label="Serviam Therapy בפייסבוק"
             >
 
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -457,11 +329,9 @@
                 href="https://www.instagram.com/serviamtherapy"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
-                class="mobile-social-link"
+                class="header-social-link"
+                aria-label="Serviam Therapy באינסטגרם"
             >
-
-                <!-- Proper Instagram icon -->
 
                 <svg
                     viewBox="0 0 24 24"
@@ -497,21 +367,137 @@
 
         </div>
 
+
+        <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="פתיחת תפריט"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            class="nav-menu"
+            id="main-navigation"
+            aria-label="ניווט ראשי"
+        >
+
+            <a href="#home" class="nav-link">
+                ראשי
+            </a>
+
+            <a href="#services" class="nav-link">
+                טיפולים
+            </a>
+
+            <a href="#about" class="nav-link">
+                אודות
+            </a>
+
+            <a href="#gallery" class="nav-link">
+                גלריה
+            </a>
+
+            <a href="#reviews" class="nav-link">
+                חוות דעת
+            </a>
+
+            <a href="#faq" class="nav-link">
+                שאלות נפוצות
+            </a>
+
+            <a href="#contact" class="nav-link">
+                צור קשר
+            </a>
+
+            <a href="#booking" class="nav-book-button">
+                הזמנת טיפול
+            </a>
+
+
+            <div class="mobile-socials">
+
+                <a
+                    href="https://www.facebook.com/serviamtherapypage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    class="mobile-social-link"
+                >
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.66.34-1 1-1z"/>
+                    </svg>
+
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/serviamtherapy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    class="mobile-social-link"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        class="instagram-icon"
+                    >
+
+                        <rect
+                            x="3.5"
+                            y="3.5"
+                            width="17"
+                            height="17"
+                            rx="4.5"
+                            ry="4.5"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        />
+
+                        <circle
+                            cx="17.4"
+                            cy="6.6"
+                            r="1"
+                            class="instagram-dot"
+                        />
+
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </nav>
+
     </div>
 
-</nav>
+</header>
 
+
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <main>
 
-
-<!-- =====================================================
-     HERO
-====================================================== -->
-
 <section
+    class="hero"
     id="home"
-    class="hero-section"
 >
 
     <div
@@ -586,11 +572,11 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      INTRO
-====================================================== -->
+========================================================= -->
 
-<section class="intro-section">
+<section class="intro section-light">
 
     <div class="container">
 
@@ -622,13 +608,13 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      SERVICES
-====================================================== -->
+========================================================= -->
 
 <section
+    class="services section-cream"
     id="services"
-    class="services-section"
 >
 
     <div class="container">
@@ -700,10 +686,7 @@
 
                     </div>
 
-                    <a
-                        href="#booking"
-                        class="text-link"
-                    >
+                    <a href="#booking" class="text-link">
                         להזמנת טיפול
                         <span>←</span>
                     </a>
@@ -947,13 +930,13 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      ABOUT
-====================================================== -->
+========================================================= -->
 
 <section
+    class="about section-light"
     id="about"
-    class="about-section"
 >
 
     <div class="container">
@@ -1190,11 +1173,11 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      STATISTICS
-====================================================== -->
+========================================================= -->
 
-<section class="statistics-section">
+<section class="statistics section-dark">
 
     <div class="container">
 
@@ -1258,11 +1241,11 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      BENEFITS
-====================================================== -->
+========================================================= -->
 
-<section class="benefits-section">
+<section class="benefits section-cream">
 
     <div class="container">
 
@@ -1370,11 +1353,11 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      PROCESS
-====================================================== -->
+========================================================= -->
 
-<section class="process-section">
+<section class="process section-light">
 
     <div class="container">
 
@@ -1480,13 +1463,13 @@
 </section>
 
 
-<!-- =====================================================
-     GOOGLE REVIEWS
-====================================================== -->
+<!-- =========================================================
+     REVIEWS
+========================================================= -->
 
 <section
+    class="reviews section-cream"
     id="reviews"
-    class="reviews-section"
 >
 
     <div class="container">
@@ -1594,13 +1577,13 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      GALLERY
-====================================================== -->
+========================================================= -->
 
 <section
+    class="gallery section-light"
     id="gallery"
-    class="gallery-section"
 >
 
     <div class="container">
@@ -1682,13 +1665,13 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FAQ
-====================================================== -->
+========================================================= -->
 
 <section
+    class="faq section-cream"
     id="faq"
-    class="faq-section"
 >
 
     <div class="container">
@@ -1887,13 +1870,13 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      BOOKING
-====================================================== -->
+========================================================= -->
 
 <section
+    class="booking"
     id="booking"
-    class="booking-section"
 >
 
     <div
@@ -1970,13 +1953,13 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CONTACT
-====================================================== -->
+========================================================= -->
 
 <section
+    class="contact section-light"
     id="contact"
-    class="contact-section"
 >
 
     <div class="container">
@@ -2246,7 +2229,7 @@
 
 
                 <a
-                    href="tel:+972543629852"
+                    href="#booking"
                     class="button button-gold"
                 >
                     הזמנת טיפול
@@ -2263,11 +2246,11 @@
 </main>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-====================================================== -->
+========================================================= -->
 
-<footer class="footer-section">
+<footer class="site-footer">
 
     <div class="container">
 
@@ -2388,9 +2371,9 @@
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FLOATING WHATSAPP
-====================================================== -->
+========================================================= -->
 
 <a
     href="https://wa.me/972543629852"
@@ -2418,694 +2401,8 @@
 </a>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-====================================================== -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    /* -------------------------------------------------
-       PAGE LOADER
-    ------------------------------------------------- */
-
-    const loader =
-        document.getElementById("page-loader");
-
-    window.addEventListener("load", function () {
-
-        setTimeout(function () {
-
-            if (loader) {
-                loader.classList.add("loaded");
-            }
-
-        }, 500);
-
-    });
-
-
-    /* -------------------------------------------------
-       CURRENT YEAR
-    ------------------------------------------------- */
-
-    document
-        .querySelectorAll("[data-current-year]")
-        .forEach(function (element) {
-
-            element.textContent =
-                new Date().getFullYear();
-
-        });
-
-
-    /* -------------------------------------------------
-       POPUP
-    ------------------------------------------------- */
-
-    const popup =
-        document.querySelector(".popup-window");
-
-    const popupClose =
-        document.getElementById("popup-close");
-
-    const popupEnter =
-        document.getElementById("popup-enter");
-
-
-    function closePopup() {
-
-        if (!popup) return;
-
-        popup.classList.add("popup-hidden");
-
-        document.body.classList.remove(
-            "popup-open"
-        );
-
-    }
-
-
-    if (popupClose) {
-
-        popupClose.addEventListener(
-            "click",
-            closePopup
-        );
-
-    }
-
-
-    if (popupEnter) {
-
-        popupEnter.addEventListener(
-            "click",
-            closePopup
-        );
-
-    }
-
-
-    if (popup) {
-
-        popup.addEventListener(
-            "click",
-            function (event) {
-
-                if (event.target === popup) {
-                    closePopup();
-                }
-
-            }
-        );
-
-    }
-
-
-    /* -------------------------------------------------
-       MOBILE MENU
-    ------------------------------------------------- */
-
-    const mobileToggle =
-        document.getElementById(
-            "mobile-menu-toggle"
-        );
-
-    const navigation =
-        document.getElementById(
-            "main-navigation"
-        );
-
-
-    if (
-        mobileToggle &&
-        navigation
-    ) {
-
-        mobileToggle.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    navigation.classList.toggle(
-                        "nav-open"
-                    );
-
-                mobileToggle.classList.toggle(
-                    "menu-open",
-                    isOpen
-                );
-
-                mobileToggle.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-
-            }
-        );
-
-
-        navigation
-            .querySelectorAll("a")
-            .forEach(function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        navigation.classList.remove(
-                            "nav-open"
-                        );
-
-                        mobileToggle.classList.remove(
-                            "menu-open"
-                        );
-
-                        mobileToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
-                );
-
-            });
-
-    }
-
-
-    /* -------------------------------------------------
-       FAQ
-    ------------------------------------------------- */
-
-    document
-        .querySelectorAll(".faq-question")
-        .forEach(function (question) {
-
-            question.addEventListener(
-                "click",
-                function () {
-
-                    const item =
-                        question.closest(
-                            ".faq-item"
-                        );
-
-                    if (!item) return;
-
-                    const isOpen =
-                        item.classList.contains(
-                            "faq-open"
-                        );
-
-
-                    document
-                        .querySelectorAll(".faq-item")
-                        .forEach(function (otherItem) {
-
-                            otherItem.classList.remove(
-                                "faq-open"
-                            );
-
-                            const otherQuestion =
-                                otherItem.querySelector(
-                                    ".faq-question"
-                                );
-
-                            if (otherQuestion) {
-
-                                otherQuestion.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
-
-                            }
-
-                        });
-
-
-                    if (!isOpen) {
-
-                        item.classList.add(
-                            "faq-open"
-                        );
-
-                        question.setAttribute(
-                            "aria-expanded",
-                            "true"
-                        );
-
-                    }
-
-                }
-            );
-
-        });
-
-
-    /* -------------------------------------------------
-       EMAIL REVEAL
-    ------------------------------------------------- */
-
-    const emailButton =
-        document.getElementById(
-            "email-reveal"
-        );
-
-    const emailLabel =
-        document.getElementById(
-            "email-label"
-        );
-
-
-    if (
-        emailButton &&
-        emailLabel
-    ) {
-
-        emailButton.addEventListener(
-            "click",
-            function () {
-
-                const email =
-                    "serviamtherapy@gmail.com";
-
-                emailLabel.textContent =
-                    email;
-
-                emailButton.onclick =
-                    function () {
-
-                        window.location.href =
-                            "mailto:" + email;
-
-                    };
-
-            }
-        );
-
-    }
-
-
-    /* -------------------------------------------------
-       GOOGLE PLACES
-    ------------------------------------------------- */
-
-    const GOOGLE_PLACE_ID =
-        "YOUR_GOOGLE_PLACE_ID";
-
-
-    window.initGoogleReviews =
-        async function () {
-
-            const ratingNumber =
-                document.getElementById(
-                    "google-rating-number"
-                );
-
-            const ratingCount =
-                document.getElementById(
-                    "google-review-count"
-                );
-
-            const ratingStars =
-                document.getElementById(
-                    "google-rating-stars"
-                );
-
-            const reviewsGrid =
-                document.getElementById(
-                    "google-reviews-grid"
-                );
-
-            const reviewsLink =
-                document.getElementById(
-                    "google-reviews-link"
-                );
-
-
-            if (
-                !ratingNumber ||
-                !ratingCount ||
-                !ratingStars
-            ) {
-                return;
-            }
-
-
-            if (
-                !GOOGLE_PLACE_ID ||
-                GOOGLE_PLACE_ID ===
-                "YOUR_GOOGLE_PLACE_ID"
-            ) {
-
-                ratingNumber.textContent =
-                    "—";
-
-                ratingCount.textContent =
-                    "יש להגדיר Place ID של Google";
-
-
-                if (reviewsGrid) {
-
-                    reviewsGrid.innerHTML = `
-                        <div class="google-reviews-loading google-api-not-configured">
-                            <p>
-                                נתוני Google יופיעו כאן לאחר חיבור העסק.
-                            </p>
-                        </div>
-                    `;
-
-                }
-
-                return;
-
-            }
-
-
-            try {
-
-                const { Place } =
-                    await google.maps.importLibrary(
-                        "places"
-                    );
-
-
-                const place =
-                    new Place({
-                        id: GOOGLE_PLACE_ID
-                    });
-
-
-                await place.fetchFields({
-
-                    fields: [
-                        "displayName",
-                        "rating",
-                        "userRatingCount",
-                        "googleMapsURI",
-                        "reviews"
-                    ]
-
-                });
-
-
-                if (
-                    typeof place.rating ===
-                    "number"
-                ) {
-
-                    const rating =
-                        place.rating;
-
-                    ratingNumber.textContent =
-                        rating.toFixed(1);
-
-
-                    const fullStars =
-                        Math.floor(rating);
-
-                    const hasHalfStar =
-                        rating - fullStars >= 0.5;
-
-                    const emptyStars =
-                        5 -
-                        fullStars -
-                        (hasHalfStar ? 1 : 0);
-
-
-                    ratingStars.textContent =
-                        "★".repeat(fullStars) +
-                        (hasHalfStar ? "★" : "") +
-                        "☆".repeat(
-                            Math.max(
-                                0,
-                                emptyStars
-                            )
-                        );
-
-                }
-
-
-                if (
-                    typeof place.userRatingCount ===
-                    "number"
-                ) {
-
-                    ratingCount.textContent =
-                        place.userRatingCount +
-                        " חוות דעת ב-Google";
-
-                }
-
-
-                if (
-                    reviewsLink &&
-                    place.googleMapsURI
-                ) {
-
-                    reviewsLink.href =
-                        place.googleMapsURI;
-
-                }
-
-
-                if (
-                    reviewsGrid &&
-                    Array.isArray(place.reviews) &&
-                    place.reviews.length
-                ) {
-
-                    reviewsGrid.innerHTML = "";
-
-
-                    place.reviews
-                        .slice(0, 5)
-                        .forEach(function (review) {
-
-                            const article =
-                                document.createElement(
-                                    "article"
-                                );
-
-                            article.className =
-                                "google-review-card";
-
-
-                            const header =
-                                document.createElement(
-                                    "div"
-                                );
-
-                            header.className =
-                                "google-review-header";
-
-
-                            const author =
-                                document.createElement(
-                                    "strong"
-                                );
-
-                            author.textContent =
-                                review.authorAttribution
-                                    ?.displayName ||
-                                "לקוח Google";
-
-
-                            const reviewRating =
-                                document.createElement(
-                                    "span"
-                                );
-
-                            reviewRating.className =
-                                "google-review-rating";
-
-                            reviewRating.textContent =
-                                "★".repeat(
-                                    Math.round(
-                                        review.rating ||
-                                        5
-                                    )
-                                );
-
-
-                            header.appendChild(
-                                author
-                            );
-
-                            header.appendChild(
-                                reviewRating
-                            );
-
-
-                            const text =
-                                document.createElement(
-                                    "p"
-                                );
-
-                            text.textContent =
-                                review.text ||
-                                review.originalText ||
-                                "";
-
-
-                            const date =
-                                document.createElement(
-                                    "small"
-                                );
-
-                            date.textContent =
-                                review.relativePublishTimeDescription ||
-                                "";
-
-
-                            article.appendChild(
-                                header
-                            );
-
-                            article.appendChild(
-                                text
-                            );
-
-                            article.appendChild(
-                                date
-                            );
-
-
-                            reviewsGrid.appendChild(
-                                article
-                            );
-
-                        });
-
-                } else if (reviewsGrid) {
-
-                    reviewsGrid.innerHTML = `
-                        <div class="google-reviews-loading">
-                            <p>
-                                ניתן לצפות בכל חוות הדעת ב-Google.
-                            </p>
-                        </div>
-                    `;
-
-                }
-
-
-            } catch (error) {
-
-                console.error(
-                    "Google Places error:",
-                    error
-                );
-
-
-                ratingNumber.textContent =
-                    "—";
-
-                ratingCount.textContent =
-                    "לא ניתן לטעון את נתוני Google כרגע";
-
-
-                if (reviewsGrid) {
-
-                    reviewsGrid.innerHTML = `
-                        <div class="google-reviews-loading">
-                            <p>
-                                נתוני Google אינם זמינים כרגע.
-                            </p>
-                        </div>
-                    `;
-
-                }
-
-            }
-
-        };
-
-
-    /* -------------------------------------------------
-       SMOOTH SCROLL
-    ------------------------------------------------- */
-
-    document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function (event) {
-
-                    const targetId =
-                        link.getAttribute("href");
-
-                    if (
-                        !targetId ||
-                        targetId === "#"
-                    ) {
-                        return;
-                    }
-
-
-                    const target =
-                        document.querySelector(
-                            targetId
-                        );
-
-
-                    if (!target) return;
-
-
-                    event.preventDefault();
-
-
-                    const navbar =
-                        document.querySelector(
-                            ".navbar"
-                        );
-
-
-                    const offset =
-                        navbar
-                            ? navbar.offsetHeight
-                            : 0;
-
-
-                    const position =
-                        target.getBoundingClientRect()
-                            .top +
-                        window.scrollY -
-                        offset;
-
-
-                    window.scrollTo({
-
-                        top: position,
-
-                        behavior: "smooth"
-
-                    });
-
-                }
-            );
-
-        });
-
-});
-
-</script>
-
-
-<!-- =====================================================
-     GOOGLE MAPS / PLACES API
-====================================================== -->
-
-<script
-    async
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initGoogleReviews"
-></script>
-
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
