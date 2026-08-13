@@ -446,16 +446,6 @@ button{
 }
 
 .gold-break::before,
-.gold-break::after {
-    content: "";
-    width: 42px;
-    height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(190, 151, 82, 0.55)
-    );
-}
 
 .gold-break::after {
     background: linear-gradient(
