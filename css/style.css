@@ -1,16 +1,10 @@
 /* =========================================================
    SERVIAM THERAPY
    PREMIUM LUXURY WELLNESS DESIGN SYSTEM
-   RTL / HEBREW
-   ========================================================= */
-
-
-/* =========================================================
-   01. DESIGN TOKENS
+   POPUP / DESKTOP / MOBILE REFINEMENT
    ========================================================= */
 
 :root {
-
     --bg: #ebe5da;
     --bg-soft: #f1ece3;
     --bg-light: #f7f3ec;
@@ -19,9 +13,6 @@
     --espresso: #30241d;
     --espresso-2: #3c2e24;
     --espresso-3: #514035;
-
-    --brown: #665649;
-    --brown-soft: #837568;
 
     --gold: #b9914e;
     --gold-light: #d6b776;
@@ -58,13 +49,11 @@
 
     --transition-slow:
         .7s cubic-bezier(.22,.61,.36,1);
-
-    --nav-height: 84px;
 }
 
 
 /* =========================================================
-   02. RESET
+   RESET
    ========================================================= */
 
 *,
@@ -76,7 +65,9 @@
 html {
     margin: 0;
     padding: 0;
+
     scroll-behavior: smooth;
+
     background: var(--bg);
 }
 
@@ -138,7 +129,7 @@ button {
 
 
 /* =========================================================
-   03. BASE LAYOUT
+   GLOBAL
    ========================================================= */
 
 .container {
@@ -151,12 +142,12 @@ section {
 }
 
 section[id] {
-    scroll-margin-top: 110px;
+    scroll-margin-top: 105px;
 }
 
 
 /* =========================================================
-   04. TYPOGRAPHY
+   TYPOGRAPHY
    ========================================================= */
 
 .section-label {
@@ -210,6 +201,7 @@ section[id] {
 
     font-size: clamp(38px, 5vw, 66px);
     font-weight: 400;
+
     letter-spacing: -.04em;
     line-height: 1.08;
 }
@@ -231,12 +223,13 @@ section[id] {
 
     font-size: 16px;
     font-weight: 300;
+
     line-height: 2;
 }
 
 
 /* =========================================================
-   05. DECORATIVE GOLD ELEMENTS
+   GOLD BREAK
    ========================================================= */
 
 .gold-break {
@@ -253,8 +246,8 @@ section[id] {
 .gold-break::after {
     content: "";
 
-    height: 1px;
     flex: 1;
+    height: 1px;
 
     background:
         linear-gradient(
@@ -274,8 +267,6 @@ section[id] {
 }
 
 .gold-break span {
-    display: block;
-
     width: 6px;
     height: 6px;
 
@@ -292,7 +283,7 @@ section[id] {
 
 
 /* =========================================================
-   06. PAGE LOADER
+   PAGE LOADER
    ========================================================= */
 
 .page-loader {
@@ -377,20 +368,28 @@ section[id] {
 
 
 /* =========================================================
-   07. WELCOME POPUP
+   POPUP
+   IMPORTANT:
+   The popup is deliberately isolated from the rest of the
+   page and its content has explicit pointer-events / z-index
+   rules so the CTA remains clickable.
    ========================================================= */
 
 .popup-window {
     position: fixed;
     inset: 0;
-    z-index: 9000;
+    z-index: 10000;
 
     display: grid;
-    grid-template-columns: minmax(300px, .92fr) minmax(360px, 1.08fr);
+    grid-template-columns:
+        minmax(300px, .92fr)
+        minmax(420px, 1.08fr);
+
+    align-items: stretch;
 
     padding: 28px;
 
-    background: rgba(30, 22, 17, .76);
+    background: rgba(30,22,17,.76);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -401,6 +400,8 @@ section[id] {
     transition:
         opacity .45s ease,
         visibility .45s ease;
+
+    pointer-events: auto;
 }
 
 .popup-window.popup-hidden {
@@ -409,27 +410,38 @@ section[id] {
     pointer-events: none;
 }
 
-.popup-left {
+.popup-left,
+.popup-right {
     position: relative;
 
+    min-width: 0;
+    min-height: 0;
+
     overflow: hidden;
+}
 
-    min-height: 620px;
 
+/* ---------------------------------------------------------
+   Popup image side
+   --------------------------------------------------------- */
+
+.popup-left {
     background:
         linear-gradient(
             180deg,
-            rgba(37,27,20,.18),
-            rgba(37,27,20,.78)
+            rgba(37,27,20,.16),
+            rgba(37,27,20,.80)
         ),
         url("../images/hero/hero.jpg")
-        center / cover;
+        center / cover no-repeat;
 }
 
 .popup-left::before {
     content: "";
 
     position: absolute;
+    z-index: 1;
+
     inset: 20px;
 
     border: 1px solid rgba(214,183,118,.45);
@@ -439,28 +451,32 @@ section[id] {
 
 .popup-left-overlay {
     position: absolute;
+    z-index: 0;
+
     inset: 0;
 
     background:
         radial-gradient(
             circle at 55% 25%,
-            rgba(214,183,118,.15),
+            rgba(214,183,118,.16),
             transparent 35%
         ),
         linear-gradient(
             180deg,
-            transparent 30%,
-            rgba(31,23,17,.72)
+            transparent 28%,
+            rgba(31,23,17,.75)
         );
+
+    pointer-events: none;
 }
 
 .popup-left-content {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 
-    right: 50px;
-    left: 50px;
-    bottom: 55px;
+    right: 55px;
+    left: 55px;
+    bottom: 60px;
 }
 
 .popup-left-content > span {
@@ -479,7 +495,7 @@ section[id] {
 .popup-left-content strong {
     display: block;
 
-    color: #fff;
+    color: white;
 
     font-size: clamp(34px,4vw,55px);
     font-weight: 300;
@@ -487,14 +503,19 @@ section[id] {
     line-height: 1.13;
 }
 
+
+/* ---------------------------------------------------------
+   Popup content side
+   --------------------------------------------------------- */
+
 .popup-right {
-    position: relative;
+    z-index: 2;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 70px;
+    padding: 60px 75px;
 
     background:
         radial-gradient(
@@ -504,13 +525,15 @@ section[id] {
         ),
         var(--cream);
 
-    color: var(--text);
+    pointer-events: auto;
 }
 
 .popup-right::before {
     content: "";
 
     position: absolute;
+    z-index: 0;
+
     inset: 20px;
 
     border: 1px solid var(--border-gold);
@@ -520,10 +543,10 @@ section[id] {
 
 .popup-close {
     position: absolute;
-    z-index: 4;
+    z-index: 20;
 
-    top: 22px;
-    left: 22px;
+    top: 23px;
+    left: 23px;
 
     display: grid;
     place-items: center;
@@ -534,34 +557,47 @@ section[id] {
     border: 1px solid var(--border);
     border-radius: 50%;
 
-    background: transparent;
+    background: var(--cream);
     color: var(--brown);
 
     font-size: 25px;
     font-weight: 300;
 
+    cursor: pointer;
+
     transition: var(--transition);
+
+    pointer-events: auto;
 }
 
 .popup-close:hover {
     background: var(--espresso);
+
     border-color: var(--espresso);
+
     color: var(--gold-light);
+
     transform: rotate(90deg);
 }
 
 .popup-content {
+    position: relative;
+    z-index: 10;
+
     width: min(100%, 540px);
 
-    position: relative;
-    z-index: 2;
+    margin: auto;
+
+    text-align: right;
+
+    pointer-events: auto;
 }
 
 .popup-logo {
-    width: 70px;
-    height: 70px;
+    width: 68px;
+    height: 68px;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     object-fit: contain;
 }
@@ -569,12 +605,13 @@ section[id] {
 .popup-label {
     display: block;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     color: var(--gold-dark);
 
     font-family: "Poppins", sans-serif;
     font-size: 10px;
+
     letter-spacing: .28em;
 }
 
@@ -583,26 +620,28 @@ section[id] {
 
     color: var(--espresso);
 
-    font-size: clamp(32px,4vw,49px);
+    font-size: clamp(31px,4vw,48px);
     font-weight: 500;
 
     line-height: 1.12;
 }
 
 .popup-content > p {
-    margin-bottom: 15px;
+    margin: 0 0 14px;
 
     color: var(--text-soft);
 
     font-size: 15px;
+    font-weight: 300;
+
     line-height: 1.95;
 }
 
 .popup-features {
     display: grid;
-    gap: 10px;
+    gap: 9px;
 
-    margin: 28px 0;
+    margin: 26px 0 28px;
 }
 
 .popup-feature {
@@ -639,20 +678,33 @@ section[id] {
     height: 17px;
 
     fill: none;
+
     stroke: currentColor;
     stroke-width: 1.4;
+
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
+
+/* ---------------------------------------------------------
+   Popup CTA
+   --------------------------------------------------------- */
+
 .popup-button {
+    position: relative;
+    z-index: 30;
+
     width: 100%;
+    min-height: 57px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 16px 20px;
+    padding: 15px 20px;
+
+    border: 1px solid var(--gold-dark);
 
     background:
         linear-gradient(
@@ -663,23 +715,48 @@ section[id] {
 
     color: white;
 
-    transition: var(--transition);
+    text-align: right;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    pointer-events: auto;
+
+    transition:
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 .popup-button:hover {
     background: var(--gold-dark);
-    box-shadow: var(--shadow-md);
+
+    box-shadow:
+        0 15px 35px rgba(110,77,31,.22);
+
+    transform: translateY(-2px);
+}
+
+.popup-button:active {
+    transform: translateY(0);
+}
+
+.popup-button span:first-child {
+    pointer-events: none;
 }
 
 .popup-button-arrow {
     color: var(--gold-light);
 
-    font-size: 20px;
+    font-size: 21px;
+
+    pointer-events: none;
 }
 
 
 /* =========================================================
-   08. NAVIGATION
+   NAVIGATION
    ========================================================= */
 
 .navbar {
@@ -711,9 +788,7 @@ section[id] {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    transition:
-        box-shadow var(--transition),
-        background var(--transition);
+    transition: var(--transition);
 }
 
 .navbar::after {
@@ -755,6 +830,7 @@ section[id] {
     font-weight: 500;
 
     line-height: 1;
+
     letter-spacing: .18em;
 }
 
@@ -795,7 +871,9 @@ section[id] {
 .header-social-link:hover,
 .mobile-social-link:hover {
     color: var(--gold-dark);
+
     border-color: var(--border-gold);
+
     transform: translateY(-2px);
 }
 
@@ -877,10 +955,9 @@ section[id] {
     padding: 12px 19px;
 
     background: var(--espresso);
-    color: var(--white);
+    color: white;
 
     font-size: 12px;
-    font-weight: 500;
 
     overflow: hidden;
 
@@ -897,7 +974,7 @@ section[id] {
         linear-gradient(
             110deg,
             transparent 20%,
-            rgba(255,255,255,.16) 50%,
+            rgba(255,255,255,.15) 50%,
             transparent 80%
         );
 
@@ -921,16 +998,16 @@ section[id] {
 
 
 /* =========================================================
-   09. HERO
+   HERO
    ========================================================= */
 
 .hero-section {
+    position: relative;
+
     min-height: 900px;
 
     display: flex;
     align-items: center;
-
-    position: relative;
 
     overflow: hidden;
 
@@ -958,13 +1035,13 @@ section[id] {
         linear-gradient(
             90deg,
             rgba(38,27,20,.93) 0%,
-            rgba(38,27,20,.74) 35%,
-            rgba(38,27,20,.35) 69%,
+            rgba(38,27,20,.74) 38%,
+            rgba(38,27,20,.35) 70%,
             rgba(38,27,20,.56) 100%
         ),
         radial-gradient(
             circle at 75% 28%,
-            rgba(214,183,118,.17),
+            rgba(214,183,118,.16),
             transparent 28%
         );
 }
@@ -1028,6 +1105,7 @@ section[id] {
 
     font-family: "Poppins", sans-serif;
     font-size: 10px;
+
     letter-spacing: .38em;
 }
 
@@ -1043,13 +1121,12 @@ section[id] {
 .hero-content h1 {
     margin: 0 0 30px;
 
-    color: #fff;
+    color: white;
 
     font-size: clamp(58px,8vw,108px);
     font-weight: 300;
 
     line-height: .98;
-
     letter-spacing: -.055em;
 }
 
@@ -1068,7 +1145,7 @@ section[id] {
 
     margin: 0 0 38px;
 
-    color: rgba(255,255,255,.80);
+    color: rgba(255,255,255,.8);
 
     font-size: 18px;
     font-weight: 300;
@@ -1119,6 +1196,8 @@ section[id] {
     transform: translateX(-120%);
 
     transition: .75s ease;
+
+    pointer-events: none;
 }
 
 .button:hover::before {
@@ -1155,7 +1234,7 @@ section[id] {
 }
 
 .button-outline-light {
-    border-color: rgba(255,255,255,.45);
+    border: 1px solid rgba(255,255,255,.42);
 
     color: white;
 
@@ -1204,7 +1283,7 @@ section[id] {
 
 
 /* =========================================================
-   10. INTRO
+   INTRO
    ========================================================= */
 
 .intro-section {
@@ -1234,6 +1313,7 @@ section[id] {
 
     font-family: "Poppins", sans-serif;
     font-size: 170px;
+
     letter-spacing: .08em;
 }
 
@@ -1258,7 +1338,7 @@ section[id] {
 
 
 /* =========================================================
-   11. SERVICES
+   SERVICES
    ========================================================= */
 
 .services-section {
@@ -1412,6 +1492,8 @@ section[id] {
             transparent 50%,
             rgba(25,17,12,.30)
         );
+
+    pointer-events: none;
 }
 
 .service-image img {
@@ -1427,7 +1509,7 @@ section[id] {
 
 .service-card:hover .service-image img {
     transform: scale(1.07);
-    filter: saturate(.90);
+    filter: saturate(.9);
 }
 
 .service-content {
@@ -1460,7 +1542,8 @@ section[id] {
     font-family: "Poppins", sans-serif;
     font-size: 11px;
 
-    box-shadow: 0 10px 22px rgba(121,87,40,.18);
+    box-shadow:
+        0 10px 22px rgba(121,87,40,.18);
 }
 
 .service-content h3 {
@@ -1556,7 +1639,7 @@ section[id] {
 
 
 /* =========================================================
-   12. ABOUT
+   ABOUT
    ========================================================= */
 
 .about-section {
@@ -1654,7 +1737,7 @@ section[id] {
 
     overflow: hidden;
 
-    background: var(--espresso-deep);
+    background: var(--espresso);
 }
 
 .about-image img {
@@ -1699,7 +1782,8 @@ section[id] {
 
     border-radius: 50%;
 
-    box-shadow: 0 20px 55px rgba(0,0,0,.28);
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.28);
 
     text-align: center;
 }
@@ -1753,6 +1837,7 @@ section[id] {
 
 .about-features {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     margin: 34px 0 48px;
@@ -1823,6 +1908,7 @@ section[id] {
 .education-group li {
     display: flex;
     justify-content: space-between;
+
     gap: 20px;
 
     padding: 10px 0;
@@ -1858,7 +1944,7 @@ section[id] {
 
 
 /* =========================================================
-   13. STATISTICS
+   STATISTICS
    ========================================================= */
 
 .statistics-section {
@@ -1916,7 +2002,7 @@ section[id] {
 
 
 /* =========================================================
-   14. BENEFITS
+   BENEFITS
    ========================================================= */
 
 .benefits-section {
@@ -1961,6 +2047,8 @@ section[id] {
 
 .benefit-card:hover {
     background: rgba(255,255,255,.55);
+
+    box-shadow: var(--shadow-sm);
 }
 
 .benefit-card::before {
@@ -2012,7 +2100,7 @@ section[id] {
 
 
 /* =========================================================
-   15. PROCESS
+   PROCESS
    ========================================================= */
 
 .process-section {
@@ -2106,7 +2194,7 @@ section[id] {
 
 
 /* =========================================================
-   16. GOOGLE REVIEWS
+   GOOGLE REVIEWS
    ========================================================= */
 
 .reviews-section {
@@ -2119,6 +2207,7 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 28px;
 
     width: fit-content;
@@ -2147,6 +2236,7 @@ section[id] {
 .google-rating-number {
     display: flex;
     align-items: baseline;
+
     gap: 6px;
 }
 
@@ -2224,6 +2314,7 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 15px;
 
     margin-bottom: 17px;
@@ -2283,7 +2374,8 @@ section[id] {
 
     background: var(--gold);
 
-    animation: reviewDot 1.2s ease-in-out infinite;
+    animation:
+        reviewDot 1.2s ease-in-out infinite;
 }
 
 .review-loading-dot:nth-child(2) {
@@ -2291,7 +2383,7 @@ section[id] {
 }
 
 .review-loading-dot:nth-child(3) {
-    animation-delay: .3s;
+    animation-delay: .30s;
 }
 
 @keyframes reviewDot {
@@ -2318,6 +2410,7 @@ section[id] {
 .google-reviews-link {
     display: inline-flex;
     align-items: center;
+
     gap: 10px;
 
     color: var(--gold-dark);
@@ -2333,7 +2426,7 @@ section[id] {
 
 
 /* =========================================================
-   17. GALLERY
+   GALLERY
    ========================================================= */
 
 .gallery-section {
@@ -2459,6 +2552,7 @@ section[id] {
 
 .gallery-item:hover img {
     transform: scale(1.07);
+
     filter: saturate(.86);
 }
 
@@ -2475,7 +2569,7 @@ section[id] {
 
 
 /* =========================================================
-   18. FAQ
+   FAQ
    ========================================================= */
 
 .faq-section {
@@ -2551,6 +2645,7 @@ section[id] {
 
 .faq-open .faq-plus {
     background: var(--gold);
+
     border-color: var(--gold);
 
     color: var(--espresso);
@@ -2588,7 +2683,7 @@ section[id] {
 
 
 /* =========================================================
-   19. BOOKING CTA
+   BOOKING
    ========================================================= */
 
 .booking-section {
@@ -2720,12 +2815,13 @@ section[id] {
 .booking-actions {
     display: flex;
     justify-content: center;
+
     gap: 12px;
 }
 
 
 /* =========================================================
-   20. CONTACT
+   CONTACT
    ========================================================= */
 
 .contact-section {
@@ -2823,6 +2919,7 @@ section[id] {
 
     font-family: "Poppins", sans-serif;
     font-size: 8px;
+
     letter-spacing: .08em;
 
     transition: var(--transition);
@@ -2856,6 +2953,7 @@ section[id] {
 
 .social-links {
     display: flex;
+
     gap: 9px;
 
     margin-top: 28px;
@@ -2923,6 +3021,7 @@ section[id] {
     content: "";
 
     position: absolute;
+
     inset: 14px;
 
     border: 1px solid rgba(214,183,118,.27);
@@ -2972,7 +3071,7 @@ section[id] {
 }
 
 .opening-hours h4 {
-    margin-bottom: 12px;
+    margin: 0 0 12px;
 
     color: var(--gold-light);
 
@@ -2999,10 +3098,12 @@ section[id] {
 
 
 /* =========================================================
-   21. FOOTER
+   FOOTER
    ========================================================= */
 
 .footer-section {
+    position: relative;
+
     padding: 80px 0 24px;
 
     background:
@@ -3066,11 +3167,12 @@ section[id] {
 .footer-column {
     display: flex;
     flex-direction: column;
+
     gap: 7px;
 }
 
 .footer-column h4 {
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 
     color: var(--gold-light);
 
@@ -3088,6 +3190,7 @@ section[id] {
 
 .footer-column a:hover {
     color: var(--gold-light);
+
     transform: translateX(-4px);
 }
 
@@ -3106,7 +3209,7 @@ section[id] {
 
 
 /* =========================================================
-   22. FLOATING WHATSAPP
+   FLOATING WHATSAPP
    ========================================================= */
 
 .floating-whatsapp {
@@ -3155,9 +3258,6 @@ section[id] {
 
 .floating-whatsapp:hover {
     transform: translateY(-5px) scale(1.04);
-
-    box-shadow:
-        0 22px 48px rgba(29,70,46,.36);
 }
 
 .floating-whatsapp svg {
@@ -3168,13 +3268,14 @@ section[id] {
 
     stroke: currentColor;
     stroke-width: 1.4;
+
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 
 /* =========================================================
-   23. TABLET
+   TABLET
    ========================================================= */
 
 @media (max-width: 1150px) {
@@ -3187,12 +3288,9 @@ section[id] {
         width: calc(100% - 24px);
     }
 
-    .nav-menu {
-        gap: 0;
-    }
-
     .nav-link {
         padding-inline: 7px;
+
         font-size: 12px;
     }
 
@@ -3229,14 +3327,10 @@ section[id] {
 
 
 /* =========================================================
-   24. MOBILE NAVIGATION
+   MOBILE NAVIGATION
    ========================================================= */
 
 @media (max-width: 900px) {
-
-    :root {
-        --nav-height: 72px;
-    }
 
     .navbar {
         top: 10px;
@@ -3256,16 +3350,19 @@ section[id] {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         gap: 5px;
 
         width: 42px;
         height: 42px;
 
+        margin-inline-start: auto;
+
         border: 1px solid var(--border);
 
         background: transparent;
 
-        margin-inline-start: auto;
+        cursor: pointer;
     }
 
     .mobile-menu-toggle span {
@@ -3351,6 +3448,7 @@ section[id] {
     .mobile-socials {
         display: flex;
         justify-content: center;
+
         gap: 8px;
 
         padding-top: 17px;
@@ -3374,11 +3472,8 @@ section[id] {
 
     .about-image-wrapper {
         width: min(520px,100%);
-        margin-inline: auto;
-    }
 
-    .about-grid {
-        gap: 65px;
+        margin-inline: auto;
     }
 
     .process-grid {
@@ -3408,10 +3503,19 @@ section[id] {
         max-width: 600px;
     }
 
+
+    /* ---------------------------------------------------------
+       POPUP — TABLET / SMALL DESKTOP
+       --------------------------------------------------------- */
+
     .popup-window {
         grid-template-columns: 1fr;
 
-        padding: 12px;
+        align-items: center;
+
+        padding: 18px;
+
+        overflow-y: auto;
     }
 
     .popup-left {
@@ -3419,15 +3523,34 @@ section[id] {
     }
 
     .popup-right {
-        min-height: calc(100vh - 24px);
+        width: 100%;
+        min-height: 0;
 
-        padding: 60px 35px;
+        padding:
+            70px
+            50px
+            55px;
+
+        overflow: visible;
+    }
+
+    .popup-content {
+        width: min(100%, 560px);
+    }
+
+    .popup-right::before {
+        inset: 12px;
+    }
+
+    .popup-close {
+        top: 20px;
+        left: 20px;
     }
 }
 
 
 /* =========================================================
-   25. MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 650px) {
@@ -3699,6 +3822,7 @@ section[id] {
 
     .booking-actions {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -3728,26 +3852,119 @@ section[id] {
         bottom: 15px;
     }
 
+
+    /* ---------------------------------------------------------
+       POPUP — MOBILE
+       --------------------------------------------------------- */
+
+    .popup-window {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding:
+            10px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
     .popup-right {
-        padding: 50px 23px 30px;
+        width: 100%;
+        max-width: 530px;
+
+        min-height: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding:
+            62px
+            24px
+            30px;
+
+        overflow: visible;
+
+        border: 0;
     }
 
     .popup-right::before {
-        inset: 9px;
+        inset: 8px;
     }
 
     .popup-content {
-        width: min(100%, 430px);
+        width: 100%;
+        max-width: 440px;
+
+        margin: 0 auto;
+
+        text-align: right;
+    }
+
+    .popup-close {
+        top: 17px;
+        left: 17px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .popup-logo {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 12px;
     }
 
     .popup-content h1 {
-        font-size: 32px;
+        margin-bottom: 16px;
+
+        font-size: 31px;
+
+        line-height: 1.12;
+    }
+
+    .popup-content > p {
+        margin-bottom: 12px;
+
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .popup-features {
+        gap: 7px;
+
+        margin: 21px 0 23px;
+    }
+
+    .popup-feature {
+        padding: 8px 0;
+
+        font-size: 13px;
+    }
+
+    .popup-feature-icon {
+        width: 32px;
+        height: 32px;
+
+        flex-basis: 32px;
+    }
+
+    .popup-button {
+        min-height: 56px;
+
+        padding:
+            14px
+            17px;
+
+        font-size: 13px;
     }
 }
 
 
 /* =========================================================
-   26. VERY SMALL MOBILE
+   VERY SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 430px) {
@@ -3775,23 +3992,61 @@ section[id] {
     .footer-brand {
         grid-column: auto;
     }
+
+
+    /* POPUP — EXTRA SMALL */
+
+    .popup-window {
+        padding: 7px;
+    }
+
+    .popup-right {
+        padding:
+            57px
+            19px
+            24px;
+    }
+
+    .popup-content {
+        max-width: 390px;
+    }
+
+    .popup-content h1 {
+        font-size: 28px;
+    }
+
+    .popup-content > p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .popup-feature {
+        font-size: 12px;
+    }
+
+    .popup-button {
+        min-height: 54px;
+
+        font-size: 12px;
+    }
 }
 
 
 /* =========================================================
-   27. ACCESSIBILITY
+   ACCESSIBILITY
    ========================================================= */
 
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid var(--gold);
+    outline:
+        2px solid var(--gold);
 
     outline-offset: 4px;
 }
 
 
 /* =========================================================
-   28. REDUCED MOTION
+   REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3803,8 +4058,8 @@ button:focus-visible {
     *,
     *::before,
     *::after {
-        transition-duration: .01ms !important;
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
     }
 }
