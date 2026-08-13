@@ -433,6 +433,55 @@ button{
     background:rgba(60,45,31,.13);
     transform:rotate(90deg);
 }
+/* =========================================================
+   LUXURY GOLD BREAK
+========================================================= */
+
+.gold-break {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 26px 0 28px;
+}
+
+.gold-break::before,
+.gold-break::after {
+    content: "";
+    width: 42px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(190, 151, 82, 0.55)
+    );
+}
+
+.gold-break::after {
+    background: linear-gradient(
+        90deg,
+        rgba(190, 151, 82, 0.55),
+        transparent
+    );
+}
+
+.gold-break span {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    margin: 0 10px;
+    border: 1px solid #c9a45c;
+    transform: rotate(0deg);
+    box-shadow:
+        0 0 8px rgba(201, 164, 92, 0.25);
+}
+
+.gold-break span::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #c9a45c;
+}
 
 
 /* =========================================================
