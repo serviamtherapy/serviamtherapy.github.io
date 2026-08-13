@@ -5,13 +5,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
 
-
 /* =========================================================
    VARIABLES
 ========================================================= */
 
 :root {
-
     --bg-main: #f4f1eb;
     --bg-light: #faf8f4;
     --bg-cream: #eee9df;
@@ -42,9 +40,7 @@
 
     --transition:
         300ms cubic-bezier(.2,.65,.3,1);
-
 }
-
 
 /* =========================================================
    RESET
@@ -75,9 +71,7 @@ body {
 
     color: var(--text);
 
-    font-family:
-        "Heebo",
-        sans-serif;
+    font-family: "Heebo", sans-serif;
 
     font-size: 16px;
     line-height: 1.75;
@@ -116,7 +110,6 @@ a {
     color: #fff;
 }
 
-
 /* =========================================================
    CONTAINER
 ========================================================= */
@@ -129,7 +122,6 @@ a {
 
     margin-inline: auto;
 }
-
 
 /* =========================================================
    SECTION BACKGROUNDS
@@ -146,7 +138,6 @@ a {
 .section-dark {
     background: #302b24;
 }
-
 
 /* =========================================================
    TYPOGRAPHY
@@ -169,9 +160,7 @@ a {
 
     color: var(--gold-dark);
 
-    font-family:
-        "Poppins",
-        sans-serif;
+    font-family: "Poppins", sans-serif;
 
     font-size: 11px;
     font-weight: 600;
@@ -221,7 +210,6 @@ a {
 
     line-height: 1.9;
 }
-
 
 /* =========================================================
    BUTTONS
@@ -287,7 +275,6 @@ a {
     border-color: #fff;
 }
 
-
 /* =========================================================
    LOADER
 ========================================================= */
@@ -320,9 +307,7 @@ a {
 .loader-logo {
     color: var(--text-dark);
 
-    font-family:
-        "Poppins",
-        sans-serif;
+    font-family: "Poppins", sans-serif;
 
     font-size: 30px;
     font-weight: 500;
@@ -345,9 +330,7 @@ a {
 .loader-subtitle {
     color: var(--gold-dark);
 
-    font-family:
-        "Poppins",
-        sans-serif;
+    font-family: "Poppins", sans-serif;
 
     font-size: 10px;
     letter-spacing: 5px;
@@ -365,7 +348,6 @@ a {
         opacity: 1;
     }
 }
-
 
 /* =========================================================
    POPUP
@@ -613,7 +595,6 @@ a {
     font-size: 22px;
 }
 
-
 /* =========================================================
    HEADER
 ========================================================= */
@@ -806,7 +787,6 @@ a {
     display: none;
 }
 
-
 /* =========================================================
    HERO
 ========================================================= */
@@ -941,7 +921,6 @@ a {
     background: rgba(255,255,255,.55);
 }
 
-
 /* =========================================================
    INTRO
 ========================================================= */
@@ -949,7 +928,6 @@ a {
 .intro {
     padding: 125px 0;
 }
-
 
 /* =========================================================
    SERVICES
@@ -1099,7 +1077,6 @@ a {
     gap: 16px;
     color: var(--text-dark);
 }
-
 
 /* =========================================================
    ABOUT
@@ -1309,7 +1286,6 @@ a {
     font-size: 12px;
 }
 
-
 /* =========================================================
    STATISTICS
 ========================================================= */
@@ -1365,7 +1341,6 @@ a {
 
     font-size: 14px;
 }
-
 
 /* =========================================================
    BENEFITS
@@ -1432,7 +1407,6 @@ a {
     line-height: 1.85;
 }
 
-
 /* =========================================================
    PROCESS
 ========================================================= */
@@ -1492,7 +1466,6 @@ a {
 
     background: rgba(179,148,93,.5);
 }
-
 
 /* =========================================================
    GOOGLE REVIEWS
@@ -1658,7 +1631,6 @@ a {
     color: var(--text-dark);
 }
 
-
 /* =========================================================
    GALLERY
 ========================================================= */
@@ -1697,7 +1669,6 @@ a {
 .gallery-item:hover img {
     transform: scale(1.06);
 }
-
 
 /* =========================================================
    FAQ
@@ -1786,7 +1757,6 @@ a {
     font-size: 15px;
     line-height: 1.9;
 }
-
 
 /* =========================================================
    BOOKING
@@ -1882,7 +1852,6 @@ a {
     display: flex;
     gap: 13px;
 }
-
 
 /* =========================================================
    CONTACT
@@ -2132,7 +2101,6 @@ button.contact-item {
     font-weight: 500;
 }
 
-
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -2227,7 +2195,6 @@ button.contact-item {
     text-align: center;
 }
 
-
 /* =========================================================
    FLOATING WHATSAPP
 ========================================================= */
@@ -2288,7 +2255,6 @@ button.contact-item {
     fill: none;
 }
 
-
 /* =========================================================
    RESPONSIVE — TABLET
 ========================================================= */
@@ -2329,9 +2295,7 @@ button.contact-item {
     .contact-grid {
         gap: 55px;
     }
-
 }
-
 
 /* =========================================================
    RESPONSIVE — MOBILE
@@ -2360,7 +2324,6 @@ button.contact-item {
     .booking-content h2 {
         font-size: 36px;
     }
-
 
     /* HEADER */
 
@@ -2509,7 +2472,6 @@ button.contact-item {
         padding-top: 18px;
     }
 
-
     /* HERO */
 
     .hero {
@@ -2555,7 +2517,6 @@ button.contact-item {
         display: none;
     }
 
-
     /* GENERAL SECTIONS */
 
     .intro,
@@ -2570,7 +2531,6 @@ button.contact-item {
         padding: 85px 0;
     }
 
-
     /* SERVICES */
 
     .services-grid {
@@ -2582,7 +2542,6 @@ button.contact-item {
     .service-content p {
         min-height: auto;
     }
-
 
     /* ABOUT */
 
@@ -2620,7 +2579,6 @@ button.contact-item {
         gap: 2px;
     }
 
-
     /* STATISTICS */
 
     .statistics {
@@ -2653,13 +2611,11 @@ button.contact-item {
         font-size: 38px;
     }
 
-
     /* BENEFITS */
 
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-
 
     /* PROCESS */
 
@@ -2672,7 +2628,6 @@ button.contact-item {
     .process-line {
         display: none;
     }
-
 
     /* REVIEWS */
 
@@ -2696,7 +2651,6 @@ button.contact-item {
         grid-template-columns: 1fr;
     }
 
-
     /* GALLERY */
 
     .gallery-grid {
@@ -2706,7 +2660,6 @@ button.contact-item {
         gap: 10px;
     }
 
-
     /* FAQ */
 
     .faq-grid {
@@ -2714,7 +2667,6 @@ button.contact-item {
 
         gap: 45px;
     }
-
 
     /* BOOKING */
 
@@ -2727,7 +2679,6 @@ button.contact-item {
 
         max-width: 320px;
     }
-
 
     /* CONTACT */
 
@@ -2745,7 +2696,6 @@ button.contact-item {
         padding: 38px 28px;
     }
 
-
     /* FOOTER */
 
     .footer-grid {
@@ -2758,7 +2708,6 @@ button.contact-item {
     .footer-brand {
         grid-column: 1 / -1;
     }
-
 
     /* POPUP */
 
@@ -2782,9 +2731,7 @@ button.contact-item {
         top: 15px;
         left: 15px;
     }
-
 }
-
 
 /* =========================================================
    RESPONSIVE — SMALL MOBILE
@@ -2844,9 +2791,7 @@ button.contact-item {
     .footer-brand {
         grid-column: auto;
     }
-
 }
-
 
 /* =========================================================
    ACCESSIBILITY
@@ -2864,9 +2809,7 @@ button.contact-item {
 
         transition-duration: .01ms !important;
     }
-
 }
-
 
 /* =========================================================
    FOCUS
