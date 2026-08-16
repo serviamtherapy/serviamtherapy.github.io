@@ -10,9 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Serviam Therapy | עיסוי מקצועי וטיפולי
-    </title>
+    <title>Serviam Therapy | עיסוי מקצועי וטיפולי</title>
 
     <meta
         name="description"
@@ -24,186 +22,25 @@
         content="Serviam Therapy, עיסוי, עיסוי טיפולי, עיסוי רפואי, עיסוי שוודי, עיסוי רקמות עמוקות, עיסוי ספורטיבי, עיסוי לנשים הרות, עיסוי אבנים חמות, כוסות רוח, massage Israel, massage Bat Yam"
     >
 
-    <meta
-        name="author"
-        content="Serviam Therapy"
-    >
+    <meta name="author" content="Serviam Therapy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#eef2f6">
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <meta
-        name="theme-color"
-        content="#e6edf4"
-    >
-
-    <meta
-        name="format-detection"
-        content="telephone=no"
-    >
+    <!-- =====================================================
+         SEO / CANONICAL
+    ====================================================== -->
 
     <link
         rel="canonical"
         href="https://www.serviamtherapy.com/"
     >
 
-
-    <!-- =====================================================
-         GOOGLE ANALYTICS 4
-    ====================================================== -->
-
-    <script>
-
-        /*
-         * Replace G-XXXXXXXXXX with your real Google Analytics
-         * Measurement ID when you have it.
-         */
-
-        window.SERVIAM_GA_ID = "G-XXXXXXXXXX";
-
-        if (
-            /^G-[A-Z0-9]+$/i.test(
-                window.SERVIAM_GA_ID
-            ) &&
-            window.SERVIAM_GA_ID !==
-                "G-XXXXXXXXXX"
-        ) {
-
-            window.dataLayer =
-                window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            window.gtag = gtag;
-
-            gtag(
-                "js",
-                new Date()
-            );
-
-            gtag(
-                "config",
-                window.SERVIAM_GA_ID,
-                {
-                    anonymize_ip: true,
-                    page_title: document.title
-                }
-            );
-
-            const gaScript =
-                document.createElement(
-                    "script"
-                );
-
-            gaScript.async = true;
-
-            gaScript.src =
-                "https://www.googletagmanager.com/gtag/js?id=" +
-                encodeURIComponent(
-                    window.SERVIAM_GA_ID
-                );
-
-            document.head.appendChild(
-                gaScript
-            );
-
-        }
-
-    </script>
-
-
-    <!-- =====================================================
-         STRUCTURED DATA
-    ====================================================== -->
-
-    <script type="application/ld+json">
-
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://www.serviamtherapy.com/#business",
-
-        "name": "Serviam Therapy",
-
-        "url":
-            "https://www.serviamtherapy.com/",
-
-        "telephone":
-            "+972543629852",
-
-        "email":
-            "serviamtherapy@gmail.com",
-
-        "image":
-            "https://www.serviamtherapy.com/images/hero/hero.jpg",
-
-        "priceRange":
-            "₪₪",
-
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress":
-                "הנביאים 27",
-            "addressLocality":
-                "בת ים",
-            "addressCountry":
-                "IL"
-        },
-
-        "openingHoursSpecification": [
-
-            {
-                "@type":
-                    "OpeningHoursSpecification",
-
-                "dayOfWeek": [
-                    "Sunday",
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                ],
-
-                "opens":
-                    "10:00",
-
-                "closes":
-                    "20:00"
-            }
-
-        ],
-
-        "sameAs": [
-
-            "https://www.facebook.com/serviamtherapypage",
-
-            "https://www.instagram.com/serviamtherapy"
-
-        ]
-
-    }
-
-    </script>
-
-
     <!-- =====================================================
          OPEN GRAPH
     ====================================================== -->
 
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:site_name"
-        content="Serviam Therapy"
-    >
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Serviam Therapy">
 
     <meta
         property="og:title"
@@ -220,10 +57,7 @@
         content="https://www.serviamtherapy.com/"
     >
 
-    <meta
-        property="og:locale"
-        content="he_IL"
-    >
+    <meta property="og:locale" content="he_IL">
 
     <meta
         property="og:image"
@@ -235,15 +69,11 @@
         content="Serviam Therapy — טיפול עיסוי מקצועי"
     >
 
-
     <!-- =====================================================
          TWITTER
     ====================================================== -->
 
-    <meta
-        name="twitter:card"
-        content="summary_large_image"
-    >
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta
         name="twitter:title"
@@ -260,15 +90,11 @@
         content="https://www.serviamtherapy.com/images/hero/hero.jpg"
     >
 
-
     <!-- =====================================================
          FONTS
     ====================================================== -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -281,7 +107,6 @@
         rel="stylesheet"
     >
 
-
     <!-- =====================================================
          CSS
     ====================================================== -->
@@ -291,17 +116,33 @@
         href="css/style.css"
     >
 
-
     <!-- =====================================================
-         HERO IMAGE PRELOAD
+         STRUCTURED DATA
     ====================================================== -->
 
-    <link
-        rel="preload"
-        as="image"
-        href="images/hero/hero.jpg"
-        fetchpriority="high"
-    >
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Serviam Therapy",
+        "url": "https://www.serviamtherapy.com/",
+        "telephone": "+972543629852",
+        "image": "https://www.serviamtherapy.com/images/hero/hero.jpg",
+        "description": "Serviam Therapy — טיפולי עיסוי מקצועיים בהתאמה אישית.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "הנביאים 27",
+            "addressLocality": "בת ים",
+            "addressCountry": "IL"
+        },
+        "sameAs": [
+            "https://www.facebook.com/serviamtherapypage",
+            "https://www.instagram.com/serviamtherapy"
+        ],
+        "priceRange": "₪₪",
+        "areaServed": "Central Israel"
+    }
+    </script>
 
 </head>
 
@@ -418,15 +259,8 @@
 
                         <span class="popup-feature-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path
-                                    d="M5 17h14M7 17V8h10v9M4 17v-3h16v3M8 8l1-3h6l1 3M7 20h2M15 20h2"
-                                />
-
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 17h14M7 17V8h10v9M4 17v-3h16v3M8 8l1-3h6l1 3M7 20h2M15 20h2"/>
                             </svg>
 
                         </span>
@@ -442,19 +276,9 @@
 
                         <span class="popup-feature-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path
-                                    d="M12 21s-7-4.35-7-10V5l7-3 7 3v6c0 5.65-7 10-7 10Z"
-                                />
-
-                                <path
-                                    d="M9 12l2 2 4-4"
-                                />
-
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 21s-7-4.35-7-10V5l7-3 7 3v6c0 5.65-7 10-7 10Z"/>
+                                <path d="M9 12l2 2 4-4"/>
                             </svg>
 
                         </span>
@@ -470,15 +294,8 @@
 
                         <span class="popup-feature-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path
-                                    d="M12 3l2.2 5.1L20 9l-4.2 3.8L17 18l-5-2.9L7 18l1.2-5.2L4 9l5.8-.9L12 3Z"
-                                />
-
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3l2.2 5.1L20 9l-4.2 3.8L17 18l-5-2.9L7 18l1.2-5.2L4 9l5.8-.9L12 3Z"/>
                             </svg>
 
                         </span>
@@ -551,6 +368,8 @@
 
         <div class="header-socials">
 
+            <!-- FACEBOOK -->
+
             <a
                 href="https://www.facebook.com/serviamtherapypage"
                 target="_blank"
@@ -562,6 +381,7 @@
                 <svg
                     viewBox="0 0 24 24"
                     aria-hidden="true"
+                    focusable="false"
                 >
 
                     <path
@@ -573,40 +393,43 @@
             </a>
 
 
+            <!-- INSTAGRAM -->
+
             <a
                 href="https://www.instagram.com/serviamtherapy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="header-social-link"
+                class="header-social-link instagram-social"
                 aria-label="Serviam Therapy באינסטגרם"
             >
 
                 <svg
                     viewBox="0 0 24 24"
                     aria-hidden="true"
+                    focusable="false"
                 >
 
                     <rect
-                        x="3"
-                        y="3"
-                        width="18"
-                        height="18"
+                        x="3.25"
+                        y="3.25"
+                        width="17.5"
+                        height="17.5"
                         rx="5"
                         ry="5"
-                    />
+                    ></rect>
 
                     <circle
                         cx="12"
                         cy="12"
-                        r="4"
-                    />
+                        r="4.15"
+                    ></circle>
 
                     <circle
-                        cx="17.5"
-                        cy="6.5"
-                        r="1.2"
+                        cx="17.65"
+                        cy="6.45"
+                        r="1.15"
                         class="instagram-dot"
-                    />
+                    ></circle>
 
                 </svg>
 
@@ -668,10 +491,7 @@
                 צור קשר
             </a>
 
-            <a
-                href="#booking"
-                class="nav-book-button"
-            >
+            <a href="#booking" class="nav-book-button">
                 הזמנת טיפול
             </a>
 
@@ -689,6 +509,7 @@
                     <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"
+                        focusable="false"
                     >
 
                         <path
@@ -705,35 +526,35 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    class="mobile-social-link"
+                    class="mobile-social-link instagram-social"
                 >
 
                     <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"
+                        focusable="false"
                     >
 
                         <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
+                            x="3.25"
+                            y="3.25"
+                            width="17.5"
+                            height="17.5"
                             rx="5"
-                            ry="5"
-                        />
+                        ></rect>
 
                         <circle
                             cx="12"
                             cy="12"
-                            r="4"
-                        />
+                            r="4.15"
+                        ></circle>
 
                         <circle
-                            cx="17.5"
-                            cy="6.5"
-                            r="1.2"
+                            cx="17.65"
+                            cy="6.45"
+                            r="1.15"
                             class="instagram-dot"
-                        />
+                        ></circle>
 
                     </svg>
 
@@ -907,6 +728,8 @@
                 <div class="services-grid">
 
 
+                    <!-- SERVICE 01 -->
+
                     <article class="service-card">
 
                         <div class="service-image">
@@ -985,6 +808,8 @@
                     </article>
 
 
+                    <!-- SERVICE 02 -->
+
                     <article class="service-card">
 
                         <div class="service-image">
@@ -1049,6 +874,8 @@
 
                     </article>
 
+
+                    <!-- SERVICE 03 -->
 
                     <article class="service-card">
 
@@ -1115,6 +942,8 @@
                     </article>
 
 
+                    <!-- SERVICE 04 -->
+
                     <article class="service-card">
 
                         <div class="service-image">
@@ -1180,6 +1009,8 @@
                     </article>
 
 
+                    <!-- SERVICE 05 -->
+
                     <article class="service-card">
 
                         <div class="service-image">
@@ -1243,6 +1074,8 @@
 
                     </article>
 
+
+                    <!-- SERVICE 06 -->
 
                     <article class="service-card">
 
@@ -1581,7 +1414,7 @@
 
 
         <!-- =====================================================
-             PROFESSIONAL CREDENTIALS
+             PROFESSIONAL CREDENTIALS CAROUSEL
         ====================================================== -->
 
         <section
@@ -1601,7 +1434,6 @@
 
                         <h2>
                             הכשרה שמרגישים
-
                             <span>
                                 בידיים.
                             </span>
@@ -1636,326 +1468,577 @@
                 </div>
 
 
-                <div class="credentials-grid">
+                <!-- =================================================
+                     CREDENTIALS CAROUSEL
+                ================================================== -->
+
+                <div
+                    class="credentials-carousel"
+                    id="credentials-carousel"
+                    tabindex="0"
+                    aria-label="קרוסלת הסמכות מקצועיות"
+                >
+
+                    <button
+                        type="button"
+                        class="credentials-carousel-button credentials-prev"
+                        id="credentials-prev"
+                        aria-label="ההסמכה הקודמת"
+                    >
+                        <span aria-hidden="true">→</span>
+                    </button>
 
 
-                    <article class="credential-card">
+                    <div class="credentials-viewport">
 
-                        <div class="credential-image">
+                        <div
+                            class="credentials-track"
+                            id="credentials-track"
+                        >
 
-                            <img
-                                src="images/credentials/medical-massage-senior.jpeg"
-                                alt="מטפל מוסמך בעיסוי רפואי בכיר"
-                                loading="lazy"
+
+                            <!-- =================================================
+                                 CREDENTIAL 01
+                            ================================================== -->
+
+                            <article
+                                class="credential-card credential-slide"
+                                data-credential-slide="0"
                             >
 
-                            <div class="credential-placeholder">
+                                <div class="credential-image">
 
-                                <span class="credential-placeholder-number">
-                                    01
-                                </span>
+                                    <img
+                                        src="images/credentials/medical-massage-senior.jpeg"
+                                        alt="תעודת מטפל מוסמך בעיסוי רפואי בכיר"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
 
-                                <span class="credential-placeholder-icon">
-                                    ✦
-                                </span>
+                                    <div class="credential-placeholder">
 
-                                <span>
-                                    תעודה תתווסף כאן
-                                </span>
+                                        <span class="credential-placeholder-number">
+                                            01
+                                        </span>
 
-                            </div>
+                                        <span class="credential-placeholder-icon">
+                                            ✦
+                                        </span>
 
-                        </div>
+                                        <span>
+                                            תעודה תתווסף כאן
+                                        </span>
 
+                                    </div>
 
-                        <div class="credential-content">
+                                    <button
+                                        type="button"
+                                        class="credential-image-view"
+                                        aria-label="הצגת תעודת מטפל מוסמך בעיסוי רפואי בכיר"
+                                    >
+                                        הגדלה
+                                    </button>
 
-                            <span class="credential-number">
-                                01
-                            </span>
-
-                            <h3>
-                                מטפל מוסמך בעיסוי רפואי בכיר
-                            </h3>
-
-                            <p>
-                                Certified Senior Medical Massage Therapist
-                            </p>
-
-                            <span class="credential-status">
-                                הסמכה מקצועית
-                            </span>
-
-                        </div>
-
-                    </article>
+                                </div>
 
 
-                    <article class="credential-card">
+                                <div class="credential-content">
 
-                        <div class="credential-image">
+                                    <span class="credential-number">
+                                        01
+                                    </span>
 
-                            <img
-                                src="images/credentials/medical-massage.jpeg"
-                                alt="מטפל בכיר בעיסוי רפואי"
-                                loading="lazy"
+                                    <h3>
+                                        מטפל מוסמך בעיסוי רפואי בכיר
+                                    </h3>
+
+                                    <p>
+                                        Certified Senior Medical Massage Therapist
+                                    </p>
+
+                                    <span class="credential-status">
+                                        הסמכה מקצועית
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =================================================
+                                 CREDENTIAL 02
+                            ================================================== -->
+
+                            <article
+                                class="credential-card credential-slide"
+                                data-credential-slide="1"
                             >
 
-                            <div class="credential-placeholder">
+                                <div class="credential-image">
 
-                                <span class="credential-placeholder-number">
-                                    02
-                                </span>
+                                    <img
+                                        src="images/credentials/medical-massage.jpeg"
+                                        alt="תעודת מטפל בכיר בעיסוי רפואי"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
 
-                                <span class="credential-placeholder-icon">
-                                    ✦
-                                </span>
+                                    <div class="credential-placeholder">
 
-                                <span>
-                                    תעודה תתווסף כאן
-                                </span>
+                                        <span class="credential-placeholder-number">
+                                            02
+                                        </span>
 
-                            </div>
+                                        <span class="credential-placeholder-icon">
+                                            ✦
+                                        </span>
 
-                        </div>
+                                        <span>
+                                            תעודה תתווסף כאן
+                                        </span>
 
+                                    </div>
 
-                        <div class="credential-content">
+                                    <button
+                                        type="button"
+                                        class="credential-image-view"
+                                        aria-label="הצגת תעודת מטפל בכיר בעיסוי רפואי"
+                                    >
+                                        הגדלה
+                                    </button>
 
-                            <span class="credential-number">
-                                02
-                            </span>
-
-                            <h3>
-                                מטפל בכיר בעיסוי רפואי
-                            </h3>
-
-                            <p>
-                                Senior Medical Massage Therapist
-                            </p>
-
-                            <span class="credential-status">
-                                הסמכה מקצועית
-                            </span>
-
-                        </div>
-
-                    </article>
+                                </div>
 
 
-                    <article class="credential-card">
+                                <div class="credential-content">
 
-                        <div class="credential-image">
+                                    <span class="credential-number">
+                                        02
+                                    </span>
 
-                            <img
-                                src="images/credentials/swedish-massage.jpeg"
-                                alt="מטפל בעיסוי שוודי"
-                                loading="lazy"
+                                    <h3>
+                                        מטפל בכיר בעיסוי רפואי
+                                    </h3>
+
+                                    <p>
+                                        Senior Medical Massage Therapist
+                                    </p>
+
+                                    <span class="credential-status">
+                                        הסמכה מקצועית
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =================================================
+                                 CREDENTIAL 03
+                            ================================================== -->
+
+                            <article
+                                class="credential-card credential-slide"
+                                data-credential-slide="2"
                             >
 
-                            <div class="credential-placeholder">
+                                <div class="credential-image">
 
-                                <span class="credential-placeholder-number">
-                                    03
-                                </span>
+                                    <img
+                                        src="images/credentials/swedish-massage.jpeg"
+                                        alt="תעודת מטפל בעיסוי שוודי"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
 
-                                <span class="credential-placeholder-icon">
-                                    ✦
-                                </span>
+                                    <div class="credential-placeholder">
 
-                                <span>
-                                    תעודה תתווסף כאן
-                                </span>
+                                        <span class="credential-placeholder-number">
+                                            03
+                                        </span>
 
-                            </div>
+                                        <span class="credential-placeholder-icon">
+                                            ✦
+                                        </span>
 
-                        </div>
+                                        <span>
+                                            תעודה תתווסף כאן
+                                        </span>
 
+                                    </div>
 
-                        <div class="credential-content">
+                                    <button
+                                        type="button"
+                                        class="credential-image-view"
+                                        aria-label="הצגת תעודת מטפל בעיסוי שוודי"
+                                    >
+                                        הגדלה
+                                    </button>
 
-                            <span class="credential-number">
-                                03
-                            </span>
-
-                            <h3>
-                                מטפל בעיסוי שוודי
-                            </h3>
-
-                            <p>
-                                Swedish Massage Therapist
-                            </p>
-
-                            <span class="credential-status">
-                                הכשרה מקצועית
-                            </span>
-
-                        </div>
-
-                    </article>
+                                </div>
 
 
-                    <article class="credential-card">
+                                <div class="credential-content">
 
-                        <div class="credential-image">
+                                    <span class="credential-number">
+                                        03
+                                    </span>
 
-                            <img
-                                src="images/credentials/prenatal-massage.jpeg"
-                                alt="מטפל בעיסוי לנשים הרות"
-                                loading="lazy"
+                                    <h3>
+                                        מטפל בעיסוי שוודי
+                                    </h3>
+
+                                    <p>
+                                        Swedish Massage Therapist
+                                    </p>
+
+                                    <span class="credential-status">
+                                        הכשרה מקצועית
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =================================================
+                                 CREDENTIAL 04
+                            ================================================== -->
+
+                            <article
+                                class="credential-card credential-slide"
+                                data-credential-slide="3"
                             >
 
-                            <div class="credential-placeholder">
+                                <div class="credential-image">
 
-                                <span class="credential-placeholder-number">
-                                    04
-                                </span>
+                                    <img
+                                        src="images/credentials/prenatal-massage.jpeg"
+                                        alt="תעודת מטפל בעיסוי לנשים הרות"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
 
-                                <span class="credential-placeholder-icon">
-                                    ✦
-                                </span>
+                                    <div class="credential-placeholder">
 
-                                <span>
-                                    תעודה תתווסף כאן
-                                </span>
+                                        <span class="credential-placeholder-number">
+                                            04
+                                        </span>
 
-                            </div>
+                                        <span class="credential-placeholder-icon">
+                                            ✦
+                                        </span>
 
-                        </div>
+                                        <span>
+                                            תעודה תתווסף כאן
+                                        </span>
 
+                                    </div>
 
-                        <div class="credential-content">
+                                    <button
+                                        type="button"
+                                        class="credential-image-view"
+                                        aria-label="הצגת תעודת מטפל בעיסוי לנשים הרות"
+                                    >
+                                        הגדלה
+                                    </button>
 
-                            <span class="credential-number">
-                                04
-                            </span>
-
-                            <h3>
-                                מטפל בעיסוי לנשים הרות
-                            </h3>
-
-                            <p>
-                                Prenatal Massage Therapist
-                            </p>
-
-                            <span class="credential-status">
-                                הכשרה מקצועית
-                            </span>
-
-                        </div>
-
-                    </article>
+                                </div>
 
 
-                    <article class="credential-card">
+                                <div class="credential-content">
 
-                        <div class="credential-image">
+                                    <span class="credential-number">
+                                        04
+                                    </span>
 
-                            <img
-                                src="images/credentials/hot-stone.jpeg"
-                                alt="עיסוי באבנים חמות"
-                                loading="lazy"
+                                    <h3>
+                                        מטפל בעיסוי לנשים הרות
+                                    </h3>
+
+                                    <p>
+                                        Prenatal Massage Therapist
+                                    </p>
+
+                                    <span class="credential-status">
+                                        הכשרה מקצועית
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =================================================
+                                 CREDENTIAL 05
+                            ================================================== -->
+
+                            <article
+                                class="credential-card credential-slide"
+                                data-credential-slide="4"
                             >
 
-                            <div class="credential-placeholder">
+                                <div class="credential-image">
 
-                                <span class="credential-placeholder-number">
-                                    05
-                                </span>
+                                    <img
+                                        src="images/credentials/hot-stone.jpeg"
+                                        alt="תעודת עיסוי באבנים חמות"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
 
-                                <span class="credential-placeholder-icon">
-                                    ✦
-                                </span>
+                                    <div class="credential-placeholder">
 
-                                <span>
-                                    תעודה תתווסף כאן
-                                </span>
+                                        <span class="credential-placeholder-number">
+                                            05
+                                        </span>
 
-                            </div>
+                                        <span class="credential-placeholder-icon">
+                                            ✦
+                                        </span>
 
-                        </div>
+                                        <span>
+                                            תעודה תתווסף כאן
+                                        </span>
 
+                                    </div>
 
-                        <div class="credential-content">
+                                    <button
+                                        type="button"
+                                        class="credential-image-view"
+                                        aria-label="הצגת תעודת עיסוי באבנים חמות"
+                                    >
+                                        הגדלה
+                                    </button>
 
-                            <span class="credential-number">
-                                05
-                            </span>
-
-                            <h3>
-                                עיסוי באבנים חמות
-                            </h3>
-
-                            <p>
-                                Hot Stone Massage
-                            </p>
-
-                            <span class="credential-status">
-                                הכשרה מקצועית
-                            </span>
-
-                        </div>
-
-                    </article>
+                                </div>
 
 
-                    <article class="credential-card">
+                                <div class="credential-content">
 
-                        <div class="credential-image">
+                                    <span class="credential-number">
+                                        05
+                                    </span>
 
-                            <img
-                                src="images/credentials/cupping.jpeg"
-                                alt="מטפל בכוסות רוח"
-                                loading="lazy"
+                                    <h3>
+                                        עיסוי באבנים חמות
+                                    </h3>
+
+                                    <p>
+                                        Hot Stone Massage
+                                    </p>
+
+                                    <span class="credential-status">
+                                        הכשרה מקצועית
+                                    </span>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- =================================================
+                                 CREDENTIAL 06
+                            ================================================== -->
+
+                            <article
+                                class="credential-card credential-slide"
+                                data-credential-slide="5"
                             >
 
-                            <div class="credential-placeholder">
+                                <div class="credential-image">
 
-                                <span class="credential-placeholder-number">
-                                    06
-                                </span>
+                                    <img
+                                        src="images/credentials/cupping.jpeg"
+                                        alt="תעודת מטפל בכוסות רוח"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
 
-                                <span class="credential-placeholder-icon">
-                                    ✦
-                                </span>
+                                    <div class="credential-placeholder">
 
-                                <span>
-                                    תעודה תתווסף כאן
-                                </span>
+                                        <span class="credential-placeholder-number">
+                                            06
+                                        </span>
 
-                            </div>
+                                        <span class="credential-placeholder-icon">
+                                            ✦
+                                        </span>
+
+                                        <span>
+                                            תעודה תתווסף כאן
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        class="credential-image-view"
+                                        aria-label="הצגת תעודת מטפל בכוסות רוח"
+                                    >
+                                        הגדלה
+                                    </button>
+
+                                </div>
+
+
+                                <div class="credential-content">
+
+                                    <span class="credential-number">
+                                        06
+                                    </span>
+
+                                    <h3>
+                                        מטפל בכוסות רוח
+                                    </h3>
+
+                                    <p>
+                                        Cupping Therapy Practitioner
+                                    </p>
+
+                                    <span class="credential-status">
+                                        הכשרה מקצועית
+                                    </span>
+
+                                </div>
+
+                            </article>
+
 
                         </div>
 
+                    </div>
 
-                        <div class="credential-content">
 
-                            <span class="credential-number">
-                                06
-                            </span>
+                    <button
+                        type="button"
+                        class="credentials-carousel-button credentials-next"
+                        id="credentials-next"
+                        aria-label="ההסמכה הבאה"
+                    >
+                        <span aria-hidden="true">←</span>
+                    </button>
 
-                            <h3>
-                                מטפל בכוסות רוח
-                            </h3>
+                </div>
 
-                            <p>
-                                Cupping Therapy Practitioner
-                            </p>
 
-                            <span class="credential-status">
-                                הכשרה מקצועית
-                            </span>
+                <!-- CAROUSEL DOTS -->
 
-                        </div>
+                <div
+                    class="credentials-dots"
+                    id="credentials-dots"
+                    role="tablist"
+                    aria-label="בחירת הסמכה"
+                >
 
-                    </article>
+                    <button
+                        type="button"
+                        class="credentials-dot active"
+                        data-slide="0"
+                        role="tab"
+                        aria-label="הסמכה 1"
+                        aria-selected="true"
+                    ></button>
 
+                    <button
+                        type="button"
+                        class="credentials-dot"
+                        data-slide="1"
+                        role="tab"
+                        aria-label="הסמכה 2"
+                        aria-selected="false"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="credentials-dot"
+                        data-slide="2"
+                        role="tab"
+                        aria-label="הסמכה 3"
+                        aria-selected="false"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="credentials-dot"
+                        data-slide="3"
+                        role="tab"
+                        aria-label="הסמכה 4"
+                        aria-selected="false"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="credentials-dot"
+                        data-slide="4"
+                        role="tab"
+                        aria-label="הסמכה 5"
+                        aria-selected="false"
+                    ></button>
+
+                    <button
+                        type="button"
+                        class="credentials-dot"
+                        data-slide="5"
+                        role="tab"
+                        aria-label="הסמכה 6"
+                        aria-selected="false"
+                    ></button>
+
+                </div>
+
+
+                <div class="credentials-note">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <p>
+                        ההסמכות מוצגות כאן כחלק מהמחויבות
+                        למקצועיות, דיוק ולמידה מתמשכת.
+                    </p>
 
                 </div>
 
             </div>
 
         </section>
+
+
+        <!-- =====================================================
+             CREDENTIAL IMAGE LIGHTBOX
+        ====================================================== -->
+
+        <div
+            class="credential-lightbox"
+            id="credential-lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label="הצגת תעודה"
+            aria-hidden="true"
+        >
+
+            <button
+                type="button"
+                class="credential-lightbox-close"
+                id="credential-lightbox-close"
+                aria-label="סגירת התעודה"
+            >
+                ×
+            </button>
+
+            <div class="credential-lightbox-content">
+
+                <img
+                    id="credential-lightbox-image"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+        </div>
 
 
         <!-- =====================================================
@@ -2042,7 +2125,6 @@
 
                     <h2>
                         כי טיפול טוב
-
                         <span>
                             מתחיל בהקשבה.
                         </span>
@@ -2058,6 +2140,7 @@
 
 
                 <div class="benefits-grid">
+
 
                     <article class="benefit-card">
 
@@ -2132,6 +2215,7 @@
 
                     </article>
 
+
                 </div>
 
             </div>
@@ -2155,11 +2239,9 @@
 
                     <h2>
                         פשוט.
-
                         <span>
                             אישי.
                         </span>
-
                         מקצועי.
                     </h2>
 
@@ -2414,6 +2496,7 @@
 
                     </div>
 
+
                     <div class="gallery-item">
 
                         <img
@@ -2423,6 +2506,7 @@
                         >
 
                     </div>
+
 
                     <div class="gallery-item">
 
@@ -2434,6 +2518,7 @@
 
                     </div>
 
+
                     <div class="gallery-item">
 
                         <img
@@ -2444,6 +2529,7 @@
 
                     </div>
 
+
                     <div class="gallery-item">
 
                         <img
@@ -2453,6 +2539,7 @@
                         >
 
                     </div>
+
 
                     <div class="gallery-item">
 
@@ -2483,6 +2570,7 @@
             <div class="container">
 
                 <div class="faq-grid">
+
 
                     <div class="section-heading">
 
@@ -2937,6 +3025,8 @@
 
                         <div class="social-links">
 
+                            <!-- FACEBOOK -->
+
                             <a
                                 href="https://www.facebook.com/serviamtherapypage"
                                 target="_blank"
@@ -2948,6 +3038,7 @@
                                 <svg
                                     viewBox="0 0 24 24"
                                     aria-hidden="true"
+                                    focusable="false"
                                 >
 
                                     <path
@@ -2959,40 +3050,42 @@
                             </a>
 
 
+                            <!-- INSTAGRAM -->
+
                             <a
                                 href="https://www.instagram.com/serviamtherapy"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Instagram"
-                                class="social-link instagram-link"
+                                class="social-link instagram-link instagram-social"
                             >
 
                                 <svg
                                     viewBox="0 0 24 24"
                                     aria-hidden="true"
+                                    focusable="false"
                                 >
 
                                     <rect
-                                        x="3"
-                                        y="3"
-                                        width="18"
-                                        height="18"
+                                        x="3.25"
+                                        y="3.25"
+                                        width="17.5"
+                                        height="17.5"
                                         rx="5"
-                                        ry="5"
-                                    />
+                                    ></rect>
 
                                     <circle
                                         cx="12"
                                         cy="12"
-                                        r="4"
-                                    />
+                                        r="4.15"
+                                    ></circle>
 
                                     <circle
-                                        cx="17.5"
-                                        cy="6.5"
-                                        r="1.2"
+                                        cx="17.65"
+                                        cy="6.45"
+                                        r="1.15"
                                         class="instagram-dot"
-                                    />
+                                    ></circle>
 
                                 </svg>
 
@@ -3079,6 +3172,7 @@
                     <img
                         src="images/logo/logo.png"
                         alt="Serviam Therapy"
+                        loading="lazy"
                     >
 
                     <p>
@@ -3209,6 +3303,7 @@
         <svg
             viewBox="0 0 24 24"
             aria-hidden="true"
+            focusable="false"
         >
 
             <path
@@ -3230,975 +3325,189 @@
 
     <script>
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
+        document.addEventListener("DOMContentLoaded", function () {
 
 
-                /* =================================================
-                   PAGE LOADER
-                ================================================= */
+            /* =================================================
+               PAGE LOADER
+            ================================================= */
 
-                const loader =
-                    document.getElementById(
-                        "page-loader"
-                    );
+            const loader =
+                document.getElementById("page-loader");
 
 
-                function hideLoader() {
+            window.addEventListener(
+                "load",
+                function () {
 
-                    if (!loader) {
-                        return;
-                    }
+                    setTimeout(
+                        function () {
 
-                    loader.classList.add(
-                        "loaded"
-                    );
-
-                }
-
-
-                window.addEventListener(
-                    "load",
-                    function () {
-
-                        setTimeout(
-                            hideLoader,
-                            450
-                        );
-
-                    }
-                );
-
-
-                /* Safety fallback if an external asset
-                   prevents the normal load event. */
-
-                setTimeout(
-                    hideLoader,
-                    3500
-                );
-
-
-                /* =================================================
-                   CURRENT YEAR
-                ================================================= */
-
-                document
-                    .querySelectorAll(
-                        "[data-current-year]"
-                    )
-                    .forEach(
-                        function (element) {
-
-                            element.textContent =
-                                new Date()
-                                    .getFullYear();
-
-                        }
-                    );
-
-
-                /* =================================================
-                   WELCOME POPUP
-                ================================================= */
-
-                const popup =
-                    document.getElementById(
-                        "maintenance-popup"
-                    );
-
-
-                const popupClose =
-                    document.getElementById(
-                        "popup-close"
-                    );
-
-
-                const popupEnter =
-                    document.getElementById(
-                        "popup-enter"
-                    );
-
-
-                function openPopup() {
-
-                    if (!popup) {
-                        return;
-                    }
-
-                    popup.classList.remove(
-                        "popup-hidden"
-                    );
-
-                    document.body.classList.add(
-                        "popup-open"
-                    );
-
-                }
-
-
-                function closePopup() {
-
-                    if (!popup) {
-                        return;
-                    }
-
-                    popup.classList.add(
-                        "popup-hidden"
-                    );
-
-                    document.body.classList.remove(
-                        "popup-open"
-                    );
-
-                }
-
-
-                /*
-                 * IMPORTANT:
-                 * The popup is explicitly opened here.
-                 * It is not dependent on the page loader,
-                 * Google Maps, analytics, or any other
-                 * external script.
-                 */
-
-                if (popup) {
-                    openPopup();
-                }
-
-
-                if (popupClose) {
-
-                    popupClose.addEventListener(
-                        "click",
-                        closePopup
-                    );
-
-                }
-
-
-                if (popupEnter) {
-
-                    popupEnter.addEventListener(
-                        "click",
-                        closePopup
-                    );
-
-                }
-
-
-                if (popup) {
-
-                    popup.addEventListener(
-                        "click",
-                        function (event) {
-
-                            if (
-                                event.target === popup
-                            ) {
-
-                                closePopup();
-
+                            if (loader) {
+                                loader.classList.add("loaded");
                             }
 
-                        }
+                        },
+                        500
                     );
 
                 }
+            );
 
 
-                document.addEventListener(
-                    "keydown",
+            /* =================================================
+               CURRENT YEAR
+            ================================================= */
+
+            document
+                .querySelectorAll("[data-current-year]")
+                .forEach(function (element) {
+
+                    element.textContent =
+                        new Date().getFullYear();
+
+                });
+
+
+            /* =================================================
+               WELCOME POPUP
+               IMPORTANT:
+               Popup is intentionally independent from loader,
+               carousel and Google scripts.
+            ================================================= */
+
+            const popup =
+                document.getElementById("maintenance-popup");
+
+            const popupClose =
+                document.getElementById("popup-close");
+
+            const popupEnter =
+                document.getElementById("popup-enter");
+
+
+            function closePopup() {
+
+                if (!popup) return;
+
+                popup.classList.add("popup-hidden");
+
+                document.body.classList.remove("popup-open");
+
+            }
+
+
+            function openPopup() {
+
+                if (!popup) return;
+
+                popup.classList.remove("popup-hidden");
+
+                document.body.classList.add("popup-open");
+
+            }
+
+
+            if (popup) {
+                openPopup();
+            }
+
+
+            if (popupClose) {
+
+                popupClose.addEventListener(
+                    "click",
+                    closePopup
+                );
+
+            }
+
+
+            if (popupEnter) {
+
+                popupEnter.addEventListener(
+                    "click",
+                    closePopup
+                );
+
+            }
+
+
+            if (popup) {
+
+                popup.addEventListener(
+                    "click",
                     function (event) {
 
-                        if (
-                            event.key === "Escape"
-                        ) {
-
+                        if (event.target === popup) {
                             closePopup();
-
                         }
 
                     }
                 );
 
+            }
 
-                /* =================================================
-                   MOBILE MENU
-                ================================================= */
 
-                const mobileToggle =
-                    document.getElementById(
-                        "mobile-menu-toggle"
-                    );
+            document.addEventListener(
+                "keydown",
+                function (event) {
 
-
-                const navigation =
-                    document.getElementById(
-                        "main-navigation"
-                    );
-
-
-                if (
-                    mobileToggle &&
-                    navigation
-                ) {
-
-                    mobileToggle.addEventListener(
-                        "click",
-                        function () {
-
-                            const isOpen =
-                                navigation.classList.toggle(
-                                    "nav-open"
-                                );
-
-
-                            mobileToggle.classList.toggle(
-                                "menu-open",
-                                isOpen
-                            );
-
-
-                            mobileToggle.setAttribute(
-                                "aria-expanded",
-                                String(isOpen)
-                            );
-
-                        }
-                    );
-
-
-                    navigation
-                        .querySelectorAll("a")
-                        .forEach(
-                            function (link) {
-
-                                link.addEventListener(
-                                    "click",
-                                    function () {
-
-                                        navigation.classList.remove(
-                                            "nav-open"
-                                        );
-
-                                        mobileToggle.classList.remove(
-                                            "menu-open"
-                                        );
-
-                                        mobileToggle.setAttribute(
-                                            "aria-expanded",
-                                            "false"
-                                        );
-
-                                    }
-                                );
-
-                            }
-                        );
-
-                }
-
-
-                /* =================================================
-                   FAQ
-                ================================================= */
-
-                document
-                    .querySelectorAll(
-                        ".faq-question"
-                    )
-                    .forEach(
-                        function (question) {
-
-                            question.addEventListener(
-                                "click",
-                                function () {
-
-                                    const item =
-                                        question.closest(
-                                            ".faq-item"
-                                        );
-
-
-                                    if (!item) {
-                                        return;
-                                    }
-
-
-                                    const isOpen =
-                                        item.classList.contains(
-                                            "faq-open"
-                                        );
-
-
-                                    document
-                                        .querySelectorAll(
-                                            ".faq-item"
-                                        )
-                                        .forEach(
-                                            function (
-                                                otherItem
-                                            ) {
-
-                                                otherItem.classList.remove(
-                                                    "faq-open"
-                                                );
-
-
-                                                const otherQuestion =
-                                                    otherItem.querySelector(
-                                                        ".faq-question"
-                                                    );
-
-
-                                                if (
-                                                    otherQuestion
-                                                ) {
-
-                                                    otherQuestion.setAttribute(
-                                                        "aria-expanded",
-                                                        "false"
-                                                    );
-
-                                                }
-
-                                            }
-                                        );
-
-
-                                    if (!isOpen) {
-
-                                        item.classList.add(
-                                            "faq-open"
-                                        );
-
-                                        question.setAttribute(
-                                            "aria-expanded",
-                                            "true"
-                                        );
-
-                                    }
-
-                                }
-                            );
-
-                        }
-                    );
-
-
-                /* =================================================
-                   EMAIL REVEAL
-                ================================================= */
-
-                const emailButton =
-                    document.getElementById(
-                        "email-reveal"
-                    );
-
-
-                const emailLabel =
-                    document.getElementById(
-                        "email-label"
-                    );
-
-
-                if (
-                    emailButton &&
-                    emailLabel
-                ) {
-
-                    emailButton.addEventListener(
-                        "click",
-                        function () {
-
-                            const email =
-                                "serviamtherapy@gmail.com";
-
-
-                            emailLabel.textContent =
-                                email;
-
-
-                            emailButton.onclick =
-                                function () {
-
-                                    window.location.href =
-                                        "mailto:" +
-                                        email;
-
-                                };
-
-                        }
-                    );
-
-                }
-
-
-                /* =================================================
-                   GOOGLE PLACES
-                ================================================= */
-
-                const GOOGLE_PLACE_ID =
-                    "YOUR_GOOGLE_PLACE_ID";
-
-
-                window.initGoogleReviews =
-                    async function () {
-
-
-                        const ratingNumber =
-                            document.getElementById(
-                                "google-rating-number"
-                            );
-
-
-                        const ratingCount =
-                            document.getElementById(
-                                "google-review-count"
-                            );
-
-
-                        const ratingStars =
-                            document.getElementById(
-                                "google-rating-stars"
-                            );
-
-
-                        const reviewsGrid =
-                            document.getElementById(
-                                "google-reviews-grid"
-                            );
-
-
-                        const reviewsLink =
-                            document.getElementById(
-                                "google-reviews-link"
-                            );
-
-
-                        if (
-                            !ratingNumber ||
-                            !ratingCount ||
-                            !ratingStars
-                        ) {
-
-                            return;
-
-                        }
-
-
-                        if (
-                            !GOOGLE_PLACE_ID ||
-                            GOOGLE_PLACE_ID ===
-                                "YOUR_GOOGLE_PLACE_ID"
-                        ) {
-
-                            ratingNumber.textContent =
-                                "—";
-
-
-                            ratingCount.textContent =
-                                "יש להגדיר Place ID של Google";
-
-
-                            if (reviewsGrid) {
-
-                                reviewsGrid.innerHTML = `
-                                    <div class="google-reviews-loading google-api-not-configured">
-                                        <p>
-                                            נתוני Google יופיעו כאן לאחר חיבור העסק.
-                                        </p>
-                                    </div>
-                                `;
-
-                            }
-
-                            return;
-
-                        }
-
-
-                        try {
-
-                            const {
-                                Place
-                            } =
-                                await google.maps.importLibrary(
-                                    "places"
-                                );
-
-
-                            const place =
-                                new Place({
-                                    id:
-                                        GOOGLE_PLACE_ID
-                                });
-
-
-                            await place.fetchFields({
-
-                                fields: [
-
-                                    "displayName",
-                                    "rating",
-                                    "userRatingCount",
-                                    "googleMapsURI",
-                                    "reviews"
-
-                                ]
-
-                            });
-
-
-                            if (
-                                typeof place.rating ===
-                                "number"
-                            ) {
-
-                                const rating =
-                                    place.rating;
-
-
-                                ratingNumber.textContent =
-                                    rating.toFixed(1);
-
-
-                                const fullStars =
-                                    Math.floor(
-                                        rating
-                                    );
-
-
-                                const hasHalfStar =
-                                    rating -
-                                    fullStars >=
-                                    0.5;
-
-
-                                const emptyStars =
-                                    5 -
-                                    fullStars -
-                                    (
-                                        hasHalfStar
-                                            ? 1
-                                            : 0
-                                    );
-
-
-                                ratingStars.textContent =
-                                    "★".repeat(
-                                        fullStars
-                                    ) +
-
-                                    (
-                                        hasHalfStar
-                                            ? "★"
-                                            : ""
-                                    ) +
-
-                                    "☆".repeat(
-                                        Math.max(
-                                            0,
-                                            emptyStars
-                                        )
-                                    );
-
-                            }
-
-
-                            if (
-                                typeof place.userRatingCount ===
-                                "number"
-                            ) {
-
-                                ratingCount.textContent =
-                                    place.userRatingCount +
-                                    " חוות דעת ב-Google";
-
-                            }
-
-
-                            if (
-                                reviewsLink &&
-                                place.googleMapsURI
-                            ) {
-
-                                reviewsLink.href =
-                                    place.googleMapsURI;
-
-                            }
-
-
-                            if (
-                                reviewsGrid &&
-                                Array.isArray(
-                                    place.reviews
-                                ) &&
-                                place.reviews.length
-                            ) {
-
-                                reviewsGrid.innerHTML =
-                                    "";
-
-
-                                place.reviews
-                                    .slice(0, 5)
-                                    .forEach(
-                                        function (
-                                            review
-                                        ) {
-
-                                            const article =
-                                                document.createElement(
-                                                    "article"
-                                                );
-
-
-                                            article.className =
-                                                "google-review-card";
-
-
-                                            const header =
-                                                document.createElement(
-                                                    "div"
-                                                );
-
-
-                                            header.className =
-                                                "google-review-header";
-
-
-                                            const author =
-                                                document.createElement(
-                                                    "strong"
-                                                );
-
-
-                                            author.textContent =
-                                                review
-                                                    .authorAttribution
-                                                    ?.displayName ||
-                                                "לקוח Google";
-
-
-                                            const reviewRating =
-                                                document.createElement(
-                                                    "span"
-                                                );
-
-
-                                            reviewRating.className =
-                                                "google-review-rating";
-
-
-                                            reviewRating.textContent =
-                                                "★".repeat(
-                                                    Math.round(
-                                                        review.rating ||
-                                                        5
-                                                    )
-                                                );
-
-
-                                            header.appendChild(
-                                                author
-                                            );
-
-
-                                            header.appendChild(
-                                                reviewRating
-                                            );
-
-
-                                            const text =
-                                                document.createElement(
-                                                    "p"
-                                                );
-
-
-                                            text.textContent =
-                                                review.text ||
-                                                review.originalText ||
-                                                "";
-
-
-                                            const date =
-                                                document.createElement(
-                                                    "small"
-                                                );
-
-
-                                            date.textContent =
-                                                review
-                                                    .relativePublishTimeDescription ||
-                                                "";
-
-
-                                            article.appendChild(
-                                                header
-                                            );
-
-
-                                            article.appendChild(
-                                                text
-                                            );
-
-
-                                            article.appendChild(
-                                                date
-                                            );
-
-
-                                            reviewsGrid.appendChild(
-                                                article
-                                            );
-
-                                        }
-                                    );
-
-                            }
-
-                            else if (
-                                reviewsGrid
-                            ) {
-
-                                reviewsGrid.innerHTML = `
-                                    <div class="google-reviews-loading">
-                                        <p>
-                                            ניתן לצפות בכל חוות הדעת ב-Google.
-                                        </p>
-                                    </div>
-                                `;
-
-                            }
-
-                        }
-
-
-                        catch (error) {
-
-                            console.error(
-                                "Google Places error:",
-                                error
-                            );
-
-
-                            ratingNumber.textContent =
-                                "—";
-
-
-                            ratingCount.textContent =
-                                "לא ניתן לטעון את נתוני Google כרגע";
-
-
-                            if (
-                                reviewsGrid
-                            ) {
-
-                                reviewsGrid.innerHTML = `
-                                    <div class="google-reviews-loading">
-                                        <p>
-                                            נתוני Google אינם זמינים כרגע.
-                                        </p>
-                                    </div>
-                                `;
-
-                            }
-
-                        }
-
-                    };
-
-
-                /* =================================================
-                   CREDENTIAL IMAGE HANDLING
-                ================================================= */
-
-                document
-                    .querySelectorAll(
-                        ".credential-image img"
-                    )
-                    .forEach(
-                        function (image) {
-
-                            const wrapper =
-                                image.closest(
-                                    ".credential-image"
-                                );
-
-
-                            const placeholder =
-                                wrapper
-                                    ? wrapper.querySelector(
-                                        ".credential-placeholder"
-                                    )
-                                    : null;
-
-
-                            function imageLoaded() {
-
-                                image.classList.add(
-                                    "credential-image-loaded"
-                                );
-
-
-                                if (
-                                    placeholder
-                                ) {
-
-                                    placeholder.classList.add(
-                                        "credential-placeholder-hidden"
-                                    );
-
-                                }
-
-                            }
-
-
-                            function imageFailed() {
-
-                                image.classList.remove(
-                                    "credential-image-loaded"
-                                );
-
-
-                                if (
-                                    placeholder
-                                ) {
-
-                                    placeholder.classList.remove(
-                                        "credential-placeholder-hidden"
-                                    );
-
-                                }
-
-                            }
-
-
-                            image.addEventListener(
-                                "load",
-                                imageLoaded
-                            );
-
-
-                            image.addEventListener(
-                                "error",
-                                function () {
-
-                                    const src =
-                                        image.getAttribute(
-                                            "src"
-                                        ) || "";
-
-
-                                    if (
-                                        !image.dataset
-                                            .fallbackTried
-                                    ) {
-
-                                        image.dataset
-                                            .fallbackTried =
-                                            "true";
-
-
-                                        if (
-                                            /\.jpeg$/i.test(
-                                                src
-                                            )
-                                        ) {
-
-                                            image.src =
-                                                src.replace(
-                                                    /\.jpeg$/i,
-                                                    ".jpg"
-                                                );
-
-                                            return;
-
-                                        }
-
-
-                                        if (
-                                            /\.jpg$/i.test(
-                                                src
-                                            )
-                                        ) {
-
-                                            image.src =
-                                                src.replace(
-                                                    /\.jpg$/i,
-                                                    ".jpeg"
-                                                );
-
-                                            return;
-
-                                        }
-
-                                    }
-
-
-                                    imageFailed();
-
-                                }
-                            );
-
-
-                            if (
-                                image.complete
-                            ) {
-
-                                if (
-                                    image.naturalWidth >
-                                    0
-                                ) {
-
-                                    imageLoaded();
-
-                                }
-
-                                else {
-
-                                    imageFailed();
-
-                                }
-
-                            }
-
-                        }
-                    );
-
-
-                /* =================================================
-                   ANALYTICS EVENTS
-                ================================================= */
-
-                function trackEvent(
-                    name,
-                    params
-                ) {
-
-                    if (
-                        typeof window.gtag ===
-                        "function"
-                    ) {
-
-                        window.gtag(
-                            "event",
-                            name,
-                            params || {}
-                        );
-
+                    if (event.key === "Escape") {
+                        closePopup();
                     }
 
                 }
+            );
 
 
-                document
-                    .querySelectorAll(
-                        'a[href^="tel:"]'
-                    )
+            /* =================================================
+               MOBILE MENU
+            ================================================= */
+
+            const mobileToggle =
+                document.getElementById(
+                    "mobile-menu-toggle"
+                );
+
+            const navigation =
+                document.getElementById(
+                    "main-navigation"
+                );
+
+
+            if (
+                mobileToggle &&
+                navigation
+            ) {
+
+                mobileToggle.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            navigation.classList.toggle(
+                                "nav-open"
+                            );
+
+
+                        mobileToggle.classList.toggle(
+                            "menu-open",
+                            isOpen
+                        );
+
+
+                        mobileToggle.setAttribute(
+                            "aria-expanded",
+                            String(isOpen)
+                        );
+
+                    }
+                );
+
+
+                navigation
+                    .querySelectorAll("a")
                     .forEach(
                         function (link) {
 
@@ -4206,186 +3515,18 @@
                                 "click",
                                 function () {
 
-                                    trackEvent(
-                                        "phone_click",
-                                        {
-                                            link_location:
-                                                link.closest(
-                                                    "section"
-                                                )?.id ||
-                                                "site"
-                                        }
+                                    navigation.classList.remove(
+                                        "nav-open"
                                     );
 
-                                }
-                            );
-
-                        }
-                    );
-
-
-                document
-                    .querySelectorAll(
-                        'a[href*="wa.me"]'
-                    )
-                    .forEach(
-                        function (link) {
-
-                            link.addEventListener(
-                                "click",
-                                function () {
-
-                                    trackEvent(
-                                        "whatsapp_click",
-                                        {
-                                            link_location:
-                                                link.closest(
-                                                    "section"
-                                                )?.id ||
-                                                "site"
-                                        }
+                                    mobileToggle.classList.remove(
+                                        "menu-open"
                                     );
 
-                                }
-                            );
-
-                        }
-                    );
-
-
-                document
-                    .querySelectorAll(
-                        'a[href="#booking"], .nav-book-button'
-                    )
-                    .forEach(
-                        function (link) {
-
-                            link.addEventListener(
-                                "click",
-                                function () {
-
-                                    trackEvent(
-                                        "booking_cta_click",
-                                        {
-                                            link_text:
-                                                (
-                                                    link.textContent ||
-                                                    ""
-                                                ).trim()
-                                        }
+                                    mobileToggle.setAttribute(
+                                        "aria-expanded",
+                                        "false"
                                     );
-
-                                }
-                            );
-
-                        }
-                    );
-
-
-                document
-                    .querySelectorAll(
-                        'a[href^="https://www.facebook.com"], a[href^="https://www.instagram.com"]'
-                    )
-                    .forEach(
-                        function (link) {
-
-                            link.addEventListener(
-                                "click",
-                                function () {
-
-                                    trackEvent(
-                                        "social_click",
-                                        {
-                                            platform:
-                                                link.href.includes(
-                                                    "instagram"
-                                                )
-                                                    ? "instagram"
-                                                    : "facebook"
-                                        }
-                                    );
-
-                                }
-                            );
-
-                        }
-                    );
-
-
-                /* =================================================
-                   SMOOTH SCROLL
-                ================================================= */
-
-                document
-                    .querySelectorAll(
-                        'a[href^="#"]'
-                    )
-                    .forEach(
-                        function (link) {
-
-                            link.addEventListener(
-                                "click",
-                                function (event) {
-
-                                    const targetId =
-                                        link.getAttribute(
-                                            "href"
-                                        );
-
-
-                                    if (
-                                        !targetId ||
-                                        targetId === "#"
-                                    ) {
-
-                                        return;
-
-                                    }
-
-
-                                    const target =
-                                        document.querySelector(
-                                            targetId
-                                        );
-
-
-                                    if (!target) {
-                                        return;
-                                    }
-
-
-                                    event.preventDefault();
-
-
-                                    const navbar =
-                                        document.querySelector(
-                                            ".navbar"
-                                        );
-
-
-                                    const offset =
-                                        navbar
-                                            ? navbar.offsetHeight
-                                            : 0;
-
-
-                                    const position =
-                                        target
-                                            .getBoundingClientRect()
-                                            .top +
-                                        window.scrollY -
-                                        offset;
-
-
-                                    window.scrollTo({
-
-                                        top:
-                                            position,
-
-                                        behavior:
-                                            "smooth"
-
-                                    });
 
                                 }
                             );
@@ -4395,13 +3536,1649 @@
 
             }
 
-        );
+
+            /* =================================================
+               FAQ
+            ================================================= */
+
+            document
+                .querySelectorAll(".faq-question")
+                .forEach(
+                    function (question) {
+
+                        question.addEventListener(
+                            "click",
+                            function () {
+
+                                const item =
+                                    question.closest(
+                                        ".faq-item"
+                                    );
+
+                                if (!item) {
+                                    return;
+                                }
+
+
+                                const isOpen =
+                                    item.classList.contains(
+                                        "faq-open"
+                                    );
+
+
+                                document
+                                    .querySelectorAll(
+                                        ".faq-item"
+                                    )
+                                    .forEach(
+                                        function (
+                                            otherItem
+                                        ) {
+
+                                            otherItem.classList.remove(
+                                                "faq-open"
+                                            );
+
+
+                                            const otherQuestion =
+                                                otherItem.querySelector(
+                                                    ".faq-question"
+                                                );
+
+
+                                            if (
+                                                otherQuestion
+                                            ) {
+
+                                                otherQuestion.setAttribute(
+                                                    "aria-expanded",
+                                                    "false"
+                                                );
+
+                                            }
+
+                                        }
+                                    );
+
+
+                                if (!isOpen) {
+
+                                    item.classList.add(
+                                        "faq-open"
+                                    );
+
+                                    question.setAttribute(
+                                        "aria-expanded",
+                                        "true"
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+
+            /* =================================================
+               EMAIL REVEAL
+            ================================================= */
+
+            const emailButton =
+                document.getElementById(
+                    "email-reveal"
+                );
+
+            const emailLabel =
+                document.getElementById(
+                    "email-label"
+                );
+
+
+            if (
+                emailButton &&
+                emailLabel
+            ) {
+
+                emailButton.addEventListener(
+                    "click",
+                    function () {
+
+                        const email =
+                            "serviamtherapy@gmail.com";
+
+
+                        emailLabel.textContent =
+                            email;
+
+
+                        emailButton.onclick =
+                            function () {
+
+                                window.location.href =
+                                    "mailto:" + email;
+
+                            };
+
+                    }
+                );
+
+            }
+
+
+            /* =================================================
+               CREDENTIAL IMAGE HANDLING
+            ================================================= */
+
+            const credentialImages =
+                document.querySelectorAll(
+                    ".credential-image img"
+                );
+
+
+            credentialImages.forEach(
+                function (image) {
+
+                    const placeholder =
+                        image.parentElement?.querySelector(
+                            ".credential-placeholder"
+                        );
+
+
+                    function imageLoaded() {
+
+                        image.classList.add(
+                            "credential-image-loaded"
+                        );
+
+
+                        if (placeholder) {
+
+                            placeholder.classList.add(
+                                "credential-placeholder-hidden"
+                            );
+
+                        }
+
+                    }
+
+
+                    function imageFailed() {
+
+                        image.classList.remove(
+                            "credential-image-loaded"
+                        );
+
+
+                        if (placeholder) {
+
+                            placeholder.classList.remove(
+                                "credential-placeholder-hidden"
+                            );
+
+                        }
+
+                    }
+
+
+                    image.addEventListener(
+                        "load",
+                        imageLoaded
+                    );
+
+
+                    image.addEventListener(
+                        "error",
+                        function () {
+
+                            if (
+                                image.dataset.fallbackTried ===
+                                "true"
+                            ) {
+
+                                imageFailed();
+
+                                return;
+
+                            }
+
+
+                            const src =
+                                image.getAttribute("src") ||
+                                "";
+
+
+                            if (
+                                /\.jpeg$/i.test(src)
+                            ) {
+
+                                image.dataset.fallbackTried =
+                                    "true";
+
+                                image.src =
+                                    src.replace(
+                                        /\.jpeg$/i,
+                                        ".jpg"
+                                    );
+
+                            }
+
+                            else if (
+                                /\.jpg$/i.test(src)
+                            ) {
+
+                                image.dataset.fallbackTried =
+                                    "true";
+
+                                image.src =
+                                    src.replace(
+                                        /\.jpg$/i,
+                                        ".jpeg"
+                                    );
+
+                            }
+
+                            else {
+
+                                imageFailed();
+
+                            }
+
+                        }
+                    );
+
+
+                    if (
+                        image.complete &&
+                        image.naturalWidth > 0
+                    ) {
+
+                        imageLoaded();
+
+                    }
+
+                }
+            );
+
+
+            /* =================================================
+               CREDENTIALS CAROUSEL
+               Desktop + tablet + mobile
+               Buttons + dots + touch/swipe + autoplay
+            ================================================= */
+
+            const credentialsCarousel =
+                document.getElementById(
+                    "credentials-carousel"
+                );
+
+            const credentialsTrack =
+                document.getElementById(
+                    "credentials-track"
+                );
+
+            const credentialSlides =
+                Array.from(
+                    document.querySelectorAll(
+                        ".credential-slide"
+                    )
+                );
+
+            const previousButton =
+                document.getElementById(
+                    "credentials-prev"
+                );
+
+            const nextButton =
+                document.getElementById(
+                    "credentials-next"
+                );
+
+            const credentialDots =
+                Array.from(
+                    document.querySelectorAll(
+                        ".credentials-dot"
+                    )
+                );
+
+
+            let credentialIndex = 0;
+
+            let credentialAutoplay = null;
+
+            let touchStartX = 0;
+
+            let touchStartY = 0;
+
+            let touchCurrentX = 0;
+
+            let isTouching = false;
+
+
+            function getCredentialStep() {
+
+                if (!credentialsTrack) {
+                    return 0;
+                }
+
+
+                const slide =
+                    credentialSlides[0];
+
+
+                if (!slide) {
+                    return 0;
+                }
+
+
+                const trackStyle =
+                    window.getComputedStyle(
+                        credentialsTrack
+                    );
+
+
+                const gap =
+                    parseFloat(
+                        trackStyle.columnGap ||
+                        trackStyle.gap ||
+                        "0"
+                    ) || 0;
+
+
+                return (
+                    slide.getBoundingClientRect().width +
+                    gap
+                );
+
+            }
+
+
+            function getVisibleSlides() {
+
+                const width =
+                    window.innerWidth;
+
+
+                if (width <= 767) {
+                    return 1;
+                }
+
+
+                if (width <= 1100) {
+                    return 2;
+                }
+
+
+                return 3;
+
+            }
+
+
+            function getMaxIndex() {
+
+                const visible =
+                    getVisibleSlides();
+
+
+                return Math.max(
+                    0,
+                    credentialSlides.length -
+                    visible
+                );
+
+            }
+
+
+            function updateCredentialCarousel(
+                requestedIndex,
+                animate = true
+            ) {
+
+                if (
+                    !credentialsTrack ||
+                    !credentialSlides.length
+                ) {
+
+                    return;
+
+                }
+
+
+                const maxIndex =
+                    getMaxIndex();
+
+
+                credentialIndex =
+                    Math.max(
+                        0,
+                        Math.min(
+                            requestedIndex,
+                            maxIndex
+                        )
+                    );
+
+
+                const step =
+                    getCredentialStep();
+
+
+                credentialsTrack.style.transition =
+                    animate
+                        ? ""
+                        : "none";
+
+
+                /*
+                 * RTL carousel:
+                 * moving toward the next logical item
+                 * requires translating the track toward
+                 * the left in the physical layout.
+                 */
+
+                const translate =
+                    credentialIndex * step;
+
+
+                credentialsTrack.style.transform =
+                    "translateX(" +
+                    translate +
+                    "px)";
+
+
+                credentialSlides.forEach(
+                    function (
+                        slide,
+                        index
+                    ) {
+
+                        const isVisible =
+                            index >= credentialIndex &&
+                            index <
+                            credentialIndex +
+                            getVisibleSlides();
+
+
+                        slide.classList.toggle(
+                            "credential-active",
+                            isVisible
+                        );
+
+                    }
+                );
+
+
+                credentialDots.forEach(
+                    function (
+                        dot,
+                        index
+                    ) {
+
+                        const isActive =
+                            index ===
+                            credentialIndex;
+
+
+                        dot.classList.toggle(
+                            "active",
+                            isActive
+                        );
+
+
+                        dot.setAttribute(
+                            "aria-selected",
+                            String(isActive)
+                        );
+
+                    }
+                );
+
+
+                if (previousButton) {
+
+                    previousButton.disabled =
+                        credentialIndex <= 0;
+
+                }
+
+
+                if (nextButton) {
+
+                    nextButton.disabled =
+                        credentialIndex >= maxIndex;
+
+                }
+
+            }
+
+
+            function nextCredential() {
+
+                const maxIndex =
+                    getMaxIndex();
+
+
+                if (credentialIndex >= maxIndex) {
+
+                    updateCredentialCarousel(
+                        0
+                    );
+
+                }
+
+                else {
+
+                    updateCredentialCarousel(
+                        credentialIndex + 1
+                    );
+
+                }
+
+            }
+
+
+            function previousCredential() {
+
+                const maxIndex =
+                    getMaxIndex();
+
+
+                if (credentialIndex <= 0) {
+
+                    updateCredentialCarousel(
+                        maxIndex
+                    );
+
+                }
+
+                else {
+
+                    updateCredentialCarousel(
+                        credentialIndex - 1
+                    );
+
+                }
+
+            }
+
+
+            function stopCredentialAutoplay() {
+
+                if (credentialAutoplay) {
+
+                    clearInterval(
+                        credentialAutoplay
+                    );
+
+                    credentialAutoplay =
+                        null;
+
+                }
+
+            }
+
+
+            function startCredentialAutoplay() {
+
+                stopCredentialAutoplay();
+
+
+                /*
+                 * A slower interval keeps the certificates
+                 * readable instead of rapidly rotating them.
+                 */
+
+                credentialAutoplay =
+                    setInterval(
+                        function () {
+
+                            nextCredential();
+
+                        },
+                        6500
+                    );
+
+            }
+
+
+            if (
+                credentialsCarousel &&
+                credentialsTrack &&
+                credentialSlides.length
+            ) {
+
+
+                updateCredentialCarousel(
+                    0,
+                    false
+                );
+
+
+                if (nextButton) {
+
+                    nextButton.addEventListener(
+                        "click",
+                        function () {
+
+                            nextCredential();
+
+                            startCredentialAutoplay();
+
+                        }
+                    );
+
+                }
+
+
+                if (previousButton) {
+
+                    previousButton.addEventListener(
+                        "click",
+                        function () {
+
+                            previousCredential();
+
+                            startCredentialAutoplay();
+
+                        }
+                    );
+
+                }
+
+
+                credentialDots.forEach(
+                    function (
+                        dot
+                    ) {
+
+                        dot.addEventListener(
+                            "click",
+                            function () {
+
+                                const target =
+                                    parseInt(
+                                        dot.dataset.slide,
+                                        10
+                                    );
+
+
+                                if (
+                                    Number.isFinite(
+                                        target
+                                    )
+                                ) {
+
+                                    updateCredentialCarousel(
+                                        target
+                                    );
+
+                                    startCredentialAutoplay();
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /*
+                 * Touch / swipe support
+                 */
+
+                credentialsCarousel.addEventListener(
+                    "touchstart",
+                    function (event) {
+
+                        if (
+                            !event.touches ||
+                            !event.touches.length
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        isTouching = true;
+
+
+                        touchStartX =
+                            event.touches[0].clientX;
+
+                        touchStartY =
+                            event.touches[0].clientY;
+
+                        touchCurrentX =
+                            touchStartX;
+
+
+                        stopCredentialAutoplay();
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                credentialsCarousel.addEventListener(
+                    "touchmove",
+                    function (event) {
+
+                        if (
+                            !isTouching ||
+                            !event.touches ||
+                            !event.touches.length
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        touchCurrentX =
+                            event.touches[0].clientX;
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                credentialsCarousel.addEventListener(
+                    "touchend",
+                    function () {
+
+                        if (!isTouching) {
+                            return;
+                        }
+
+
+                        isTouching = false;
+
+
+                        const deltaX =
+                            touchCurrentX -
+                            touchStartX;
+
+
+                        const threshold = 45;
+
+
+                        if (
+                            Math.abs(deltaX) >=
+                            threshold
+                        ) {
+
+                            /*
+                             * Finger moves right:
+                             * previous visual card.
+                             *
+                             * Finger moves left:
+                             * next visual card.
+                             */
+
+                            if (deltaX > 0) {
+
+                                previousCredential();
+
+                            }
+
+                            else {
+
+                                nextCredential();
+
+                            }
+
+                        }
+
+
+                        startCredentialAutoplay();
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                /*
+                 * Keyboard accessibility
+                 */
+
+                credentialsCarousel.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "ArrowLeft"
+                        ) {
+
+                            event.preventDefault();
+
+                            nextCredential();
+
+                            startCredentialAutoplay();
+
+                        }
+
+
+                        if (
+                            event.key === "ArrowRight"
+                        ) {
+
+                            event.preventDefault();
+
+                            previousCredential();
+
+                            startCredentialAutoplay();
+
+                        }
+
+                    }
+                );
+
+
+                /*
+                 * Pause while pointer is over carousel.
+                 */
+
+                credentialsCarousel.addEventListener(
+                    "mouseenter",
+                    function () {
+
+                        stopCredentialAutoplay();
+
+                    }
+                );
+
+
+                credentialsCarousel.addEventListener(
+                    "mouseleave",
+                    function () {
+
+                        startCredentialAutoplay();
+
+                    }
+                );
+
+
+                /*
+                 * Resume after focus leaves.
+                 */
+
+                credentialsCarousel.addEventListener(
+                    "focusin",
+                    function () {
+
+                        stopCredentialAutoplay();
+
+                    }
+                );
+
+
+                credentialsCarousel.addEventListener(
+                    "focusout",
+                    function () {
+
+                        setTimeout(
+                            function () {
+
+                                if (
+                                    !credentialsCarousel.contains(
+                                        document.activeElement
+                                    )
+                                ) {
+
+                                    startCredentialAutoplay();
+
+                                }
+
+                            },
+                            100
+                        );
+
+                    }
+                );
+
+
+                /*
+                 * Responsive recalculation.
+                 */
+
+                let credentialResizeTimer;
+
+
+                window.addEventListener(
+                    "resize",
+                    function () {
+
+                        clearTimeout(
+                            credentialResizeTimer
+                        );
+
+
+                        credentialResizeTimer =
+                            setTimeout(
+                                function () {
+
+                                    const maxIndex =
+                                        getMaxIndex();
+
+
+                                    if (
+                                        credentialIndex >
+                                        maxIndex
+                                    ) {
+
+                                        credentialIndex =
+                                            maxIndex;
+
+                                    }
+
+
+                                    updateCredentialCarousel(
+                                        credentialIndex,
+                                        false
+                                    );
+
+                                },
+                                150
+                            );
+
+                    }
+                );
+
+
+                startCredentialAutoplay();
+
+            }
+
+
+            /* =================================================
+               CREDENTIAL LIGHTBOX
+            ================================================= */
+
+            const credentialLightbox =
+                document.getElementById(
+                    "credential-lightbox"
+                );
+
+            const credentialLightboxImage =
+                document.getElementById(
+                    "credential-lightbox-image"
+                );
+
+            const credentialLightboxClose =
+                document.getElementById(
+                    "credential-lightbox-close"
+                );
+
+
+            function closeCredentialLightbox() {
+
+                if (!credentialLightbox) {
+                    return;
+                }
+
+
+                credentialLightbox.classList.remove(
+                    "credential-lightbox-open"
+                );
+
+
+                credentialLightbox.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+                document.body.classList.remove(
+                    "credential-lightbox-body-open"
+                );
+
+
+                if (credentialLightboxImage) {
+
+                    credentialLightboxImage.src =
+                        "";
+
+                    credentialLightboxImage.alt =
+                        "";
+
+                }
+
+            }
+
+
+            function openCredentialLightbox(
+                image
+            ) {
+
+                if (
+                    !credentialLightbox ||
+                    !credentialLightboxImage ||
+                    !image
+                ) {
+
+                    return;
+
+                }
+
+
+                credentialLightboxImage.src =
+                    image.currentSrc ||
+                    image.src;
+
+
+                credentialLightboxImage.alt =
+                    image.alt ||
+                    "תעודה מקצועית";
+
+
+                credentialLightbox.classList.add(
+                    "credential-lightbox-open"
+                );
+
+
+                credentialLightbox.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+
+                document.body.classList.add(
+                    "credential-lightbox-body-open"
+                );
+
+            }
+
+
+            document
+                .querySelectorAll(
+                    ".credential-image-view"
+                )
+                .forEach(
+                    function (
+                        button
+                    ) {
+
+                        button.addEventListener(
+                            "click",
+                            function (
+                                event
+                            ) {
+
+                                event.preventDefault();
+
+                                event.stopPropagation();
+
+
+                                const image =
+                                    button
+                                        .closest(
+                                            ".credential-image"
+                                        )
+                                        ?.querySelector(
+                                            "img"
+                                        );
+
+
+                                if (
+                                    image &&
+                                    image.naturalWidth > 0
+                                ) {
+
+                                    openCredentialLightbox(
+                                        image
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+
+            if (credentialLightbox) {
+
+                credentialLightbox.addEventListener(
+                    "click",
+                    function (
+                        event
+                    ) {
+
+                        if (
+                            event.target ===
+                            credentialLightbox
+                        ) {
+
+                            closeCredentialLightbox();
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            if (credentialLightboxClose) {
+
+                credentialLightboxClose.addEventListener(
+                    "click",
+                    closeCredentialLightbox
+                );
+
+            }
+
+
+            document.addEventListener(
+                "keydown",
+                function (
+                    event
+                ) {
+
+                    if (
+                        event.key === "Escape"
+                    ) {
+
+                        closeCredentialLightbox();
+
+                    }
+
+                }
+            );
+
+
+            /* =================================================
+               GOOGLE PLACES
+            ================================================= */
+
+            const GOOGLE_PLACE_ID =
+                "YOUR_GOOGLE_PLACE_ID";
+
+
+            window.initGoogleReviews =
+                async function () {
+
+
+                    const ratingNumber =
+                        document.getElementById(
+                            "google-rating-number"
+                        );
+
+
+                    const ratingCount =
+                        document.getElementById(
+                            "google-review-count"
+                        );
+
+
+                    const ratingStars =
+                        document.getElementById(
+                            "google-rating-stars"
+                        );
+
+
+                    const reviewsGrid =
+                        document.getElementById(
+                            "google-reviews-grid"
+                        );
+
+
+                    const reviewsLink =
+                        document.getElementById(
+                            "google-reviews-link"
+                        );
+
+
+                    if (
+                        !ratingNumber ||
+                        !ratingCount ||
+                        !ratingStars
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        !GOOGLE_PLACE_ID ||
+                        GOOGLE_PLACE_ID ===
+                        "YOUR_GOOGLE_PLACE_ID"
+                    ) {
+
+                        ratingNumber.textContent =
+                            "—";
+
+
+                        ratingCount.textContent =
+                            "יש להגדיר Place ID של Google";
+
+
+                        if (reviewsGrid) {
+
+                            reviewsGrid.innerHTML = `
+                                <div class="google-reviews-loading google-api-not-configured">
+                                    <p>
+                                        נתוני Google יופיעו כאן לאחר חיבור העסק.
+                                    </p>
+                                </div>
+                            `;
+
+                        }
+
+                        return;
+
+                    }
+
+
+                    try {
+
+                        if (
+                            typeof google ===
+                            "undefined" ||
+                            !google.maps
+                        ) {
+
+                            throw new Error(
+                                "Google Maps API is unavailable."
+                            );
+
+                        }
+
+
+                        const { Place } =
+                            await google.maps.importLibrary(
+                                "places"
+                            );
+
+
+                        const place =
+                            new Place({
+                                id:
+                                    GOOGLE_PLACE_ID
+                            });
+
+
+                        await place.fetchFields({
+
+                            fields: [
+
+                                "displayName",
+                                "rating",
+                                "userRatingCount",
+                                "googleMapsURI",
+                                "reviews"
+
+                            ]
+
+                        });
+
+
+                        if (
+                            typeof place.rating ===
+                            "number"
+                        ) {
+
+                            const rating =
+                                place.rating;
+
+
+                            ratingNumber.textContent =
+                                rating.toFixed(1);
+
+
+                            const fullStars =
+                                Math.floor(
+                                    rating
+                                );
+
+
+                            const hasHalfStar =
+                                rating -
+                                fullStars >=
+                                0.5;
+
+
+                            const emptyStars =
+                                5 -
+                                fullStars -
+                                (
+                                    hasHalfStar
+                                        ? 1
+                                        : 0
+                                );
+
+
+                            ratingStars.textContent =
+                                "★".repeat(
+                                    fullStars
+                                ) +
+
+                                (
+                                    hasHalfStar
+                                        ? "★"
+                                        : ""
+                                ) +
+
+                                "☆".repeat(
+                                    Math.max(
+                                        0,
+                                        emptyStars
+                                    )
+                                );
+
+                        }
+
+
+                        if (
+                            typeof place.userRatingCount ===
+                            "number"
+                        ) {
+
+                            ratingCount.textContent =
+                                place.userRatingCount +
+                                " חוות דעת ב-Google";
+
+                        }
+
+
+                        if (
+                            reviewsLink &&
+                            place.googleMapsURI
+                        ) {
+
+                            reviewsLink.href =
+                                place.googleMapsURI;
+
+                        }
+
+
+                        if (
+                            reviewsGrid &&
+                            Array.isArray(
+                                place.reviews
+                            ) &&
+                            place.reviews.length
+                        ) {
+
+                            reviewsGrid.innerHTML =
+                                "";
+
+
+                            place.reviews
+                                .slice(0, 5)
+                                .forEach(
+                                    function (
+                                        review
+                                    ) {
+
+
+                                        const article =
+                                            document.createElement(
+                                                "article"
+                                            );
+
+
+                                        article.className =
+                                            "google-review-card";
+
+
+                                        const header =
+                                            document.createElement(
+                                                "div"
+                                            );
+
+
+                                        header.className =
+                                            "google-review-header";
+
+
+                                        const author =
+                                            document.createElement(
+                                                "strong"
+                                            );
+
+
+                                        author.textContent =
+                                            review
+                                                .authorAttribution
+                                                ?.displayName ||
+                                            "לקוח Google";
+
+
+                                        const reviewRating =
+                                            document.createElement(
+                                                "span"
+                                            );
+
+
+                                        reviewRating.className =
+                                            "google-review-rating";
+
+
+                                        reviewRating.textContent =
+                                            "★".repeat(
+                                                Math.round(
+                                                    review.rating ||
+                                                    5
+                                                )
+                                            );
+
+
+                                        header.appendChild(
+                                            author
+                                        );
+
+
+                                        header.appendChild(
+                                            reviewRating
+                                        );
+
+
+                                        const text =
+                                            document.createElement(
+                                                "p"
+                                            );
+
+
+                                        text.textContent =
+                                            review.text ||
+                                            review.originalText ||
+                                            "";
+
+
+                                        const date =
+                                            document.createElement(
+                                                "small"
+                                            );
+
+
+                                        date.textContent =
+                                            review
+                                                .relativePublishTimeDescription ||
+                                            "";
+
+
+                                        article.appendChild(
+                                            header
+                                        );
+
+
+                                        article.appendChild(
+                                            text
+                                        );
+
+
+                                        article.appendChild(
+                                            date
+                                        );
+
+
+                                        reviewsGrid.appendChild(
+                                            article
+                                        );
+
+                                    }
+                                );
+
+                        }
+
+                        else if (
+                            reviewsGrid
+                        ) {
+
+                            reviewsGrid.innerHTML = `
+                                <div class="google-reviews-loading">
+                                    <p>
+                                        ניתן לצפות בכל חוות הדעת ב-Google.
+                                    </p>
+                                </div>
+                            `;
+
+                        }
+
+                    }
+
+
+                    catch (error) {
+
+                        console.error(
+                            "Google Places error:",
+                            error
+                        );
+
+
+                        ratingNumber.textContent =
+                            "—";
+
+
+                        ratingCount.textContent =
+                            "לא ניתן לטעון את נתוני Google כרגע";
+
+
+                        if (
+                            reviewsGrid
+                        ) {
+
+                            reviewsGrid.innerHTML = `
+                                <div class="google-reviews-loading">
+                                    <p>
+                                        נתוני Google אינם זמינים כרגע.
+                                    </p>
+                                </div>
+                            `;
+
+                        }
+
+                    }
+
+                };
+
+
+            /* =================================================
+               SMOOTH SCROLL
+            ================================================= */
+
+            document
+                .querySelectorAll(
+                    'a[href^="#"]'
+                )
+                .forEach(
+                    function (
+                        link
+                    ) {
+
+                        link.addEventListener(
+                            "click",
+                            function (
+                                event
+                            ) {
+
+                                const targetId =
+                                    link.getAttribute(
+                                        "href"
+                                    );
+
+
+                                if (
+                                    !targetId ||
+                                    targetId === "#"
+                                ) {
+
+                                    return;
+
+                                }
+
+
+                                const target =
+                                    document.querySelector(
+                                        targetId
+                                    );
+
+
+                                if (!target) {
+                                    return;
+                                }
+
+
+                                event.preventDefault();
+
+
+                                const navbar =
+                                    document.querySelector(
+                                        ".navbar"
+                                    );
+
+
+                                const offset =
+                                    navbar
+                                        ? navbar.offsetHeight
+                                        : 0;
+
+
+                                const position =
+                                    target
+                                        .getBoundingClientRect()
+                                        .top +
+                                    window.scrollY -
+                                    offset;
+
+
+                                window.scrollTo({
+
+                                    top:
+                                        position,
+
+                                    behavior:
+                                        "smooth"
+
+                                });
+
+                            }
+                        );
+
+                    }
+                );
+
+
+        });
 
     </script>
 
 
     <!-- =====================================================
          GOOGLE MAPS / PLACES API
+         Keep YOUR_GOOGLE_MAPS_API_KEY until the API key
+         is configured.
     ====================================================== -->
 
     <script
