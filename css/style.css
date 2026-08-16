@@ -1,41 +1,58 @@
 /* =========================================================
    SERVIAM THERAPY
-   LUXURY CHAMPAGNE & GOLD THEME
-   DARKER CHAMPAGNE — DESKTOP + MOBILE CONSISTENT
-========================================================= */
+   FINAL LUXURY CHAMPAGNE & GOLD THEME
+   Premium Boutique Wellness Aesthetic
+   Desktop + Tablet + Mobile
+   ========================================================= */
 
 :root {
 
-    /* MAIN CHAMPAGNE PALETTE */
-    --champagne: #c2a567;
-    --champagne-dark: #ad8d50;
-    --champagne-deep: #9b7b43;
-    --champagne-light: #d6c18f;
-    --champagne-soft: #e2d1aa;
-    --champagne-pale: #eee3ca;
+    /* =====================================================
+       LUXURY CHAMPAGNE PALETTE
+       ===================================================== */
+
+    --champagne: #c4a86a;
+    --champagne-dark: #ad8e50;
+    --champagne-deep: #94743d;
+    --champagne-light: #d9c493;
+    --champagne-soft: #e5d4ad;
+    --champagne-pale: #f1e7d1;
 
     /* GOLD */
-    --gold: #ae8b4c;
-    --gold-light: #c9ad70;
-    --gold-bright: #dfc88f;
-    --gold-dark: #8f7038;
+    --gold: #b8934f;
+    --gold-light: #d5bb7d;
+    --gold-bright: #e8d19b;
+    --gold-dark: #8e6d37;
 
-    /* LIGHT BACKGROUNDS */
-    --cream: #f2ecdf;
-    --ivory: #f9f5ed;
+    /* BACKGROUNDS */
+    --cream: #f3ede0;
+    --ivory: #faf7ef;
     --warm-white: #fffdf8;
-    --section-light: #eee6d6;
+    --section-light: #eee5d4;
 
     /* TEXT */
-    --text-main: #594b38;
-    --text-medium: #70614d;
-    --text-light: #8d7d64;
+    --text-main: #574a38;
+    --text-medium: #71634f;
+    --text-light: #93836a;
 
-    /* BORDERS / SHADOWS */
-    --border: rgba(173, 141, 80, 0.30);
-    --border-strong: rgba(173, 141, 80, 0.50);
-    --shadow-soft: 0 12px 35px rgba(112, 86, 45, 0.11);
-    --shadow-medium: 0 18px 45px rgba(112, 86, 45, 0.17);
+    /* BORDERS */
+    --border: rgba(173, 142, 80, .24);
+    --border-strong: rgba(173, 142, 80, .46);
+
+    /* SHADOWS */
+    --shadow-soft:
+        0 12px 35px rgba(102, 79, 39, .10);
+
+    --shadow-medium:
+        0 20px 50px rgba(102, 79, 39, .15);
+
+    --shadow-luxury:
+        0 25px 70px rgba(102, 79, 39, .18);
+
+    /* RADIUS */
+    --radius-small: 4px;
+    --radius-medium: 12px;
+    --radius-large: 18px;
 }
 
 
@@ -51,6 +68,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -59,6 +77,8 @@ body {
     color: var(--text-main);
     line-height: 1.7;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 body.popup-open {
@@ -93,7 +113,13 @@ button {
     position: fixed;
     inset: 0;
     z-index: 99999;
-    background: var(--ivory);
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf8 0%,
+            var(--ivory) 55%,
+            #eee3cd 100%
+        );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +148,13 @@ button {
     width: 90px;
     height: 1px;
     margin: 15px auto;
-    background: var(--champagne);
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
 }
 
 .loader-subtitle {
@@ -145,8 +177,9 @@ button {
     align-items: center;
     justify-content: center;
     padding: 25px;
-    background: rgba(82, 68, 45, .40);
-    backdrop-filter: blur(8px);
+    background: rgba(76, 62, 39, .42);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition:
         opacity .45s ease,
         visibility .45s ease;
@@ -173,20 +206,34 @@ button {
     border-radius: 18px 0 0 18px;
 }
 
+.popup-left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(72, 54, 28, .10),
+            rgba(194, 162, 101, .20)
+        );
+    pointer-events: none;
+}
+
 .popup-left-overlay {
     position: absolute;
     inset: 0;
     background:
         linear-gradient(
             135deg,
-            rgba(103, 79, 40, .20),
-            rgba(201, 177, 119, .34)
+            rgba(82, 63, 31, .16),
+            rgba(221, 198, 145, .30)
         );
 }
 
 .popup-left-content {
     position: absolute;
     inset: auto 40px 45px;
+    z-index: 2;
     color: #fffdf8;
 }
 
@@ -206,7 +253,12 @@ button {
 
 .popup-right {
     position: relative;
-    background: var(--warm-white);
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f8f1e4
+        );
     border: 1px solid var(--champagne-soft);
     border-right: none;
     border-radius: 0 18px 18px 0;
@@ -214,6 +266,7 @@ button {
     align-items: center;
     justify-content: center;
     padding: 55px;
+    box-shadow: var(--shadow-luxury);
 }
 
 .popup-close {
@@ -224,7 +277,7 @@ button {
     height: 38px;
     border: 1px solid var(--border);
     border-radius: 50%;
-    background: transparent;
+    background: rgba(255,255,255,.35);
     color: var(--gold-dark);
     font-size: 25px;
     cursor: pointer;
@@ -233,6 +286,8 @@ button {
 
 .popup-close:hover {
     background: var(--champagne-pale);
+    border-color: var(--gold);
+    transform: rotate(90deg);
 }
 
 .popup-content {
@@ -246,6 +301,7 @@ button {
     height: 82px;
     object-fit: contain;
     margin: 0 auto 15px;
+    filter: drop-shadow(0 8px 15px rgba(122, 94, 45, .14));
 }
 
 .popup-label,
@@ -292,6 +348,7 @@ button {
     place-items: center;
     color: var(--gold-dark);
     flex-shrink: 0;
+    background: rgba(231, 211, 169, .16);
 }
 
 .popup-feature-icon svg {
@@ -313,7 +370,8 @@ button {
         linear-gradient(
             135deg,
             var(--champagne-deep),
-            var(--gold-dark)
+            var(--gold),
+            var(--champagne-dark)
         );
     color: #fffdf8;
     cursor: pointer;
@@ -330,6 +388,7 @@ button {
 .popup-button:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-medium);
+    filter: brightness(1.04);
 }
 
 .popup-button-arrow {
@@ -350,16 +409,18 @@ button {
     display: flex;
     align-items: center;
 
-    /* DARKER CHAMPAGNE */
     background:
         linear-gradient(
             135deg,
-            #e7d8b9,
-            #d9c59b
+            #eadcc0 0%,
+            #ddc99d 48%,
+            #d5bc87 100%
         );
 
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 5px 25px rgba(120, 94, 48, .10);
+    border-bottom: 1px solid var(--border-strong);
+    box-shadow:
+        0 5px 25px rgba(111, 86, 43, .10),
+        0 1px 0 rgba(255,255,255,.35) inset;
 }
 
 
@@ -369,7 +430,6 @@ button {
     order: 1;
     margin-right: 0;
     margin-left: auto;
-
     display: flex;
     align-items: center;
     gap: 13px;
@@ -379,6 +439,7 @@ button {
     width: 56px;
     height: 56px;
     object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(112, 85, 40, .12));
 }
 
 .brand-text {
@@ -425,6 +486,7 @@ button {
     background: var(--gold);
     color: #fffdf8;
     transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(121, 92, 42, .18);
 }
 
 .social-svg {
@@ -471,7 +533,12 @@ button {
     bottom: -8px;
     width: 0;
     height: 1px;
-    background: var(--gold);
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-dark),
+            var(--gold-bright)
+        );
     transition: .25s ease;
 }
 
@@ -487,13 +554,14 @@ button {
     padding: 10px 20px;
     border: 1px solid var(--gold);
     color: var(--gold-dark);
-    background: rgba(255,255,255,.30);
+    background: rgba(255,255,255,.32);
     transition: .25s ease;
 }
 
 .nav-book-button:hover {
     background: var(--gold);
     color: #fffdf8;
+    box-shadow: 0 7px 20px rgba(126, 94, 40, .15);
 }
 
 .mobile-menu-toggle,
@@ -528,8 +596,8 @@ button {
     background:
         linear-gradient(
             90deg,
-            rgba(250,247,240,.20),
-            rgba(250,247,240,.62)
+            rgba(250,247,240,.18),
+            rgba(250,247,240,.58)
         );
 }
 
@@ -595,7 +663,8 @@ button {
         linear-gradient(
             135deg,
             var(--champagne-deep),
-            var(--gold-dark)
+            var(--gold),
+            var(--champagne-dark)
         );
     color: #fffdf8;
     box-shadow: var(--shadow-soft);
@@ -610,7 +679,7 @@ button {
 .button-outline-light {
     border: 1px solid var(--gold);
     color: var(--gold-dark);
-    background: rgba(255,255,255,.4);
+    background: rgba(255,255,255,.38);
 }
 
 .button-outline-light:hover {
@@ -631,7 +700,12 @@ button {
 .scroll-line {
     width: 1px;
     height: 45px;
-    background: var(--gold);
+    background:
+        linear-gradient(
+            to bottom,
+            var(--gold),
+            transparent
+        );
     margin: 8px auto 0;
 }
 
@@ -657,7 +731,12 @@ button {
 .credentials-section,
 .reviews-section,
 .faq-section {
-    background: var(--ivory);
+    background:
+        linear-gradient(
+            180deg,
+            var(--ivory),
+            #f8f3e9
+        );
 }
 
 .services-section,
@@ -665,7 +744,12 @@ button {
 .benefits-section,
 .gallery-section,
 .contact-section {
-    background: var(--cream);
+    background:
+        linear-gradient(
+            180deg,
+            var(--cream),
+            #eee6d7
+        );
 }
 
 .section-heading {
@@ -707,7 +791,12 @@ button {
 
 .service-card {
     overflow: hidden;
-    background: var(--warm-white);
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f9f4ea
+        );
     border: 1px solid var(--border);
     box-shadow: var(--shadow-soft);
     transition: .35s ease;
@@ -715,7 +804,8 @@ button {
 
 .service-card:hover {
     transform: translateY(-7px);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-luxury);
+    border-color: var(--border-strong);
 }
 
 .service-image {
@@ -810,7 +900,7 @@ button {
 .about-image {
     overflow: hidden;
     border: 1px solid var(--border-strong);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-luxury);
 }
 
 .about-image img {
@@ -1000,6 +1090,7 @@ button {
     background: var(--champagne);
     border-color: var(--champagne);
     color: #fffdf8;
+    box-shadow: 0 7px 18px rgba(135, 102, 48, .12);
 }
 
 .credentials-carousel {
@@ -1020,7 +1111,12 @@ button {
 }
 
 .credential-card {
-    background: var(--warm-white);
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f8f2e6
+        );
     border: 1px solid var(--border);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
@@ -1029,7 +1125,8 @@ button {
 
 .credential-card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-luxury);
+    border-color: var(--border-strong);
 }
 
 .credential-card.credential-filtered {
@@ -1091,6 +1188,7 @@ button {
 .credential-carousel-arrow:hover {
     background: var(--champagne);
     color: #fffdf8;
+    box-shadow: 0 8px 20px rgba(129, 96, 42, .15);
 }
 
 .credentials-dots {
@@ -1122,10 +1220,14 @@ button {
     background:
         linear-gradient(
             135deg,
-            var(--champagne),
-            var(--champagne-dark)
+            #b89a5f,
+            #a98649,
+            #bfa36d
         );
     color: #fffdf8;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.18),
+        inset 0 -1px 0 rgba(93,68,29,.12);
 }
 
 .statistics-grid {
@@ -1173,10 +1275,22 @@ button {
 
 .benefit-card {
     padding: 35px 25px;
-    background: var(--warm-white);
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f8f2e7
+        );
     border: 1px solid var(--border);
     text-align: center;
     box-shadow: var(--shadow-soft);
+    transition: .3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--border-strong);
 }
 
 .benefit-icon {
@@ -1189,6 +1303,7 @@ button {
     place-items: center;
     color: var(--gold-dark);
     font-family: "Poppins", sans-serif;
+    background: rgba(218, 196, 150, .12);
 }
 
 .benefit-card h3 {
@@ -1208,7 +1323,12 @@ button {
 
 .process-section {
     padding: 100px 0;
-    background: var(--ivory);
+    background:
+        linear-gradient(
+            180deg,
+            var(--ivory),
+            #f5eee1
+        );
 }
 
 .process-grid {
@@ -1241,7 +1361,13 @@ button {
 .process-line {
     width: 50px;
     height: 1px;
-    background: var(--champagne);
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
 }
 
 
@@ -1254,7 +1380,12 @@ button {
     margin: 0 auto 45px;
     padding: 25px;
     text-align: center;
-    background: var(--warm-white);
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f7f0e3
+        );
     border: 1px solid var(--border);
     box-shadow: var(--shadow-soft);
 }
@@ -1284,9 +1415,20 @@ button {
 
 .google-review-card {
     padding: 25px;
-    background: var(--warm-white);
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f9f4ea
+        );
     border: 1px solid var(--border);
     box-shadow: var(--shadow-soft);
+    transition: .3s ease;
+}
+
+.google-review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
 }
 
 .google-review-header {
@@ -1350,6 +1492,7 @@ button {
     overflow: hidden;
     aspect-ratio: 1 / .78;
     border: 1px solid var(--border);
+    box-shadow: 0 7px 22px rgba(100, 76, 38, .07);
 }
 
 .gallery-item img {
@@ -1446,8 +1589,8 @@ button {
     background:
         linear-gradient(
             90deg,
-            rgba(225,204,159,.80),
-            rgba(250,247,240,.76)
+            rgba(226,207,166,.78),
+            rgba(250,247,240,.75)
         );
 }
 
@@ -1538,6 +1681,7 @@ button {
 .contact-item:hover {
     border-color: var(--gold);
     transform: translateX(-3px);
+    box-shadow: 0 7px 20px rgba(112, 83, 38, .08);
 }
 
 .contact-icon {
@@ -1547,7 +1691,12 @@ button {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: var(--champagne);
+    background:
+        linear-gradient(
+            135deg,
+            var(--champagne),
+            var(--gold-dark)
+        );
     color: #fffdf8;
     font-family: "Poppins", sans-serif;
     font-size: 11px;
@@ -1600,6 +1749,7 @@ button {
     background: var(--gold);
     color: #fffdf8;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(119, 88, 38, .14);
 }
 
 .social-link svg {
@@ -1622,11 +1772,12 @@ button {
     background:
         linear-gradient(
             145deg,
-            #e8d8b8,
-            #d7c197
+            #eadbc0,
+            #d6bd8d,
+            #c9ab70
         );
     border: 1px solid var(--border-strong);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-luxury);
 }
 
 .contact-card-label {
@@ -1672,16 +1823,17 @@ button {
 .footer-section {
     padding: 70px 0 25px;
 
-    /* DARKER CHAMPAGNE FOOTER */
     background:
         linear-gradient(
             135deg,
-            #d8c49b,
-            #c9ae78
+            #d6c398 0%,
+            #c7ac76 50%,
+            #bfa16a 100%
         );
 
     color: var(--text-main);
     border-top: 1px solid var(--border-strong);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.20);
 }
 
 .footer-grid {
@@ -1695,6 +1847,7 @@ button {
     height: 70px;
     object-fit: contain;
     margin-bottom: 15px;
+    filter: drop-shadow(0 6px 12px rgba(91, 67, 31, .12));
 }
 
 .footer-brand p {
@@ -1720,6 +1873,7 @@ button {
 
 .footer-column a:hover {
     color: var(--gold-dark);
+    transform: translateX(-2px);
 }
 
 .footer-bottom {
@@ -1753,7 +1907,9 @@ button {
             var(--gold-dark)
         );
     color: #fffdf8;
-    box-shadow: 0 10px 30px rgba(130, 102, 55, .25);
+    box-shadow:
+        0 10px 30px rgba(112, 83, 37, .25),
+        0 0 0 5px rgba(198, 168, 106, .10);
     transition: .3s ease;
 }
 
@@ -1773,21 +1929,13 @@ button {
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
 
     .navbar {
         padding: 0 25px;
-
-        /* DARKER TABLET CHAMPAGNE */
-        background:
-            linear-gradient(
-                135deg,
-                #e5d5b3,
-                #d6c095
-            );
     }
 
     .nav-menu {
@@ -1826,7 +1974,7 @@ button {
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   MOBILE / TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -1835,20 +1983,23 @@ button {
         width: min(100% - 30px, 700px);
     }
 
+    /* MOBILE HEADER */
+
     .navbar {
         min-height: 76px;
         padding: 0 18px;
 
-        /* MOBILE HEADER — DARKER CHAMPAGNE */
         background:
             linear-gradient(
                 135deg,
-                #e3d1ac,
-                #d1b988
+                #eadcc1 0%,
+                #dcc89d 52%,
+                #d2b985 100%
             );
 
-        border-bottom-color: rgba(143,112,56,.32);
-        box-shadow: 0 6px 24px rgba(112,86,45,.12);
+        box-shadow:
+            0 5px 22px rgba(111, 84, 40, .12),
+            inset 0 1px 0 rgba(255,255,255,.30);
     }
 
     .brand {
@@ -1863,12 +2014,13 @@ button {
 
     .brand-text {
         font-size: 14px;
-        color: var(--gold-dark);
     }
 
     .header-socials {
         display: none;
     }
+
+    /* MOBILE MENU BUTTON */
 
     .mobile-menu-toggle {
         order: 3;
@@ -1876,9 +2028,14 @@ button {
         width: 42px;
         height: 42px;
 
-        /* DARKER MOBILE MENU BUTTON */
-        border: 1px solid rgba(143,112,56,.52);
-        background: rgba(246,236,215,.58);
+        border: 1px solid var(--border-strong);
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.52),
+                rgba(245,231,201,.38)
+            );
 
         display: flex;
         flex-direction: column;
@@ -1886,6 +2043,13 @@ button {
         justify-content: center;
         gap: 5px;
         cursor: pointer;
+        transition: .25s ease;
+        box-shadow: 0 4px 12px rgba(104, 77, 35, .07);
+    }
+
+    .mobile-menu-toggle:hover {
+        border-color: var(--gold);
+        background: rgba(255,255,255,.60);
     }
 
     .mobile-menu-toggle span {
@@ -1907,10 +2071,7 @@ button {
         transform: translateY(-6.5px) rotate(-45deg);
     }
 
-
-    /* =====================================================
-       MOBILE NAVIGATION — DARKER CHAMPAGNE
-    ===================================================== */
+    /* MOBILE NAVIGATION */
 
     .nav-menu {
         position: absolute;
@@ -1919,24 +2080,25 @@ button {
         left: 0;
         margin: 0;
         padding: 25px 20px 30px;
+
         display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
 
-        /* IMPORTANT:
-           This was previously too light.
-           It now matches the darker champagne header.
-        */
         background:
             linear-gradient(
                 145deg,
-                #e3d1ac,
-                #ceb580
+                #eee3cc 0%,
+                #e4d3ad 52%,
+                #d8c092 100%
             );
 
-        border-bottom: 1px solid rgba(143,112,56,.34);
-        box-shadow: 0 15px 32px rgba(105,81,42,.16);
+        border-bottom: 1px solid var(--border-strong);
+
+        box-shadow:
+            0 18px 35px rgba(103, 78, 37, .15),
+            inset 0 1px 0 rgba(255,255,255,.30);
 
         opacity: 0;
         visibility: hidden;
@@ -1951,8 +2113,8 @@ button {
     }
 
     .nav-link {
-        padding: 12px 5px;
-        border-bottom: 1px solid rgba(143,112,56,.28);
+        padding: 13px 5px;
+        border-bottom: 1px solid var(--border);
         color: var(--text-main);
     }
 
@@ -1967,8 +2129,7 @@ button {
     .nav-book-button {
         margin-top: 18px;
         text-align: center;
-        border-color: var(--gold-dark);
-        background: rgba(255,253,248,.30);
+        background: rgba(255,255,255,.35);
     }
 
     .mobile-socials {
@@ -1983,19 +2144,18 @@ button {
         height: 42px;
         display: grid;
         place-items: center;
-
-        /* MATCH MOBILE CHAMPAGNE */
-        border: 1px solid rgba(143,112,56,.48);
+        border: 1px solid var(--border-strong);
         border-radius: 50%;
         color: var(--gold-dark);
-        background: rgba(247,237,216,.48);
 
-        transition: .25s ease;
-    }
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.50),
+                rgba(237,218,181,.35)
+            );
 
-    .mobile-social-link:hover {
-        background: var(--gold);
-        color: #fffdf8;
+        box-shadow: 0 5px 14px rgba(101, 76, 34, .06);
     }
 
     .mobile-social-link svg {
@@ -2011,9 +2171,7 @@ button {
     }
 
 
-    /* =====================================================
-       MOBILE HERO
-    ===================================================== */
+    /* MOBILE HERO */
 
     .hero-section {
         min-height: calc(100vh - 76px);
@@ -2023,8 +2181,8 @@ button {
         background:
             linear-gradient(
                 90deg,
-                rgba(250,247,240,.38),
-                rgba(250,247,240,.72)
+                rgba(250,247,240,.40),
+                rgba(250,247,240,.74)
             );
     }
 
@@ -2045,9 +2203,7 @@ button {
     }
 
 
-    /* =====================================================
-       MOBILE SECTIONS
-    ===================================================== */
+    /* MOBILE SECTIONS */
 
     .intro-section,
     .services-section,
@@ -2061,6 +2217,9 @@ button {
     .contact-section {
         padding: 80px 0;
     }
+
+
+    /* MOBILE CONTENT */
 
     .about-grid,
     .faq-grid,
@@ -2100,6 +2259,9 @@ button {
         height: 40px;
     }
 
+
+    /* MOBILE STATISTICS */
+
     .statistics-grid {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 30px;
@@ -2108,6 +2270,9 @@ button {
     .stat-item:nth-child(2) {
         border-left: none;
     }
+
+
+    /* MOBILE PROCESS */
 
     .process-grid {
         grid-template-columns: 1fr;
@@ -2118,16 +2283,34 @@ button {
         width: 1px;
         height: 35px;
         margin: 0 auto;
+
+        background:
+            linear-gradient(
+                to bottom,
+                transparent,
+                var(--gold),
+                transparent
+            );
     }
+
+
+    /* MOBILE GALLERY */
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* MOBILE CONTACT CARD */
+
+    .contact-card {
+        box-shadow: var(--shadow-medium);
     }
 }
 
 
 /* =========================================================
-   RESPONSIVE — SMALL MOBILE
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -2136,17 +2319,18 @@ button {
         width: calc(100% - 28px);
     }
 
-    .navbar {
+    /* HEADER */
 
-        /* EXTRA MOBILE CONSISTENCY */
+    .navbar {
+        padding: 0 14px;
+
         background:
             linear-gradient(
                 135deg,
-                #e0cda7,
-                #cdb27c
+                #e8dabd,
+                #d9c398,
+                #ceb37d
             );
-
-        padding: 0 14px;
     }
 
     .brand {
@@ -2169,35 +2353,10 @@ button {
 
     .mobile-menu-toggle {
         margin-right: 10px;
-        background: rgba(242,229,202,.62);
-        border-color: rgba(137,106,52,.52);
     }
 
-    /* =====================================================
-       SMALL MOBILE MENU
-       Same darker champagne as header
-    ===================================================== */
 
-    .nav-menu {
-        background:
-            linear-gradient(
-                145deg,
-                #e0cda7,
-                #cdb27c
-            );
-
-        border-bottom-color: rgba(137,106,52,.34);
-        box-shadow: 0 15px 32px rgba(105,81,42,.18);
-    }
-
-    .nav-link {
-        border-bottom-color: rgba(137,106,52,.27);
-    }
-
-    .mobile-social-link {
-        background: rgba(242,229,202,.50);
-        border-color: rgba(137,106,52,.48);
-    }
+    /* MOBILE HERO */
 
     .hero-content h1 {
         font-size: 43px;
@@ -2212,12 +2371,18 @@ button {
         width: 100%;
     }
 
+
+    /* MOBILE CARDS */
+
     .services-grid,
     .benefits-grid,
     .google-reviews-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* ABOUT */
 
     .about-content h2 {
         font-size: 38px;
@@ -2236,6 +2401,9 @@ button {
         margin-top: 3px;
     }
 
+
+    /* CREDENTIALS */
+
     .credential-image {
         height: 270px;
     }
@@ -2248,6 +2416,9 @@ button {
         padding: 8px 14px;
         font-size: 13px;
     }
+
+
+    /* STATISTICS */
 
     .statistics-grid {
         grid-template-columns: 1fr 1fr;
@@ -2263,6 +2434,9 @@ button {
         font-size: 38px;
     }
 
+
+    /* BOOKING */
+
     .booking-section {
         padding: 90px 0;
     }
@@ -2272,9 +2446,15 @@ button {
         grid-template-columns: 1fr;
     }
 
+
+    /* CONTACT */
+
     .contact-card {
         padding: 30px 22px;
     }
+
+
+    /* FOOTER */
 
     .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -2285,20 +2465,29 @@ button {
         grid-column: 1 / -1;
     }
 
+
+    /* WHATSAPP */
+
     .floating-whatsapp {
         right: 16px;
         bottom: 16px;
         width: 54px;
         height: 54px;
+        box-shadow:
+            0 9px 25px rgba(112, 83, 37, .24),
+            0 0 0 4px rgba(198,168,106,.10);
     }
 
 
     /* =====================================================
-       POPUP MOBILE
-    ===================================================== */
+       POPUP — MOBILE LUXURY VERSION
+       ===================================================== */
 
     .popup-window {
         padding: 12px;
+        background: rgba(74, 59, 36, .46);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .popup-left {
@@ -2310,8 +2499,30 @@ button {
         min-height: auto;
         max-height: 92vh;
         overflow-y: auto;
+
         border-radius: 18px;
+
         padding: 45px 22px 30px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #fffdf8,
+                #f7efe0
+            );
+
+        border: 1px solid var(--champagne-soft);
+
+        box-shadow:
+            0 25px 70px rgba(76, 57, 27, .24),
+            inset 0 1px 0 rgba(255,255,255,.65);
+    }
+
+    .popup-close {
+        top: 14px;
+        left: 14px;
+        width: 36px;
+        height: 36px;
     }
 
     .popup-content h1 {
@@ -2321,6 +2532,69 @@ button {
     .popup-logo {
         width: 70px;
         height: 70px;
+    }
+
+    .popup-feature {
+        gap: 10px;
+    }
+
+    .popup-button {
+        min-height: 54px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 22px);
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .brand-logo {
+        width: 39px;
+        height: 39px;
+    }
+
+    .brand-text {
+        font-size: 11px;
+    }
+
+    .mobile-menu-toggle {
+        width: 39px;
+        height: 39px;
+        margin-right: 7px;
+    }
+
+    .hero-content h1 {
+        font-size: 39px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .contact-card {
+        padding: 25px 18px;
+    }
+
+    .popup-right {
+        padding: 42px 18px 25px;
+    }
+
+    .popup-content h1 {
+        font-size: 25px;
     }
 }
 
