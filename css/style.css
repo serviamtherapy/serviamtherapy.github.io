@@ -6870,3 +6870,528 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   30 — RANDOMIZED EDITORIAL FRAME RHYTHM
+   Purpose:
+   Break the repetitive "six identical cards" feeling.
+   Variation is intentional, deterministic, and responsive.
+   No rotation / no diagonal geometry.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   SERVICES — six distinct visual personalities
+   --------------------------------------------------------- */
+
+.services-grid {
+    align-items: start;
+    gap: 30px 24px;
+}
+
+.services-grid .service-card {
+    position: relative;
+}
+
+.services-grid .service-card:nth-child(1) .service-image {
+    height: 305px;
+    margin: 10px 24px 20px 8px;
+    border-radius: 34px 18px 46px 22px;
+}
+
+.services-grid .service-card:nth-child(1) .service-image::after {
+    width: 58px;
+    height: 58px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 0 0 24px 0;
+}
+
+.services-grid .service-card:nth-child(2) .service-image {
+    height: 370px;
+    margin: 28px 8px 16px 26px;
+    border-radius: 18px 44px 24px 54px;
+}
+
+.services-grid .service-card:nth-child(2) .service-image::after {
+    left: -6px;
+    right: auto;
+    bottom: -6px;
+    width: 78px;
+    height: 52px;
+    border-right: 0;
+    border-left: 1px solid rgba(184, 147, 79, .65);
+    border-bottom: 1px solid rgba(184, 147, 79, .65);
+    border-radius: 0 0 0 22px;
+}
+
+.services-grid .service-card:nth-child(3) .service-image {
+    height: 265px;
+    margin: 18px 14px 30px 2px;
+    border-radius: 52px 22px 18px 38px;
+}
+
+.services-grid .service-card:nth-child(3) .service-image::before {
+    inset: 11px 18px 8px 7px;
+    border-radius: 42px 16px 14px 30px;
+}
+
+.services-grid .service-card:nth-child(3) .service-image::after {
+    right: 12px;
+    bottom: -8px;
+    width: 46px;
+    height: 76px;
+    border-radius: 0 0 18px 0;
+}
+
+.services-grid .service-card:nth-child(4) .service-image {
+    height: 395px;
+    margin: 4px 2px 18px 30px;
+    border-radius: 20px 58px 32px 18px;
+}
+
+.services-grid .service-card:nth-child(4) .service-image::after {
+    right: -8px;
+    bottom: 18px;
+    width: 62px;
+    height: 38px;
+    border-radius: 0 0 18px 0;
+}
+
+.services-grid .service-card:nth-child(5) .service-image {
+    height: 285px;
+    margin: 34px 28px 12px 12px;
+    border-radius: 26px 18px 58px 30px;
+}
+
+.services-grid .service-card:nth-child(5) .service-image::before {
+    inset: 6px 9px 13px 14px;
+    border-radius: 20px 13px 50px 25px;
+}
+
+.services-grid .service-card:nth-child(5) .service-image::after {
+    left: -7px;
+    right: auto;
+    bottom: 14px;
+    width: 66px;
+    height: 48px;
+    border-right: 0;
+    border-left: 1px solid rgba(184, 147, 79, .65);
+    border-bottom: 1px solid rgba(184, 147, 79, .65);
+}
+
+.services-grid .service-card:nth-child(6) .service-image {
+    height: 340px;
+    margin: 20px 10px 24px 22px;
+    border-radius: 44px 20px 28px 56px;
+}
+
+.services-grid .service-card:nth-child(6) .service-image::after {
+    right: 10px;
+    bottom: -8px;
+    width: 84px;
+    height: 62px;
+    border-radius: 0 0 28px 0;
+}
+
+/* Subtle vertical rhythm makes adjacent cards feel less templated. */
+.services-grid .service-card:nth-child(2),
+.services-grid .service-card:nth-child(4),
+.services-grid .service-card:nth-child(6) {
+    transform: translateY(22px);
+}
+
+.services-grid .service-card:nth-child(2):hover,
+.services-grid .service-card:nth-child(4):hover,
+.services-grid .service-card:nth-child(6):hover {
+    transform: translateY(15px);
+}
+
+
+/* ---------------------------------------------------------
+   CREDENTIALS — deliberately mixed proportions
+   --------------------------------------------------------- */
+
+.credentials-track {
+    align-items: start;
+    gap: 28px;
+}
+
+.credentials-track .credential-card {
+    position: relative;
+}
+
+.credentials-track .credential-card:nth-child(1) .credential-image {
+    height: 300px;
+    margin: 26px 22px 16px 4px;
+    border-radius: 42px 20px 26px 54px;
+}
+
+.credentials-track .credential-card:nth-child(1) .credential-image::before {
+    inset: 10px 7px 15px 12px;
+    border-radius: 34px 15px 20px 45px;
+}
+
+.credentials-track .credential-card:nth-child(1) .credential-image::after {
+    left: auto;
+    right: 12px;
+    bottom: -5px;
+    width: 52px;
+    height: 70px;
+    border-left: 0;
+    border-right: 1px solid rgba(184, 147, 79, .55);
+    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-radius: 0 0 20px 0;
+}
+
+.credentials-track .credential-card:nth-child(2) .credential-image {
+    height: 385px;
+    margin: 2px 6px 24px 28px;
+    border-radius: 18px 56px 22px 34px;
+}
+
+.credentials-track .credential-card:nth-child(2) .credential-image::after {
+    left: -6px;
+    bottom: 18px;
+    width: 70px;
+    height: 44px;
+    border-left: 1px solid rgba(184, 147, 79, .55);
+    border-right: 0;
+    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-radius: 0 0 0 18px;
+}
+
+.credentials-track .credential-card:nth-child(3) .credential-image {
+    height: 270px;
+    margin: 38px 16px 12px 0;
+    border-radius: 58px 24px 18px 30px;
+}
+
+.credentials-track .credential-card:nth-child(3) .credential-image::before {
+    inset: 7px 14px 11px 8px;
+    border-radius: 48px 18px 13px 24px;
+}
+
+.credentials-track .credential-card:nth-child(3) .credential-image::after {
+    right: 16px;
+    left: auto;
+    bottom: -6px;
+    width: 42px;
+    height: 62px;
+    border-left: 0;
+    border-right: 1px solid rgba(184, 147, 79, .55);
+    border-bottom: 1px solid rgba(184, 147, 79, .55);
+}
+
+.credentials-track .credential-card:nth-child(4) .credential-image {
+    height: 345px;
+    margin: 12px 30px 20px 8px;
+    border-radius: 24px 34px 62px 18px;
+}
+
+.credentials-track .credential-card:nth-child(4) .credential-image::after {
+    left: -7px;
+    right: auto;
+    bottom: 12px;
+    width: 62px;
+    height: 54px;
+    border-left: 1px solid rgba(184, 147, 79, .55);
+    border-right: 0;
+    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-radius: 0 0 0 22px;
+}
+
+.credentials-track .credential-card:nth-child(5) .credential-image {
+    height: 315px;
+    margin: 30px 10px 14px 24px;
+    border-radius: 20px 62px 28px 20px;
+}
+
+.credentials-track .credential-card:nth-child(5) .credential-image::before {
+    inset: 12px 8px 7px 15px;
+    border-radius: 15px 50px 21px 15px;
+}
+
+.credentials-track .credential-card:nth-child(5) .credential-image::after {
+    right: -5px;
+    left: auto;
+    bottom: 15px;
+    width: 72px;
+    height: 38px;
+    border-left: 0;
+    border-right: 1px solid rgba(184, 147, 79, .55);
+    border-bottom: 1px solid rgba(184, 147, 79, .55);
+}
+
+.credentials-track .credential-card:nth-child(6) .credential-image {
+    height: 410px;
+    margin: 0 20px 28px 2px;
+    border-radius: 50px 18px 32px 58px;
+}
+
+.credentials-track .credential-card:nth-child(6) .credential-image::after {
+    left: 10px;
+    right: auto;
+    bottom: -7px;
+    width: 86px;
+    height: 58px;
+    border-radius: 0 0 0 26px;
+}
+
+/* Different vertical rhythm without rotation. */
+.credentials-track .credential-card:nth-child(2),
+.credentials-track .credential-card:nth-child(4),
+.credentials-track .credential-card:nth-child(6) {
+    transform: translateY(20px);
+}
+
+.credentials-track .credential-card:nth-child(2):hover,
+.credentials-track .credential-card:nth-child(4):hover,
+.credentials-track .credential-card:nth-child(6):hover {
+    transform: translateY(13px);
+}
+
+
+/* ---------------------------------------------------------
+   BENEFITS — break the uniform four-card rhythm too
+   --------------------------------------------------------- */
+
+.benefits-grid {
+    align-items: start;
+    gap: 22px;
+}
+
+.benefits-grid .benefit-card:nth-child(1) {
+    border-radius: 42px 22px 28px 54px;
+    padding-top: 40px;
+}
+
+.benefits-grid .benefit-card:nth-child(2) {
+    margin-top: 26px;
+    border-radius: 20px 52px 24px 30px;
+}
+
+.benefits-grid .benefit-card:nth-child(3) {
+    border-radius: 28px 18px 58px 24px;
+    padding-bottom: 42px;
+}
+
+.benefits-grid .benefit-card:nth-child(4) {
+    margin-top: 12px;
+    border-radius: 54px 26px 20px 38px;
+}
+
+
+/* ---------------------------------------------------------
+   REVIEW TRUST — not identical rectangles
+   --------------------------------------------------------- */
+
+.review-trust-grid {
+    align-items: start;
+}
+
+.review-trust-card:nth-child(1) {
+    border-radius: 38px 20px 30px 48px;
+}
+
+.review-trust-card:nth-child(2) {
+    margin-top: 22px;
+    border-radius: 18px 46px 22px 30px;
+}
+
+.review-trust-card:nth-child(3) {
+    border-radius: 24px 30px 52px 18px;
+}
+
+
+/* ---------------------------------------------------------
+   GALLERY — stronger variation, still clean and premium
+   --------------------------------------------------------- */
+
+.gallery-item:nth-child(1) {
+    aspect-ratio: 1 / .96;
+    border-radius: 42px 18px 28px 54px;
+}
+
+.gallery-item:nth-child(2) {
+    margin-top: 54px;
+    aspect-ratio: 1 / .70;
+    border-radius: 18px 54px 24px 30px;
+}
+
+.gallery-item:nth-child(3) {
+    aspect-ratio: 1 / 1.08;
+    border-radius: 28px 20px 58px 24px;
+}
+
+.gallery-item:nth-child(4) {
+    margin-top: -14px;
+    aspect-ratio: 1 / .78;
+    border-radius: 56px 24px 18px 34px;
+}
+
+.gallery-item:nth-child(5) {
+    margin-top: 32px;
+    aspect-ratio: 1 / 1.02;
+    border-radius: 20px 48px 28px 58px;
+}
+
+.gallery-item:nth-child(6) {
+    aspect-ratio: 1 / .68;
+    border-radius: 18px 28px 52px 22px;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — preserve variation without breaking layout
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .services-grid .service-card:nth-child(n) {
+        transform: none;
+    }
+
+    .services-grid .service-card:nth-child(2) .service-image,
+    .services-grid .service-card:nth-child(4) .service-image {
+        height: 335px;
+    }
+
+    .services-grid .service-card:nth-child(6) .service-image {
+        height: 315px;
+    }
+
+    .credentials-track .credential-card:nth-child(n) {
+        transform: none;
+    }
+
+    .credentials-track .credential-card:nth-child(2) .credential-image,
+    .credentials-track .credential-card:nth-child(6) .credential-image {
+        height: 350px;
+    }
+
+    .gallery-item:nth-child(4) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .services-grid .service-card:nth-child(1) .service-image,
+    .services-grid .service-card:nth-child(3) .service-image,
+    .services-grid .service-card:nth-child(5) .service-image {
+        height: 285px;
+    }
+
+    .services-grid .service-card:nth-child(2) .service-image,
+    .services-grid .service-card:nth-child(4) .service-image,
+    .services-grid .service-card:nth-child(6) .service-image {
+        height: 325px;
+    }
+
+    .credentials-track .credential-card:nth-child(1) .credential-image,
+    .credentials-track .credential-card:nth-child(3) .credential-image,
+    .credentials-track .credential-card:nth-child(5) .credential-image {
+        height: 290px;
+    }
+
+    .credentials-track .credential-card:nth-child(2) .credential-image,
+    .credentials-track .credential-card:nth-child(4) .credential-image,
+    .credentials-track .credential-card:nth-child(6) .credential-image {
+        height: 335px;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(5) {
+        aspect-ratio: 1 / .88;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(6) {
+        aspect-ratio: 1 / .78;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid .service-card:nth-child(n) {
+        transform: none;
+    }
+
+    .services-grid .service-card:nth-child(1) .service-image,
+    .services-grid .service-card:nth-child(3) .service-image,
+    .services-grid .service-card:nth-child(5) .service-image {
+        height: 260px;
+        margin: 12px 14px 18px 4px;
+    }
+
+    .services-grid .service-card:nth-child(2) .service-image,
+    .services-grid .service-card:nth-child(4) .service-image,
+    .services-grid .service-card:nth-child(6) .service-image {
+        height: 315px;
+        margin: 22px 4px 18px 18px;
+    }
+
+    .credentials-track .credential-card:nth-child(n) {
+        transform: none;
+    }
+
+    .credentials-track .credential-card:nth-child(1) .credential-image,
+    .credentials-track .credential-card:nth-child(3) .credential-image,
+    .credentials-track .credential-card:nth-child(5) .credential-image {
+        height: 275px;
+        margin: 18px 12px 14px 4px;
+    }
+
+    .credentials-track .credential-card:nth-child(2) .credential-image,
+    .credentials-track .credential-card:nth-child(4) .credential-image,
+    .credentials-track .credential-card:nth-child(6) .credential-image {
+        height: 315px;
+        margin: 18px 4px 14px 16px;
+    }
+
+    .benefits-grid .benefit-card:nth-child(2),
+    .benefits-grid .benefit-card:nth-child(4),
+    .review-trust-card:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .gallery-item:nth-child(n) {
+        margin-top: 0;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(5) {
+        aspect-ratio: 1 / .90;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(6) {
+        aspect-ratio: 1 / .78;
+    }
+}
+
+@media (max-width: 380px) {
+    .services-grid .service-card:nth-child(n) .service-image {
+        height: 245px;
+        margin-inline: 4px;
+    }
+
+    .services-grid .service-card:nth-child(2) .service-image,
+    .services-grid .service-card:nth-child(4) .service-image,
+    .services-grid .service-card:nth-child(6) .service-image {
+        height: 285px;
+    }
+
+    .credentials-track .credential-card:nth-child(n) .credential-image {
+        height: 270px;
+        margin-inline: 4px;
+    }
+
+    .credentials-track .credential-card:nth-child(2) .credential-image,
+    .credentials-track .credential-card:nth-child(4) .credential-image,
+    .credentials-track .credential-card:nth-child(6) .credential-image {
+        height: 295px;
+    }
+}
