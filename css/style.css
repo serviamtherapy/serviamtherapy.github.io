@@ -2830,73 +2830,8 @@ img {
 
 
 /* =========================================================
-   11 — SERVICES
+   PREMIUM EDITORIAL SERVICE IMAGE FRAMES
 ========================================================= */
-
-.services-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
-
-    gap:
-        28px;
-
-}
-
-
-.service-card {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            #fffdf8,
-            #f8f1e4
-        );
-
-    border:
-        1px
-        solid
-        var(--line);
-
-    border-radius:
-        var(--radius-card);
-
-    box-shadow:
-        var(--shadow-sm);
-
-    transition:
-        var(--transition);
-
-}
-
-
-.service-card:hover {
-
-    transform:
-        translateY(
-            -8px
-        );
-
-    border-color:
-        var(--line-strong);
-
-    box-shadow:
-        var(--shadow-lg);
-
-}
-
 
 .service-image {
 
@@ -2907,30 +2842,48 @@ img {
         285px;
 
     margin:
-        10px;
+        16px;
 
     overflow:
         hidden;
 
+    border:
+        1px
+        solid
+        rgba(
+            139,
+            107,
+            55,
+            .48
+        );
+
     border-radius:
-        38%
-        62%
-        55%
-        45%
-        /
-        28%
-        42%
-        58%
-        72%;
+        22px
+        30px
+        22px
+        30px;
 
     background:
         var(--champagne-pale);
+
+    box-shadow:
+        0
+        16px
+        35px
+        rgba(
+            72,
+            54,
+            30,
+            .12
+        );
 
     isolation:
         isolate;
 
 }
 
+
+/* Fine luxury frame */
 
 .service-image::before {
 
@@ -2941,7 +2894,7 @@ img {
         absolute;
 
     inset:
-        0;
+        7px;
 
     z-index:
         2;
@@ -2951,37 +2904,73 @@ img {
         solid
         rgba(
             255,
-            255,
-            255,
-            .6
+            253,
+            248,
+            .62
         );
 
     border-radius:
-        inherit;
+        17px
+        24px
+        17px
+        24px;
 
-    box-shadow:
-        inset
-        0
-        0
-        0
+    pointer-events:
+        none;
+
+}
+
+
+/* Offset champagne accent */
+
+.service-image::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        -7px;
+
+    bottom:
+        -7px;
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    z-index:
+        3;
+
+    border-right:
         1px
+        solid
         rgba(
             184,
             147,
             79,
-            .18
-        ),
-
-        inset
-        0
-        0
-        35px
-        rgba(
-            255,
-            255,
-            255,
-            .12
+            .65
         );
+
+    border-bottom:
+        1px
+        solid
+        rgba(
+            184,
+            147,
+            79,
+            .65
+        );
+
+    border-radius:
+        0
+        0
+        25px
+        0;
 
     pointer-events:
         none;
@@ -3002,7 +2991,7 @@ img {
 
     transition:
         transform
-        .8s
+        .85s
         cubic-bezier(
             .2,
             .7,
@@ -3022,7 +3011,7 @@ img {
 
     transform:
         scale(
-            1.07
+            1.055
         );
 
     filter:
@@ -3033,168 +3022,29 @@ img {
 }
 
 
-.service-content {
+.service-card:hover
+.service-image {
 
-    padding:
-        26px
-        30px
-        31px;
+    border-color:
+        rgba(
+            139,
+            107,
+            55,
+            .68
+        );
 
-}
-
-
-.service-number {
-
-    color:
-        var(--gold);
-
-    font:
-        12px
-        "Poppins",
-        sans-serif;
-
-    letter-spacing:
-        .16em;
-
-}
-
-
-.service-content h3 {
-
-    margin:
-        6px
+    box-shadow:
         0
-        9px;
-
-    color:
-        var(--espresso);
-
-    font-size:
-        26px;
-
-    font-weight:
-        500;
-
-}
-
-
-.service-content p {
-
-    min-height:
-        96px;
-
-    color:
-        var(--text-soft);
-
-}
-
-
-.service-pricing {
-
-    display:
-        flex;
-
-    gap:
-        20px;
-
-    margin-top:
-        16px;
-
-    padding:
-        18px
-        0;
-
-    border-top:
-        1px
-        solid
-        var(--line);
-
-}
-
-
-.service-pricing div {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-}
-
-
-.service-pricing strong {
-
-    color:
-        var(--text-muted);
-
-    font-size:
-        13px;
-
-}
-
-
-.service-pricing span {
-
-    color:
-        var(--gold-dark);
-
-    font-size:
-        21px;
-
-    font-weight:
-        700;
-
-}
-
-
-.text-link {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        8px;
-
-    color:
-        var(--gold-dark);
-
-    font-weight:
-        700;
-
-}
-
-
-.text-link span {
-
-    transition:
-        transform
-        .25s
-        ease;
-
-}
-
-
-.text-link:hover span {
-
-    transform:
-        translateX(
-            -4px
+        22px
+        48px
+        rgba(
+            72,
+            54,
+            30,
+            .17
         );
 
 }
-
-
-.large-link {
-
-    margin-top:
-        22px;
-
-}
-
 
 /* =========================================================
    12 — HOME SERVICE
