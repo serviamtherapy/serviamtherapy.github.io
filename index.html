@@ -3233,7 +3233,33 @@
 document.addEventListener(
     "DOMContentLoaded",
     function () {
+const scrollIndicator =
+    document.querySelector(
+        ".scroll-indicator"
+    );
 
+function updateScrollIndicator() {
+
+    if (!scrollIndicator) {
+        return;
+    }
+
+    scrollIndicator.classList.toggle(
+        "scroll-hidden",
+        window.scrollY > 80
+    );
+
+}
+
+updateScrollIndicator();
+
+window.addEventListener(
+    "scroll",
+    updateScrollIndicator,
+    {
+        passive: true
+    }
+);
         const body =
             document.body;
 
