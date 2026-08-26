@@ -1586,7 +1586,111 @@ img {
 
 }
 
+/* =========================================================
+   PREMIUM SCROLL INDICATOR
+========================================================= */
 
+.scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.82);
+    animation: scrollIndicatorFade 3s ease-in-out infinite;
+}
+
+.scroll-indicator span {
+    font-family: "Heebo", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+}
+
+.scroll-line {
+    position: relative;
+    width: 1px;
+    height: 42px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.15),
+        rgba(216, 193, 141, 0.85)
+    );
+    overflow: visible;
+}
+
+.scroll-line::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #d8c18d;
+    border-bottom: 1px solid #d8c18d;
+    transform: translateX(-50%) rotate(45deg);
+    animation: scrollArrowMove 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollArrowMove {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -4px)
+            rotate(45deg);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform:
+            translate(-50%, 5px)
+            rotate(45deg);
+        opacity: 1;
+    }
+
+}
+
+@keyframes scrollIndicatorFade {
+
+    0%,
+    100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .scroll-indicator {
+        bottom: 25px;
+        gap: 8px;
+    }
+
+    .scroll-indicator span {
+        font-size: 0.68rem;
+    }
+
+    .scroll-line {
+        height: 34px;
+    }
+
+}
 /* =========================================================
    10 — HERO
 ========================================================= */
