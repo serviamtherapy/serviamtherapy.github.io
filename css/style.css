@@ -3332,34 +3332,24 @@ img {
 
 
 /* =========================================================
-   13 — ABOUT
+   PREMIUM EDITORIAL ABOUT IMAGE
 ========================================================= */
-
-.about-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        .9fr
-        1.1fr;
-
-    gap:
-        80px;
-
-    align-items:
-        center;
-
-}
-
 
 .about-image-wrapper {
 
     position:
         relative;
 
+    padding:
+        18px
+        18px
+        18px
+        8px;
+
 }
 
+
+/* Main architectural frame */
 
 .about-image-frame {
 
@@ -3367,23 +3357,23 @@ img {
         relative;
 
     padding:
-        13px;
+        11px;
 
     border:
         1px
         solid
-        var(--line-strong);
+        rgba(
+            139,
+            107,
+            55,
+            .52
+        );
 
     border-radius:
-        48%
-        52%
-        42%
-        58%
-        /
-        35%
-        50%
-        50%
-        65%;
+        24px
+        34px
+        24px
+        34px;
 
     background:
         linear-gradient(
@@ -3392,29 +3382,131 @@ img {
                 255,
                 253,
                 248,
-                .75
+                .88
             ),
             rgba(
                 213,
                 189,
                 131,
-                .25
+                .28
             )
         );
 
     box-shadow:
-        var(--shadow-lg);
+        0
+        25px
+        65px
+        rgba(
+            72,
+            54,
+            30,
+            .15
+        );
+
+}
+
+
+/* Elegant offset frame behind photograph */
+
+.about-image-frame::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    right:
+        -18px;
+
+    bottom:
+        -18px;
+
+    left:
+        18px;
+
+    z-index:
+        -1;
+
+    border:
+        1px
+        solid
+        rgba(
+            184,
+            147,
+            79,
+            .45
+        );
+
+    border-radius:
+        28px
+        38px
+        28px
+        38px;
+
+    background:
+        transparent;
+
+}
+
+
+/* Subtle inner champagne line */
+
+.about-image-frame::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        8px;
+
+    z-index:
+        3;
+
+    border:
+        1px
+        solid
+        rgba(
+            255,
+            253,
+            248,
+            .58
+        );
+
+    border-radius:
+        18px
+        28px
+        18px
+        28px;
+
+    pointer-events:
+        none;
 
 }
 
 
 .about-image {
 
+    position:
+        relative;
+
     overflow:
         hidden;
 
     border-radius:
-        inherit;
+        18px
+        28px
+        18px
+        28px;
+
+    background:
+        var(--cream);
 
 }
 
@@ -3431,8 +3523,40 @@ img {
     object-fit:
         cover;
 
+    transition:
+        transform
+        .9s
+        cubic-bezier(
+            .2,
+            .7,
+            .2,
+            1
+        ),
+
+        filter
+        .5s
+        ease;
+
 }
 
+
+.about-image-frame:hover
+.about-image img {
+
+    transform:
+        scale(
+            1.035
+        );
+
+    filter:
+        saturate(
+            1.03
+        );
+
+}
+
+
+/* Replace old decorative image-frame line */
 
 .image-frame-line {
 
@@ -3440,261 +3564,28 @@ img {
         absolute;
 
     inset:
-        9%;
+        7%;
 
     border:
         1px
         solid
         rgba(
-            255,
-            255,
-            255,
-            .48
+            184,
+            147,
+            79,
+            .22
         );
 
     border-radius:
-        inherit;
+        20px
+        30px
+        20px
+        30px;
 
     pointer-events:
         none;
 
 }
-
-
-.experience-badge {
-
-    position:
-        absolute;
-
-    right:
-        -22px;
-
-    bottom:
-        35px;
-
-    width:
-        130px;
-
-    height:
-        130px;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    border:
-        5px
-        solid
-        var(--ivory);
-
-    border-radius:
-        50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold),
-            var(--gold-deep)
-        );
-
-    color:
-        #fffdf8;
-
-    box-shadow:
-        var(--shadow-md);
-
-}
-
-
-.experience-badge strong {
-
-    font:
-        500
-        35px/1
-        "Poppins",
-        sans-serif;
-
-}
-
-
-.experience-badge span {
-
-    font-size:
-        12px;
-
-    text-align:
-        center;
-
-    line-height:
-        1.3;
-
-}
-
-
-.about-content h2 {
-
-    margin:
-        14px
-        0
-        20px;
-
-    color:
-        var(--espresso);
-
-    font-size:
-        clamp(
-            40px,
-            4.5vw,
-            58px
-        );
-
-    line-height:
-        1.08;
-
-    font-weight:
-        500;
-
-}
-
-
-.about-content > p {
-
-    margin-bottom:
-        14px;
-
-    color:
-        var(--text-soft);
-
-    font-size:
-        17px;
-
-}
-
-
-.about-features {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(
-            2,
-            1fr
-        );
-
-    gap:
-        12px;
-
-    margin:
-        27px
-        0;
-
-}
-
-
-.feature-item {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        10px;
-
-}
-
-
-.feature-item span {
-
-    width:
-        27px;
-
-    height:
-        27px;
-
-    flex:
-        0
-        0
-        27px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    border-radius:
-        50%;
-
-    background:
-        var(--gold);
-
-    color:
-        #fffdf8;
-
-    font-size:
-        13px;
-
-}
-
-
-.skills-list {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        8px;
-
-    margin-top:
-        20px;
-
-}
-
-
-.skills-list span {
-
-    padding:
-        6px
-        12px;
-
-    border:
-        1px
-        solid
-        var(--line);
-
-    border-radius:
-        30px;
-
-    color:
-        var(--text-soft);
-
-    background:
-        rgba(
-            255,
-            253,
-            248,
-            .45
-        );
-
-    font-size:
-        13px;
-
-}
-
 
 /* =========================================================
    14 — STATISTICS
