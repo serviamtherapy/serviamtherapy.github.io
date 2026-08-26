@@ -683,10 +683,21 @@
     class="hero-section"
 >
 
-    <div
-        class="hero-background"
+    <div class="hero-background">
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="images/hero/hero.jpg"
         aria-hidden="true"
-    ></div>
+        <link rel="preload" as="image" href="images/hero/hero.jpg">
+    >
+        <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+</div>
 
     <div
         class="hero-overlay"
