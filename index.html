@@ -3390,15 +3390,33 @@ document.addEventListener(
         }
 
 
-        if (popupEnter) {
+      if (popupEnter) {
 
-            popupEnter.addEventListener(
-                "click",
-                closePopup
+    popupEnter.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            closePopup();
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+
+            history.replaceState(
+                null,
+                "",
+                window.location.pathname +
+                window.location.search
             );
 
         }
+    );
 
+}
 
         if (popup) {
 
