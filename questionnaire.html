@@ -1,2 +1,390 @@
-<div data-tally-src="https://tally.so/r/XXXXXXXX"></div>
-<script async src="https://tally.so/widgets/embed.js"></script>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>שאלון לפני הטיפול | Serviam Therapy</title>
+
+    <meta
+        name="description"
+        content="שאלון קצר לפני הטיפול ב-Serviam Therapy, כדי להתאים את הטיפול בצורה המדויקת והנוחה ביותר עבורך."
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Tally -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <style>
+        /* =========================================================
+           SERVIAM THERAPY
+           PRE-TREATMENT QUESTIONNAIRE PAGE
+        ========================================================= */
+
+        :root {
+            --ivory: #f3eee5;
+            --ivory-soft: #ebe3d6;
+            --cream: #faf7f1;
+            --espresso: #3b2a21;
+            --espresso-soft: #59443a;
+            --gold: #b49763;
+            --gold-light: #d2bc8b;
+            --line: rgba(59, 42, 33, 0.14);
+            --shadow: 0 24px 70px rgba(59, 42, 33, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(180, 151, 99, 0.13),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 85%,
+                    rgba(180, 151, 99, 0.09),
+                    transparent 32%
+                ),
+                var(--ivory);
+            color: var(--espresso);
+            font-family: "Heebo", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .questionnaire-header {
+            position: relative;
+            padding: 34px 24px 26px;
+            text-align: center;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--espresso);
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+        }
+
+        .brand-mark {
+            width: 9px;
+            height: 9px;
+            margin-left: 10px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 0 5px rgba(180, 151, 99, 0.10);
+        }
+
+        .header-line {
+            width: 70px;
+            height: 1px;
+            margin: 20px auto 0;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--gold),
+                transparent
+            );
+        }
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .questionnaire-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 38px 24px 30px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: var(--gold);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+        }
+
+        .questionnaire-intro h1 {
+            margin: 0;
+            color: var(--espresso);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 1.12;
+            font-weight: 500;
+        }
+
+        .intro-subtitle {
+            max-width: 620px;
+            margin: 20px auto 0;
+            color: var(--espresso-soft);
+            font-size: 1.08rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .privacy-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 22px;
+            padding: 9px 17px;
+            border: 1px solid rgba(180, 151, 99, 0.28);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.38);
+            color: var(--espresso-soft);
+            font-size: 0.88rem;
+        }
+
+        .privacy-icon {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* =========================================================
+           FORM CONTAINER
+        ========================================================= */
+
+        .questionnaire-wrapper {
+            width: min(920px, calc(100% - 32px));
+            margin: 12px auto 70px;
+            padding: clamp(18px, 4vw, 42px);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.76),
+                    rgba(250, 247, 241, 0.88)
+                );
+            box-shadow: var(--shadow);
+        }
+
+        .tally-container {
+            width: 100%;
+            min-height: 650px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .questionnaire-footer {
+            padding: 30px 24px 42px;
+            text-align: center;
+            border-top: 1px solid rgba(59, 42, 33, 0.08);
+        }
+
+        .footer-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--espresso);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition:
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .footer-back:hover {
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .footer-brand {
+            margin-top: 16px;
+            color: var(--gold);
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            font-weight: 500;
+        }
+
+        .footer-tagline {
+            margin-top: 5px;
+            color: var(--espresso-soft);
+            font-size: 0.84rem;
+            font-weight: 300;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .questionnaire-header {
+                padding-top: 24px;
+            }
+
+            .questionnaire-intro {
+                padding-top: 26px;
+            }
+
+            .intro-subtitle {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .privacy-note {
+                max-width: 100%;
+                border-radius: 16px;
+                line-height: 1.5;
+            }
+
+            .questionnaire-wrapper {
+                width: calc(100% - 18px);
+                margin-top: 4px;
+                padding: 8px;
+                border-radius: 20px;
+            }
+
+            .tally-container {
+                min-height: 600px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .footer-back {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="questionnaire-header">
+
+        <a class="brand" href="index.html" aria-label="Serviam Therapy - חזרה לאתר">
+            <span class="brand-mark" aria-hidden="true"></span>
+            SERVIAM THERAPY
+        </a>
+
+        <div class="header-line" aria-hidden="true"></div>
+
+    </header>
+
+
+    <!-- =========================================================
+         INTRO
+    ========================================================= -->
+
+    <main>
+
+        <section class="questionnaire-intro">
+
+            <p class="eyebrow">SERVIAM THERAPY</p>
+
+            <h1>שאלון קצר לפני הטיפול</h1>
+
+            <p class="intro-subtitle">
+                כמה שאלות קצרות שיעזרו לי להבין מה הגוף שלך צריך,
+                מה נעים לך ומה חשוב לי לדעת לפני שמתחילים.
+            </p>
+
+            <div class="privacy-note">
+                <span class="privacy-icon" aria-hidden="true">🔒</span>
+                <span>
+                    המידע שתמסור/י הוא אישי וסודי וישמש לצורך התאמת הטיפול
+                    ולשמירה על בטיחותך בלבד.
+                </span>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TALLY FORM
+        ====================================================== -->
+
+        <section
+            class="questionnaire-wrapper"
+            aria-label="שאלון לפני הטיפול"
+        >
+
+            <div
+                class="tally-container"
+                data-tally-src="https://tally.so/r/Y5lgeB"
+                data-tally-width="100%"
+                data-tally-layout="default"
+                data-tally-embed="1"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer class="questionnaire-footer">
+
+        <a class="footer-back" href="index.html">
+            <span aria-hidden="true">←</span>
+            חזרה לאתר Serviam Therapy
+        </a>
+
+        <div class="footer-brand">
+            SERVIAM THERAPY
+        </div>
+
+        <div class="footer-tagline">
+            טיפול שמתחיל בהקשבה.
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         TALLY INITIALIZATION
+    ========================================================= -->
+
+    <script>
+        window.TallyConfig = {
+            "formWidth": "100%",
+            "hideTitle": true,
+            "alignLeft": false
+        };
+    </script>
+
+</body>
+</html>
