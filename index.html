@@ -96,16 +96,16 @@
     >
 
     <!-- =====================================================
-     HERO IMAGE PRELOAD
-====================================================== -->
+         HERO IMAGE PRELOAD
+    ====================================================== -->
 
-<link rel="preload" as="image" href="images/hero/hero.jpg">
+    <link rel="preload" as="image" href="images/hero/hero.jpg">
 
-<!-- =====================================================
-     CSS
-====================================================== -->
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- =====================================================
          GOOGLE ANALYTICS 4
@@ -334,6 +334,8 @@
     }
 
     </script>
+
+
 
 </head>
 
@@ -634,6 +636,10 @@
                 שאלות נפוצות
             </a>
 
+            <a href="#questionnaire" class="nav-link">
+                שאלון
+            </a>
+
             <a href="#contact" class="nav-link">
                 צור קשר
             </a>
@@ -691,19 +697,26 @@
 >
 
     <div class="hero-background">
-    <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="images/hero/hero.jpg"
-        aria-hidden="true"
-    >
-        <source src="videos/hero.mp4" type="video/mp4">
-    </video>
-</div>
+
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="images/hero/hero.jpg"
+            aria-hidden="true"
+        >
+
+            <source
+                src="videos/hero.mp4"
+                type="video/mp4"
+            >
+
+        </video>
+
+    </div>
 
     <div
         class="hero-overlay"
@@ -893,8 +906,6 @@
         <div class="services-grid">
 
 
-            <!-- 01 -->
-
             <article class="service-card reveal">
 
                 <div class="service-image">
@@ -972,8 +983,6 @@
             </article>
 
 
-            <!-- 02 -->
-
             <article class="service-card reveal">
 
                 <div class="service-image">
@@ -1039,8 +1048,6 @@
 
             </article>
 
-
-            <!-- 03 -->
 
             <article class="service-card reveal">
 
@@ -1108,8 +1115,6 @@
             </article>
 
 
-            <!-- 04 -->
-
             <article class="service-card reveal">
 
                 <div class="service-image">
@@ -1176,8 +1181,6 @@
             </article>
 
 
-            <!-- 05 -->
-
             <article class="service-card reveal">
 
                 <div class="service-image">
@@ -1243,8 +1246,6 @@
 
             </article>
 
-
-            <!-- 06 -->
 
             <article class="service-card reveal">
 
@@ -1689,8 +1690,6 @@
                 >
 
 
-                    <!-- 01 -->
-
                     <article class="credential-card active">
 
                         <div class="credential-image">
@@ -1722,8 +1721,6 @@
 
                     </article>
 
-
-                    <!-- 02 -->
 
                     <article class="credential-card">
 
@@ -1757,8 +1754,6 @@
                     </article>
 
 
-                    <!-- 03 -->
-
                     <article class="credential-card">
 
                         <div class="credential-image">
@@ -1790,8 +1785,6 @@
 
                     </article>
 
-
-                    <!-- 04 -->
 
                     <article class="credential-card">
 
@@ -1825,8 +1818,6 @@
                     </article>
 
 
-                    <!-- 05 -->
-
                     <article class="credential-card">
 
                         <div class="credential-image">
@@ -1858,8 +1849,6 @@
 
                     </article>
 
-
-                    <!-- 06 -->
 
                     <article class="credential-card">
 
@@ -2729,6 +2718,15 @@
                 WhatsApp
             </a>
 
+
+            <a
+                href="questionnaire.html"
+                class="button button-outline-light"
+                data-track="questionnaire_booking"
+            >
+                שאלון לפני הטיפול
+            </a>
+
         </div>
 
     </div>
@@ -3068,6 +3066,10 @@
                     הסמכות
                 </a>
 
+                <a href="#questionnaire">
+                    שאלון לפני הטיפול
+                </a>
+
                 <a href="#contact">
                     צור קשר
                 </a>
@@ -3124,6 +3126,10 @@
 
                 <a href="#faq">
                     שאלות נפוצות
+                </a>
+
+                <a href="#questionnaire">
+                    שאלון לפני הטיפול
                 </a>
 
                 <a href="#booking">
@@ -3196,12 +3202,12 @@
 
 
     <a
-        href="#booking"
-        data-track="mobile_booking"
+        href="#questionnaire"
+        data-track="mobile_questionnaire"
     >
         ✦
         <span>
-            קביעת טיפול
+            שאלון
         </span>
     </a>
 
@@ -3233,33 +3239,36 @@
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-const scrollIndicator =
-    document.querySelector(
-        ".scroll-indicator"
-    );
 
-function updateScrollIndicator() {
+        const scrollIndicator =
+            document.querySelector(
+                ".scroll-indicator"
+            );
 
-    if (!scrollIndicator) {
-        return;
-    }
+        function updateScrollIndicator() {
 
-    scrollIndicator.classList.toggle(
-        "scroll-hidden",
-        window.scrollY > 80
-    );
+            if (!scrollIndicator) {
+                return;
+            }
 
-}
+            scrollIndicator.classList.toggle(
+                "scroll-hidden",
+                window.scrollY > 80
+            );
 
-updateScrollIndicator();
+        }
 
-window.addEventListener(
-    "scroll",
-    updateScrollIndicator,
-    {
-        passive: true
-    }
-);
+        updateScrollIndicator();
+
+        window.addEventListener(
+            "scroll",
+            updateScrollIndicator,
+            {
+                passive: true
+            }
+        );
+
+
         const body =
             document.body;
 
@@ -3416,33 +3425,34 @@ window.addEventListener(
         }
 
 
-      if (popupEnter) {
+        if (popupEnter) {
 
-    popupEnter.addEventListener(
-        "click",
-        function (event) {
+            popupEnter.addEventListener(
+                "click",
+                function (event) {
 
-            event.preventDefault();
+                    event.preventDefault();
 
-            closePopup();
+                    closePopup();
 
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            });
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                    });
 
-            history.replaceState(
-                null,
-                "",
-                window.location.pathname +
-                window.location.search
+                    history.replaceState(
+                        null,
+                        "",
+                        window.location.pathname +
+                        window.location.search
+                    );
+
+                }
             );
 
         }
-    );
 
-}
 
         if (popup) {
 
