@@ -4755,7 +4755,55 @@ img {
         20px;
 
 }
+/* =========================================================
+   BOOKING ACTIONS — THREE BUTTON LAYOUT
+========================================================= */
 
+.booking-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.booking-actions .button {
+    min-width: 190px;
+    text-align: center;
+    justify-content: center;
+}
+
+.booking-actions .button-gold {
+    min-width: 190px;
+}
+
+.booking-actions .button-outline-light {
+    min-width: 190px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+    .booking-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .booking-actions .button,
+    .booking-actions .button-gold,
+    .booking-actions .button-outline-light {
+        width: 100%;
+        min-width: 0;
+        max-width: 360px;
+    }
+
+}
 
 /* =========================================================
    22 — CONTACT
