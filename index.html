@@ -135,11 +135,7 @@
         );
 
     </script>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAicad1cXayypQu_nKh24hZ-vX38hX7r6s&callback=initMap&libraries=places,geometry"
-  async
-  defer>
-</script>
+
     <!-- =====================================================
          LOCAL BUSINESS STRUCTURED DATA
     ====================================================== -->
@@ -3001,9 +2997,7 @@
         </aside>
 
     </div>
-<div class="map-container">
-  <div id="map"></div>
-</div>
+
 </section>
 
 
@@ -4071,6 +4065,7 @@ document.addEventListener(
                 }
             );
 
+
         /* =================================================
            SMOOTH ANCHOR SCROLLING
         ================================================== */
@@ -4146,33 +4141,6 @@ document.addEventListener(
     }
 );
 
-</script>
-
-<script>
-function initMap() {
-
-  const location = {
-    lat: 32.0123924,
-    lng: 34.7468278
-  };
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-  zoom: 17,
-  center: location,
-});
-
-new google.maps.Marker({
-  position: location,
-  map: map,
-  title: "Serviam Therapy",
-});
-  
-</script>
-
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgdypwWc3v7dqoTF2aZ-3FU5NCt2LHSV0&callback=initMap"
-  async
-  defer>
 </script>
 
 </body>
