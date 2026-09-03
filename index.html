@@ -4152,27 +4152,21 @@ document.addEventListener(
 function initMap() {
 
   const location = {
-    lat: 32.035,
-    lng: 34.75
+    lat: 32.0123924,
+    lng: 34.7468278
   };
 
-  const map = new google.maps.Map(
-    document.getElementById("map"),
-    {
-      center: location,
-      zoom: 15,
-      mapTypeControl: false,
-      streetViewControl: false
-    }
-  );
+  const map = new google.maps.Map(document.getElementById("map"), {
+  zoom: 17,
+  center: location,
+});
 
-  new google.maps.Marker({
-    position: location,
-    map: map,
-    title: "Serviam Therapy"
-  });
-
-}
+new google.maps.Marker({
+  position: location,
+  map: map,
+  title: "Serviam Therapy",
+});
+  
 </script>
 
 <script
