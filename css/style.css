@@ -1893,7 +1893,7 @@ img {
 .header-social-link,
 .mobile-social-link,
 .social-link {
- width: 40px;
+width: 40px;
     height: 40px;
     min-width: 40px;
     min-height: 40px;
@@ -1901,8 +1901,37 @@ img {
     flex: 0 0 40px;
     box-sizing: border-box;
 }
-   
-   .social-icon {
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px
+        solid
+        var(--line-strong);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--gold-dark);
+
+    background:
+        rgba(
+            255,
+            253,
+            248,
+            .55
+        );
+
+    transition:
+        .25s
+        ease;
+
+}
+.social-icon {
     width: 18px;
     height: 18px;
     display: block;
