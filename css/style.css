@@ -7389,3 +7389,20 @@ img {
         height: 295px;
     }
 }
+
+/* =========================================================
+   FINAL — RESPONSIVE SAFETY
+========================================================= */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
