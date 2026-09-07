@@ -1890,98 +1890,94 @@ img {
 }
 
 
+/* =========================================================
+   SOCIAL ICONS — UNIFIED PREMIUM CIRCLES
+========================================================= */
+
 .header-social-link,
 .mobile-social-link,
 .social-link {
-width: 40px;
+
+    width: 40px;
     height: 40px;
     min-width: 40px;
     min-height: 40px;
-    padding: 0;
+
     flex: 0 0 40px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
     box-sizing: border-box;
-}
-    display:
-        grid;
 
-    place-items:
-        center;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
 
-    border:
-        1px
-        solid
-        var(--line-strong);
+    color: var(--gold-dark);
 
-    border-radius:
-        50%;
+    background: rgba(
+        255,
+        253,
+        248,
+        .55
+    );
 
-    color:
-        var(--gold-dark);
-
-    background:
-        rgba(
-            255,
-            253,
-            248,
-            .55
-        );
-
-    transition:
-        .25s
-        ease;
+    transition: .25s ease;
 
 }
+
+
+/* Facebook + Instagram SVG icons */
+
 .social-icon {
+
     width: 18px;
     height: 18px;
+
     display: block;
+
     flex: 0 0 18px;
+
     fill: currentColor;
+
     line-height: 1;
+
 }
+
+
+/* Optical adjustment only — circle remains identical */
 
 .social-icon-facebook {
+
     width: 16px;
     flex-basis: 16px;
+
 }
+
 
 .social-icon-instagram {
+
     width: 18px;
     flex-basis: 18px;
-}
-
-.header-social-link {
-
-    width:
-        37px;
-
-    height:
-        37px;
-
-    font-family:
-        Arial,
-        sans-serif;
 
 }
 
+
+/* Hover */
 
 .header-social-link:hover,
 .mobile-social-link:hover,
 .social-link:hover {
 
-    color:
-        #fffdf8;
+    color: #fffdf8;
 
-    background:
-        var(--gold);
+    background: var(--gold);
 
-    transform:
-        translateY(
-            -2px
-        );
+    transform: translateY(-2px);
 
-    box-shadow:
-        var(--shadow-sm);
+    box-shadow: var(--shadow-sm);
 
 }
 
@@ -5116,19 +5112,7 @@ width: 40px;
 }
 
 
-.social-link {
 
-    width:
-        45px;
-
-    height:
-        45px;
-
-    font-family:
-        Arial,
-        sans-serif;
-
-}
 
 
 .contact-card {
@@ -5881,21 +5865,6 @@ width: 40px;
 
         margin-top:
             18px;
-
-    }
-
-
-    .mobile-social-link {
-
-        width:
-            40px;
-
-        height:
-            40px;
-
-        font-family:
-            Arial,
-            sans-serif;
 
     }
 
