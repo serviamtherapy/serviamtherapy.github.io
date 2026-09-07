@@ -1924,7 +1924,24 @@ img {
         ease;
 
 }
+.social-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    flex: 0 0 18px;
+    fill: currentColor;
+    line-height: 1;
+}
 
+.social-icon-facebook {
+    width: 16px;
+    flex-basis: 16px;
+}
+
+.social-icon-instagram {
+    width: 18px;
+    flex-basis: 18px;
+}
 
 .header-social-link {
 
