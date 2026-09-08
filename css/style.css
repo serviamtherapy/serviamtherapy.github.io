@@ -22,45 +22,45 @@
        BACKGROUNDS
     ----------------------------------------------------- */
 
-    --ivory: #f3f2f0;
-    --warm-white: #fffdf8;
-    --cream: #e6e5e2;
-    --cream-deep: #d5d4d1;
+    --ivory: #1b1d1f;
+    --warm-white: #222426;
+    --cream: #292c2f;
+    --cream-deep: #363a3d;
 
 
     /* -----------------------------------------------------
        DARKS
     ----------------------------------------------------- */
 
-    --espresso: #2f3030;
-    --espresso-soft: #4a4b4b;
+    --espresso: #e7e9e7;
+    --espresso-soft: #b8bcba;
 
 
     /* -----------------------------------------------------
        TEXT
     ----------------------------------------------------- */
 
-    --text: #575857;
-    --text-soft: #747574;
-    --text-muted: #969795;
+    --text: #d0d3d1;
+    --text-soft: #a3a7a5;
+    --text-muted: #7d8280;
 
 
     /* -----------------------------------------------------
        CHAMPAGNE
     ----------------------------------------------------- */
 
-    --champagne: #b9b7b0;
-    --champagne-light: #d5d3cc;
-    --champagne-pale: #e7e5df;
+    --champagne: #9fa5a3;
+    --champagne-light: #c2c7c4;
+    --champagne-pale: #d9ddda;
 
 
     /* -----------------------------------------------------
-       GOLD
+       SILVER ACCENTS
     ----------------------------------------------------- */
 
-    --gold: #9d9b95;
-    --gold-dark: #77756f;
-    --gold-deep: #5f5e59;
+    --gold: #aeb4b1;
+    --gold-dark: #c1c6c3;
+    --gold-deep: #d1d5d2;
 
 
     /* -----------------------------------------------------
@@ -375,8 +375,8 @@ img {
     background:
         linear-gradient(
             180deg,
-            #f3f2f0 0%,
-            #e9e8e5 100%
+            #1b1d1f 0%,
+            #232628 100%
         );
 
 }
@@ -387,8 +387,8 @@ img {
     background:
         linear-gradient(
             180deg,
-            #deddd9 0%,
-            #d4d3cf 100%
+            #2b2e31 0%,
+            #383c3f 100%
         );
 
 }
@@ -1090,8 +1090,8 @@ img {
     background:
         radial-gradient(
             circle,
-            #fffdf8,
-            #e5e3de
+            #222426,
+            #25282a
         );
 
     transition:
@@ -1334,7 +1334,7 @@ img {
         2;
 
     color:
-        #fffdf8;
+        #222426;
 
 }
 
@@ -1389,8 +1389,8 @@ img {
     background:
         linear-gradient(
             145deg,
-            #fffdf8,
-            #efeeeb
+            #222426,
+            #202325
         );
 
     border:
@@ -1639,7 +1639,7 @@ img {
         );
 
     color:
-        #fffdf8;
+        #222426;
 
     font-weight:
         600;
@@ -1971,7 +1971,7 @@ img {
 .mobile-social-link:hover,
 .social-link:hover {
 
-    color: #fffdf8;
+    color: #222426;
 
     background: var(--gold);
 
@@ -2101,7 +2101,7 @@ img {
 .nav-book-button:hover {
 
     color:
-        #fffdf8;
+        #222426;
 
     background:
         var(--gold);
@@ -2171,8 +2171,8 @@ img {
     bottom: -2px;
     width: 8px;
     height: 8px;
-    border-right: 1px solid #aaa8a1;
-    border-bottom: 1px solid #aaa8a1;
+    border-right: 1px solid #555a5c;
+    border-bottom: 1px solid #555a5c;
     transform: translateX(-50%) rotate(45deg);
     animation: scrollArrowMove 1.8s ease-in-out infinite;
 }
@@ -2611,7 +2611,7 @@ img {
         );
 
     color:
-        #fffdf8;
+        #222426;
 
     box-shadow:
         var(--shadow-sm);
@@ -2657,7 +2657,7 @@ img {
 .button-outline-light:hover {
 
     color:
-        #fffdf8;
+        #222426;
 
     background:
         var(--gold);
@@ -2674,7 +2674,7 @@ img {
         var(--espresso);
 
     color:
-        #fffdf8;
+        #222426;
 
 }
 
@@ -3086,7 +3086,7 @@ img {
         var(--espresso);
 
     color:
-        #fffdf8;
+        #222426;
 
     isolation:
         isolate;
@@ -3190,7 +3190,7 @@ img {
         18px;
 
     color:
-        #fffdf8;
+        #222426;
 
     font-size:
         clamp(
@@ -3618,14 +3618,14 @@ img {
         0;
 
     color:
-        #fffdf8;
+        #222426;
 
     background:
         linear-gradient(
             135deg,
-            #898781,
-            #74726c,
-            #a19f98
+            #8e9491,
+            #777d7a,
+            #9da39f
         );
 
     box-shadow:
@@ -3757,8 +3757,8 @@ img {
     background:
         linear-gradient(
             145deg,
-            #e8e6e1,
-            #d9d7d1
+            #272a2c,
+            #3a3e41
         );
 
 }
@@ -3923,8 +3923,8 @@ img {
     background:
         linear-gradient(
             145deg,
-            #fffdf8,
-            #ecebe7
+            #222426,
+            #26292b
         );
 
     box-shadow:
@@ -4148,8 +4148,8 @@ img {
     background:
         linear-gradient(
             145deg,
-            #fffdf8,
-            #ecebe7
+            #222426,
+            #26292b
         );
 
     box-shadow:
@@ -4828,7 +4828,7 @@ img {
         700px;
 
     color:
-        #fffdf8;
+        #222426;
 
 }
 
@@ -4849,7 +4849,7 @@ img {
         0;
 
     color:
-        #fffdf8;
+        #222426;
 
     font-size:
         clamp(
@@ -5069,7 +5069,7 @@ img {
         );
 
     color:
-        #fffdf8;
+        #222426;
 
     font:
         10px
@@ -5134,8 +5134,8 @@ img {
     background:
         linear-gradient(
             145deg,
-            #dedcd6,
-            #aaa8a1
+            #34383b,
+            #555a5c
         );
 
     box-shadow:
@@ -5236,9 +5236,9 @@ img {
     background:
         linear-gradient(
             135deg,
-            #c9c7c0,
-            #a7a59e 55%,
-            #85837d
+            #747b78,
+            #969d9a 55%,
+            #858c89
         );
 
     border-top:
@@ -5365,7 +5365,7 @@ img {
 .footer-column a:hover {
 
     color:
-        #fffdf8;
+        #222426;
 
     transform:
         translateX(
@@ -5439,12 +5439,12 @@ img {
         50%;
 
     color:
-        #fffdf8;
+        #222426;
 
     background:
         linear-gradient(
             135deg,
-            #414240,
+            #313538,
             var(--gold)
         );
 
@@ -5765,8 +5765,8 @@ img {
         background:
             linear-gradient(
                 145deg,
-                #e2e0db,
-                #b3b1aa
+                #414649,
+                #69706d
             );
 
         border-bottom:
@@ -6158,7 +6158,7 @@ img {
             );
 
         color:
-            #fffdf8;
+            #222426;
 
         box-shadow:
             0
