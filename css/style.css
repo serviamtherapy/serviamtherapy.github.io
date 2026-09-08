@@ -1,22 +1,71 @@
+/* =========================================================
+   SERVIAM THERAPY
+   FINAL PREMIUM BOUTIQUE WELLNESS DESIGN SYSTEM
+
+   Graphite / Stone / Ivory / Silver
+   Organic editorial frames
+   No tilted cards
+   No diagonal frames
+   No conventional square-only presentation
+
+   Desktop + Tablet + Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   01 — DESIGN TOKENS
+========================================================= */
+
 :root {
 
-    --ivory: #faf7ef;
---cream: #f1e8d8;
+    /* -----------------------------------------------------
+       BACKGROUNDS
+    ----------------------------------------------------- */
 
-    --espresso: #3c3023;
-    --espresso-soft: #554636;
+    --ivory: #f3f2f0;
+    --warm-white: #fffdf8;
+    --cream: #e6e5e2;
+    --cream-deep: #d5d4d1;
 
-    --text: #5d4f3d;
-    --text-soft: #766753;
-    --text-muted: #9b896e;
 
-    --champagne: #d5bd83;
-    --champagne-light: #ead9ad;
-    --champagne-pale: #f2e8d2;
+    /* -----------------------------------------------------
+       DARKS
+    ----------------------------------------------------- */
 
-    --gold: #b8934f;
-    --gold-dark: #8b6b37;
-    --gold-deep: #73552d;
+    --espresso: #2f3030;
+    --espresso-soft: #4a4b4b;
+
+
+    /* -----------------------------------------------------
+       TEXT
+    ----------------------------------------------------- */
+
+    --text: #575857;
+    --text-soft: #747574;
+    --text-muted: #969795;
+
+
+    /* -----------------------------------------------------
+       CHAMPAGNE
+    ----------------------------------------------------- */
+
+    --champagne: #b9b7b0;
+    --champagne-light: #d5d3cc;
+    --champagne-pale: #e7e5df;
+
+
+    /* -----------------------------------------------------
+       GOLD
+    ----------------------------------------------------- */
+
+    --gold: #9d9b95;
+    --gold-dark: #77756f;
+    --gold-deep: #5f5e59;
+
+
+    /* -----------------------------------------------------
+       BORDERS
+    ----------------------------------------------------- */
 
     --line:
         rgba(
@@ -33,6 +82,11 @@
             55,
             .42
         );
+
+
+    /* -----------------------------------------------------
+       SHADOWS
+    ----------------------------------------------------- */
 
     --shadow-sm:
         0
@@ -67,14 +121,29 @@
             .18
         );
 
+
+    /* -----------------------------------------------------
+       LAYOUT
+    ----------------------------------------------------- */
+
     --container:
         1220px;
+
+
+    /* -----------------------------------------------------
+       ORGANIC FRAME
+    ----------------------------------------------------- */
 
     --radius-card:
         28px
         42px
         34px
         48px;
+
+
+    /* -----------------------------------------------------
+       MOTION
+    ----------------------------------------------------- */
 
     --transition:
         .45s
@@ -86,6 +155,11 @@
         );
 
 }
+
+
+/* =========================================================
+   02 — RESET
+========================================================= */
 
 * {
 
@@ -100,6 +174,7 @@
 
 }
 
+
 html {
 
     scroll-behavior:
@@ -109,6 +184,7 @@ html {
         100px;
 
 }
+
 
 body {
 
@@ -140,6 +216,7 @@ body {
 
 }
 
+
 body.popup-open {
 
     overflow:
@@ -147,12 +224,14 @@ body.popup-open {
 
 }
 
+
 body.menu-open {
 
     overflow:
         hidden;
 
 }
+
 
 a {
 
@@ -164,6 +243,7 @@ a {
 
 }
 
+
 button,
 input,
 textarea,
@@ -173,6 +253,7 @@ select {
         inherit;
 
 }
+
 
 button {
 
@@ -184,6 +265,7 @@ button {
 
 }
 
+
 img {
 
     display:
@@ -194,6 +276,7 @@ img {
 
 }
 
+
 ::selection {
 
     background:
@@ -203,6 +286,7 @@ img {
         #fff;
 
 }
+
 
 :focus-visible {
 
@@ -215,6 +299,11 @@ img {
         4px;
 
 }
+
+
+/* =========================================================
+   03 — ATMOSPHERIC TEXTURE
+========================================================= */
 
 .site-noise {
 
@@ -240,6 +329,11 @@ img {
 
 }
 
+
+/* =========================================================
+   04 — GLOBAL LAYOUT
+========================================================= */
+
 .container {
 
     width:
@@ -255,12 +349,14 @@ img {
 
 }
 
+
 .narrow {
 
     max-width:
         900px;
 
 }
+
 
 .section-soft,
 .section-light {
@@ -273,27 +369,34 @@ img {
 
 }
 
+
 .section-soft {
 
     background:
         linear-gradient(
             180deg,
-            #faf7ef 0%,
-            #f5eee1 100%
+            #f3f2f0 0%,
+            #e9e8e5 100%
         );
 
 }
+
 
 .section-light {
 
     background:
         linear-gradient(
             180deg,
-            #f0e7d8 0%,
-            #ece1cf 100%
+            #deddd9 0%,
+            #d4d3cf 100%
         );
 
 }
+
+
+/* =========================================================
+   05 — SECTION TYPOGRAPHY
+========================================================= */
 
 .section-heading {
 
@@ -305,6 +408,7 @@ img {
 
 }
 
+
 .section-heading.centered {
 
     margin-inline:
@@ -314,6 +418,7 @@ img {
         center;
 
 }
+
 
 .section-label,
 .hero-eyebrow,
@@ -343,6 +448,7 @@ img {
 
 }
 
+
 .section-heading h2 {
 
     margin:
@@ -368,6 +474,7 @@ img {
 
 }
 
+
 .section-heading h2 span,
 .about-content h2 span,
 .booking-content h2 span,
@@ -377,6 +484,7 @@ img {
         var(--gold-dark);
 
 }
+
 
 .section-heading p {
 
@@ -391,12 +499,18 @@ img {
 
 }
 
+
 .section-heading.centered p {
 
     margin-inline:
         auto;
 
 }
+
+
+/* =========================================================
+   06 — PREMIUM SCROLL / TEXT INERTIA REVEAL
+========================================================= */
 
 .reveal {
 
@@ -448,6 +562,11 @@ img {
 
 }
 
+
+/* ---------------------------------------------------------
+   MAIN REVEAL
+--------------------------------------------------------- */
+
 .reveal.is-visible {
 
     opacity:
@@ -470,6 +589,12 @@ img {
 
 }
 
+
+/* =========================================================
+   HEADINGS
+   Subtle physical inertia / overshoot
+========================================================= */
+
 .reveal.is-visible h1,
 .reveal.is-visible h2 {
 
@@ -489,6 +614,7 @@ img {
         opacity;
 
 }
+
 
 @keyframes textInertia {
 
@@ -536,6 +662,12 @@ img {
 
 }
 
+
+/* =========================================================
+   PARAGRAPHS
+   Arrive slightly after the heading
+========================================================= */
+
 .reveal.is-visible p {
 
     animation:
@@ -555,6 +687,7 @@ img {
         opacity;
 
 }
+
 
 @keyframes paragraphInertia {
 
@@ -602,6 +735,11 @@ img {
 
 }
 
+
+/* =========================================================
+   SECTION LABELS / HERO EYEBROW
+========================================================= */
+
 .reveal.is-visible
 .section-label,
 .reveal.is-visible
@@ -623,6 +761,7 @@ img {
         opacity;
 
 }
+
 
 @keyframes labelInertia {
 
@@ -676,6 +815,12 @@ img {
 
 }
 
+
+/* =========================================================
+   HERO / BOOKING ACTIONS
+   Gentle delayed arrival
+========================================================= */
+
 .reveal.is-visible
 .hero-actions,
 .reveal.is-visible
@@ -695,6 +840,11 @@ img {
 
 }
 
+
+/* =========================================================
+   HERO TRUST ROW
+========================================================= */
+
 .reveal.is-visible
 .hero-trust-row {
 
@@ -711,6 +861,11 @@ img {
         both;
 
 }
+
+
+/* =========================================================
+   ABOUT / CONTACT SECONDARY CONTENT
+========================================================= */
 
 .reveal.is-visible
 .about-features,
@@ -735,6 +890,11 @@ img {
 
 }
 
+
+/* =========================================================
+   FAQ
+========================================================= */
+
 .reveal.is-visible
 .faq-list {
 
@@ -751,6 +911,11 @@ img {
         both;
 
 }
+
+
+/* =========================================================
+   HOME SERVICE POINTS
+========================================================= */
 
 .reveal.is-visible
 .home-service-points {
@@ -769,12 +934,18 @@ img {
 
 }
 
+
+/* =========================================================
+   PREMIUM STAGGER FOR MULTIPLE REVEALS
+========================================================= */
+
 .reveal:nth-child(2) {
 
     transition-delay:
         .06s;
 
 }
+
 
 .reveal:nth-child(3) {
 
@@ -783,6 +954,7 @@ img {
 
 }
 
+
 .reveal:nth-child(4) {
 
     transition-delay:
@@ -790,12 +962,18 @@ img {
 
 }
 
+
 .reveal:nth-child(5) {
 
     transition-delay:
         .24s;
 
 }
+
+
+/* =========================================================
+   MOBILE — SLIGHTLY SOFTER MOTION
+========================================================= */
 
 @media (
     max-width:
@@ -821,6 +999,7 @@ img {
 
     }
 
+
     .reveal.is-visible h1,
     .reveal.is-visible h2 {
 
@@ -828,6 +1007,7 @@ img {
             .95s;
 
     }
+
 
     .reveal.is-visible p {
 
@@ -837,6 +1017,11 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
 @media (
     prefers-reduced-motion:
@@ -881,6 +1066,10 @@ img {
 
 }
 
+/* =========================================================
+   07 — PAGE LOADER
+========================================================= */
+
 .page-loader {
 
     position:
@@ -902,7 +1091,7 @@ img {
         radial-gradient(
             circle,
             #fffdf8,
-            #f0e5d0
+            #e5e3de
         );
 
     transition:
@@ -916,6 +1105,7 @@ img {
 
 }
 
+
 .page-loader.loaded {
 
     opacity:
@@ -926,12 +1116,14 @@ img {
 
 }
 
+
 .loader-inner {
 
     text-align:
         center;
 
 }
+
 
 .loader-logo {
 
@@ -948,6 +1140,7 @@ img {
         .28em;
 
 }
+
 
 .loader-line {
 
@@ -971,6 +1164,7 @@ img {
 
 }
 
+
 .loader-subtitle {
 
     color:
@@ -985,6 +1179,11 @@ img {
         .45em;
 
 }
+
+
+/* =========================================================
+   08 — POPUP
+========================================================= */
 
 .popup-window {
 
@@ -1038,6 +1237,7 @@ img {
 
 }
 
+
 .popup-window.popup-hidden {
 
     opacity:
@@ -1050,6 +1250,7 @@ img {
         none;
 
 }
+
 
 .popup-left,
 .popup-right {
@@ -1064,6 +1265,7 @@ img {
         580px;
 
 }
+
 
 .popup-left {
 
@@ -1088,6 +1290,7 @@ img {
         26px;
 
 }
+
 
 .popup-left-overlay {
 
@@ -1116,6 +1319,7 @@ img {
 
 }
 
+
 .popup-left-content {
 
     position:
@@ -1133,6 +1337,7 @@ img {
         #fffdf8;
 
 }
+
 
 .popup-left-content span {
 
@@ -1152,6 +1357,7 @@ img {
 
 }
 
+
 .popup-left-content strong {
 
     font-size:
@@ -1164,6 +1370,7 @@ img {
         1.3;
 
 }
+
 
 .popup-right {
 
@@ -1183,7 +1390,7 @@ img {
         linear-gradient(
             145deg,
             #fffdf8,
-            #f7efe0
+            #efeeeb
         );
 
     border:
@@ -1205,6 +1412,7 @@ img {
 
 }
 
+
 .popup-content {
 
     width:
@@ -1217,6 +1425,7 @@ img {
         center;
 
 }
+
 
 .popup-close {
 
@@ -1263,6 +1472,7 @@ img {
 
 }
 
+
 .popup-close:hover {
 
     transform:
@@ -1277,6 +1487,7 @@ img {
         var(--champagne-pale);
 
 }
+
 
 .popup-logo {
 
@@ -1296,6 +1507,25 @@ img {
 
 }
 
+
+.popup-content h1 {
+
+    margin:
+        14px
+        0;
+
+    color:
+        var(--espresso);
+
+    font-size:
+        34px;
+
+    line-height:
+        1.15;
+
+}
+
+
 .popup-content p {
 
     margin-bottom:
@@ -1305,6 +1535,7 @@ img {
         var(--text-soft);
 
 }
+
 
 .popup-features {
 
@@ -1323,6 +1554,7 @@ img {
 
 }
 
+
 .popup-feature {
 
     display:
@@ -1335,6 +1567,7 @@ img {
         12px;
 
 }
+
 
 .popup-feature-icon {
 
@@ -1375,6 +1608,7 @@ img {
         );
 
 }
+
 
 .popup-button {
 
@@ -1418,6 +1652,7 @@ img {
 
 }
 
+
 .popup-button:hover {
 
     transform:
@@ -1430,6 +1665,11 @@ img {
 
 }
 
+
+/* =========================================================
+   09 — HEADER
+========================================================= */
+
 .site-header {
 
     position:
@@ -1439,6 +1679,7 @@ img {
         1000;
 
 }
+
 
 .navbar {
 
@@ -1510,6 +1751,7 @@ img {
 
 }
 
+
 .navbar.scrolled {
 
     min-height:
@@ -1536,6 +1778,7 @@ img {
 
 }
 
+
 .brand {
 
     margin-left:
@@ -1551,6 +1794,7 @@ img {
         12px;
 
 }
+
 
 .brand-logo {
 
@@ -1582,6 +1826,7 @@ img {
 
 }
 
+
 .navbar.scrolled
 .brand-logo {
 
@@ -1592,6 +1837,7 @@ img {
         48px;
 
 }
+
 
 .brand-text {
 
@@ -1608,6 +1854,7 @@ img {
         .16em;
 
 }
+
 
 .brand-text small {
 
@@ -1628,6 +1875,7 @@ img {
 
 }
 
+
 .header-socials {
 
     display:
@@ -1640,6 +1888,11 @@ img {
         28px;
 
 }
+
+
+/* =========================================================
+   SOCIAL ICONS — UNIFIED PREMIUM CIRCLES
+========================================================= */
 
 .header-social-link,
 .mobile-social-link,
@@ -1675,6 +1928,45 @@ img {
 
 }
 
+
+/* Facebook + Instagram SVG icons */
+
+.social-icon {
+
+    width: 18px;
+    height: 18px;
+
+    display: block;
+
+    flex: 0 0 18px;
+
+    fill: currentColor;
+
+    line-height: 1;
+
+}
+
+
+/* Optical adjustment only — circle remains identical */
+
+.social-icon-facebook {
+
+    width: 16px;
+    flex-basis: 16px;
+
+}
+
+
+.social-icon-instagram {
+
+    width: 18px;
+    flex-basis: 18px;
+
+}
+
+
+/* Hover */
+
 .header-social-link:hover,
 .mobile-social-link:hover,
 .social-link:hover {
@@ -1688,6 +1980,7 @@ img {
     box-shadow: var(--shadow-sm);
 
 }
+
 
 .nav-menu {
 
@@ -1704,6 +1997,7 @@ img {
         32px;
 
 }
+
 
 .nav-link {
 
@@ -1723,6 +2017,7 @@ img {
         nowrap;
 
 }
+
 
 .nav-link::after {
 
@@ -1757,6 +2052,7 @@ img {
 
 }
 
+
 .nav-link:hover {
 
     color:
@@ -1764,12 +2060,14 @@ img {
 
 }
 
+
 .nav-link:hover::after {
 
     width:
         100%;
 
 }
+
 
 .nav-book-button {
 
@@ -1799,6 +2097,7 @@ img {
 
 }
 
+
 .nav-book-button:hover {
 
     color:
@@ -1812,6 +2111,7 @@ img {
 
 }
 
+
 .mobile-menu-toggle,
 .mobile-socials {
 
@@ -1819,6 +2119,10 @@ img {
         none;
 
 }
+
+/* =========================================================
+   PREMIUM SCROLL INDICATOR
+========================================================= */
 
 .scroll-indicator {
     position: absolute;
@@ -1867,11 +2171,15 @@ img {
     bottom: -2px;
     width: 8px;
     height: 8px;
-    border-right: 1px solid #d8c18d;
-    border-bottom: 1px solid #d8c18d;
+    border-right: 1px solid #aaa8a1;
+    border-bottom: 1px solid #aaa8a1;
     transform: translateX(-50%) rotate(45deg);
     animation: scrollArrowMove 1.8s ease-in-out infinite;
 }
+
+/* =========================================================
+   ARROW ANIMATION
+========================================================= */
 
 @keyframes scrollArrowMove {
 
@@ -1892,6 +2200,10 @@ img {
 
 }
 
+/* =========================================================
+   SUBTLE PULSE
+========================================================= */
+
 @keyframes scrollIndicatorFade {
 
     0%,
@@ -1905,11 +2217,19 @@ img {
 
 }
 
+/* =========================================================
+   HIDE AFTER USER STARTS SCROLLING
+========================================================= */
+
 .scroll-indicator.scroll-hidden {
     opacity: 0;
     visibility: hidden;
     animation: none;
 }
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
@@ -1927,6 +2247,9 @@ img {
     }
 
 }
+/* =========================================================
+   10 — HERO
+========================================================= */
 
 .hero-section {
 
@@ -1951,6 +2274,7 @@ img {
         isolate;
 
 }
+
 
 .hero-background {
 
@@ -1977,6 +2301,7 @@ img {
         );
 
 }
+
 
 .hero-overlay {
 
@@ -2019,6 +2344,7 @@ img {
 
 }
 
+
 .hero-section::after {
 
     content:
@@ -2051,6 +2377,7 @@ img {
 
 }
 
+
 .hero-orb {
 
     position:
@@ -2076,6 +2403,7 @@ img {
         none;
 
 }
+
 
 .hero-orb-one {
 
@@ -2105,6 +2433,7 @@ img {
 
 }
 
+
 .hero-orb-two {
 
     width:
@@ -2129,6 +2458,7 @@ img {
 
 }
 
+
 .hero-container {
 
     position:
@@ -2138,6 +2468,7 @@ img {
         2;
 
 }
+
 
 .hero-content {
 
@@ -2149,12 +2480,14 @@ img {
 
 }
 
+
 .hero-eyebrow {
 
     margin-bottom:
         14px;
 
 }
+
 
 .hero-content h1 {
 
@@ -2179,6 +2512,7 @@ img {
 
 }
 
+
 .hero-content h1 span {
 
     display:
@@ -2196,6 +2530,7 @@ img {
 
 }
 
+
 .hero-description {
 
     max-width:
@@ -2211,6 +2546,7 @@ img {
         19px;
 
 }
+
 
 .hero-actions,
 .booking-actions {
@@ -2228,6 +2564,7 @@ img {
         30px;
 
 }
+
 
 .button {
 
@@ -2261,6 +2598,7 @@ img {
 
 }
 
+
 .button-primary,
 .button-gold {
 
@@ -2280,6 +2618,7 @@ img {
 
 }
 
+
 .button-primary:hover,
 .button-gold:hover {
 
@@ -2292,6 +2631,7 @@ img {
         var(--shadow-md);
 
 }
+
 
 .button-outline-light {
 
@@ -2313,6 +2653,7 @@ img {
 
 }
 
+
 .button-outline-light:hover {
 
     color:
@@ -2326,6 +2667,7 @@ img {
 
 }
 
+
 .button-dark {
 
     background:
@@ -2335,6 +2677,7 @@ img {
         #fffdf8;
 
 }
+
 
 .button-dark:hover {
 
@@ -2347,6 +2690,7 @@ img {
         );
 
 }
+
 
 .hero-trust-row {
 
@@ -2370,6 +2714,7 @@ img {
 
 }
 
+
 .hero-trust-row span {
 
     padding-left:
@@ -2382,6 +2727,7 @@ img {
 
 }
 
+
 .hero-trust-row span:last-child {
 
     border-left:
@@ -2392,6 +2738,7 @@ img {
 
 }
 
+
 .hero-trust-row b {
 
     color:
@@ -2401,6 +2748,7 @@ img {
         700;
 
 }
+
 
 .scroll-indicator {
 
@@ -2429,6 +2777,7 @@ img {
 
 }
 
+
 .scroll-line {
 
     width:
@@ -2449,6 +2798,9 @@ img {
         );
 
 }
+/* =========================================================
+   HERO VIDEO
+   ========================================================= */
 
 .hero-background {
     position: absolute;
@@ -2495,6 +2847,11 @@ img {
         background: url("../images/hero/hero.jpg") center / cover no-repeat;
     }
 }
+
+
+/* =========================================================
+   PREMIUM EDITORIAL SERVICE IMAGE FRAMES
+========================================================= */
 
 .service-image {
 
@@ -2545,6 +2902,9 @@ img {
 
 }
 
+
+/* Fine luxury frame */
+
 .service-image::before {
 
     content:
@@ -2579,6 +2939,9 @@ img {
         none;
 
 }
+
+
+/* Offset champagne accent */
 
 .service-image::after {
 
@@ -2634,6 +2997,7 @@ img {
 
 }
 
+
 .service-image img {
 
     width:
@@ -2661,6 +3025,7 @@ img {
 
 }
 
+
 .service-card:hover
 .service-image img {
 
@@ -2675,6 +3040,7 @@ img {
         );
 
 }
+
 
 .service-card:hover
 .service-image {
@@ -2700,6 +3066,10 @@ img {
 
 }
 
+/* =========================================================
+   12 — HOME SERVICE
+========================================================= */
+
 .home-service-section {
 
     position:
@@ -2722,6 +3092,7 @@ img {
         isolate;
 
 }
+
 
 .home-service-art {
 
@@ -2746,6 +3117,7 @@ img {
         .18;
 
 }
+
 
 .home-service-section::after {
 
@@ -2791,6 +3163,7 @@ img {
 
 }
 
+
 .home-service-grid {
 
     display:
@@ -2807,6 +3180,7 @@ img {
         70px;
 
 }
+
 
 .home-service-content h2 {
 
@@ -2833,6 +3207,7 @@ img {
 
 }
 
+
 .home-service-content h2 span {
 
     color:
@@ -2843,6 +3218,7 @@ img {
         serif;
 
 }
+
 
 .home-service-content p {
 
@@ -2861,6 +3237,7 @@ img {
         18px;
 
 }
+
 
 .home-service-points {
 
@@ -2883,6 +3260,7 @@ img {
         var(--champagne-light);
 
 }
+
 
 .home-service-visual {
 
@@ -2948,6 +3326,7 @@ img {
 
 }
 
+
 .home-service-visual span {
 
     color:
@@ -2971,6 +3350,11 @@ img {
 
 }
 
+
+/* =========================================================
+   PREMIUM EDITORIAL ABOUT IMAGE
+========================================================= */
+
 .about-image-wrapper {
 
     position:
@@ -2983,6 +3367,9 @@ img {
         8px;
 
 }
+
+
+/* Main architectural frame */
 
 .about-image-frame {
 
@@ -3038,6 +3425,9 @@ img {
 
 }
 
+
+/* Elegant offset frame behind photograph */
+
 .about-image-frame::before {
 
     content:
@@ -3082,6 +3472,9 @@ img {
 
 }
 
+
+/* Subtle inner champagne line */
+
 .about-image-frame::after {
 
     content:
@@ -3117,6 +3510,7 @@ img {
 
 }
 
+
 .about-image {
 
     position:
@@ -3135,6 +3529,7 @@ img {
         var(--cream);
 
 }
+
 
 .about-image img {
 
@@ -3164,6 +3559,7 @@ img {
 
 }
 
+
 .about-image-frame:hover
 .about-image img {
 
@@ -3178,6 +3574,9 @@ img {
         );
 
 }
+
+
+/* Replace old decorative image-frame line */
 
 .image-frame-line {
 
@@ -3208,6 +3607,10 @@ img {
 
 }
 
+/* =========================================================
+   14 — STATISTICS
+========================================================= */
+
 .statistics-section {
 
     padding:
@@ -3220,9 +3623,9 @@ img {
     background:
         linear-gradient(
             135deg,
-            #b79658,
-            #8f6d37,
-            #c3a66d
+            #898781,
+            #74726c,
+            #a19f98
         );
 
     box-shadow:
@@ -3239,6 +3642,7 @@ img {
 
 }
 
+
 .statistics-grid {
 
     display:
@@ -3251,6 +3655,7 @@ img {
         );
 
 }
+
 
 .stat-item {
 
@@ -3273,12 +3678,14 @@ img {
 
 }
 
+
 .stat-item:last-child {
 
     border-left:
         0;
 
 }
+
 
 .stat-item strong {
 
@@ -3293,12 +3700,14 @@ img {
 
 }
 
+
 .stat-item strong span {
 
     font-size:
         25px;
 
 }
+
 
 .stat-item p {
 
@@ -3309,6 +3718,11 @@ img {
         .9;
 
 }
+
+
+/* =========================================================
+   PREMIUM CREDENTIAL IMAGE FRAMES
+========================================================= */
 
 .credential-image {
 
@@ -3343,11 +3757,12 @@ img {
     background:
         linear-gradient(
             145deg,
-            #f5ead6,
-            #e8d8ba
+            #e8e6e1,
+            #d9d7d1
         );
 
 }
+
 
 .credential-image::before {
 
@@ -3383,6 +3798,7 @@ img {
         none;
 
 }
+
 
 .credential-image::after {
 
@@ -3429,6 +3845,7 @@ img {
 
 }
 
+
 .credential-image img {
 
     width:
@@ -3450,6 +3867,7 @@ img {
 
 }
 
+
 .credential-card:hover
 .credential-image img {
 
@@ -3459,6 +3877,11 @@ img {
         );
 
 }
+
+
+/* =========================================================
+   16 — BENEFITS
+========================================================= */
 
 .benefits-grid {
 
@@ -3475,6 +3898,7 @@ img {
         20px;
 
 }
+
 
 .benefit-card {
 
@@ -3500,7 +3924,7 @@ img {
         linear-gradient(
             145deg,
             #fffdf8,
-            #f8f1e4
+            #ecebe7
         );
 
     box-shadow:
@@ -3510,6 +3934,7 @@ img {
         var(--transition);
 
 }
+
 
 .benefit-card:hover {
 
@@ -3525,6 +3950,7 @@ img {
         var(--line-strong);
 
 }
+
 
 .benefit-icon {
 
@@ -3571,6 +3997,7 @@ img {
 
 }
 
+
 .benefit-card h3 {
 
     color:
@@ -3584,12 +4011,18 @@ img {
 
 }
 
+
 .benefit-card p {
 
     color:
         var(--text-soft);
 
 }
+
+
+/* =========================================================
+   17 — PROCESS
+========================================================= */
 
 .process-grid {
 
@@ -3610,12 +4043,14 @@ img {
 
 }
 
+
 .process-step {
 
     text-align:
         center;
 
 }
+
 
 .process-step > span {
 
@@ -3628,6 +4063,7 @@ img {
         sans-serif;
 
 }
+
 
 .process-step h3 {
 
@@ -3643,12 +4079,14 @@ img {
 
 }
 
+
 .process-step p {
 
     color:
         var(--text-muted);
 
 }
+
 
 .process-line {
 
@@ -3667,6 +4105,11 @@ img {
         );
 
 }
+
+
+/* =========================================================
+   18 — GOOGLE REVIEWS
+========================================================= */
 
 .google-rating-summary {
 
@@ -3706,13 +4149,14 @@ img {
         linear-gradient(
             145deg,
             #fffdf8,
-            #f8f1e4
+            #ecebe7
         );
 
     box-shadow:
         var(--shadow-sm);
 
 }
+
 
 .google-mark {
 
@@ -3753,6 +4197,7 @@ img {
 
 }
 
+
 .google-rating-summary strong {
 
     display:
@@ -3765,6 +4210,7 @@ img {
         20px;
 
 }
+
 
 .google-rating-summary span {
 
@@ -3779,6 +4225,7 @@ img {
 
 }
 
+
 .google-rating-summary .button {
 
     margin-right:
@@ -3788,6 +4235,7 @@ img {
         190px;
 
 }
+
 
 .review-trust-grid {
 
@@ -3811,6 +4259,7 @@ img {
         auto;
 
 }
+
 
 .review-trust-card {
 
@@ -3838,6 +4287,7 @@ img {
 
 }
 
+
 .review-trust-card span {
 
     display:
@@ -3856,12 +4306,14 @@ img {
 
 }
 
+
 .review-trust-card strong {
 
     color:
         var(--espresso);
 
 }
+
 
 .review-trust-card p {
 
@@ -3875,6 +4327,11 @@ img {
         13px;
 
 }
+
+
+/* =========================================================
+   PREMIUM EDITORIAL GALLERY FRAMES
+========================================================= */
 
 .gallery-grid {
 
@@ -3894,6 +4351,7 @@ img {
         start;
 
 }
+
 
 .gallery-item {
 
@@ -3945,6 +4403,9 @@ img {
 
 }
 
+
+/* Controlled editorial variation */
+
 .gallery-item:nth-child(
     3n + 1
 ) {
@@ -3956,6 +4417,7 @@ img {
         10px;
 
 }
+
 
 .gallery-item:nth-child(
     3n + 2
@@ -3972,6 +4434,7 @@ img {
 
 }
 
+
 .gallery-item:nth-child(
     3n + 3
 ) {
@@ -3983,6 +4446,9 @@ img {
         30px;
 
 }
+
+
+/* Fine inner frame */
 
 .gallery-item::before {
 
@@ -4015,6 +4481,9 @@ img {
         none;
 
 }
+
+
+/* Small gold editorial corner */
 
 .gallery-item::after {
 
@@ -4064,6 +4533,7 @@ img {
 
 }
 
+
 .gallery-item img {
 
     width:
@@ -4090,6 +4560,7 @@ img {
         ease;
 
 }
+
 
 .gallery-item:hover {
 
@@ -4119,6 +4590,7 @@ img {
 
 }
 
+
 .gallery-item:hover img {
 
     transform:
@@ -4132,6 +4604,11 @@ img {
         );
 
 }
+
+
+/* =========================================================
+   20 — FAQ
+========================================================= */
 
 .faq-grid {
 
@@ -4147,6 +4624,7 @@ img {
 
 }
 
+
 .faq-list {
 
     border-top:
@@ -4156,6 +4634,7 @@ img {
 
 }
 
+
 .faq-item {
 
     border-bottom:
@@ -4164,6 +4643,7 @@ img {
         var(--line);
 
 }
+
 
 .faq-question {
 
@@ -4200,6 +4680,7 @@ img {
 
 }
 
+
 .faq-question b {
 
     color:
@@ -4216,6 +4697,7 @@ img {
 
 }
 
+
 .faq-open
 .faq-question b {
 
@@ -4225,6 +4707,7 @@ img {
         );
 
 }
+
 
 .faq-answer {
 
@@ -4241,6 +4724,7 @@ img {
 
 }
 
+
 .faq-open
 .faq-answer {
 
@@ -4248,6 +4732,7 @@ img {
         300px;
 
 }
+
 
 .faq-answer p {
 
@@ -4260,6 +4745,11 @@ img {
         var(--text-soft);
 
 }
+
+
+/* =========================================================
+   21 — BOOKING
+========================================================= */
 
 .booking-section {
 
@@ -4277,6 +4767,7 @@ img {
         isolate;
 
 }
+
 
 .booking-background {
 
@@ -4298,6 +4789,7 @@ img {
         no-repeat;
 
 }
+
 
 .booking-overlay {
 
@@ -4329,6 +4821,7 @@ img {
 
 }
 
+
 .booking-content {
 
     max-width:
@@ -4339,6 +4832,7 @@ img {
 
 }
 
+
 .booking-content
 .section-label {
 
@@ -4346,6 +4840,7 @@ img {
         var(--champagne-light);
 
 }
+
 
 .booking-content h2 {
 
@@ -4371,6 +4866,7 @@ img {
 
 }
 
+
 .booking-content > p {
 
     max-width:
@@ -4388,6 +4884,7 @@ img {
         18px;
 
 }
+
 
 .booking-notice {
 
@@ -4409,12 +4906,18 @@ img {
 
 }
 
+
 .booking-actions {
 
     margin-top:
         20px;
 
 }
+
+
+/* =========================================================
+   22 — CONTACT
+========================================================= */
 
 .contact-grid {
 
@@ -4432,6 +4935,7 @@ img {
         start;
 
 }
+
 
 .contact-content h2 {
 
@@ -4458,6 +4962,7 @@ img {
 
 }
 
+
 .contact-content > p {
 
     color:
@@ -4467,6 +4972,7 @@ img {
         17px;
 
 }
+
 
 .contact-details {
 
@@ -4481,6 +4987,7 @@ img {
         0;
 
 }
+
 
 .contact-item {
 
@@ -4515,6 +5022,7 @@ img {
 
 }
 
+
 .contact-item:hover {
 
     border-color:
@@ -4529,6 +5037,7 @@ img {
         var(--shadow-sm);
 
 }
+
 
 .contact-icon {
 
@@ -4569,6 +5078,7 @@ img {
 
 }
 
+
 .contact-item small {
 
     display:
@@ -4578,6 +5088,7 @@ img {
         var(--text-muted);
 
 }
+
 
 .contact-item strong {
 
@@ -4589,6 +5100,7 @@ img {
 
 }
 
+
 .social-links {
 
     display:
@@ -4598,6 +5110,10 @@ img {
         10px;
 
 }
+
+
+
+
 
 .contact-card {
 
@@ -4618,14 +5134,15 @@ img {
     background:
         linear-gradient(
             145deg,
-            #eadcc0,
-            #d2b77d
+            #dedcd6,
+            #aaa8a1
         );
 
     box-shadow:
         var(--shadow-lg);
 
 }
+
 
 .contact-card h3 {
 
@@ -4644,12 +5161,14 @@ img {
 
 }
 
+
 .contact-card p {
 
     color:
         var(--text-soft);
 
 }
+
 
 .opening-hours {
 
@@ -4667,6 +5186,7 @@ img {
 
 }
 
+
 .opening-hours h4 {
 
     margin-bottom:
@@ -4676,6 +5196,7 @@ img {
         var(--gold-deep);
 
 }
+
 
 .opening-hours p {
 
@@ -4697,6 +5218,11 @@ img {
 
 }
 
+
+/* =========================================================
+   23 — FOOTER
+========================================================= */
+
 .footer-section {
 
     padding:
@@ -4710,9 +5236,9 @@ img {
     background:
         linear-gradient(
             135deg,
-            #e0d0ac,
-            #c6a96e 55%,
-            #b38f50
+            #c9c7c0,
+            #a7a59e 55%,
+            #85837d
         );
 
     border-top:
@@ -4721,6 +5247,7 @@ img {
         var(--line-strong);
 
 }
+
 
 .footer-grid {
 
@@ -4739,6 +5266,7 @@ img {
 
 }
 
+
 .footer-brand img {
 
     width:
@@ -4754,6 +5282,7 @@ img {
         12px;
 
 }
+
 
 .footer-brand > strong {
 
@@ -4774,6 +5303,7 @@ img {
 
 }
 
+
 .footer-brand p {
 
     max-width:
@@ -4786,6 +5316,7 @@ img {
 
 }
 
+
 .footer-cta {
 
     color:
@@ -4795,6 +5326,7 @@ img {
         700;
 
 }
+
 
 .footer-column {
 
@@ -4809,6 +5341,7 @@ img {
 
 }
 
+
 .footer-column h4 {
 
     margin-bottom:
@@ -4819,6 +5352,7 @@ img {
 
 }
 
+
 .footer-column a {
 
     transition:
@@ -4826,6 +5360,7 @@ img {
         ease;
 
 }
+
 
 .footer-column a:hover {
 
@@ -4838,6 +5373,7 @@ img {
         );
 
 }
+
 
 .footer-bottom {
 
@@ -4867,6 +5403,11 @@ img {
         );
 
 }
+
+
+/* =========================================================
+   24 — FLOATING WHATSAPP
+========================================================= */
 
 .floating-whatsapp {
 
@@ -4903,7 +5444,7 @@ img {
     background:
         linear-gradient(
             135deg,
-            #4d3a24,
+            #414240,
             var(--gold)
         );
 
@@ -4938,6 +5479,7 @@ img {
 
 }
 
+
 .floating-whatsapp:hover {
 
     transform:
@@ -4950,12 +5492,18 @@ img {
 
 }
 
+
 .mobile-action-bar {
 
     display:
         none;
 
 }
+
+
+/* =========================================================
+   25 — TABLET
+========================================================= */
 
 @media (
     max-width:
@@ -4970,6 +5518,7 @@ img {
 
     }
 
+
     .nav-menu {
 
         gap:
@@ -4979,6 +5528,7 @@ img {
             20px;
 
     }
+
 
     .services-grid {
 
@@ -4990,6 +5540,7 @@ img {
 
     }
 
+
     .benefits-grid {
 
         grid-template-columns:
@@ -4999,6 +5550,7 @@ img {
             );
 
     }
+
 
     .credentials-track {
 
@@ -5010,6 +5562,7 @@ img {
 
     }
 
+
     .gallery-grid {
 
         grid-template-columns:
@@ -5019,6 +5572,7 @@ img {
             );
 
     }
+
 
     .footer-grid {
 
@@ -5030,6 +5584,7 @@ img {
 
     }
 
+
     .home-service-grid {
 
         gap:
@@ -5038,6 +5593,11 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   26 — MOBILE / TABLET
+========================================================= */
 
 @media (
     max-width:
@@ -5054,6 +5614,7 @@ img {
 
     }
 
+
     .section-soft,
     .section-light {
 
@@ -5063,12 +5624,14 @@ img {
 
     }
 
+
     .header-socials {
 
         display:
             none;
 
     }
+
 
     .mobile-menu-toggle {
 
@@ -5111,6 +5674,7 @@ img {
 
     }
 
+
     .mobile-menu-toggle span {
 
         width:
@@ -5128,6 +5692,7 @@ img {
 
     }
 
+
     .menu-open
     span:nth-child(1) {
 
@@ -5141,6 +5706,7 @@ img {
 
     }
 
+
     .menu-open
     span:nth-child(2) {
 
@@ -5148,6 +5714,7 @@ img {
             0;
 
     }
+
 
     .menu-open
     span:nth-child(3) {
@@ -5161,6 +5728,7 @@ img {
             );
 
     }
+
 
     .nav-menu {
 
@@ -5197,8 +5765,8 @@ img {
         background:
             linear-gradient(
                 145deg,
-                #f0e4cb,
-                #d8c294
+                #e2e0db,
+                #b3b1aa
             );
 
         border-bottom:
@@ -5234,6 +5802,7 @@ img {
 
     }
 
+
     .nav-menu.nav-open {
 
         opacity:
@@ -5249,6 +5818,7 @@ img {
 
     }
 
+
     .nav-link {
 
         padding:
@@ -5262,12 +5832,14 @@ img {
 
     }
 
+
     .nav-link::after {
 
         display:
             none;
 
     }
+
 
     .nav-book-button {
 
@@ -5278,6 +5850,7 @@ img {
             center;
 
     }
+
 
     .mobile-socials {
 
@@ -5295,6 +5868,7 @@ img {
 
     }
 
+
     .hero-section {
 
         min-height:
@@ -5303,6 +5877,7 @@ img {
             );
 
     }
+
 
     .hero-overlay {
 
@@ -5325,12 +5900,14 @@ img {
 
     }
 
+
     .hero-content {
 
         max-width:
             100%;
 
     }
+
 
     .hero-content h1 {
 
@@ -5343,12 +5920,14 @@ img {
 
     }
 
+
     .hero-description {
 
         font-size:
             17px;
 
     }
+
 
     .home-service-grid,
     .about-grid,
@@ -5362,6 +5941,7 @@ img {
             48px;
 
     }
+
 
     .home-service-visual {
 
@@ -5379,6 +5959,7 @@ img {
 
     }
 
+
     .about-image-wrapper {
 
         max-width:
@@ -5392,12 +5973,14 @@ img {
 
     }
 
+
     .credentials-carousel {
 
         gap:
             7px;
 
     }
+
 
     .credentials-track {
 
@@ -5406,12 +5989,14 @@ img {
 
     }
 
+
     .credential-card {
 
         display:
             none;
 
     }
+
 
     .credential-card.active {
 
@@ -5420,12 +6005,14 @@ img {
 
     }
 
+
     .credentials-dots {
 
         display:
             flex;
 
     }
+
 
     .statistics-grid {
 
@@ -5440,12 +6027,14 @@ img {
 
     }
 
+
     .stat-item:nth-child(2) {
 
         border-left:
             0;
 
     }
+
 
     .process-grid {
 
@@ -5456,6 +6045,7 @@ img {
             22px;
 
     }
+
 
     .process-line {
 
@@ -5474,12 +6064,14 @@ img {
 
     }
 
+
     .google-rating-summary {
 
         flex-wrap:
             wrap;
 
     }
+
 
     .google-rating-summary .button {
 
@@ -5491,12 +6083,14 @@ img {
 
     }
 
+
     .review-trust-grid {
 
         grid-template-columns:
             1fr;
 
     }
+
 
     .gallery-grid {
 
@@ -5507,6 +6101,7 @@ img {
             );
 
     }
+
 
     .floating-whatsapp {
 
@@ -5523,6 +6118,7 @@ img {
             54px;
 
     }
+
 
     .mobile-action-bar {
 
@@ -5582,6 +6178,7 @@ img {
 
     }
 
+
     .mobile-action-bar a {
 
         display:
@@ -5614,6 +6211,7 @@ img {
 
     }
 
+
     .mobile-action-bar a:last-child {
 
         color:
@@ -5621,12 +6219,14 @@ img {
 
     }
 
+
     .mobile-action-bar span {
 
         font-size:
             11px;
 
     }
+
 
     body {
 
@@ -5636,6 +6236,9 @@ img {
     }
 
 }
+/* =========================================================
+   MOBILE — EDITORIAL IMAGE FRAMES
+========================================================= */
 
 @media (
     max-width:
@@ -5658,6 +6261,7 @@ img {
 
     }
 
+
     .about-image-wrapper {
 
         padding:
@@ -5667,6 +6271,7 @@ img {
             4px;
 
     }
+
 
     .about-image-frame {
 
@@ -5680,6 +6285,7 @@ img {
             28px;
 
     }
+
 
     .about-image-frame::before {
 
@@ -5703,6 +6309,7 @@ img {
 
     }
 
+
     .gallery-item:nth-child(
         3n + 2
     ) {
@@ -5711,6 +6318,7 @@ img {
             0;
 
     }
+
 
     .gallery-item {
 
@@ -5721,6 +6329,7 @@ img {
             26px;
 
     }
+
 
     .gallery-item:nth-child(
         3n + 1
@@ -5742,6 +6351,11 @@ img {
 
 }
 
+
+/* =========================================================
+   27 — SMALL MOBILE
+========================================================= */
+
 @media (
     max-width:
     600px
@@ -5756,6 +6370,7 @@ img {
 
     }
 
+
     .navbar {
     position: relative;
 
@@ -5768,12 +6383,14 @@ img {
 
     }
 
+
     .brand {
 
         gap:
             8px;
 
     }
+
 
     .brand-logo {
 
@@ -5785,6 +6402,7 @@ img {
 
     }
 
+
     .brand-text {
 
         font-size:
@@ -5795,12 +6413,14 @@ img {
 
     }
 
+
     .brand-text small {
 
         font-size:
             7px;
 
     }
+
 
     .mobile-menu-toggle {
 
@@ -5809,12 +6429,14 @@ img {
 
     }
 
+
     .hero-content h1 {
 
         font-size:
             44px;
 
     }
+
 
     .hero-actions,
     .booking-actions {
@@ -5827,12 +6449,14 @@ img {
 
     }
 
+
     .button {
 
         width:
             100%;
 
     }
+
 
     .hero-trust-row {
 
@@ -5846,6 +6470,7 @@ img {
             8px;
 
     }
+
 
     .hero-trust-row span {
 
@@ -5865,12 +6490,14 @@ img {
 
     }
 
+
     .hero-trust-row span:last-child {
 
         padding-right:
             10px;
 
     }
+
 
     .services-grid,
     .benefits-grid,
@@ -5881,12 +6508,14 @@ img {
 
     }
 
+
     .service-image {
 
         height:
             275px;
 
     }
+
 
     .service-content p {
 
@@ -5895,6 +6524,7 @@ img {
 
     }
 
+
     .about-content h2 {
 
         font-size:
@@ -5902,12 +6532,14 @@ img {
 
     }
 
+
     .about-features {
 
         grid-template-columns:
             1fr;
 
     }
+
 
     .experience-badge {
 
@@ -5925,12 +6557,14 @@ img {
 
     }
 
+
     .experience-badge strong {
 
         font-size:
             29px;
 
     }
+
 
     .statistics-section {
 
@@ -5939,6 +6573,7 @@ img {
             0;
 
     }
+
 
     .stat-item {
 
@@ -5960,12 +6595,14 @@ img {
 
     }
 
+
     .stat-item strong {
 
         font-size:
             38px;
 
     }
+
 
     .credentials-carousel {
 
@@ -5974,12 +6611,14 @@ img {
 
     }
 
+
     .credential-image {
 
         height:
             315px;
 
     }
+
 
     .credential-carousel-arrow {
 
@@ -5997,6 +6636,7 @@ img {
 
     }
 
+
     .gallery-item {
 
         aspect-ratio:
@@ -6005,6 +6645,7 @@ img {
 
     }
 
+
     .contact-card {
 
         padding:
@@ -6012,6 +6653,7 @@ img {
             20px;
 
     }
+
 
     .footer-grid {
 
@@ -6025,6 +6667,7 @@ img {
 
     }
 
+
     .footer-brand {
 
         grid-column:
@@ -6033,6 +6676,7 @@ img {
 
     }
 
+
     .popup-window {
 
         padding:
@@ -6040,12 +6684,14 @@ img {
 
     }
 
+
     .popup-left {
 
         display:
             none;
 
     }
+
 
     .popup-right {
 
@@ -6075,7 +6721,17 @@ img {
             28px;
 
     }
-.popup-logo {
+
+
+    .popup-content h1 {
+
+        font-size:
+            27px;
+
+    }
+
+
+    .popup-logo {
 
         width:
             70px;
@@ -6084,6 +6740,7 @@ img {
             70px;
 
     }
+
 
     .home-service-section {
 
@@ -6094,6 +6751,11 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   28 — VERY SMALL PHONES
+========================================================= */
 
 @media (
     max-width:
@@ -6109,6 +6771,7 @@ img {
 
     }
 
+
     .brand-logo {
 
         width:
@@ -6119,12 +6782,14 @@ img {
 
     }
 
+
     .brand-text {
 
         font-size:
             11px;
 
     }
+
 
     .hero-content h1 {
 
@@ -6133,6 +6798,7 @@ img {
 
     }
 
+
     .section-heading h2 {
 
         font-size:
@@ -6140,12 +6806,14 @@ img {
 
     }
 
+
     .about-content h2 {
 
         font-size:
             34px;
 
     }
+
 
     .service-image {
 
@@ -6155,6 +6823,11 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   29 — REDUCED MOTION
+========================================================= */
 
 @media (
     prefers-reduced-motion:
@@ -6179,6 +6852,7 @@ img {
 
     }
 
+
     .reveal {
 
         opacity:
@@ -6190,6 +6864,19 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   30 — RANDOMIZED EDITORIAL FRAME RHYTHM
+   Purpose:
+   Break the repetitive "six identical cards" feeling.
+   Variation is intentional, deterministic, and responsive.
+   No rotation / no diagonal geometry.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   SERVICES — six distinct visual personalities
+   --------------------------------------------------------- */
 
 .services-grid {
     align-items: start;
@@ -6301,6 +6988,7 @@ img {
     border-radius: 0 0 28px 0;
 }
 
+/* Subtle vertical rhythm makes adjacent cards feel less templated. */
 .services-grid .service-card:nth-child(2),
 .services-grid .service-card:nth-child(4),
 .services-grid .service-card:nth-child(6) {
@@ -6312,6 +7000,11 @@ img {
 .services-grid .service-card:nth-child(6):hover {
     transform: translateY(15px);
 }
+
+
+/* ---------------------------------------------------------
+   CREDENTIALS — deliberately mixed proportions
+   --------------------------------------------------------- */
 
 .credentials-track {
     align-items: start;
@@ -6439,6 +7132,7 @@ img {
     border-radius: 0 0 0 26px;
 }
 
+/* Different vertical rhythm without rotation. */
 .credentials-track .credential-card:nth-child(2),
 .credentials-track .credential-card:nth-child(4),
 .credentials-track .credential-card:nth-child(6) {
@@ -6450,6 +7144,11 @@ img {
 .credentials-track .credential-card:nth-child(6):hover {
     transform: translateY(13px);
 }
+
+
+/* ---------------------------------------------------------
+   BENEFITS — break the uniform four-card rhythm too
+   --------------------------------------------------------- */
 
 .benefits-grid {
     align-items: start;
@@ -6476,6 +7175,11 @@ img {
     border-radius: 54px 26px 20px 38px;
 }
 
+
+/* ---------------------------------------------------------
+   REVIEW TRUST — not identical rectangles
+   --------------------------------------------------------- */
+
 .review-trust-grid {
     align-items: start;
 }
@@ -6492,6 +7196,11 @@ img {
 .review-trust-card:nth-child(3) {
     border-radius: 24px 30px 52px 18px;
 }
+
+
+/* ---------------------------------------------------------
+   GALLERY — stronger variation, still clean and premium
+   --------------------------------------------------------- */
 
 .gallery-item:nth-child(1) {
     aspect-ratio: 1 / .96;
@@ -6525,6 +7234,11 @@ img {
     aspect-ratio: 1 / .68;
     border-radius: 18px 28px 52px 22px;
 }
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — preserve variation without breaking layout
+   --------------------------------------------------------- */
 
 @media (max-width: 1100px) {
     .services-grid .service-card:nth-child(n) {
@@ -6676,7 +7390,15 @@ img {
     }
 }
 
+/* =========================================================
+   FINAL — RESPONSIVE SAFETY
+========================================================= */
+
 html {
+    overflow-x: hidden;
+}
+
+body {
     overflow-x: hidden;
 }
 
