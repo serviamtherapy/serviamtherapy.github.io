@@ -1704,9 +1704,9 @@ img {
 
     background:
         rgba(
-            229,
-            213,
-            178,
+            18,
+            20,
+            22,
             .94
         );
 
@@ -1759,10 +1759,10 @@ img {
 
     background:
         rgba(
-            250,
-            247,
-            239,
-            .92
+            13,
+            15,
+            17,
+            .96
         );
 
     box-shadow:
@@ -2159,7 +2159,7 @@ img {
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.15),
-        rgba(216, 193, 141, 0.9)
+        rgba(220, 224, 222, 0.82)
     );
     overflow: visible;
 }
@@ -2825,9 +2825,9 @@ img {
     background:
         linear-gradient(
             90deg,
-            rgba(35, 27, 19, 0.72) 0%,
-            rgba(35, 27, 19, 0.48) 45%,
-            rgba(35, 27, 19, 0.28) 100%
+            rgba(8, 10, 12, 0.82) 0%,
+            rgba(8, 10, 12, 0.60) 45%,
+            rgba(8, 10, 12, 0.42) 100%
         );
     pointer-events: none;
 }
@@ -6914,8 +6914,8 @@ img {
     width: 78px;
     height: 52px;
     border-right: 0;
-    border-left: 1px solid rgba(184, 147, 79, .65);
-    border-bottom: 1px solid rgba(184, 147, 79, .65);
+    border-left: 1px solid rgba(220, 224, 222, .50);
+    border-bottom: 1px solid rgba(220, 224, 222, .50);
     border-radius: 0 0 0 22px;
 }
 
@@ -6970,8 +6970,8 @@ img {
     width: 66px;
     height: 48px;
     border-right: 0;
-    border-left: 1px solid rgba(184, 147, 79, .65);
-    border-bottom: 1px solid rgba(184, 147, 79, .65);
+    border-left: 1px solid rgba(220, 224, 222, .50);
+    border-bottom: 1px solid rgba(220, 224, 222, .50);
 }
 
 .services-grid .service-card:nth-child(6) .service-image {
@@ -7033,8 +7033,8 @@ img {
     width: 52px;
     height: 70px;
     border-left: 0;
-    border-right: 1px solid rgba(184, 147, 79, .55);
-    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-right: 1px solid rgba(205, 210, 208, .42);
+    border-bottom: 1px solid rgba(205, 210, 208, .42);
     border-radius: 0 0 20px 0;
 }
 
@@ -7049,9 +7049,9 @@ img {
     bottom: 18px;
     width: 70px;
     height: 44px;
-    border-left: 1px solid rgba(184, 147, 79, .55);
+    border-left: 1px solid rgba(205, 210, 208, .42);
     border-right: 0;
-    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-bottom: 1px solid rgba(205, 210, 208, .42);
     border-radius: 0 0 0 18px;
 }
 
@@ -7073,8 +7073,8 @@ img {
     width: 42px;
     height: 62px;
     border-left: 0;
-    border-right: 1px solid rgba(184, 147, 79, .55);
-    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-right: 1px solid rgba(205, 210, 208, .42);
+    border-bottom: 1px solid rgba(205, 210, 208, .42);
 }
 
 .credentials-track .credential-card:nth-child(4) .credential-image {
@@ -7089,9 +7089,9 @@ img {
     bottom: 12px;
     width: 62px;
     height: 54px;
-    border-left: 1px solid rgba(184, 147, 79, .55);
+    border-left: 1px solid rgba(205, 210, 208, .42);
     border-right: 0;
-    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-bottom: 1px solid rgba(205, 210, 208, .42);
     border-radius: 0 0 0 22px;
 }
 
@@ -7113,8 +7113,8 @@ img {
     width: 72px;
     height: 38px;
     border-left: 0;
-    border-right: 1px solid rgba(184, 147, 79, .55);
-    border-bottom: 1px solid rgba(184, 147, 79, .55);
+    border-right: 1px solid rgba(205, 210, 208, .42);
+    border-bottom: 1px solid rgba(205, 210, 208, .42);
 }
 
 .credentials-track .credential-card:nth-child(6) .credential-image {
@@ -7405,4 +7405,247 @@ body {
 img,
 video {
     max-width: 100%;
+}
+
+/* =========================================================
+   FINAL GRAPHITE EDITORIAL PASS
+   Darker header + hero, high legibility, restrained silver
+========================================================= */
+
+html {
+    background: #0b0d0f;
+}
+
+body {
+    background: #0f1113;
+    color: #d6dad8;
+}
+
+.site-header {
+    background: #111315;
+}
+
+.navbar,
+.navbar.scrolled {
+    background: rgba(14, 16, 18, .96);
+    border-bottom: 1px solid rgba(220, 224, 222, .12);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, .38);
+}
+
+.brand-text {
+    color: #e4e7e5;
+}
+
+.brand-subtitle {
+    color: #8e9492;
+}
+
+.nav-link,
+.header-social-link,
+.mobile-social-link {
+    color: #c7cbc9;
+}
+
+.nav-link:hover,
+.header-social-link:hover,
+.mobile-social-link:hover {
+    color: #f0f2f1;
+}
+
+.nav-link::after {
+    background: linear-gradient(90deg, #aeb5b2, #e0e4e2);
+}
+
+.nav-book-button {
+    background: rgba(255,255,255,.05);
+    border-color: rgba(220,224,222,.32);
+    color: #e3e6e4;
+}
+
+.nav-book-button:hover {
+    background: #d7dcda;
+    border-color: #d7dcda;
+    color: #101214;
+}
+
+.hero-section {
+    min-height: calc(100vh - 88px);
+    background: #0b0d0f;
+}
+
+.hero-background {
+    filter: grayscale(100%) contrast(1.08) brightness(.48);
+    transform: scale(1.035);
+}
+
+.hero-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,9,11,.88) 0%,
+            rgba(7,9,11,.72) 42%,
+            rgba(7,9,11,.54) 68%,
+            rgba(7,9,11,.68) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(7,9,11,.26) 0%,
+            rgba(7,9,11,.04) 48%,
+            rgba(7,9,11,.72) 100%
+        );
+}
+
+.hero-section::after {
+    height: 220px;
+    background: linear-gradient(transparent, rgba(7,9,11,.92));
+}
+
+.hero-orb {
+    border-color: rgba(220,224,222,.13);
+}
+
+.hero-orb-one {
+    box-shadow: inset 0 0 90px rgba(220,224,222,.035);
+}
+
+.hero-orb-two {
+    border-color: rgba(220,224,222,.09);
+}
+
+.hero-content h1 {
+    color: #f0f2f1;
+    text-shadow: 0 4px 24px rgba(0,0,0,.34);
+}
+
+.hero-content h1 span {
+    color: #bfc5c2;
+}
+
+.hero-eyebrow {
+    color: #b9bfbc;
+}
+
+.hero-description {
+    color: #c0c5c3;
+    text-shadow: 0 2px 12px rgba(0,0,0,.32);
+}
+
+.hero-trust-row {
+    color: #aeb4b1;
+}
+
+.hero-trust-row b {
+    color: #edf0ef;
+}
+
+.button-primary,
+.button-gold {
+    background: linear-gradient(135deg, #dce1df, #aeb5b2);
+    color: #111315;
+    box-shadow: 0 12px 28px rgba(0,0,0,.32);
+}
+
+.button-primary:hover,
+.button-gold:hover {
+    background: linear-gradient(135deg, #eef1f0, #c2c8c5);
+}
+
+.button-outline-light {
+    border-color: rgba(225,229,227,.55);
+    color: #e6e9e8;
+    background: rgba(255,255,255,.035);
+    backdrop-filter: blur(8px);
+}
+
+.button-outline-light:hover {
+    color: #111315;
+    background: #d8dddb;
+    border-color: #d8dddb;
+}
+
+.scroll-indicator {
+    color: rgba(230,233,232,.76);
+}
+
+.scroll-line {
+    background: linear-gradient(to bottom, rgba(255,255,255,.10), rgba(220,224,222,.82));
+}
+
+/* Keep content sections dark, but separate them through tone rather than brightness. */
+.section-soft {
+    background: linear-gradient(180deg, #111315 0%, #17191b 100%);
+}
+
+.section-light {
+    background: linear-gradient(180deg, #191c1f 0%, #202326 100%);
+}
+
+/* Cards: dark graphite surfaces with enough contrast for discovery. */
+.card,
+.service-card,
+.review-trust-card,
+.faq-item,
+.booking-card,
+.contact-card,
+.gallery-item,
+.journal-card {
+    background-color: #202326;
+    border-color: rgba(220,224,222,.11);
+}
+
+/* Prevent white/light legacy surfaces from breaking the monochrome system. */
+input,
+textarea,
+select {
+    background: #17191b;
+    color: #e1e4e2;
+    border-color: rgba(220,224,222,.18);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #777e7b;
+}
+
+.popup-right {
+    background: #17191b;
+    color: #d5d9d7;
+}
+
+.popup-content h2 {
+    color: #edf0ef;
+}
+
+.popup-content p {
+    color: #aeb4b1;
+}
+
+.popup-close {
+    color: #cbd0ce;
+    background: rgba(255,255,255,.05);
+}
+
+.popup-button {
+    background: linear-gradient(135deg, #dce1df, #aeb5b2);
+    color: #111315;
+}
+
+@media (max-width: 768px) {
+    .navbar,
+    .navbar.scrolled {
+        background: rgba(14,16,18,.985);
+    }
+
+    .hero-section {
+        min-height: calc(100svh - 74px);
+    }
+
+    .hero-background {
+        filter: grayscale(100%) contrast(1.06) brightness(.42);
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(180deg, rgba(7,9,11,.66) 0%, rgba(7,9,11,.40) 42%, rgba(7,9,11,.88) 100%);
+    }
 }
