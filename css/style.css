@@ -2770,6 +2770,11 @@ img {
     display: block;
     object-fit: cover;
     object-position: center;
+    filter:
+    grayscale(100%)
+    brightness(1.16)
+    contrast(1.10);
+  opacity: 1;
 }
 
 .hero-background::after {
@@ -2779,14 +2784,13 @@ img {
     z-index: 1;
     background:
         linear-gradient(
-            90deg,
-            rgba(8, 10, 12, 0.82) 0%,
-            rgba(8, 10, 12, 0.60) 45%,
-            rgba(8, 10, 12, 0.42) 100%
-        );
-    pointer-events: none;
+      90deg,
+      rgba(5, 7, 9, 0.72) 0%,
+      rgba(5, 7, 9, 0.40) 42%,
+      rgba(5, 7, 9, 0.18) 72%,
+      rgba(5, 7, 9, 0.30) 100%
+    );
 }
-
 @media (max-width: 640px) {
     .hero-video {
         object-position: center center;
