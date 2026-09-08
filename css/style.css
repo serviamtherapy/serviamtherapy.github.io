@@ -2772,7 +2772,7 @@ img {
     object-position: center;
     filter:
     grayscale(100%)
-    brightness(1.16)
+    brightness(1.60)
     contrast(1.10);
   opacity: 1;
 }
