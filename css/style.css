@@ -2181,46 +2181,6 @@ img {
     transition: text-shadow 0.3s ease;
 }
 
-/* Diamond shine */
-.nav-book-button::before {
-    content: "";
-    position: absolute;
-
-    top: -80%;
-    left: -35%;
-
-    width: 45%;
-    height: 260%;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.65),
-        rgba(255, 255, 255, 0.15),
-        transparent
-    );
-
-    transform: rotate(25deg);
-    filter: blur(2px);
-
-    transition: left 0.8s ease;
-}
-
-
-/* Subtle crystal edge */
-.nav-book-button::after {
-    content: "";
-    position: absolute;
-    inset: 1px;
-
-    border-radius: 13px;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    pointer-events: none;
-}
-
-
 .nav-book-button:hover span {
     text-shadow:
         0 0 6px rgba(255, 255, 255, 0.55),
