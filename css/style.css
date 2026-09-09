@@ -2164,50 +2164,22 @@ img {
 }
 
 
-.nav-book-button {
+.nav-book-button span {
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 2;
 
-    padding: 12px 28px;
-    min-height: 46px;
-
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    border-radius: 14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.16),
-            rgba(40, 40, 43, 0.72) 45%,
-            rgba(255, 255, 255, 0.10)
-        );
+    font-family: "Heebo", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 
     color: #ffffff;
 
-    font-family: "Heebo", sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.5);
 
-    text-decoration: none;
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.55),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.08);
-
-    overflow: hidden;
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease,
-        border-color 0.35s ease;
+    transition: text-shadow 0.3s ease;
 }
-
 
 /* Diamond shine */
 .nav-book-button::before {
@@ -2249,23 +2221,11 @@ img {
 }
 
 
-/* Hover */
-.nav-book-button:hover {
-    transform: translateY(-2px);
-
-    border-color: rgba(255, 255, 255, 0.75);
-
-    box-shadow:
-        0 12px 32px rgba(0, 0, 0, 0.45),
-        0 0 22px rgba(255, 255, 255, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+.nav-book-button:hover span {
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.55),
+        0 0 14px rgba(255, 255, 255, 0.20);
 }
-
-
-.nav-book-button:hover::before {
-    left: 135%;
-}
-
 
 /* Click */
 .nav-book-button:active {
