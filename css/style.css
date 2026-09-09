@@ -2773,7 +2773,7 @@ img {
     filter:
     grayscale(100%)
     brightness(1.98)
-    contrast(1.20);
+    contrast(1.10);
   opacity: 1;
 }
 
@@ -8261,4 +8261,203 @@ select:focus {
         animation: none !important;
         transition: none !important;
     }
+}
+
+
+/* =========================================================
+   SERVIAM AI — GRAPHITE CRYSTAL CHAT
+   Visual front-end only. No external AI calls are made here.
+========================================================= */
+.serviam-ai {
+    --ai-bg: rgba(8, 10, 12, .88);
+    --ai-glass: rgba(18, 21, 24, .78);
+    --ai-line: rgba(232, 236, 234, .16);
+    --ai-line-bright: rgba(238, 242, 240, .28);
+    --ai-text: #edf0ef;
+    --ai-soft: #b7bfbc;
+    --ai-muted: #747d79;
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 99990;
+    font-family: 'Poppins', 'Heebo', sans-serif;
+    direction: rtl;
+}
+
+.serviam-ai-launch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 176px;
+    padding: 10px 14px 10px 13px;
+    border: 1px solid rgba(235,240,238,.20);
+    border-radius: 999px;
+    color: var(--ai-text);
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.085), rgba(255,255,255,.025) 42%, rgba(8,10,12,.82)),
+        rgba(8,10,12,.78);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.12),
+        0 18px 50px rgba(0,0,0,.48),
+        0 0 34px rgba(235,240,238,.055);
+    backdrop-filter: blur(22px) saturate(125%);
+    -webkit-backdrop-filter: blur(22px) saturate(125%);
+    cursor: pointer;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.serviam-ai-launch:hover {
+    transform: translateY(-3px);
+    border-color: rgba(235,240,238,.34);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.16),
+        0 22px 58px rgba(0,0,0,.58),
+        0 0 42px rgba(235,240,238,.09);
+}
+
+.serviam-ai-launch-glow {
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(110deg, transparent 22%, rgba(255,255,255,.12) 48%, transparent 68%);
+    background-size: 220% 100%;
+    opacity: .6;
+    animation: serviamAiShimmer 5.5s ease-in-out infinite;
+}
+
+.serviam-ai-launch-icon,
+.serviam-ai-orb {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    color: #f4f6f5;
+    text-shadow: 0 0 14px rgba(255,255,255,.5);
+}
+
+.serviam-ai-launch-icon {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(235,240,238,.22);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 25%, rgba(255,255,255,.15), rgba(255,255,255,.025) 52%, rgba(0,0,0,.24));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 0 22px rgba(255,255,255,.06);
+    font-size: 17px;
+}
+
+.serviam-ai-launch-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+}
+
+.serviam-ai-launch-label strong { font-size: 13px; letter-spacing: .02em; font-weight: 600; }
+.serviam-ai-launch-label small { margin-top: 4px; color: var(--ai-muted); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.serviam-ai-status-dot { width: 6px; height: 6px; margin-left: auto; border-radius: 50%; background: #dfe5e2; box-shadow: 0 0 12px rgba(235,240,238,.75); animation: serviamAiPulse 2.2s ease-in-out infinite; }
+
+.serviam-ai-panel {
+    position: absolute;
+    right: 0;
+    bottom: 72px;
+    width: min(390px, calc(100vw - 28px));
+    height: min(650px, calc(100vh - 110px));
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--ai-line);
+    border-radius: 25px;
+    background:
+        radial-gradient(circle at 88% 0%, rgba(255,255,255,.07), transparent 34%),
+        linear-gradient(160deg, rgba(25,28,31,.90), rgba(7,9,11,.94) 62%);
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.62),
+        inset 0 1px 0 rgba(255,255,255,.10),
+        0 0 60px rgba(235,240,238,.045);
+    backdrop-filter: blur(30px) saturate(125%);
+    -webkit-backdrop-filter: blur(30px) saturate(125%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px) scale(.97);
+    transform-origin: bottom right;
+    transition: opacity .28s ease, transform .32s cubic-bezier(.2,.8,.2,1), visibility .28s;
+}
+
+.serviam-ai.is-open .serviam-ai-panel { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+.serviam-ai.is-open .serviam-ai-launch { opacity: .86; }
+
+.serviam-ai-panel-shine { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,.045) 40%, transparent 56%); transform: translateX(-75%); animation: serviamAiPanelShine 8s ease-in-out infinite; }
+
+.serviam-ai-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 18px 15px;
+    border-bottom: 1px solid rgba(232,236,234,.10);
+}
+
+.serviam-ai-identity { display: flex; align-items: center; gap: 11px; min-width: 0; }
+.serviam-ai-orb { width: 43px; height: 43px; border: 1px solid rgba(235,240,238,.19); border-radius: 50%; background: radial-gradient(circle at 35% 25%, rgba(255,255,255,.14), rgba(255,255,255,.025) 54%, rgba(0,0,0,.35)); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 0 28px rgba(255,255,255,.055); }
+.serviam-ai-orb span { font-size: 16px; }
+.serviam-ai-kicker { color: var(--ai-muted); font-size: 8px; letter-spacing: .16em; margin-bottom: 2px; }
+.serviam-ai-header h2 { margin: 0; color: var(--ai-text); font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; letter-spacing: .01em; }
+.serviam-ai-header p { display: flex; align-items: center; gap: 5px; margin: 2px 0 0; color: #8e9894; font-size: 9px; }
+.serviam-ai-header p span { width: 5px; height: 5px; border-radius: 50%; background: #e3e8e6; box-shadow: 0 0 8px rgba(255,255,255,.65); }
+.serviam-ai-actions { display: flex; gap: 6px; }
+.serviam-ai-icon-btn { width: 32px; height: 32px; display: grid; place-items: center; padding: 0; border: 1px solid rgba(232,236,234,.12); border-radius: 10px; color: #cdd3d0; background: rgba(255,255,255,.035); cursor: pointer; transition: .25s ease; }
+.serviam-ai-icon-btn:hover { color: #fff; border-color: rgba(235,240,238,.28); background: rgba(255,255,255,.075); }
+
+.serviam-ai-messages { position: relative; flex: 1; overflow-y: auto; padding: 19px 17px 12px; scrollbar-width: thin; scrollbar-color: rgba(235,240,238,.18) transparent; }
+.serviam-ai-welcome { padding: 16px; border: 1px solid rgba(232,236,234,.10); border-radius: 17px; background: linear-gradient(145deg, rgba(255,255,255,.052), rgba(255,255,255,.016)); box-shadow: inset 0 1px 0 rgba(255,255,255,.05); }
+.serviam-ai-welcome-mark { display: inline-block; margin-bottom: 7px; color: #f2f5f4; font-size: 15px; text-shadow: 0 0 14px rgba(255,255,255,.35); }
+.serviam-ai-welcome strong { display: block; color: #eef1f0; font-size: 14px; font-weight: 600; }
+.serviam-ai-welcome p { margin: 6px 0 0; color: #969f9c; font-size: 11px; line-height: 1.65; }
+.serviam-ai-quick { display: grid; gap: 7px; margin-top: 14px; }
+.serviam-ai-quick button { display: flex; align-items: center; gap: 9px; width: 100%; padding: 10px 11px; border: 1px solid rgba(232,236,234,.095); border-radius: 12px; color: #cdd3d0; background: rgba(255,255,255,.025); text-align: right; font: inherit; font-size: 10.5px; cursor: pointer; transition: .25s ease; }
+.serviam-ai-quick button:hover { border-color: rgba(235,240,238,.23); background: rgba(255,255,255,.065); transform: translateY(-1px); }
+.serviam-ai-quick button span { flex: 1; }
+
+.serviam-ai-message { max-width: 88%; margin-top: 10px; padding: 10px 12px; border-radius: 14px; font-size: 11px; line-height: 1.7; animation: serviamAiMessageIn .28s ease both; }
+.serviam-ai-message.user { margin-right: auto; color: #e9edeb; background: rgba(235,240,238,.10); border: 1px solid rgba(235,240,238,.12); border-bottom-right-radius: 5px; }
+.serviam-ai-message.assistant { margin-left: auto; color: #aeb7b4; background: rgba(8,10,12,.60); border: 1px solid rgba(232,236,234,.09); border-bottom-left-radius: 5px; }
+.serviam-ai-typing { display: none; align-items: center; gap: 4px; min-height: 19px; padding: 0 18px 7px; }
+.serviam-ai-typing.is-visible { display: flex; }
+.serviam-ai-typing span { width: 5px; height: 5px; border-radius: 50%; background: #aeb6b3; animation: serviamAiTyping 1s infinite ease-in-out; }
+.serviam-ai-typing span:nth-child(2) { animation-delay: .14s; }
+.serviam-ai-typing span:nth-child(3) { animation-delay: .28s; }
+
+.serviam-ai-input { position: relative; display: flex; align-items: center; gap: 8px; margin: 0 13px 8px; padding: 6px 7px 6px 9px; border: 1px solid rgba(232,236,234,.13); border-radius: 15px; background: rgba(255,255,255,.035); box-shadow: inset 0 1px 0 rgba(255,255,255,.04); }
+.serviam-ai-input:focus-within { border-color: rgba(235,240,238,.25); box-shadow: 0 0 0 3px rgba(235,240,238,.025), inset 0 1px 0 rgba(255,255,255,.06); }
+.serviam-ai-input input { min-width: 0; flex: 1; padding: 7px 3px; border: 0 !important; outline: 0; color: #e6eae8 !important; background: transparent !important; font: inherit; font-size: 11px; }
+.serviam-ai-input input::placeholder { color: #707976 !important; }
+.serviam-ai-input button { width: 31px; height: 31px; flex: 0 0 auto; border: 1px solid rgba(235,240,238,.18); border-radius: 10px; color: #101214; background: linear-gradient(145deg, #edf0ef, #aeb6b2); box-shadow: 0 5px 16px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.7); cursor: pointer; }
+.serviam-ai-input button:hover { filter: brightness(1.08); }
+.serviam-ai-input button span { display: block; transform: translateY(-1px); font-weight: 700; }
+.serviam-ai-footer { padding: 0 15px 12px; color: #5f6865; font-size: 8px; text-align: center; letter-spacing: .025em; }
+
+@keyframes serviamAiShimmer { 0%, 60%, 100% { background-position: 160% 0; } 75% { background-position: -30% 0; } }
+@keyframes serviamAiPanelShine { 0%, 45%, 100% { transform: translateX(-75%); opacity: 0; } 55% { opacity: .8; } 70% { transform: translateX(75%); opacity: 0; } }
+@keyframes serviamAiPulse { 0%,100% { opacity: .5; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
+@keyframes serviamAiTyping { 0%,60%,100% { opacity: .3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
+@keyframes serviamAiMessageIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 600px) {
+    .serviam-ai { right: 14px; bottom: 14px; left: 14px; }
+    .serviam-ai-launch { min-width: 0; width: max-content; margin-left: auto; padding: 9px 12px 9px 10px; }
+    .serviam-ai-launch-label small { display: none; }
+    .serviam-ai-panel { right: 0; bottom: 65px; width: calc(100vw - 28px); height: min(620px, calc(100vh - 92px)); min-height: 470px; border-radius: 21px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .serviam-ai-launch-glow,
+    .serviam-ai-panel-shine,
+    .serviam-ai-status-dot,
+    .serviam-ai-typing span { animation: none !important; }
+    .serviam-ai-panel, .serviam-ai-launch, .serviam-ai-quick button { transition: none !important; }
 }
