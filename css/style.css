@@ -2165,48 +2165,112 @@ img {
 
 
 .nav-book-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    padding:
-        10px
-        20px;
+    padding: 12px 28px;
+    min-height: 46px;
 
-    border:
-        1px
-        solid
-        var(--gold);
-
-    color:
-        var(--gold-dark);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 14px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            .34
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.16),
+            rgba(40, 40, 43, 0.72) 45%,
+            rgba(255, 255, 255, 0.10)
         );
 
-    transition:
-        .3s
-        ease;
+    color: #ffffff;
 
-}
+    font-family: "Heebo", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
 
+    text-decoration: none;
 
-.nav-book-button:hover {
-
-    color:
-        #222426;
-
-    background:
-        var(--gold);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     box-shadow:
-        var(--shadow-sm);
+        0 8px 25px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 }
 
 
+/* Diamond shine */
+.nav-book-button::before {
+    content: "";
+    position: absolute;
+
+    top: -80%;
+    left: -35%;
+
+    width: 45%;
+    height: 260%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.65),
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+
+    transform: rotate(25deg);
+    filter: blur(2px);
+
+    transition: left 0.8s ease;
+}
+
+
+/* Subtle crystal edge */
+.nav-book-button::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* Hover */
+.nav-book-button:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.45),
+        0 0 22px rgba(255, 255, 255, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+
+.nav-book-button:hover::before {
+    left: 135%;
+}
+
+
+/* Click */
+.nav-book-button:active {
+    transform: translateY(0);
+}
 .mobile-menu-toggle,
 .mobile-socials {
 
