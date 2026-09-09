@@ -2098,10 +2098,16 @@ img {
         center;
 
     gap:
-        24px;
+        14px;
 
     margin-right:
-        32px;
+        20px;
+
+    flex-wrap:
+        nowrap;
+
+    min-width:
+        0;
 
 }
 
@@ -2115,7 +2121,7 @@ img {
         var(--espresso-soft);
 
     font-size:
-        15px;
+        14px;
 
     font-weight:
         500;
@@ -2182,8 +2188,8 @@ img {
     align-items: center;
     justify-content: center;
 
-    padding: 12px 28px;
-    min-height: 46px;
+    padding: 10px 20px;
+    min-height: 44px;
 
     border: 1px solid rgba(255, 255, 255, 0.45);
     border-radius: 14px;
@@ -2199,8 +2205,8 @@ img {
     color: #ffffff;
 
     font-family: "Heebo", sans-serif;
-    font-weight: 800;
-    font-size: 1.15rem;
+    font-weight: 700;
+    font-size: 1rem;
 
     text-decoration: none;
 
@@ -5609,6 +5615,52 @@ img {
 /* =========================================================
    25 — TABLET
 ========================================================= */
+
+@media (max-width: 1240px) and (min-width: 901px) {
+
+    .navbar {
+        padding: 0 24px;
+    }
+
+    .brand-text {
+        font-size: 15px;
+    }
+
+    .brand-text small {
+        font-size: 7px;
+    }
+
+    .header-socials {
+        margin-right: 14px;
+    }
+
+    html[dir="ltr"] .header-socials {
+        margin-left: 14px;
+    }
+
+    .nav-menu {
+        gap: 9px;
+        margin-right: 10px;
+    }
+
+    html[dir="ltr"] .nav-menu {
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .nav-book-button {
+        padding: 9px 14px;
+        min-height: 40px;
+        font-size: .92rem;
+    }
+
+    .language-switcher {
+        margin-inline: 5px;
+    }
+}
 
 @media (
     max-width:
@@ -9583,11 +9635,13 @@ body {
 .language-switcher {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 4px;
-    margin-inline: 6px;
+    justify-content: center;
+    gap: 3px;
+    flex: 0 0 auto;
+    padding: 3px;
+    margin-inline: 10px;
     border: 1px solid rgba(255,255,255,.20);
-    border-radius: 12px;
+    border-radius: 11px;
     background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(25,27,29,.55));
     box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 5px 18px rgba(0,0,0,.18);
     backdrop-filter: blur(12px);
@@ -9652,9 +9706,17 @@ html[dir="ltr"] .brand {
 }
 
 @media (max-width: 900px) {
+    /* Language selector stays in the header on mobile, outside the dropdown. */
     .language-switcher {
         width: fit-content;
-        margin: 10px auto 6px;
-        order: 2;
+        margin: 0 8px;
+        order: 0;
+    }
+
+    .language-link {
+        min-width: 30px;
+        height: 29px;
+        padding: 0 6px;
+        font-size: 9px;
     }
 }
