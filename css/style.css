@@ -1196,21 +1196,31 @@ img {
    ----------------------------------------- */
 
 .loader-subtitle {
-    margin-top: 18px;
-
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
     font-weight: 500;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
 
-    color: rgba(245, 245, 245, 0.82);
+    /* Gold metallic gradient */
+    background: linear-gradient(
+        120deg,
+        #8c6a2f 0%,
+        #c9a44c 20%,
+        #fff1a8 40%,
+        #d4af57 55%,
+        #fff4b8 70%,
+        #a77b32 100%
+    );
 
-    text-shadow:
-        0 1px 0 rgba(255,255,255,0.35),
-        0 2px 4px rgba(0,0,0,0.8),
-        0 0 12px rgba(255,255,255,0.12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 
-    transform: translateZ(15px);
+    /* Gold glow */
+    filter:
+        drop-shadow(0 0 4px rgba(212, 175, 87, 0.45))
+        drop-shadow(0 0 10px rgba(255, 215, 120, 0.18));
 }
-
 
 /* -----------------------------------------
    3D FLOAT
