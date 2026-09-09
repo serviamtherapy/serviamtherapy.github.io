@@ -8770,3 +8770,285 @@ body {
         transition: none;
     }
 }
+
+
+/* =========================================================
+   SERVIAM THERAPY — CLINIC RENEWAL BANNER
+   Uses the existing Serviam logo asset; no generated artwork.
+========================================================= */
+.announcement-banner {
+    position: relative;
+    z-index: 2;
+    width: min(1240px, calc(100% - 32px));
+    margin: 28px auto 0;
+    border: 1px solid rgba(220, 225, 222, 0.24);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.065), transparent 30%),
+        radial-gradient(circle at 82% 45%, rgba(210,216,213,0.055), transparent 28%),
+        linear-gradient(135deg, rgba(20,22,24,0.98), rgba(10,12,14,0.96));
+    box-shadow:
+        0 24px 70px rgba(0,0,0,0.30),
+        inset 0 1px 0 rgba(255,255,255,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.025);
+    overflow: hidden;
+}
+
+.announcement-banner::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 23px;
+    pointer-events: none;
+    background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.055) 44%, transparent 58%);
+    transform: translateX(-110%);
+    animation: announcementShine 9s ease-in-out infinite;
+}
+
+.announcement-banner::after {
+    content: "✦";
+    position: absolute;
+    left: 22px;
+    bottom: 13px;
+    color: rgba(230,234,232,0.28);
+    font-size: 13px;
+    pointer-events: none;
+}
+
+.announcement-banner-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(170px, 0.72fr) minmax(300px, 1.6fr) minmax(300px, 1.2fr) auto;
+    align-items: center;
+    gap: 26px;
+    min-height: 188px;
+    padding: 24px 28px;
+    direction: rtl;
+}
+
+.announcement-brand,
+.announcement-content,
+.announcement-features,
+.announcement-button {
+    position: relative;
+    z-index: 1;
+}
+
+.announcement-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    direction: ltr;
+    min-width: 0;
+}
+
+.announcement-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(235,238,236,0.13));
+    flex: 0 0 auto;
+}
+
+.announcement-brand-copy {
+    display: grid;
+    gap: 5px;
+    text-align: left;
+}
+
+.announcement-brand-copy span,
+.announcement-label {
+    color: rgba(220,224,222,0.70);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.announcement-brand-copy strong {
+    color: #eef0ef;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+.announcement-content {
+    padding-inline: 24px;
+    border-inline-start: 1px solid rgba(220,225,222,0.15);
+    border-inline-end: 1px solid rgba(220,225,222,0.15);
+}
+
+.announcement-content h2 {
+    margin: 5px 0 7px;
+    color: #f0f2f0;
+    font-size: clamp(1.35rem, 2vw, 1.9rem);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
+
+.announcement-content p {
+    margin: 0;
+    color: rgba(218,222,220,0.78);
+    font-size: 0.91rem;
+    line-height: 1.65;
+}
+
+.announcement-content .announcement-home-text {
+    margin-top: 7px;
+    color: rgba(234,237,235,0.90);
+}
+
+.announcement-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.announcement-feature {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 64px;
+    padding: 10px 11px;
+    border: 1px solid rgba(220,225,222,0.12);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.025);
+    color: rgba(230,233,231,0.84);
+    font-size: 0.76rem;
+    line-height: 1.35;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.035);
+}
+
+.announcement-feature-icon {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgba(220,225,222,0.22);
+    border-radius: 50%;
+    color: #e2e6e4;
+    font-size: 0.78rem;
+    flex: 0 0 auto;
+}
+
+.announcement-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 178px;
+    min-height: 48px;
+    padding: 12px 18px;
+    border: 1px solid rgba(235,238,236,0.32);
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.13), rgba(255,255,255,0.045));
+    color: #f1f3f1;
+    font-size: 0.83rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.10);
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+    overflow: hidden;
+}
+
+.announcement-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.18) 48%, transparent 61%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+}
+
+.announcement-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(240,243,241,0.52);
+    background: linear-gradient(135deg, rgba(255,255,255,0.17), rgba(255,255,255,0.065));
+    box-shadow: 0 16px 34px rgba(0,0,0,0.32), 0 0 24px rgba(230,234,232,0.06);
+}
+
+.announcement-button:hover::before {
+    transform: translateX(120%);
+}
+
+@keyframes announcementShine {
+    0%, 72%, 100% { transform: translateX(-110%); }
+    84% { transform: translateX(110%); }
+}
+
+@media (max-width: 1100px) {
+    .announcement-banner-inner {
+        grid-template-columns: minmax(150px, 0.7fr) minmax(280px, 1.35fr) auto;
+    }
+
+    .announcement-features {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .announcement-button {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 760px) {
+    .announcement-banner {
+        width: min(100% - 20px, 680px);
+        margin-top: 18px;
+        border-radius: 20px;
+    }
+
+    .announcement-banner-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        min-height: auto;
+        padding: 22px 18px;
+    }
+
+    .announcement-brand {
+        justify-content: flex-start;
+    }
+
+    .announcement-content {
+        padding: 16px 0 0;
+        border-inline: 0;
+        border-top: 1px solid rgba(220,225,222,0.13);
+    }
+
+    .announcement-content h2 {
+        font-size: 1.45rem;
+    }
+
+    .announcement-content p {
+        font-size: 0.88rem;
+    }
+
+    .announcement-features {
+        grid-column: auto;
+        grid-row: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .announcement-feature {
+        min-height: 48px;
+    }
+
+    .announcement-button {
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .announcement-banner::before,
+    .announcement-button::before {
+        animation: none;
+        transition: none;
+    }
+}
