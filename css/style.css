@@ -2773,7 +2773,7 @@ img {
     filter:
     grayscale(100%)
     brightness(1.98)
-    contrast(1.60);
+    contrast(0.60);
   opacity: 1;
 }
 
