@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Serviam Therapy — טיפולי עיסוי מקצועיים בהתאמה אישית בבת ים ובמרכז הארץ. עיסוי שוודי, רקמות עמוקות, ספורטיבי, רפואי, אבנים חמות וכוסות רוח. 20+ שנות ניסיון."
+        content="Serviam Therapy — 20+ טיפולי עיסוי מקצועיים בהתאמה אישית בבת ים ובמרכז הארץ. עיסוי שוודי, רקמות עמוקות, ספורטיבי, רפואי, אבנים חמות וכוסות רוח.  שנות ניסיון."
     >
 
     <meta
@@ -675,7 +675,7 @@
         <div class="hero-content reveal">
 
             <span class="hero-eyebrow">
-                SERVIAM THERAPY · 20+ שנות ניסיון
+                SERVIAM THERAPY · שנות ניסיון 20+
             </span>
 
             <h1>
@@ -3806,211 +3806,6 @@ document.addEventListener(
     }
 );
 
-</script>
-
-
-<!-- =========================================================
-     SERVIAM AI — VISUAL CHAT WIDGET
-     Front-end only: ready to connect to an AI API later.
-========================================================= -->
-<div class="serviam-ai" id="serviam-ai">
-    <button class="serviam-ai-launch" id="serviam-ai-launch" type="button" aria-label="פתיחת Serviam AI" aria-expanded="false">
-        <span class="serviam-ai-launch-glow" aria-hidden="true"></span>
-        <span class="serviam-ai-launch-icon" aria-hidden="true">✦</span>
-        <span class="serviam-ai-launch-label">
-            <strong id="serviam-ai-launch-title">Ask Serviam</strong>
-            <small id="serviam-ai-launch-subtitle">Wellness assistant</small>
-        </span>
-        <span class="serviam-ai-status-dot" aria-hidden="true"></span>
-    </button>
-
-    <section class="serviam-ai-panel" id="serviam-ai-panel" role="dialog" aria-modal="false" aria-labelledby="serviam-ai-title" aria-hidden="true">
-        <div class="serviam-ai-panel-shine" aria-hidden="true"></div>
-        <div class="serviam-ai-header">
-            <div class="serviam-ai-identity">
-                <div class="serviam-ai-orb" aria-hidden="true"><span>✦</span></div>
-                <div>
-                    <div class="serviam-ai-kicker">SERVIAM THERAPY</div>
-                    <h2 id="serviam-ai-title">Serviam AI</h2>
-                    <p id="serviam-ai-online"><span></span> כאן כדי לעזור</p>
-                </div>
-            </div>
-            <div class="serviam-ai-actions">
-                <button id="serviam-ai-language" class="serviam-ai-icon-btn" type="button" aria-label="Switch language">EN</button>
-                <button id="serviam-ai-close" class="serviam-ai-icon-btn" type="button" aria-label="סגירת צ'אט">×</button>
-            </div>
-        </div>
-
-        <div class="serviam-ai-messages" id="serviam-ai-messages" aria-live="polite">
-            <div class="serviam-ai-welcome">
-                <span class="serviam-ai-welcome-mark">✦</span>
-                <strong id="serviam-ai-welcome-title">שלום, איך אפשר לעזור?</strong>
-                <p id="serviam-ai-welcome-text">אני יכול לעזור לך לבחור טיפול, לענות על שאלות ולכוון אותך לקביעת טיפול.</p>
-            </div>
-
-            <div class="serviam-ai-quick" id="serviam-ai-quick">
-                <button type="button" data-ai-action="recommend">💆 <span>איזה טיפול מתאים לי?</span></button>
-                <button type="button" data-ai-action="difference">✦ <span>מה ההבדל בין הטיפולים?</span></button>
-                <button type="button" data-ai-action="booking">📅 <span>איך קובעים טיפול?</span></button>
-                <button type="button" data-ai-action="before">◌ <span>מה כדאי לדעת לפני טיפול?</span></button>
-            </div>
-        </div>
-
-        <div class="serviam-ai-typing" id="serviam-ai-typing" aria-hidden="true">
-            <span></span><span></span><span></span>
-        </div>
-
-        <form class="serviam-ai-input" id="serviam-ai-form">
-            <input id="serviam-ai-input" type="text" autocomplete="off" placeholder="כתבו שאלה..." aria-label="כתבו שאלה">
-            <button type="submit" aria-label="שליחה"><span>↑</span></button>
-        </form>
-        <div class="serviam-ai-footer" id="serviam-ai-footer">Serviam AI • מידע כללי ועזרה בבחירת טיפול</div>
-    </section>
-</div>
-
-<script>
-(function () {
-    const root = document.getElementById('serviam-ai');
-    if (!root) return;
-
-    const launch = document.getElementById('serviam-ai-launch');
-    const panel = document.getElementById('serviam-ai-panel');
-    const close = document.getElementById('serviam-ai-close');
-    const lang = document.getElementById('serviam-ai-language');
-    const form = document.getElementById('serviam-ai-form');
-    const input = document.getElementById('serviam-ai-input');
-    const messages = document.getElementById('serviam-ai-messages');
-    const typing = document.getElementById('serviam-ai-typing');
-    const quick = document.getElementById('serviam-ai-quick');
-
-    let currentLang = 'he';
-    let openedOnce = false;
-
-    const copy = {
-        he: {
-            launch: 'Ask Serviam', sub: 'Wellness assistant', online: 'כאן כדי לעזור', lang: 'EN',
-            welcome: 'שלום, איך אפשר לעזור?',
-            welcomeText: 'אני יכול לעזור לך לבחור טיפול, לענות על שאלות ולכוון אותך לקביעת טיפול.',
-            placeholder: 'כתבו שאלה...', footer: 'Serviam AI • מידע כללי ועזרה בבחירת טיפול',
-            quick: [
-                ['recommend', '💆', 'איזה טיפול מתאים לי?'],
-                ['difference', '✦', 'מה ההבדל בין הטיפולים?'],
-                ['booking', '📅', 'איך קובעים טיפול?'],
-                ['before', '◌', 'מה כדאי לדעת לפני טיפול?']
-            ],
-            answers: {
-                recommend: 'בשמחה. כדי להתאים טיפול, ספרו לי מה המטרה העיקרית שלכם — הרפיה והפחתת מתח, תחושת עומס/נוקשות בשרירים, התאוששות מספורט, או צורך בטיפול ממוקד יותר. לאחר מכן אוכל לכוון אתכם לאפשרות המתאימה.',
-                difference: 'ב-Serviam Therapy ניתן לבחור בין כמה סגנונות טיפול, כולל עיסוי שוודי, רקמות עמוקות, ספורטיבי, רפואי, אבנים חמות וכוסות רוח. ההבדל העיקרי הוא בעוצמה, בטכניקות ובמטרה של הטיפול — והבחירה נעשית לפי הצרכים האישיים.',
-                booking: 'אפשר להגיע לחלק קביעת הטיפול באתר ולבחור את הדרך הנוחה לכם. אם תרצו, תוכלו גם לשאול אותי על סוג טיפול, משך או פרטים נוספים לפני שקובעים.',
-                before: 'מומלץ להגיע בבגדים נוחים, לשתות מים ולהקדיש כמה דקות רגועות לפני הטיפול. כדאי גם לשתף את המטפל בכל אזור רגיש, מגבלה או העדפה שחשוב לקחת בחשבון.'
-            },
-            fallback: 'אני כאן כדי לעזור בנושא טיפולים, בחירת עיסוי, שאלות כלליות על החוויה או קביעת טיפול. נסו לשאול אותי למשל: “איזה עיסוי מתאים לי?”'
-        },
-        en: {
-            launch: 'Ask Serviam', sub: 'Wellness assistant', online: 'Here to help', lang: 'עב',
-            welcome: 'Hello, how can I help?',
-            welcomeText: 'I can help you choose a treatment, answer questions, and guide you toward booking.',
-            placeholder: 'Ask a question...', footer: 'Serviam AI • General information & treatment guidance',
-            quick: [
-                ['recommend', '💆', 'Which treatment is right for me?'],
-                ['difference', '✦', 'What is the difference between treatments?'],
-                ['booking', '📅', 'How do I book a treatment?'],
-                ['before', '◌', 'What should I know before my treatment?']
-            ],
-            answers: {
-                recommend: 'Absolutely. To guide you, tell me your main goal — relaxation and stress relief, muscle tightness, sports recovery, or a more focused therapeutic treatment. I can then point you toward the most suitable option.',
-                difference: 'Serviam Therapy offers several approaches, including Swedish, deep tissue, sports, therapeutic, hot stone massage, and cupping. The main differences are pressure, techniques, and treatment goals — with the choice tailored to your needs.',
-                booking: 'You can use the booking section of the website and choose the option that is most convenient for you. You can also ask me about treatment types, duration, or other details before booking.',
-                before: 'It is helpful to wear comfortable clothing, stay hydrated, and give yourself a few calm minutes before the treatment. Let the therapist know about any sensitive areas, limitations, or preferences that should be considered.'
-            },
-            fallback: 'I can help with treatments, choosing a massage, general wellness questions, or booking. Try asking: “Which massage is right for me?”'
-        }
-    };
-
-    function setLanguage(next) {
-        currentLang = next;
-        const t = copy[currentLang];
-        document.documentElement.lang = currentLang === 'he' ? 'he' : 'en';
-        document.documentElement.dir = currentLang === 'he' ? 'rtl' : 'ltr';
-        root.setAttribute('dir', currentLang === 'he' ? 'rtl' : 'ltr');
-        document.getElementById('serviam-ai-launch-title').textContent = t.launch;
-        document.getElementById('serviam-ai-launch-subtitle').textContent = t.sub;
-        document.getElementById('serviam-ai-online').innerHTML = '<span></span> ' + t.online;
-        document.getElementById('serviam-ai-language').textContent = t.lang;
-        document.getElementById('serviam-ai-welcome-title').textContent = t.welcome;
-        document.getElementById('serviam-ai-welcome-text').textContent = t.welcomeText;
-        document.getElementById('serviam-ai-footer').textContent = t.footer;
-        input.placeholder = t.placeholder;
-        quick.querySelectorAll('button').forEach((button, i) => {
-            button.innerHTML = t.quick[i][1] + ' <span>' + t.quick[i][2] + '</span>';
-        });
-    }
-
-    function toggle(open) {
-        const isOpen = typeof open === 'boolean' ? open : !root.classList.contains('is-open');
-        root.classList.toggle('is-open', isOpen);
-        launch.setAttribute('aria-expanded', String(isOpen));
-        panel.setAttribute('aria-hidden', String(!isOpen));
-        if (isOpen) {
-            openedOnce = true;
-            setTimeout(() => input.focus(), 180);
-        }
-    }
-
-    function addMessage(text, type) {
-        const bubble = document.createElement('div');
-        bubble.className = 'serviam-ai-message ' + type;
-        bubble.textContent = text;
-        messages.appendChild(bubble);
-        messages.scrollTop = messages.scrollHeight;
-    }
-
-    function answer(key) {
-        const t = copy[currentLang];
-        addMessage(t.answers[key] || t.fallback, 'assistant');
-    }
-
-    function getAnswer(text) {
-        const s = text.toLowerCase();
-        if (/recommend|right for me|which massage|מתאים לי|איזה טיפול|איזה עיסוי|מומלץ/.test(s)) return 'recommend';
-        if (/difference|different|הבדל|הבדלים|סוגי טיפול|טיפולים/.test(s)) return 'difference';
-        if (/book|booking|appointment|schedule|קובע|לקבוע|תור|הזמנה|קביעת/.test(s)) return 'booking';
-        if (/before|prior|prepare|לפני|להתכונן|הכנה/.test(s)) return 'before';
-        return null;
-    }
-
-    function submitText(text) {
-        const clean = text.trim();
-        if (!clean) return;
-        addMessage(clean, 'user');
-        input.value = '';
-        typing.classList.add('is-visible');
-        setTimeout(() => {
-            typing.classList.remove('is-visible');
-            answer(getAnswer(clean));
-        }, 650);
-    }
-
-    launch.addEventListener('click', () => toggle());
-    close.addEventListener('click', () => toggle(false));
-    lang.addEventListener('click', () => setLanguage(currentLang === 'he' ? 'en' : 'he'));
-    form.addEventListener('submit', (e) => { e.preventDefault(); submitText(input.value); });
-    quick.addEventListener('click', (e) => {
-        const button = e.target.closest('[data-ai-action]');
-        if (!button) return;
-        const key = button.dataset.aiAction;
-        const label = copy[currentLang].quick.find(item => item[0] === key)[2];
-        addMessage(label, 'user');
-        typing.classList.add('is-visible');
-        setTimeout(() => { typing.classList.remove('is-visible'); answer(key); }, 500);
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && root.classList.contains('is-open')) toggle(false);
-    });
-
-    setLanguage('he');
-})();
 </script>
 
 </body>
