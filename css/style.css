@@ -7973,3 +7973,292 @@ select:focus {
         text-shadow: 0 3px 24px rgba(0,0,0,.72);
     }
 }
+/* =========================================================
+   SERVIAM LUXURY CRYSTAL EDITION — GRAPHITE RESERVE
+   Layered over the existing graphite system.
+   No layout/content/functionality changes.
+========================================================= */
+
+:root {
+    --luxury-white: #f2f4f3;
+    --luxury-silver: #d8dddb;
+    --luxury-steel: #aeb6b3;
+    --luxury-glint: rgba(245,248,247,.78);
+    --luxury-shadow: rgba(0,0,0,.58);
+}
+
+/* Refined silver typography: brighter edges, never a white wash */
+h1, h2, h3, h4, h5, h6,
+.brand-text,
+.hero-content h1 {
+    color: var(--luxury-white);
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        0 8px 34px rgba(0,0,0,.48),
+        0 0 24px rgba(225,231,229,.045);
+}
+
+.section-title,
+.hero-content h1,
+.brand-text {
+    position: relative;
+}
+
+/* Fine moving crystal glint on headings */
+.section-title::after,
+.hero-content h1::after,
+.brand-text::after {
+    content: "";
+    position: absolute;
+    inset: -12% -18%;
+    pointer-events: none;
+    background: linear-gradient(
+        108deg,
+        transparent 38%,
+        rgba(255,255,255,0) 43%,
+        rgba(255,255,255,.20) 49%,
+        rgba(255,255,255,0) 55%,
+        transparent 62%
+    );
+    transform: translateX(-115%);
+    animation: serviamCrystalSweep 8s ease-in-out infinite;
+    mix-blend-mode: screen;
+    opacity: .55;
+}
+
+/* Luxury glass surfaces: deeper blacks + a polished upper rim */
+.card,
+.service-card,
+.review-trust-card,
+.google-rating-summary,
+.blog-card,
+.faq-item,
+.booking-card,
+.contact-card,
+.form-card,
+.credential-card {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(225,231,229,.17);
+    background:
+        linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.012) 46%, rgba(0,0,0,.16)),
+        rgba(9,11,13,.72);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.085),
+        inset 0 -1px 0 rgba(0,0,0,.42),
+        0 24px 65px rgba(0,0,0,.40),
+        0 0 0 1px rgba(255,255,255,.018);
+}
+
+.card::after,
+.service-card::after,
+.review-trust-card::after,
+.google-rating-summary::after,
+.blog-card::after,
+.faq-item::after,
+.booking-card::after,
+.contact-card::after,
+.form-card::after,
+.credential-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(115deg, transparent 0 42%, rgba(255,255,255,.10) 49%, transparent 56%),
+        radial-gradient(circle at 92% 8%, rgba(255,255,255,.09), transparent 17%);
+    opacity: .18;
+    transform: translateX(-105%);
+    transition: opacity .35s ease;
+}
+
+.card:hover::after,
+.service-card:hover::after,
+.review-trust-card:hover::after,
+.google-rating-summary:hover::after,
+.blog-card:hover::after,
+.faq-item:hover::after,
+.booking-card:hover::after,
+.contact-card:hover::after,
+.form-card:hover::after,
+.credential-card:hover::after {
+    opacity: .42;
+    animation: serviamGlassSweep 1.5s ease forwards;
+}
+
+/* Crystal-cut image frames */
+.gallery-item,
+.service-image,
+.credential-image {
+    position: relative;
+    border-color: rgba(225,231,229,.20) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.15),
+        inset 0 -1px 0 rgba(0,0,0,.55),
+        0 20px 48px rgba(0,0,0,.42),
+        0 0 28px rgba(220,226,224,.035);
+}
+
+.gallery-item::before,
+.service-image::before,
+.credential-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.18), transparent 17%, transparent 72%, rgba(255,255,255,.06)),
+        linear-gradient(112deg, transparent 42%, rgba(255,255,255,.13) 49%, transparent 56%);
+    opacity: .32;
+    mix-blend-mode: screen;
+}
+
+.gallery-item::after,
+.service-image::after,
+.credential-image::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: 7px;
+    height: 7px;
+    top: 10px;
+    right: 12px;
+    border-radius: 50%;
+    background: rgba(250,252,251,.78);
+    box-shadow:
+        0 0 5px rgba(255,255,255,.65),
+        0 0 18px rgba(235,240,238,.32);
+    opacity: .48;
+    pointer-events: none;
+}
+
+.gallery-item:hover,
+.service-image:hover,
+.credential-image:hover {
+    border-color: rgba(235,240,238,.34) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.22),
+        0 26px 58px rgba(0,0,0,.52),
+        0 0 34px rgba(220,226,224,.065);
+}
+
+/* More dimensional service/gallery imagery without increasing brightness */
+.gallery-item img,
+.service-image img,
+.credential-image img {
+    transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .8s ease;
+}
+
+.gallery-item:hover img,
+.service-image:hover img,
+.credential-image:hover img {
+    transform: scale(1.025);
+    filter: contrast(1.04) brightness(1.035) saturate(.92);
+}
+
+/* Premium form focus */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(235,240,238,.40) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.07),
+        0 0 0 3px rgba(220,226,224,.045),
+        0 10px 32px rgba(0,0,0,.28) !important;
+}
+
+/* Quiet luxury button finish */
+.button-primary,
+.button-gold,
+.popup-button,
+.nav-book-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-primary::after,
+.button-gold::after,
+.popup-button::after,
+.nav-book-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(108deg, transparent 35%, rgba(255,255,255,.42) 50%, transparent 65%);
+    transform: translateX(-125%);
+    transition: transform .7s ease;
+    pointer-events: none;
+}
+
+.button-primary:hover::after,
+.button-gold:hover::after,
+.popup-button:hover::after,
+.nav-book-button:hover::after {
+    transform: translateX(125%);
+}
+
+/* Header gets a jewelry-like hairline rather than extra brightness */
+.navbar,
+.navbar.scrolled {
+    box-shadow:
+        0 18px 52px rgba(0,0,0,.48),
+        inset 0 -1px 0 rgba(255,255,255,.055),
+        0 1px 0 rgba(220,226,224,.035);
+}
+
+@keyframes serviamCrystalSweep {
+    0%, 58% { transform: translateX(-115%); }
+    72%, 100% { transform: translateX(115%); }
+}
+
+@keyframes serviamGlassSweep {
+    from { transform: translateX(-105%); }
+    to { transform: translateX(105%); }
+}
+
+@media (max-width: 768px) {
+    .section-title::after,
+    .hero-content h1::after,
+    .brand-text::after {
+        animation-duration: 11s;
+        opacity: .34;
+    }
+
+    .gallery-item:hover img,
+    .service-image:hover img,
+    .credential-image:hover img {
+        transform: none;
+    }
+
+    .card:hover::after,
+    .service-card:hover::after,
+    .review-trust-card:hover::after,
+    .google-rating-summary:hover::after,
+    .blog-card:hover::after,
+    .faq-item:hover::after,
+    .booking-card:hover::after,
+    .contact-card:hover::after,
+    .form-card:hover::after,
+    .credential-card:hover::after {
+        animation: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-title::after,
+    .hero-content h1::after,
+    .brand-text::after,
+    .card::after,
+    .service-card::after,
+    .review-trust-card::after,
+    .google-rating-summary::after,
+    .blog-card::after,
+    .faq-item::after,
+    .booking-card::after,
+    .contact-card::after,
+    .form-card::after,
+    .credential-card::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
