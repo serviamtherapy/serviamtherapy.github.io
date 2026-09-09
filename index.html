@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Serviam Therapy — 20+ טיפולי עיסוי מקצועיים בהתאמה אישית בבת ים ובמרכז הארץ. עיסוי שוודי, רקמות עמוקות, ספורטיבי, רפואי, אבנים חמות וכוסות רוח.  שנות ניסיון."
+        content="Serviam Therapy — עיסוי מקצועי וטיפולי בהתאמה אישית בבת ים ובמרכז. עיסוי שוודי, רקמות עמוקות, ספורטיבי, רפואי, אבנים חמות וכוסות רוח, עם 20+ שנות ניסיון."
     >
 
     <meta
@@ -20,7 +20,7 @@
 
     <meta name="author" content="Serviam Therapy">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#d8c18d">
+    <meta name="theme-color" content="#0b0d0f">
 
     <link rel="canonical" href="https://www.serviamtherapy.com/">
 
@@ -340,7 +340,7 @@
 </div>
 
 <div
-    class="popup-window"
+    class="popup-window popup-hidden"
     id="welcome-popup"
     role="dialog"
     aria-modal="true"
@@ -581,7 +581,7 @@
             </a>
 
             <a href="questionnaire.html" class="nav-link">
-                שאלון
+                מצאו את הטיפול המתאים
             </a>
 
             <a href="#contact" class="nav-link">
@@ -713,6 +713,16 @@
                     הטיפולים שלנו
                 </a>
 
+                <a
+                    href="questionnaire.html"
+                    class="hero-fit-link"
+                    data-track="hero_questionnaire"
+                    aria-label="מציאת הטיפול המתאים"
+                >
+                    לא בטוחים איזה טיפול מתאים?
+                    <span>מצאו את הטיפול המתאים ←</span>
+                </a>
+
             </div>
 
             <div
@@ -819,6 +829,19 @@
                 בהתאם למטרה, למצב הגוף
                 ולתחושה שאתם מחפשים.
             </p>
+
+            <a
+                href="questionnaire.html"
+                class="service-fit-cta"
+                data-track="services_questionnaire"
+            >
+                <span class="service-fit-icon">✦</span>
+                <span>
+                    <strong>לא בטוחים מה מתאים לכם?</strong>
+                    <small>ענו על כמה שאלות קצרות ונכוון אתכם לטיפול המתאים.</small>
+                </span>
+                <span class="service-fit-arrow">←</span>
+            </a>
 
         </div>
 
@@ -2489,7 +2512,7 @@
                 class="button button-outline-light"
                 data-track="questionnaire_booking"
             >
-                שאלון לפני הטיפול
+                מצאו את הטיפול המתאים
             </a>
 
         </div>
@@ -2804,7 +2827,7 @@
                 </a>
 
                 <a href="questionnaire.html">
-                    שאלון לפני הטיפול
+                    מציאת הטיפול המתאים
                 </a>
 
                 <a href="#contact">
@@ -2933,7 +2956,7 @@
     >
         ✦
         <span>
-            שאלון
+            התאמה
         </span>
     </a>
 
@@ -3093,7 +3116,9 @@ document.addEventListener(
 
         }
 
-        let popupSeen = false;
+        // The welcome popup is intentionally disabled in the final conversion-focused version.
+        // The markup and handlers remain intact so this change does not affect other site functionality.
+        let popupSeen = true;
 
         try {
 
