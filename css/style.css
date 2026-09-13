@@ -9720,3 +9720,425 @@ html[dir="ltr"] .brand {
         font-size: 9px;
     }
 }
+
+
+/* =========================================================
+   SERVIAM THERAPY — FINAL GOLD LUXURY EDITION
+   Black Graphite / Champagne Gold / Antique Gold
+   Visual layer only — preserves existing layout and behavior.
+   ========================================================= */
+:root {
+  --lux-gold-deep: #6f4d1f;
+  --lux-gold-dark: #92703a;
+  --lux-gold: #b58a43;
+  --lux-gold-rich: #c8a45a;
+  --lux-gold-light: #e0c477;
+  --lux-champagne: #f0dda7;
+  --lux-ivory: #f4eee0;
+  --lux-text: #e7dfcf;
+  --lux-text-soft: #bdb5a7;
+  --lux-line: rgba(201,164,90,.22);
+  --lux-line-strong: rgba(224,196,119,.42);
+  --lux-glow: rgba(212,175,92,.22);
+}
+
+/* Global gold hierarchy */
+.section-label,
+.hero-eyebrow,
+.contact-card-label,
+.process-step > span,
+.scroll-indicator,
+.nav-link:hover,
+.brand-text,
+.hero-trust-row b,
+.home-service-points,
+.service-fit-icon,
+.benefit-icon,
+.review-trust-card span,
+.hero-content h1 span,
+.section-heading h2 span,
+.about-content h2 span,
+.booking-content h2 span,
+.contact-content h2 span {
+  color: var(--lux-gold-light);
+  text-shadow: 0 0 14px rgba(212,175,92,.16);
+}
+
+body { color: var(--lux-text); }
+
+.section-heading h2,
+.benefit-card h3,
+.process-step h3,
+.google-rating-summary strong,
+.review-trust-card strong,
+.popup-content h1,
+.home-service-content h2,
+.hero-content h1 {
+  color: var(--lux-ivory);
+}
+
+.section-heading p,
+.hero-description,
+.benefit-card p,
+.process-step p,
+.review-trust-card p,
+.hero-trust-row,
+.brand-text small,
+.home-service-content p {
+  color: var(--lux-text-soft);
+}
+
+/* Metallic gold headings — restrained, not yellow */
+.section-heading h2,
+.hero-content h1,
+.home-service-content h2,
+.popup-content h1,
+.brand-text {
+  background: linear-gradient(112deg,
+    #8b652d 0%,
+    #b58a43 18%,
+    #f0dda7 38%,
+    #c8a45a 52%,
+    #f5e5b3 67%,
+    #a97932 84%,
+    #d8b866 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: serviamGoldText 9s ease-in-out infinite;
+  text-shadow: none;
+}
+
+.hero-content h1 span,
+.section-heading h2 span,
+.home-service-content h2 span,
+.about-content h2 span,
+.booking-content h2 span,
+.contact-content h2 span {
+  background: linear-gradient(115deg,#8c6429,#d3ae63 30%,#f3e0a8 50%,#b98639 72%,#e0c477);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: serviamGoldText 8s ease-in-out infinite;
+}
+
+@keyframes serviamGoldText {
+  0%,58%,100% { background-position: 120% 0; }
+  72% { background-position: -20% 0; }
+}
+
+/* Navigation */
+.nav-link { color: #c3baa9; }
+.nav-link::after {
+  background: linear-gradient(90deg,var(--lux-gold-dark),var(--lux-champagne),var(--lux-gold));
+  box-shadow: 0 0 8px rgba(212,175,92,.22);
+}
+.nav-link:hover { color: var(--lux-champagne); }
+
+/* Header brand */
+.brand-logo {
+  filter: drop-shadow(0 5px 13px rgba(183,139,62,.18));
+}
+
+/* Social circles */
+.header-social-link,
+.mobile-social-link,
+.social-link {
+  color: var(--lux-gold-light);
+  border-color: var(--lux-line-strong);
+  background: rgba(20,17,12,.72);
+  box-shadow: inset 0 1px 0 rgba(255,236,183,.08), 0 5px 18px rgba(0,0,0,.24);
+}
+.header-social-link:hover,
+.mobile-social-link:hover,
+.social-link:hover {
+  color: #17130c;
+  background: linear-gradient(135deg,#a77a32,#e3c87f,#b78b43);
+  border-color: rgba(240,221,167,.72);
+  box-shadow: 0 8px 25px rgba(0,0,0,.38),0 0 18px rgba(212,175,92,.18);
+}
+
+/* Booking/nav button: dark glass with gold jewelry edge */
+.nav-book-button {
+  border-color: rgba(207,169,91,.55);
+  background: linear-gradient(135deg,rgba(122,87,34,.28),rgba(25,22,17,.88) 48%,rgba(195,151,69,.16));
+  color: var(--lux-champagne);
+  box-shadow: 0 8px 25px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,236,183,.18), inset 0 -1px 0 rgba(117,78,27,.18), 0 0 18px rgba(177,130,50,.06);
+}
+.nav-book-button::before {
+  background: linear-gradient(90deg,transparent,rgba(255,239,188,.78),rgba(219,180,91,.28),transparent);
+}
+.nav-book-button::after { border-color: rgba(240,221,167,.14); }
+.nav-book-button:hover {
+  border-color: rgba(240,221,167,.82);
+  box-shadow: 0 12px 32px rgba(0,0,0,.48),0 0 24px rgba(212,175,92,.20),inset 0 1px 0 rgba(255,245,210,.72);
+}
+
+/* Buttons */
+.button-primary,
+.button-gold,
+.popup-button {
+  background: linear-gradient(125deg,#7a5420 0%,#b5863c 24%,#e0c477 48%,#b78a42 70%,#754f1c 100%);
+  color: #17130d;
+  border: 1px solid rgba(244,225,168,.58);
+  box-shadow: 0 12px 28px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,244,207,.65), 0 0 16px rgba(181,138,67,.10);
+  text-shadow: 0 1px 0 rgba(255,235,177,.25);
+}
+.button-primary::after,
+.button-gold::after,
+.popup-button::after {
+  background: linear-gradient(110deg,transparent 34%,rgba(255,248,218,.78) 49%,rgba(255,255,255,.20) 52%,transparent 66%);
+}
+.button-primary:hover,
+.button-gold:hover,
+.popup-button:hover {
+  background: linear-gradient(125deg,#956a29,#c39a50,#f0d98d,#c59a4f,#8b6023);
+  box-shadow: 0 16px 36px rgba(0,0,0,.42),0 0 25px rgba(212,175,92,.24),inset 0 1px 0 rgba(255,248,221,.82);
+}
+.button-outline-light {
+  border-color: rgba(211,177,101,.58);
+  color: var(--lux-champagne);
+  background: rgba(15,14,12,.48);
+  box-shadow: inset 0 1px 0 rgba(255,235,181,.08);
+}
+.button-outline-light:hover {
+  color:#17130d;
+  background: linear-gradient(135deg,#a77a32,#e1c579,#b6873d);
+  border-color:#e5ca82;
+}
+.button-dark {
+  background: linear-gradient(135deg,#c09850,#e0c477,#a97932);
+  color:#17130d;
+}
+.button-dark:hover { background:linear-gradient(135deg,#e4ca82,#f1dda2,#bd9348); }
+
+/* Scroll indicator */
+.scroll-indicator { color: rgba(232,209,151,.88); }
+.scroll-line { background:linear-gradient(to bottom,rgba(255,236,183,.12),rgba(224,196,119,.90)); box-shadow:0 0 8px rgba(212,175,92,.14); }
+.scroll-line::after { border-color:#c39b52; }
+
+/* Cards / glass */
+.card,
+.service-card,
+.review-trust-card,
+.google-rating-summary,
+.blog-card,
+.faq-item,
+.booking-card,
+.contact-card,
+.form-card,
+.credential-card,
+.benefit-card,
+.gallery-item,
+.journal-card {
+  border-color: rgba(199,160,82,.18);
+  background:
+    linear-gradient(145deg,rgba(255,232,173,.045),rgba(255,255,255,.012) 44%,rgba(0,0,0,.22)),
+    rgba(11,10,9,.72);
+  box-shadow: inset 0 1px 0 rgba(255,230,170,.07), inset 0 -1px 0 rgba(0,0,0,.48), 0 24px 65px rgba(0,0,0,.42), 0 0 0 1px rgba(184,139,61,.025);
+}
+.card:hover,
+.service-card:hover,
+.review-trust-card:hover,
+.blog-card:hover,
+.faq-item:hover,
+.booking-card:hover,
+.contact-card:hover,
+.form-card:hover,
+.credential-card:hover,
+.benefit-card:hover,
+.gallery-item:hover,
+.journal-card:hover {
+  border-color: rgba(224,196,119,.34);
+  box-shadow: inset 0 1px 0 rgba(255,235,183,.10),0 28px 72px rgba(0,0,0,.48),0 0 24px rgba(183,139,62,.07);
+}
+
+/* Card text and icons */
+.benefit-icon,
+.service-fit-icon,
+.popup-feature-icon {
+  color: var(--lux-gold-light);
+  border-color: rgba(214,177,94,.30);
+  background: rgba(157,113,42,.08);
+  box-shadow: 0 0 20px rgba(212,175,92,.08),inset 0 1px 0 rgba(255,235,183,.07);
+}
+.benefit-card h3,
+.process-step h3 { color:var(--lux-ivory); }
+.benefit-card p,
+.process-step p { color:var(--lux-text-soft); }
+
+/* Image frames — polished gold */
+.service-image,
+.about-image-frame,
+.credential-image,
+.gallery-item {
+  border-color: rgba(184,139,62,.48);
+  background: linear-gradient(145deg,rgba(117,79,27,.18),rgba(20,18,14,.72));
+  box-shadow: 0 18px 42px rgba(0,0,0,.38),0 0 22px rgba(177,130,50,.06);
+}
+.service-image::before,
+.about-image-frame::after,
+.credential-image::before,
+.gallery-item::before {
+  border-color: rgba(242,219,161,.34);
+  box-shadow: inset 0 0 10px rgba(212,175,92,.05);
+}
+.service-image::after { border-color:rgba(224,196,119,.62); }
+.about-image-frame::before { border-color:rgba(184,139,62,.48); }
+.image-frame-line { border-color:rgba(201,164,90,.28); }
+.service-card:hover .service-image,
+.about-image-frame:hover,
+.gallery-item:hover { border-color:rgba(230,201,125,.70); box-shadow:0 24px 52px rgba(0,0,0,.50),0 0 25px rgba(194,148,57,.12); }
+
+/* Gold shine on image frames */
+.service-image,
+.about-image-frame,
+.credential-image,
+.gallery-item { isolation:isolate; }
+.service-image::after,
+.about-image-frame::after,
+.credential-image::after,
+.gallery-item::after { pointer-events:none; }
+
+/* Process / dividers */
+.process-line { background:linear-gradient(90deg,transparent,#b98b45,#f0dda7,#b98b45,transparent); box-shadow:0 0 8px rgba(212,175,92,.18); }
+
+/* Hero: retain dark cinematic treatment, introduce gold only into accents */
+.hero-content h1 { text-shadow:0 4px 28px rgba(0,0,0,.58),0 0 20px rgba(212,175,92,.06); }
+.hero-eyebrow { color:#d5b66e; }
+.hero-description { color:#d0c8ba; }
+.hero-trust-row { color:#aaa194; }
+.hero-trust-row b { color:#e2c77f; }
+.hero-orb { border-color:rgba(210,169,87,.18); }
+.hero-orb-one { box-shadow:inset 0 0 90px rgba(212,175,92,.045); }
+.hero-orb-two { border-color:rgba(210,169,87,.12); }
+
+/* Hero video gold atmosphere, extremely subtle */
+.hero-background::after {
+  background:linear-gradient(90deg,rgba(5,7,9,.74) 0%,rgba(5,7,9,.42) 42%,rgba(7,6,4,.20) 72%,rgba(5,7,9,.34) 100%);
+}
+
+/* Home service dark section */
+.home-service-section { color:var(--lux-ivory); }
+.home-service-section::after {
+  background:radial-gradient(circle at 78% 30%,rgba(213,175,91,.16),transparent 35%),linear-gradient(90deg,rgba(7,8,9,.98),rgba(12,11,9,.86));
+}
+.home-service-content h2 { color:var(--lux-ivory); }
+.home-service-content h2 span { color:var(--lux-gold-light); }
+.home-service-content p { color:rgba(244,238,224,.76); }
+.home-service-points { color:#d8bb76; }
+.home-service-visual { border-color:rgba(234,203,128,.30); background:radial-gradient(circle,rgba(213,175,91,.12),rgba(255,255,255,.018) 62%); box-shadow:inset 0 0 70px rgba(212,175,92,.035),0 0 28px rgba(212,175,92,.05); }
+.home-service-visual span { color:rgba(234,203,128,.72); }
+
+/* Statistics */
+.statistics-section {
+  color:#18130b;
+  background:linear-gradient(135deg,#76501f,#b4863d 26%,#e1c679 50%,#ad8038 74%,#69461b);
+  box-shadow:inset 0 1px 0 rgba(255,240,194,.32),inset 0 -1px 0 rgba(81,50,14,.22);
+}
+.stat-item { border-color:rgba(255,244,211,.28); }
+
+/* Forms */
+input,textarea,select {
+  background:#151311;
+  color:#e8e0d1;
+  border-color:rgba(198,159,82,.24);
+  box-shadow:inset 0 1px 0 rgba(255,235,183,.025);
+}
+input:focus,textarea:focus,select:focus { border-color:rgba(224,196,119,.62); box-shadow:0 0 0 3px rgba(212,175,92,.07),inset 0 1px 0 rgba(255,235,183,.05); }
+input::placeholder,textarea::placeholder { color:#777064; }
+
+/* Popup */
+.popup-window { background:rgba(35,25,13,.54); }
+.popup-left-overlay { background:linear-gradient(145deg,rgba(45,29,11,.22),rgba(178,132,49,.28)); }
+.popup-right { background:linear-gradient(145deg,#171512,#11100e); border-color:rgba(202,163,88,.24); }
+.popup-content h1 { color:var(--lux-ivory); }
+.popup-content p { color:var(--lux-text-soft); }
+.popup-close { color:var(--lux-gold-light); background:rgba(32,27,19,.72); border-color:rgba(205,166,88,.24); }
+.popup-close:hover { background:linear-gradient(135deg,#b4853c,#e0c477); color:#17130d; border-color:#e5cb86; }
+.popup-feature-icon { color:#e2c77f; }
+
+/* Section glints — jewelry-like, not glittery */
+.section-title::after,
+.hero-content h1::after,
+.brand-text::after {
+  background:linear-gradient(108deg,transparent 38%,rgba(255,246,211,0) 43%,rgba(255,236,183,.32) 49%,rgba(255,246,211,0) 55%,transparent 62%);
+  mix-blend-mode:screen;
+  opacity:.62;
+}
+
+/* Premium hairline under header */
+.navbar,.navbar.scrolled {
+  box-shadow:0 18px 52px rgba(0,0,0,.50),inset 0 -1px 0 rgba(231,201,126,.08),0 1px 0 rgba(205,163,82,.045);
+}
+
+/* Gold glass sweep on major cards */
+.card::after,
+.service-card::after,
+.review-trust-card::after,
+.google-rating-summary::after,
+.blog-card::after,
+.faq-item::after,
+.booking-card::after,
+.contact-card::after,
+.form-card::after,
+.credential-card::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(112deg,transparent 32%,rgba(255,238,187,.0) 43%,rgba(255,226,151,.18) 49%,rgba(255,245,210,.05) 53%,transparent 64%);
+  transform:translateX(-125%);
+  animation:serviamGoldGlassSweep 11s ease-in-out infinite;
+}
+@keyframes serviamGoldGlassSweep {
+  0%,65%{transform:translateX(-125%)}
+  78%,100%{transform:translateX(125%)}
+}
+
+/* Loader — gold crystal luxury */
+.page-loader { background:radial-gradient(circle,#171512,#080909 72%); }
+.loader-subtitle { color:#d9b96c; }
+.loader-line { background:linear-gradient(90deg,transparent,#a97832,#f0dda7,#a97832,transparent); box-shadow:0 0 12px rgba(212,175,92,.18); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .section-heading h2,
+  .hero-content h1,
+  .home-service-content h2,
+  .popup-content h1,
+  .brand-text,
+  .hero-content h1 span,
+  .section-heading h2 span,
+  .home-service-content h2 span,
+  .card::after,
+  .service-card::after,
+  .review-trust-card::after,
+  .google-rating-summary::after,
+  .blog-card::after,
+  .faq-item::after,
+  .booking-card::after,
+  .contact-card::after,
+  .form-card::after,
+  .credential-card::after { animation:none !important; }
+}
+
+@media (max-width:768px) {
+  .section-heading h2,
+  .hero-content h1,
+  .home-service-content h2,
+  .popup-content h1,
+  .brand-text { animation-duration:12s; }
+  .card::after,
+  .service-card::after,
+  .review-trust-card::after,
+  .google-rating-summary::after,
+  .blog-card::after,
+  .faq-item::after,
+  .booking-card::after,
+  .contact-card::after,
+  .form-card::after,
+  .credential-card::after { animation-duration:14s; }
+}
