@@ -1,0 +1,208 @@
+/*
+ * Serviam Therapy — Automatic Celebration Banner
+ * Designed to sit above the existing premium black / graphite / gold design.
+ */
+
+#serviam-celebration-banner {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translate(-50%, -24px);
+  width: min(920px, calc(100% - 32px));
+  z-index: 10050;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 18px;
+  overflow: hidden;
+  border: 1px solid rgba(224, 196, 119, .48);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 18% 50%, rgba(212,175,92,.12), transparent 30%),
+    linear-gradient(135deg, rgba(16,15,13,.97), rgba(28,23,16,.96));
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,240,200,.13),
+    0 0 34px rgba(212,175,92,.09);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .45s ease, transform .45s cubic-bezier(.2,.75,.2,1);
+  color: #f3ead8;
+}
+
+#serviam-celebration-banner.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.serviam-celebration-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(112deg,
+      transparent 30%,
+      rgba(255,246,211,0) 42%,
+      rgba(255,236,183,.20) 49%,
+      rgba(255,246,211,0) 56%,
+      transparent 68%);
+  transform: translateX(-110%);
+  animation: serviamCelebrationShine 7s ease-in-out infinite;
+}
+
+@keyframes serviamCelebrationShine {
+  0%, 62% { transform: translateX(-110%); }
+  78%, 100% { transform: translateX(110%); }
+}
+
+.serviam-celebration-symbol {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(224,196,119,.38);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(225,194,111,.15), rgba(255,255,255,.02) 68%);
+  color: #e7c878;
+  font-size: 25px;
+  box-shadow:
+    0 0 26px rgba(212,175,92,.10),
+    inset 0 1px 0 rgba(255,240,200,.12);
+}
+
+.serviam-celebration-copy {
+  position: relative;
+  min-width: 0;
+}
+
+.serviam-celebration-brand {
+  display: block;
+  margin-bottom: 2px;
+  color: #bda366;
+  font: 600 10px/1.2 Poppins, Arial, sans-serif;
+  letter-spacing: .18em;
+}
+
+.serviam-celebration-copy h2 {
+  margin: 0;
+  color: #f2e8d4;
+  font: 600 clamp(18px, 2.2vw, 25px)/1.25 "Heebo", Arial, sans-serif;
+}
+
+.serviam-celebration-copy p {
+  margin: 3px 0 0;
+  max-width: 650px;
+  color: rgba(238,231,218,.74);
+  font: 400 13px/1.55 "Heebo", Arial, sans-serif;
+}
+
+.serviam-celebration-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.serviam-celebration-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid rgba(224,196,119,.50);
+  border-radius: 12px;
+  color: #17130d;
+  background: linear-gradient(135deg, #b8893e, #e3c77c 50%, #a97832);
+  box-shadow: 0 8px 22px rgba(183,139,62,.18), inset 0 1px 0 rgba(255,245,210,.42);
+  text-decoration: none;
+  font: 600 12px/1 Poppins, Arial, sans-serif;
+  white-space: nowrap;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.serviam-celebration-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(183,139,62,.28), inset 0 1px 0 rgba(255,245,210,.50);
+}
+
+.serviam-celebration-close {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(224,196,119,.25);
+  border-radius: 50%;
+  color: #d8bd79;
+  background: rgba(255,255,255,.035);
+  cursor: pointer;
+  font: 300 24px/1 Arial, sans-serif;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.serviam-celebration-close:hover {
+  color: #17130d;
+  background: #d9b86c;
+  border-color: #e5cb86;
+}
+
+html[dir="rtl"] #serviam-celebration-banner {
+  text-align: right;
+}
+
+html[dir="ltr"] #serviam-celebration-banner {
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  #serviam-celebration-banner {
+    top: 10px;
+    width: calc(100% - 20px);
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    padding: 13px;
+    border-radius: 17px;
+  }
+
+  .serviam-celebration-symbol {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .serviam-celebration-copy h2 {
+    font-size: 18px;
+  }
+
+  .serviam-celebration-copy p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .serviam-celebration-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .serviam-celebration-button {
+    flex: 1;
+    min-height: 38px;
+  }
+
+  .serviam-celebration-close {
+    flex: 0 0 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #serviam-celebration-banner {
+    transition: opacity .2s ease;
+  }
+
+  .serviam-celebration-shine {
+    animation: none;
+  }
+}
