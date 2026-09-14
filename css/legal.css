@@ -1,0 +1,99 @@
+
+/* Serviam Therapy — Legal Pages
+   Supplemental styles only. The existing site stylesheet remains the primary design system.
+*/
+.legal-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,.055), transparent 28%),
+        radial-gradient(circle at 85% 35%, rgba(210,216,213,.035), transparent 30%),
+        #080a0c;
+    color: #e8ebe9;
+}
+.legal-wrap {
+    width: min(980px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 150px 0 90px;
+}
+.legal-header {
+    margin-bottom: 48px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+}
+.legal-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #d8c18d;
+}
+.legal-header h1 {
+    margin: 0 0 16px;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.08;
+    color: #fff;
+}
+.legal-header p {
+    margin: 0;
+    color: rgba(232,235,233,.68);
+}
+.legal-card {
+    padding: clamp(26px, 4vw, 48px);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(25,28,30,.94), rgba(10,12,14,.96));
+    box-shadow: 0 24px 70px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.055);
+}
+.legal-card h2 {
+    margin: 34px 0 12px;
+    font-size: 25px;
+    color: #fff;
+}
+.legal-card h2:first-child { margin-top: 0; }
+.legal-card h3 {
+    margin: 24px 0 8px;
+    font-size: 18px;
+    color: #f2f3f2;
+}
+.legal-card p, .legal-card li {
+    font-size: 16px;
+    line-height: 1.85;
+    color: rgba(232,235,233,.78);
+}
+.legal-card ul, .legal-card ol {
+    padding-inline-start: 24px;
+}
+.legal-card a {
+    color: #e3d2a5;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.legal-note {
+    padding: 18px 20px;
+    margin: 24px 0;
+    border: 1px solid rgba(216,193,141,.25);
+    border-radius: 14px;
+    background: rgba(216,193,141,.055);
+}
+.legal-footer {
+    margin-top: 34px;
+    text-align: center;
+    color: rgba(232,235,233,.55);
+    font-size: 14px;
+}
+.legal-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.legal-back:hover { color: #e3d2a5; }
+@media (max-width: 700px) {
+    .legal-wrap { padding-top: 110px; }
+    .legal-card { border-radius: 18px; }
+    .legal-card p, .legal-card li { font-size: 15px; }
+}
