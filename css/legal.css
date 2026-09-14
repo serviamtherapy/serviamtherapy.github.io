@@ -97,3 +97,17 @@
     .legal-card { border-radius: 18px; }
     .legal-card p, .legal-card li { font-size: 15px; }
 }
+
+.legal-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+}
+.legal-nav a {
+    color: #e3d2a5;
+    text-decoration: none;
+}
+.legal-nav a:hover { text-decoration: underline; }
+.legal-nav span { flex-basis: 100%; }
